@@ -1,0 +1,413 @@
+
+/************ Table style ************/
+table{
+   width: 100%;
+   margin-top: 0em;
+   margin-right: 0em;
+   margin-bottom: 1em;
+   margin-left: 0em;   
+   border-collapse: collapse;
+	}
+
+table tr:hover{ /* can't get this to work!!! */
+  background-color: #969696;
+	}
+
+
+tbody tr.odd{
+   border: 1px solid #ccc;
+   background-color: #d1d1d1;
+	}
+
+tbody tr{
+   border: 1px solid #ccc;
+   }
+
+tbody tr:hover{
+  background-color: #969696;
+	}
+
+td.numeric,
+th.numeric{
+   text-align: right;
+	}
+
+thead th.gridheading{
+   color: #000;
+   background-color: #969696;
+	}
+
+
+thead th,
+tfoot th{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 0.5em;
+	text-align: left;
+	border: 1px solid #334d55;
+	background-image:url(../images/top-gradient.gif);
+	color:#000080;
+	}
+
+tfoot td{
+   border-top: 1px solid #ccc;
+	}
+
+tbody td{
+   font-family:Verdana, Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   color: #334d55;
+   border: 1px solid #ccc;
+   padding: 0.25em;
+	}
+
+
+/************ Table Sort styles ************/
+
+table.sortable thead th{
+   background-color:#E8E8E8;
+   color:#000080;
+   cursor: pointer;
+	}
+
+table.sortable tr.odd{
+   background-color: #ddf;
+	}
+
+table.sortable tr{
+ 
+	}
+
+table.sortable tr:hover{
+  background-color: #E8E3D4;
+	}
+
+table.tableStyle1 tr.odd{
+   border: 1px solid #ccc;
+   background-color: #ffb;
+	}
+
+table.tableStyle1 tr{
+   border: 1px solid #ccc;
+   background-color: #ffc;
+	}
+
+h1 {
+  font-size: 28px;
+  text-align: center;
+  vertical-align: center;
+  color: white;
+  
+}
+/******************************************************************************/
+/********** grouptable is for groupboxes with web property of "Table" *********/
+/******************************************************************************/
+
+.grouptable{
+   margin: 0px;
+   padding: 0px;
+	}
+
+.grouptable table{
+   margin-top: -1px;
+   margin-right: 0em;
+   margin-bottom: -1px;
+   margin-left: -3px;   
+   border-collapse: collapse;
+   padding: 0px;
+	}
+.grouptable tbody{
+   margin-top: -1px;
+   margin-bottom: -1px;
+	}
+
+.grouptable table tr:hover{ /* can't get this to work!!! */
+  background-color: white;
+	}
+
+
+.grouptable tbody tr{
+   border: 0px;
+	}
+
+.grouptable tbody tr:hover{
+  background-color: white;
+	}
+
+.grouptable tbody td{
+   font-family:Verdana, Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   color: #334d55;
+   border: 0px;
+   padding: 0.25em;
+	}
+
+.divborder{
+	border: solid darkgray;
+	border-width: 1px 1px 1px 1px;
+	border-style: inset;
+	margin-top: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+}
+
+/***********************************************/
+/********** Calendar Controls required *********/
+/***********************************************/
+.scw {
+	padding:1px;
+	vertical-align:middle;
+	}
+iframe.scw{
+	position:absolute;z-index:1;
+	top:0px;left:0px;visibility:hidden;
+    width:1px;height:1px;
+	}
+	
+table.scw{
+	visibility:hidden;
+	position:absolute;
+	cursor:default;
+	width:200px;
+	top:0px;
+	left:0px;
+	z-index:2;
+	text-align:center;
+	}
+/* IMPORTANT:  The SCW calendar script requires all the classes defined here. */
+td.scw,
+td.scw,
+td.scwDrag,
+td.scwHead{
+	padding:0px 0px;
+	border: 0px;
+	text-align: center;
+	}
+	
+td.scwDrag {
+	font-size: 7pt;
+	}
+	
+select.scwHead{
+	margin:3px 1px; 
+	}
+
+input.scwHead{
+	height:22px;
+	width:30px;
+	vertical-align:middle;
+	text-align: center;
+	margin:2px 1px;
+	font-weight:bold;
+	font-size:7pt;
+}
+	
+td.scwWeekNumberHead,
+td.scwWeek{
+	padding:0px;
+	border:0px;
+	text-align:center;
+	font-weight:bold;
+	background-color: #538ED5;
+	}
+
+td.scwFoot,
+td.scwFootHover,
+td.scwFoot:hover,
+td.scwFootDisabled{
+	padding:0px;
+	border: 0px;
+	text-align:center;
+	font-weight:normal;
+	}
+	
+table.scwCells{
+	text-align:right;
+	font-size:7pt;
+	width:100%;
+	}
+
+td.scwCells,
+td.scwCellsHover,
+td.scwCells:hover,
+td.scwCellsDisabled,
+td.scwCellsExMonth,
+td.scwCellsExMonthHover,
+td.scwCellsExMonth:hover,
+td.scwCellsExMonthDisabled,
+td.scwCellsWeekend,
+td.scwCellsWeekendHover,
+td.scwCellsWeekend:hover,
+td.scwCellsWeekendDisabled,
+td.scwInputDate,
+td.scwInputDateHover,
+td.scwInputDate:hover,
+td.scwInputDateDisabled,
+td.scwWeekNo,
+td.scwWeeks{
+	padding:3px;
+	width:16px;
+	border:0px;
+	height:16px;
+	font-weight:bold;
+	vertical-align:middle;
+	}
+/* Blend the colours into your page here...    */
+/* Calendar background */
+
+table.scw{
+	background-color:  #ffffff;
+	}
+	
+/* Drag Handle */
+
+td.scwDrag{
+	background-color:#9999CC;
+	color:#CCCCFF;
+	}
+/* Week number heading */
+td.scwWeekNumberHead{
+	color:#FFFFFF;
+	}
+/* Week day headings */
+td.scwWeek{
+	color:#CCCCCC;
+	}
+/* Week numbers */
+td.scwWeekNo{
+	background-color:#776677;
+	color:#CCCCCC;
+	}
+/* Enabled Days */
+/* Week Day */
+td.scwCells{
+	color:#000000;
+	}
+/* Day matching the input date */
+td.scwInputDate{
+	background-color:#CC9999;
+	color:#FF0000;
+	}
+/* Weekend Day */
+td.scwCellsWeekend{
+	color:#CC0000;
+	}
+/* Day outside the current month */
+td.scwCellsExMonth{
+	color:#666666;
+	}
+/* Today selector */
+td.scwFoot {
+	background-color:#538ED5;
+	color:#FFFFFF;
+	}
+/* MouseOver/Hover formatting
+       If you want to "turn off" any of the formatting
+       then just set to the same as the standard format
+       above.
+
+       Note: The reason that the following are
+       implemented using both a class and a :hover
+       pseudoclass is because Opera handles the rendering
+       involved in the class swap very poorly and IE6
+       (and below) only implements pseudoclasses on the
+       anchor tag.
+*/
+/* Active cells */
+td.scwCells:hover,
+td.scwCellsHover{
+	background-color:#FFFF00;
+	cursor:pointer;
+	cursor:hand;
+	color:#000000;
+	background-image: url(../images/i-heart-ny-active.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	}
+/* Day matching the input date */
+td.scwInputDate:hover,
+td.scwInputDateHover{
+	background-color:  #FFFF00;
+	cursor:pointer;
+	cursor:hand;
+	color:#000000;
+	}
+/* Weekend cells */
+td.scwCellsWeekend:hover,
+td.scwCellsWeekendHover{
+	background-color:#FFFF00;
+	cursor:pointer;
+    cursor:hand;
+	color:#000000;
+	background-image: url(../images/i-heart-ny-active.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	}
+/* Day outside the current month */
+td.scwCellsExMonth:hover,
+td.scwCellsExMonthHover{
+	background-color:#FFFF00;
+	cursor:pointer;
+    cursor:hand;
+    color:#000000;	
+	background-image: url(../images/i-heart-ny-active.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	}
+/* Today selector */
+td.scwFoot:hover,
+td.scwFootHover{
+	color:#FFFF00;
+    cursor:pointer;
+    cursor:hand;
+    font-weight:bold;
+	}
+/* Disabled cells */
+/* Week Day */
+/* Day matching the input date */
+td.scwInputDateDisabled{
+	background-color:  #999999;
+	color:#000000;
+	}
+	
+td.scwCellsDisabled{
+	background-color:#999999;
+	color:#000000;
+	}
+/* Weekend Day */
+td.scwCellsWeekendDisabled{
+	background-color:#999999;
+	color:#CC6666;
+	}
+/* Day outside the current month */
+td.scwCellsExMonthDisabled{
+	background-color:#999999;
+	color:#666666;
+	}
+	
+td.scwFootDisabled{
+	background-color:#6666CC;
+	color:#FFFFFF;
+	}
+/***********************************************/
+/********** END Calendar Controls required *********/
+/***********************************************/
+
+.listheader{
+   font-size: 12px;
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   color: #000000;
+	}
+
+.transcriptSummary{
+   height: 100px;
+}
+
+.languageeditwidth input{
+   width: 800px;
+}

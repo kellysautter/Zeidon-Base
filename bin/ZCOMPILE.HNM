@@ -1,0 +1,66 @@
+#
+#  zCompile.HNM
+#  Make Include File (MSVC 5.0).
+#  Generated at 2016.11.17 12:17:52
+#
+
+ALL: _zSetEnv $(TARGET_DIR)\$(MODULE).DLL
+
+# Set the DOS environment
+_zSetEnv:
+   @set PATH=C:\lplr\nazsis\JavaProject\src\main\resources\nazsisbin;c:\Program Files (x86)\Microsoft Visual Studio\VC98\Bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Microsoft SQL Server\80\Tools\BINN;c:\util;c:\b\bat;c:\b\bin;c:\10c\w\bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;c:\j2sdk\bin;c:\10c\w\bin;C:\Program Files\WinZip
+   @set LIB=c:\Program Files (x86)\Microsoft Visual Studio\VC98\lib;c:\10c\w\libr;c:\10c\w\libz;C:\lplr\nazsis\objlib;C:\lplr\nazsis\bin
+   @set INCLUDE=c:\Program Files (x86)\Microsoft Visual Studio\VC98\include;c:\10c\w\incr;c:\10c\a\incr;C:\lplr\nazsis
+
+# No common external libraries/objects for all targets defined.
+
+!if "$(OBJS)" != ""
+
+OBJS_ALL = $(OBJS_ALL) $(OBJS)
+$(OBJS): $(SRC_DIR)\$(@B).c
+   qspawn $(SRC_DIR)\$(@B).ERR $(CC) @<<
+$(CL_OPT) -Fo$(OBJ_DIR)\$(@B).obj $(SRC_DIR)\$(@B).C
+<<
+
+!endif
+
+!if "$(CPP_OBJS)" != ""
+
+OBJS_ALL = $(OBJS_ALL) $(CPP_OBJS)
+TP = -TP
+LINKDLLS = $(LINKDLLS) MFCS42.LIB
+
+$(CPP_OBJS): $(SRC_DIR)\$(@B).c
+   qspawn $(SRC_DIR)\$(@B).ERR cl @<<
+$(CL_OPT) $(TP)
+$(SRC_DIR)\$(@B).c
+-Fo$(OBJ_DIR)\$(@B).obj
+<<
+
+!endif
+
+$(ENV_DIR)\$(MODULE).res:  $(ENV_DIR)\$(MODULE).rc
+    rc -d__WIN32__  /fo$(ENV_DIR)\$(MODULE).res $(ENV_DIR)\$(MODULE).rc
+
+$(TARGET_DIR)\$(MODULE).DLL : $(OBJS_ALL) $(LINKOBJS) $(ENV_DIR)\$(MODULE).res
+   qspawn $(SRC_DIR)\$(MODULE).LER link @<<
+$(LINK_OPT) $(LINKDLLS) $(BASELINKDLLS) $(OBJS_ALL) $(LINKOBJS) zdllinst.obj
+$(ENV_DIR)\$(MODULE).res
+/OUT:$(TARGET_DIR)\$(MODULE).DLL
+/IMPLIB:$(OBJ_DIR)\$(MODULE).LIB
+/PDB:$(TARGET_DIR)\$(MODULE).PDB
+/DEF:$(ENV_DIR)\$(MODULE).dfb
+<<
+!if "$(SKIP_MERGEDEF)" != "Y"
+   dumpbin /exports $(TARGET_DIR)\$(MODULE).DLL > $(ENV_DIR)\$(MODULE).def
+   mergedef $(ENV_DIR)\$(MODULE).dfb $(ENV_DIR)\$(MODULE).def
+   qspawn +$(SRC_DIR)\$(MODULE).LER link @<<
+$(LINK_OPT) $(LINKDLLS) $(BASELINKDLLS) $(OBJS) $(LINKOBJS) zdllinst.obj
+$(ENV_DIR)\$(MODULE).res
+/OUT:$(TARGET_DIR)\$(MODULE).DLL
+/IMPLIB:$(OBJ_DIR)\$(MODULE).LIB
+/PDB:$(TARGET_DIR)\$(MODULE).PDB
+/MAP:$(OBJ_DIR)\$(MODULE).MAP
+/DEF:$(ENV_DIR)\$(MODULE).tmp
+<<
+!endif

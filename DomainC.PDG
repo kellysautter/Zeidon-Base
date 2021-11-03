@@ -1,0 +1,158 @@
+z1000-Zeidon    DOMAINC  TZDGSRCO 09/21/17   10:13:42 1.0a2    
+eDomainGroup 1
+aZKey      110000016
+aName      DomainC
+aExtension C
+
+eDomain    2
+aZKey      110000026
+aName      Revenue
+aDesc      Dollar amounts, etc.
+aDomainType E
+aJavaClass org.nazarene.nazsis.domains.RevenueDomain
+aDataType  M
+aContextRestriction N
+aDecimalFormat 2
+
+eContext   3
+aZKey      110000027
+aName      Revenue
+aDecimalFormat 2
+aJavaEditString #,###.00
+aIsDefault Y
+
+eContext   3
+aZKey      110000028
+aName      RevenueText
+aDecimalFormat 2
+aJavaEditString TextForCheckAmount
+
+eContext   3
+aZKey      110000029
+aName      RevenueWithDollarSign
+aDecimalFormat 2
+aJavaEditString $#,###.00
+
+eContext   3
+aZKey      110000030
+aName      RevenueWithDollarSignCR
+aDecimalFormat 2
+aJavaEditString $#,###.00CR
+
+eSelectedOperation 3
+aName      Revenue
+aZKey      110000020
+aType      M
+
+eDomain    2
+aZKey      110000031
+aName      SocialSecurityNumber
+aDomainType A
+aJavaClass com.quinsoft.zeidon.domains.SSNDomain
+aDataType  S
+aMaxStringLth 9
+aContextRestriction N
+
+eContext   3
+aZKey      110000032
+aName      SocialSecurityNumber
+aEditString 999-99-9999
+aJavaEditString 999-99-9999
+aIsDefault Y
+
+eContext   3
+aZKey      110000033
+aName      SSN_NoDashes
+aEditString 999999999
+aJavaEditString 999999999
+
+eContext   3
+aZKey      110000034
+aName      SSN_SecurityDisplay
+aEditString 999999999
+aJavaEditString *****9999
+
+eSelectedOperation 3
+aName      SocialSecurityNumber
+aZKey      110000025
+aType      M
+
+eDomain    2
+aZKey      110000035
+aName      CommonLineZipCode
+aDomainType E
+aJavaClass com.quinsoft.zeidon.domains.StringDomain
+aDataType  S
+aMaxStringLth 9
+aContextRestriction N
+
+eContext   3
+aZKey      110000036
+aName      CommonLineZipCode
+aIsDefault Y
+
+eDomain    2
+aZKey      110000037
+aName      CommonLineText
+aDesc      Converts data to CommonLine Text attribute
+aDomainType E
+aJavaClass com.quinsoft.zeidon.domains.StringDomain
+aDataType  S
+aMaxStringLth 256
+aContextRestriction N
+
+eContext   3
+aZKey      110000038
+aName      CommonLineText
+aIsDefault Y
+
+eDomain    2
+aZKey      110000043
+aName      AlphaNumericUpperStrip
+aDesc      Strip all non-alphanumerics and upper case all characters
+aDomainType E
+aJavaClass com.quinsoft.zeidon.domains.StringDomain
+aDataType  S
+aMaxStringLth 254
+aContextRestriction N
+
+eContext   3
+aZKey      110000044
+aName      AlphaNumericUpperStrip
+aIsDefault Y
+
+eSelectedOperation 3
+aName      AlphaNumericUpperStrip
+aZKey      110000022
+aDesc      Strip all non-alphanumerics and upper case all characters
+aType      M
+
+eOperation 2
+aName      RevenueText
+aZKey      110000017
+aType      M
+
+eOperation 2
+
+eOperation 2
+aName      zdmDecimal
+aZKey      110000021
+aType      M
+
+eOperation 2
+
+eOperation 2
+aName      CommonLineText
+aZKey      110000023
+aType      M
+
+eOperation 2
+aName      CommonLineZipCode
+aZKey      110000024
+aType      M
+
+eOperation 2
+
+i20        6
+i22        18
+i25        11

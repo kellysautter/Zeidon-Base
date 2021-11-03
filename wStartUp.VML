@@ -1,0 +1,879 @@
+/*************************************************************************************************
+**
+**    OPERATION: LoginClose
+**
+**
+*************************************************************************************************/
+DIALOG OPERATION
+LoginClose( VIEW ViewToWindow )
+   VIEW mUser  REGISTERED AS mUser
+   VIEW wXferO REGISTERED AS wXferO
+
+   DropObjectInstance( mUser )
+   DropObjectInstance( wXferO )
+
+END
+
+
+
+/*************************************************************************************************
+**
+**    OPERATION: ProcessPortalLogin
+**
+**
+*************************************************************************************************/
+DIALOG OPERATION
+ProcessPortalLogin( VIEW ViewToWindow)
+    INTEGER rVal
+    VIEW mUser    BASED ON LOD  mUser
+
+    rVal = ProcessLogin( ViewToWindow)
+    IF rVal = 2 // login issue
+        RETURN 2
+    END
+    GET VIEW mUser NAMED "mUser"
+
+END
+
+
+/*************************************************************************************************
+**
+**    OPERATION: ProcessAdminLogin
+**
+**
+*************************************************************************************************/
+DIALOG OPERATION
+ProcessAdminLogin( VIEW ViewToWindow)
+    VIEW mUser BASED ON LOD mUser
+    INTEGER rVal
+
+    rVal = ProcessLogin( ViewToWindow)
+    IF rVal = 2 // login issue
+        RETURN 2
+    END    
+    GET VIEW mUser NAMED "mUser" 
+END
+
+
+/*************************************************************************************************
+**
+**    OPERATION: PrebuildLoginWindow
+**
+**
+*************************************************************************************************/
+DIALOG OPERATION
+PrebuildLoginWindow( VIEW ViewToWindow )
+   
+   VIEW wXferO     BASED ON LOD wXferO
+   VIEW sHost      BASED ON LOD sHost
+   VIEW sAppMgr    BASED ON LOD sAppMgr
+   VIEW DOMAINT    BASED ON LOD DOMAINT
+   VIEW DOMAINTN   BASED ON LOD DOMAINT
+   VIEW DOMAINTNC  BASED ON LOD DOMAINT
+   STRING (  50  ) szHostName
+   STRING ( 50 ) szDomainName
+   INTEGER  nRC
+   
+   TraceLineS("**** PREBUILDLOGINWINDOW *** ", "")
+
+   // do all the drops necessary in case this is called from the web and keeps refreshing
+   nRC = GetViewByName( wXferO, "wXferO", ViewToWindow, zLEVEL_TASK )
+   IF nRC > 0
+      DropView( wXferO )
+   END
+   //nRC = GetViewByName( sHost, "sHost", ViewToWindow, zLEVEL_APPLICATION )
+   //IF nRC > 0
+   //   DropView( sHost )
+   //END
+   nRC = GetViewByName( DOMAINT, "DOMAINT", ViewToWindow, zLEVEL_TASK )
+   IF nRC > 0
+      DropView( DOMAINT )
+   END
+   // -- end do drops
+
+   GET VIEW wXferO NAMED "wXferO"
+   // We are going to assume that if wXferO has not been activated then we need to also
+   // activate the other objects.  If wXferO has been activated, then the rest
+   // have also been activated.
+   IF RESULT < 0 
+   
+   
+   TraceLineS("**** PREBUILDLOGINWINDOW Activating New *** ", "")
+   
+      //--- activate the transfer work area
+      ACTIVATE wXferO EMPTY
+      CREATE ENTITY wXferO.Root
+      NAME VIEW wXferO "wXferO"
+
+ TraceLineS("**** PREBUILDLOGINWINDOW Activating New *** ", "1")
+
+      ActivateEmptyObjectInstance( sAppMgr, "sAppMgr", ViewToWindow,
+                                   zSINGLE + zLEVEL_TASK )
+      CREATE ENTITY sAppMgr.sAppMgr
+      CreateFunctionalAreas( sAppMgr )
+       TraceLineS("**** PREBUILDLOGINWINDOW Activating New *** ", "3")
+
+      // Create the app name
+      sAppMgr.sAppMgr.AppName = "base"
+      SetNameForView( sAppMgr, "sAppMgr", ViewToWindow, zLEVEL_TASK )
+     TraceLineS("**** PREBUILDLOGINWINDOW Activating New *** ", "4")
+
+      ACTIVATE sHost
+        TraceLineS("**** PREBUILDLOGINWINDOW Activating New *** ", "44")
+      NAME VIEW sHost "sHost"
+       TraceLineS("**** PREBUILDLOGINWINDOW Activating New *** ", "5")
+
+         
+      CREATE ENTITY sHost.Currency 
+      sHost.Currency.CurrencySymbol = "$"      
+       
+        TraceLineS("**** PREBUILDLOGINWINDOW Activating New *** ", "6")
+
+      nRC = GetViewByName( DOMAINT, "DOMAINT", ViewToWindow, zLEVEL_TASK )
+       TraceLineS("**** PREBUILDLOGINWINDOW Activating New *** ", "7")
+
+      IF nRC < 0
+         ActivateDomainList( DOMAINT, ViewToWindow )
+         SetNameForView( DOMAINT, "DOMAINTLST", ViewToWindow, zLEVEL_TASK )
+      END
+      
+      TraceLineS("**** PREBUILDLOGINWINDOW Activating New *** ", "8")
+
+      wXferO.Root.WorkString = "LDAP://DC=ENC-AD,DC=ENC,DC=EDU"
+      
+      ActivateDynamicDomain( ViewToWindow, "Country")
+    TraceLineS("**** PREBUILDLOGINWINDOW Activating New *** ", "9")
+
+   END
+
+END
+
+
+/*************************************************************************************************
+**
+**    OPERATION: ProcessLogin
+**
+**
+*************************************************************************************************/
+DIALOG OPERATION
+ProcessLogin( VIEW ViewToWindow)
+
+   VIEW wXferO   REGISTERED AS wXferO
+   VIEW sHost    REGISTERED AS sHost
+   VIEW mUser    BASED ON LOD  mUser
+   VIEW mUserT   BASED ON LOD  mUser
+   VIEW mPerson  BASED ON LOD  mPerson
+   INTEGER nRC
+   INTEGER nRC2
+   INTEGER nLength
+   INTEGER PassResp
+   STRING ( 256 ) szUserName
+   STRING ( 256 ) szCurrentPassword
+   STRING ( 254 ) szADUserPrefix
+   STRING ( 254 ) szADPathName
+   STRING ( 1 )   szPasswordOK
+   STRING ( 1 )   szIsProspect
+   STRING ( 1 )   szBlob
+   VIEW DOMAINT  BASED ON LOD  DOMAINT
+   VIEW DOMAINTN BASED ON LOD  DOMAINT
+   VIEW DOMAINTNC BASED ON LOD DOMAINT
+   STRING ( 50 ) szDomainName
+ 
+
+   IF wXferO = 0
+      TraceLineS( "wStartUp.ProcessLogin cannot find Transfer View", "" )
+      return( 2 )
+   END   
+   
+   // Load the domain for UserStatus.  If we don't load this here, zeidon will load it automatically but
+   // there will be a view at the task level and at the application level.  We only want views at the
+   // task level on the web.
+   ActivateDynamicDomain( ViewToWindow, "UserStatus")
+   // Find a user by that name.
+   ACTIVATE mUser WHERE mUser.User.UserName = wXferO.Root.wAttemptedUserName
+   IF RESULT < zCURSOR_SET
+      // no user found
+      DropObjectInstance( mUser )
+      TraceLineS( "******* ", "Invalid Login Name - no mUser Account" )
+      MessageSend( ViewToWindow, "wStartUp001", "Login", "Invalid User Name or Password", zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+   
+   // Make sure the User is active.
+   IF mUser.User.Status = "I"
+      DropObjectInstance( mUser )
+      TraceLineS( "******* ", "User not Active" )
+      MessageSend( ViewToWindow, "wStartUp002", "Login", "Sorry, this account is inactive.", zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+
+   NAME VIEW mUser "mUser"
+      
+   // KJS 07/09/09 - Now we are going to verify with the password in ActiveDirectory, not the password
+   // in ZENCAS.
+   // We were using wAttemptedPassword but the domain for that is "Password".  When I enter "Temp1234" the
+   // returned string is "temp1234" without the capital.  Needs to be case sensitive so I changed to use
+   // wCreatePassword which is  adomain of Text.  Then this works.
+   //GetStringFromAttributeByContext( szCurrentPassword, wXferO, "Root", "wAttemptedPassword", "Password", 128 )
+   szCurrentPassword = wXferO.Root.wCreatePassword 
+   // TraceLineS("*** AttemptedPassword *** ", szCurrentPassword)
+   
+   //wXferO.Root.wAttemptedPassword = "zmail"
+   //TraceLineS("*** AttemptedPassword *** ", wXferO.Root.wAttemptedPassword)
+   
+   wXferO.Root.wAttemptedPassword = wXferO.Root.wCreatePassword
+   //TraceLineS("*** AttemptedPassword *** ", wXferO.Root.wAttemptedPassword)
+   
+   // Most users will be logged in with Active Directory.  There will be a few cases where
+   // the user will not be logged in with AD, like new users who have applied online.
+   IF mUser.User.LoginAuthenticationType = "AD"
+   
+      //USING AD FOR PASSWORD VERIFICATION  
+      szADUserPrefix = sHost.Host.AD_AuthenticationUserNamePrefix 
+      szADPathName = sHost.Host.AD_AuthenticationPathName 
+      //szUserName = "enc-ad\" + mUser.User.UserName
+      szUserName = szADUserPrefix + "\" + mUser.User.UserName
+      
+      szPasswordOK = "N"
+      
+      IF szPasswordOK = "N" 
+         // Check if we are using the admin password, if so then don't bother checking AD.
+         ACTIVATE mUserT WHERE mUserT.User.UserName = "Admin"
+         IF RESULT >= zCURSOR_SET
+            // mUser.User.Password has a domain of Password so does wAttemptedPassword so set our text
+            // password into wAttemptedPassword so it can be compared to User.Password.
+            wXferO.Root.wAttemptedPassword = wXferO.Root.wCreatePassword
+            IF mUserT.User.Password = wXferO.Root.wAttemptedPassword
+               szPasswordOK = "Y"
+            END
+         END
+      END
+
+      // If the user password for this username is not null and it is not the admin password, check
+      // this against Active directory.
+      IF szPasswordOK = "N" 
+         //nRC = AD_AuthenticateUserPassword( "LDAP://DC=ENC-AD,DC=ENC,DC=EDU", szUserName, szCurrentPassword )
+         nRC = AD_AuthenticateUserPassword( szADPathName, szUserName, szCurrentPassword )
+         TraceLineI( "*** After Authenticating AD Password: ", nRC )       
+      END
+      
+      IF nRC != 0
+         TraceLineS( "******* ", "Invalid AD Password" )
+         MessageSend( ViewToWindow, "wStartUp003", "Login", "Invalid Password", zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+         RETURN 2    
+      END
+   ELSE 
+       IF mUser.User.LoginAuthenticationType = "OL"  // OpenLDAP Authentication
+      //     PassResp = OLDAP_AuthenticateUserPassword (ViewToWindow, mUser.User.UserName, szCurrentPassword)
+          // IF PassResp < 1
+               MessageSend( ViewToWindow, "wStartUp001", "Login - UPASS", "Invalid User Name or Password", zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+               RETURN 2
+        //   END 
+       ELSE
+           PassResp = CheckPasswordInternal(ViewToWindow, mUser.User.UserName, szCurrentPassword)
+           IF PassResp < 1
+               MessageSend( ViewToWindow, "wStartUp001", "Login - UPASS", "Invalid User Name or Password", zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+               RETURN 2
+           END 
+       END       
+    END
+   
+END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: GOTO_SelectedRole
+**    
+*************************************************************************************************/
+DIALOG OPERATION
+GOTO_SelectedRole( VIEW ViewToWindow )
+
+   VIEW mUser    REGISTERED AS mUser
+   VIEW KZXMLPGO
+   INTEGER RoleCount
+   
+
+   // Runs any code needed for their login and takes them to the 
+   // home page for their role.
+  // RunRoleLoginCode( ViewToWindow )
+   
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: CREATE_UserNamePassword
+**    
+*************************************************************************************************/
+DIALOG OPERATION
+CREATE_UserNamePassword( VIEW ViewToWindow )
+  VIEW wXferO   REGISTERED AS wXferO
+   VIEW sHost    BASED ON LOD  sHost
+   VIEW mUser    BASED ON LOD  mUser
+   VIEW mPerson  BASED ON LOD  mPerson
+    STRING ( 20 )   szCurrentDate
+   STRING ( 128 )  szPassword
+   STRING ( 255 )  szSubjectText
+   STRING ( 255 )  szSMTPServer
+   STRING ( 255 )  szRecipientEmailAddress
+   STRING ( 256 )  szEmailErrors
+   STRING ( 256 )  szErrorMsg
+   STRING ( 1000 ) szMessageBody
+   STRING (1000) hashOut
+   STRING (1000) saltOut
+   INTEGER         lConnection
+   SHORT           nRC
+   INTEGER        PasswordLength
+   STRING ( 20 ) szDate
+   STRING ( 4 )  szYear
+   INTEGER nYear
+   INTEGER i
+   INTEGER retval
+
+   IF wXferO = 0
+      TraceLineS( "wStartUp.ProcessLogin cannot find Transfer View", "" )
+      return( 2 )
+   END
+   
+   // Load the domain for UserStatus.  If we don't load this here, zeidon will load it automatically but
+   // there will be a view at the task level and at the application level.  We only want views at the
+   // task level on the web.
+   ActivateDynamicDomain( ViewToWindow, "UserStatus")
+   ActivateDynamicDomain( ViewToWindow, "Country")
+   ActivateDynamicDomain( ViewToWindow, "NonresidencyPetitionReason")
+   ActivateDynamicDomain( ViewToWindow, "ChurchDenomination")
+   ActivateDynamicDomain( ViewToWindow, "ReferenceRelationshipType")
+   
+   
+   // Make sure email and confirmed email matches.
+   IF wXferO.Root.wAttemptedUserName != wXferO.Root.wEmailAddress   
+      MessageSend( ViewToWindow, "wStartUp006", "Login", "The Email and confirmed Email are not the same.", zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END   
+
+   // Need to check if a user already exists with this username
+   ACTIVATE mUser WHERE mUser.User.UserName = wXferO.Root.wAttemptedUserName
+   IF RESULT >= zCURSOR_SET
+      // no user found
+      DropObjectInstance( mUser )
+      TraceLineS( "******* ", "Username already exists" )
+      MessageSend( ViewToWindow, "wStartUp007", "Login", "This is not a unique username.  Please create a different username.", zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+   DropObjectInstance( mUser )
+   
+   szPassword = wXferO.Root.wCreatePassword 
+   
+   IF (CheckPassword(szPassword) > 0)
+      MessageSend( ViewToWindow, "wStartUp008", "Change Password", 
+                   "Your password does not meet the necessary requirements",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+
+   END
+   
+   // Make sure new and confirmed password matches.
+   IF wXferO.Root.wCreatePassword != wXferO.Root.wConfirmCreatePassword   
+      MessageSend( ViewToWindow, "wStartUp009", "Login", "The password and confirmed password are not the same.", zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+
+      
+   retval=GetPasswordHash(ViewToWindow,szPassword ,hashOut,saltOut)  //get password hash
+
+   ACTIVATE  mUser EMPTY
+   IF RESULT >= 0
+      NAME VIEW  mUser  "mUser"
+      CREATE ENTITY  mUser.User
+      mUser.User.UserName = wXferO.Root.wAttemptedUserName 
+      
+//      SetAttrFromStrByContext(mUser, "User", "Password", szPassword, "Password" )
+      mUser.User.Status = "A"
+      mUser.User.JavaPassword = hashOut
+      mUser.User.PasswordSt = saltOut
+      mUser.User.eMailUserName = wXferO.Root.wEmailAddress
+      mUser.User.AuthorizationLevel = "Prospect"
+      mUser.User.LoginAuthenticationType = "IN"
+      SysGetDateTime( szCurrentDate )
+      mUser.User.OnlineProspectInitialCreatedDate = szCurrentDate
+      mUser.User.CreatedDateTime = szCurrentDate
+   END
+   
+   GET VIEW  mPerson  NAMED "mPerson"
+   IF RESULT < 0
+         
+      // mPerson does not exist so this is someone who went right to filling
+      // out an online application.  
+      ACTIVATE mPerson EMPTY
+      NAME VIEW  mPerson "mPerson"
+      CREATE ENTITY mPerson.Person
+      mPerson.Person.PreferredEmail = wXferO.Root.wEmailAddress
+      CREATE ENTITY mPerson.Address 
+      mPerson.Address.Country = "US"
+          CREATE ENTITY mPerson.MotherAddress 
+        CREATE ENTITY mPerson.FatherAddress 
+           IF mPerson.Demographics DOES NOT EXIST
+      CREATE ENTITY mPerson.Demographics
+     END
+   
+   ELSE
+      // This is someone who filled out the online inquiry but then wanted to also fill out an application. 
+      mPerson.Person.eMailAddress = wXferO.Root.wEmailAddress
+        IF mPerson.Demographics DOES NOT EXIST
+        CREATE ENTITY mPerson.Demographics
+      END
+        END
+
+   // Make sure that the  list of College Years exists.
+   szCurrentDate = wXferO.Root.dCurrentDate 
+    
+     COMMIT mUser
+    
+   
+
+
+END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: SEND_ApplicantPassword
+**    
+*************************************************************************************************/
+DIALOG OPERATION
+SEND_ApplicantPassword( VIEW ViewToWindow )
+
+   VIEW wXferO   REGISTERED AS wXferO
+   VIEW sHost    BASED ON LOD  sHost
+   VIEW mUser    BASED ON LOD  mUser
+   VIEW DOMAINT  BASED ON LOD DOMAINT
+   //VIEW mPerson  BASED ON LOD  mPerson
+   STRING ( 20 )   szCurrentDate
+   STRING ( 128 )  szPassword
+   STRING ( 255 )  szSubjectText
+   STRING ( 255 )  szSMTPServer
+   STRING ( 255 )  szRecipientEmailAddress
+   STRING ( 256 )  szEmailErrors
+   STRING ( 256 )  szErrorMsg
+   STRING ( 1000 ) szMessageBody
+   STRING ( 1 )    szPersonExists
+   INTEGER         lConnection
+   SHORT           nRC
+   INTEGER        PasswordLength
+
+   IF wXferO = 0
+      TraceLineS( "wStartUp.ProcessLogin cannot find Transfer View", "" )
+      return( 2 )
+   END
+   
+   // Need to check if a user already exists with this username
+   ACTIVATE mUser WHERE mUser.User.UserName = wXferO.Root.wAttemptedUserName
+   IF RESULT < zCURSOR_SET
+      // no user found
+      DropObjectInstance( mUser )
+      TraceLineS( "******* ", "Account not found." )
+      MessageSend( ViewToWindow, "wStartUp011", "Login", "There is no account with this email address.", zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+ 
+   /*  
+   szPersonExists = "N"
+   IF mUser.User.ProspectInitialApplicationPerson != ""
+      // Get the application information filled out by this applicant.  If the information is still there
+      // since it could be in the batch processing
+      // ACTIVATE  mPerson EMPTY 
+      SetOI_FromBlob( mPerson,"mPerson", ViewToWindow,
+                      mUser,  "User", "ProspectInitialApplicationPerson", zIGNORE_ERRORS )
+      szPersonExists = "Y"
+   ELSE
+      // The blob does not exist for mPerson so now check if this person has been added.
+      IF mUser.Person EXISTS
+         ACTIVATE  mPerson  WHERE  mPerson.Person.ID = mUser.Person.ID 
+         IF RESULT >= 0
+            szPersonExists = "Y"       
+         END
+      END
+   END
+   
+   // Only check the lastname and first name if there is a person entity to compare to.
+   // Otherwise, I'm not sure what to do.
+   IF szPersonExists = "Y" 
+      // Check to make sure the lastname and firstname entered are also correct.
+      IF wXferO.Root.wLastName != mPerson.Person.LastName OR wXferO.Root.wFirstName != mPerson.Person.FirstName
+         // no user found
+         DropObjectInstance( mPerson )
+         DropObjectInstance( mUser )
+         TraceLineS( "******* ", "Account not found." )
+         MessageSend( ViewToWindow, "wStartUp012", "Login", "The account information you have given is incorrect.", zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+         RETURN 2
+      END
+   END
+   */
+   
+   GetStringFromAttributeByContext( szPassword,
+                                    mUser,
+                                    "User", "Password", "Password", 128 )
+   
+   DropObjectInstance( mUser )
+
+   //CreateTemporalSubobjectVersion( mPerson, "Person" )
+   
+   // Should I send an email to this email address with their username and password?
+   // Not sure if I should send this here.  Currently we don't save the username unless
+   // this person goes to the application page and save their data.  So, should I send the
+   // email then or should we create the account here even if they don't save their application?
+   ///*
+   ACTIVATE sHost
+ 
+   IF GetViewByName( DOMAINT, "_DM_PrimaryLanguage_PrimaryLanguage", ViewToWindow, zLEVEL_TASK) >= 0
+      DropObjectInstance( DOMAINT )
+   END
+   
+   //  Set specific message values.
+  
+   
+       szSubjectText = "ENC application account information"
+       szMessageBody = "We have received your request for the password to your MyENC account. Your password is: " + szPassword 
+       szMessageBody = szMessageBody + " and your username is your email address.  Please go to http://my.enc.edu to login to your ENC portal.  Thank you!"       
+       szEmailErrors = ""
+       szRecipientEmailAddress = wXferO.Root.wAttemptedUserName  
+
+                               nRC = SendEmail(sHost,"myenc.enc.edu",szRecipientEmailAddress,szSubjectText,szMessageBody,"")
+                               
+       IF nRC < 0
+          // We must give an error for each Student that was not emailed.
+          szEmailErrors = szRecipientEmailAddress 
+       END
+       
+       IF  szEmailErrors != ""
+          //The following line causes extensive errors.
+          //szEmailErrors = "The was an error sending emails to the following recipient(s): " + NEW_LINE + szEmailErrors 
+          szErrorMsg = "Due to an error, an email was not send to: " + NEW_LINE + NEW_LINE + szEmailErrors 
+          MessageSend( ViewToWindow, "wStartUp013", "Send Email",
+                       szErrorMsg,
+                       zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+       END
+       
+    
+  //*/
+  
+   //IF szPersonExists = "Y" 
+   //   DropObjectInstance( mPerson )
+   //END
+   DropObjectInstance( sHost )
+
+   MessageSend( ViewToWindow, "wStartUp014", "Login", "Your password was sent to your email account.", zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: VERIFY_SSNandDOB
+**    
+*************************************************************************************************/
+DIALOG OPERATION
+VERIFY_SSNandDOB( VIEW ViewToWindow )
+   
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: CHANGE_Password
+**    
+*************************************************************************************************/
+DIALOG OPERATION
+CHANGE_Password( VIEW ViewToWindow )
+
+   VIEW mUser    REGISTERED AS mUser
+   VIEW sHost    REGISTERED AS sHost
+   VIEW  KZXMLPGO
+   //STRING (  100  ) szOldPassword
+   STRING (  100  ) szNewPassword
+   STRING (  100  ) szConfirmPassword
+   STRING (  100  ) szCurrentPassword
+   STRING (  100  ) szUserName
+   STRING (  100  ) szLDAP
+   STRING (  100  ) szAD_Account
+   STRING (  100  ) szTmp
+   STRING (  100  ) szAD_Password
+   STRING (  200 )  szErrorMsg
+   INTEGER          nRC
+   INTEGER          PasswordLength
+   INTEGER retval
+   STRING (1000) hashOut
+   STRING (1000) saltOut
+   STRING (1000) passin
+   String (1000) szMessageSendNumber
+   //szOldPassword = mUser.User.wOldPassword 
+   szNewPassword = mUser.User.wNewPassword 
+   szConfirmPassword = mUser.User.wConfirmNewPassword 
+   //GetStringFromAttributeByContext( szCurrentPassword, mUser, "User", "Password", "Password", 128 )
+   //TraceLineS( "Current Password:", szCurrentPassword )
+   
+IF (CheckPassword(szNewPassword) > 0)
+MessageSend( ViewToWindow, "wStartUp008", "Change Password", 
+                   "Your password does not meet the necessary requirements.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+
+END
+   // Make sure new and confirmed password matches.
+   IF szNewPassword != szConfirmPassword
+      MessageSend( ViewToWindow, "wStartUp009", "Change Password", 
+                   "The password and confirmed passwords are not the same.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+   
+   // Set password to new password
+   // If this user is verified with ActiveDirectory, then we need to change the password in AD.
+   IF mUser.User.LoginAuthenticationType = "AD"
+   
+      //szLDAP = "LDAP://DC=ENC-AD,DC=ENC,DC=EDU"
+      szLDAP = sHost.Host.AD_AuthenticationPathName 
+      szUserName = mUser.User.UserName
+      
+      szAD_Account = sHost.Host.AD_AuthenticationUserNamePrefix + "\" + sHost.Host.AD_AdminAccount 
+      GetStringFromAttributeByContext( szTmp, sHost, "Host", "AD_AdminPassword", "Password", 128 )
+      szAD_Password = "F" + szTmp
+      //TraceLineS("*** CHANGE PASSWORD *** ", szAD_Account )
+      //TraceLineS("*** CHANGE PASSWORD *** ", szAD_Password )
+      //nRC = AD_ChangePassword( szLDAP, "enc-ad\zencas", "Time2Ch@nge", szUserName, szOldPassword, szNewPassword )
+      nRC = AD_SetPassword( szLDAP, szAD_Account, szAD_Password, szUserName, szNewPassword )
+      
+      TraceLineI( "*** After Changing AD Password: ", nRC )
+
+      //-2147023570 = 1326  // Invalid domain/username or invalid password in ADSOpenObject
+      //-2147022651 = 2245  // Password does not meet the complexity requirements (needs number? or already had this password recently)
+      //-2147024810 = 86    // Current Password Incorrect
+      //-2147463168 = 20480 // Invalid LDAP
+      //-2147024891 = 5     // General access denied error.
+      //-2147023569 = ?     // Password cannot be changed at this time (user cannot change within X days after changing it)
+      
+      CASE nRC 
+         OF 1326:
+            szErrorMsg = "Your password could not be changed because of an invalid Admin username or password. "
+            szMessageSendNumber="wStartUp018a"
+         OF 2245:
+            szErrorMsg = "The password you entered does not meet the complexity requirements (Ex:needs a number or you already had this password recently). "
+            szMessageSendNumber="wStartUp018b"
+         OF 86:
+            szErrorMsg = "Your password could not be changed because the password you entered as your 'current' password is incorrect. "
+            szMessageSendNumber="wStartUp018c"
+         OF 20480:
+            szErrorMsg = "Your password could not be changed because the LDAP path was incorrect. "
+            szMessageSendNumber="wStartUp018d"
+         OF 5:
+            szErrorMsg = "Active Directory account does not have permissions to change password. Call ITS Helpdesk. "
+            szMessageSendNumber="wStartUp018e"
+         OF 2:
+            szErrorMsg = "Your username is not in Active Directory. "
+            szMessageSendNumber="wStartUp018f"
+      END         
+   
+      IF nRC != 0
+         MessageSend( ViewToWindow, szMessageSendNumber, "Login", szErrorMsg, zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 ) 
+         RETURN 2
+      END
+   ELSE
+   
+   
+   
+      // mUser.User.Password = szNewPassword
+      // SetAttrFromStrByContext(mUser, "User", "Password", szNewPassword, "Password" )
+      //TraceLineS( "Newly Set Password:", mUser.User.Password )
+      // Commit change
+      
+        retval=GetPasswordHash(ViewToWindow,mUser.User.wNewPassword ,hashOut,saltOut)
+        
+      IF retval != 0
+          MessageSend( ViewToWindow, "wStartUp019", "Password Update Error",
+                   "There was an error updating the password.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+            SetWindowActionBehavior( ViewToWindow, zWAB_StayOnWindow, "", "" )
+          RETURN 2
+      END
+
+      mUser.User.JavaPassword = hashOut 
+      mUser.User.PasswordSt =  saltOut 
+      COMMIT mUser 
+   END
+
+   mUser.User.wOldPassword = ""
+   mUser.User.wNewPassword = ""
+   mUser.User.wConfirmNewPassword = ""
+   
+   //WebReturnToHomePage( wWebXfer, wWebPers )
+   GET VIEW KZXMLPGO NAMED "KZXMLPGO"
+   CREATE ENTITY KZXMLPGO.NextDialogWindow
+   KZXMLPGO.NextDialogWindow.DialogName = "wStartUp" 
+   KZXMLPGO.NextDialogWindow.WindowName = "Login"
+
+END
+
+
+
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: CREATE_SecurityQuestionList
+**    
+*************************************************************************************************/
+DIALOG OPERATION
+CREATE_SecurityQuestionList( VIEW ViewToWindow )
+
+  
+END
+
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: UPDATE_SecurityQuestions
+**    
+*************************************************************************************************/
+DIALOG OPERATION
+UPDATE_SecurityQuestions( VIEW ViewToWindow )
+
+   VIEW mUser    REGISTERED AS mUser
+
+   VIEW KZXMLPGO
+   STRING (  256  ) szQuestion1
+   STRING (  256  ) szQuestion2
+   STRING (  256  ) szQuestion3
+ 
+
+   IF mUser.User.SecurityQuestion1 = ""
+      MessageSend( ViewToWindow, "wStartUp020", "Update Security Questions", 
+                   "You need to enter a question for 'Security Question 1'.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+
+   IF mUser.User.SecurityQuestion2 = ""
+      MessageSend( ViewToWindow, "wStartUp021", "Update Security Questions", 
+                   "You need to enter a question for 'Security Question 2'.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+
+   IF mUser.User.SecurityQuestion3 = ""
+      MessageSend( ViewToWindow, "wStartUp022", "Update Security Questions", 
+                   "You need to enter a question for 'Security Question 3'.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+   
+   IF mUser.User.SecurityAnswer1  = ""
+      MessageSend( ViewToWindow, "wStartUp023", "Update Security Questions", 
+                   "You need to enter an answer for 'Security Question 1'.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+   
+   IF mUser.User.SecurityAnswer2  = ""
+      MessageSend( ViewToWindow, "wStartUp024", "Update Security Questions", 
+                   "You need to enter an answer for 'Security Question 2'.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+   
+   IF mUser.User.SecurityAnswer3  = ""
+      MessageSend( ViewToWindow, "wStartUp025", "Update Security Questions", 
+                   "You need to enter an answer for 'Security Question 3'.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+   
+   zToUpper( mUser.User.SecurityQuestion1,szQuestion1 )
+   zToUpper( mUser.User.SecurityQuestion2,szQuestion2 )
+   zToUpper( mUser.User.SecurityQuestion3,szQuestion3 )
+   
+   IF  szQuestion1 = szQuestion2 
+      MessageSend( ViewToWindow, "wStartUp026", "Update Security Questions", 
+                   "These questions must be unique.  Question 1 and Question 2 are the same.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+   
+   IF  szQuestion1 = szQuestion3 
+      MessageSend( ViewToWindow, "wStartUp027", "Update Security Questions", 
+                   "These questions must be unique.  Question 1 and Question 3 are the same.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+   
+   IF  szQuestion2 = szQuestion3 
+      MessageSend( ViewToWindow, "wStartUp028", "Update Security Questions", 
+                   "These questions must be unique.  Question 2 and Question 3 are the same.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+
+   COMMIT mUser
+
+  END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: VERIFY_SecurityQuestions
+**    
+*************************************************************************************************/
+DIALOG OPERATION
+VERIFY_SecurityQuestions( VIEW ViewToWindow )
+
+   VIEW  wXferO  REGISTERED AS wXferO
+   VIEW  mUser   REGISTERED AS mUser 
+
+   VIEW  KZXMLPGO 
+   STRING ( 256 ) szAnswer
+   STRING ( 256 ) szRealAnswer
+
+   zToUpper( mUser.User.SecurityAnswer1,szRealAnswer)
+   zToUpper( mUser.User.wSecurityAnswer1,szAnswer)
+
+   IF  szAnswer != szRealAnswer  
+      MessageSend( ViewToWindow, "wStartUp029", "Login", "Answer for question 1 is not correct", zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+
+   zToUpper( mUser.User.SecurityAnswer2,szRealAnswer)
+   zToUpper( mUser.User.wSecurityAnswer2,szAnswer)
+
+   IF  szAnswer != szRealAnswer  
+      MessageSend( ViewToWindow, "wStartUp030", "Login", "Answer for question 2 is not correct", zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+
+   zToUpper( mUser.User.SecurityAnswer3,szRealAnswer)
+   zToUpper( mUser.User.wSecurityAnswer3,szAnswer)
+
+   IF  szAnswer != szRealAnswer  
+      MessageSend( ViewToWindow, "wStartUp031", "Login", "Answer for question 3 is not correct", zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+   
+
+   GET VIEW KZXMLPGO NAMED "KZXMLPGO"
+   CREATE ENTITY KZXMLPGO.NextDialogWindow
+   //KZXMLPGO.NextDialogWindow.DialogName = "wUserAcc" 
+   KZXMLPGO.NextDialogWindow.DialogName = "wStartUp" 
+   KZXMLPGO.NextDialogWindow.WindowName = "ChangePassword"
+
+END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: RunRoleLoginCode
+**    
+*************************************************************************************************/
+DIALOG OPERATION
+RunRoleLoginCode( VIEW ViewToWindow )
+
+
+
+END

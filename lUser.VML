@@ -1,0 +1,119 @@
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: ObjectConstraints
+**    
+*************************************************************************************************/
+OBJECT CONSTRAINT OPERATION
+ObjectConstraints( VIEW lUser BASED ON LOD lUser,
+                   SHORT Event,
+                   SHORT State )
+   STRING ( 254 ) szString
+
+   CASE Event
+   OF   zOCE_ACTIVATE:
+     
+      FOR EACH lUser.User
+         IF lUser.Person EXISTS 
+            szString = lUser.Person.dFullNameLFM 
+            lUser.User.wFullNameLFM = szString 
+         ELSE
+            lUser.User.wFullNameLFM = lUser.User.UserName
+         END
+         
+      END
+
+        /* end zOCE_ACTIVATE */
+   OF   zOCE_ACTIVATE_EMPTY:
+
+        /* end zOCE_ACTIVATE_EMPTY */
+   OF   zOCE_COMMIT:
+
+        /* end zOCE_COMMIT */
+   OF   zOCE_DROPOI:
+
+        /* end zOCE_DROPOI */
+   END  /* case */
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: dPersonFullName
+**
+**
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dPersonFullNameFML( VIEW lUser BASED ON LOD lUser,
+                    STRING ( 32 ) InternalEntityStructure,
+                    STRING ( 32 ) InternalAttribStructure,
+                    SHORT GetOrSetFlag )
+
+   CASE GetOrSetFlag
+      OF zDERIVED_GET:
+      
+         PersonName_FirstMiddleLast( lUser, InternalEntityStructure, InternalAttribStructure, GetOrSetFlag )
+
+      /* end zDERIVED_GET */
+      OF zDERIVED_SET:
+
+      /* end zDERIVED_SET */
+   END  /* case */
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: dPersonFullNameLFM
+**
+**
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dPersonFullNameLFM( VIEW lUser BASED ON LOD lUser,
+                    STRING ( 32 ) InternalEntityStructure,
+                    STRING ( 32 ) InternalAttribStructure,
+                    SHORT GetOrSetFlag )
+
+   CASE GetOrSetFlag
+      OF zDERIVED_GET:
+      
+         PersonName_LastFirstMiddle( lUser, InternalEntityStructure, InternalAttribStructure, GetOrSetFlag )
+
+      /* end zDERIVED_GET */
+      OF zDERIVED_SET:
+
+      /* end zDERIVED_SET */
+   END  /* case */
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: dPersonRoles
+**    
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dPersonRoles( VIEW lUser BASED ON LOD lUser,
+              STRING ( 32 ) InternalEntityStructure,
+              STRING ( 32 ) InternalAttribStructure,
+              SHORT GetOrSetFlag )
+
+   STRING ( 50 ) szType
+   STRING ( 49 ) szTypeN
+   STRING ( 20 ) szAdminDiv
+   SHORT         StringLength
+   
+
+   szType = ""
+   CASE GetOrSetFlag
+      OF zDERIVED_GET:
+      
+     
+        /* end zDERIVED_GET */
+   OF   zDERIVED_SET:
+
+        /* end zDERIVED_SET */
+   END  /* case */
+
+END

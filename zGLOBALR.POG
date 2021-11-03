@@ -1,0 +1,75 @@
+z1000-Zeidon    ZGLOBALR TZOGSRCO 09/21/17   10:13:01 1.0a2    
+eGlobalOperationGroup 1
+aZKey      210094639
+aNextZKeyToAssign 210094652
+aName      zGLOBALR
+aDesc      Person Global Operations
+aExtension VML
+aLanguageType V
+
+eOperation 2
+aName      SAVE_PersonData_G
+aZKey      210094640
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      210094641
+
+eOperation 2
+aName      PICK_PrePerson_G
+aZKey      210094643
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      210094644
+
+eOperation 2
+aName      DELETE_Person_G
+aZKey      210094645
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      210094646
+
+eOperation 2
+aName      UPDATE_PersonDetail_G
+aZKey      210094647
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      210094648
+
+eOperation 2
+aName      SAVE_Person_G
+aZKey      210094649
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      210094650
+

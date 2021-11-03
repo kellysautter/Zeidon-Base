@@ -1,0 +1,4976 @@
+z1000-Zeidon    NAZSIS   TZZOXOGO 08/23/17   19:02:01 1.0a2    
+eTZZOXOGO  1
+aNAME      NazSIS
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      ZGLOBAL1
+aLANGUAGETYPE J
+
+eOPERATION 3
+aNAME      ConvertLineToEntity
+aTYPE      G
+
+ePARAMETER 4
+aNAME      EntityView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      XOD_View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      RecordArea
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      DelimiterType
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      MaxRecordLth
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      DELETE_File
+aTYPE      G
+
+ePARAMETER 4
+aNAME      FileName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      IntToDecimal
+aTYPE      G
+
+ePARAMETER 4
+aNAME      IntStr
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      DecimalToInt
+aTYPE      G
+
+ePARAMETER 4
+aNAME      intStr
+aDATATYPE  M
+
+eOPERATION 3
+aNAME      CreateMessageSendTexts
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mOrigTxt
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szDirectoryPath
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      OutputExcelFileName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ExportOrigTextOrigin
+aTYPE      G
+
+ePARAMETER 4
+aNAME      wLang
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      outputFileName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetTextConv
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnString
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      OrigText
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      TextIdentifier
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetMessageConv
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedMsg
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      OrigMessage
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      MsgIdentifier
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      CreateEnrollmentRptXLS
+aTYPE      G
+
+ePARAMETER 4
+aNAME      vData
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      fReport2
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      ExportDomainValuesForLanguageCnv
+aTYPE      G
+
+ePARAMETER 4
+aNAME      DomainT
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      outputFileName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ExportTextValuesForLanguageConv
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mOrigText
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      OutputFileName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      strIsInteger
+aTYPE      G
+
+ePARAMETER 4
+aNAME      StringIn
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      strIsNumber
+aTYPE      G
+
+ePARAMETER 4
+aNAME      StringIn
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      strUpper
+aTYPE      G
+
+ePARAMETER 4
+aNAME      StringInOut
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ValidateEmailAddress
+aTYPE      G
+
+ePARAMETER 4
+aNAME      emailAddress
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ReturnFileNameFromPath
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedFileName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      FileName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      CheckImportDate
+aTYPE      G
+
+ePARAMETER 4
+aNAME      DateVal
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ConvertDecimalToString
+aTYPE      G
+
+ePARAMETER 4
+aNAME      DecimalValue
+aDATATYPE  M
+
+ePARAMETER 4
+aNAME      StringValue
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      DecimalPositions
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      IsNumber
+aTYPE      G
+
+ePARAMETER 4
+aNAME      Str
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      strSubstringCompareIgnoreCase
+aTYPE      G
+
+ePARAMETER 4
+aNAME      MainString
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      SubString
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      strLen
+aTYPE      G
+
+ePARAMETER 4
+aNAME      StringIn
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      PRINT_ExcelReport_Jasper
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      strLower
+aTYPE      G
+
+ePARAMETER 4
+aNAME      StringInOut
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      strFirstWord
+aTYPE      G
+
+ePARAMETER 4
+aNAME      StringInOut
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      strLeft
+aTYPE      G
+
+ePARAMETER 4
+aNAME      StringInOut
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      retval
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      DropApplicationDomainView
+aTYPE      G
+
+ePARAMETER 4
+aNAME      vDomain
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SendEmail
+aTYPE      G
+
+ePARAMETER 4
+aNAME      sHost
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      SenderEmail
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      RecipientEmail
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      SubjectLine
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      BodyMsg
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AttachmentFileName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      CheckPassword
+aTYPE      G
+
+ePARAMETER 4
+aNAME      Password
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      CallJasperReport
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewtoObject
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      RptName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      CheckPasswordInternal
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Username
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      EnteredPassword
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetPasswordHash
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      InputString
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      HashedString
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      SaltVal
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetHexHash
+aTYPE      G
+
+ePARAMETER 4
+aNAME      InputString
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      HashedString
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      HashType
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ConvImportExcelToEntity
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      FileNamePath
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ImportView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ConvertXML_SpecialCharacters
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AnyView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ReturnedString
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      SourceString
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ReturnedStringLength
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      ConvertTabStringToEntity
+aTYPE      G
+
+ePARAMETER 4
+aNAME      EntityView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      RecordArea
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      MaxRecordLth
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      CopyFileToPDF
+aTYPE      G
+
+ePARAMETER 4
+aNAME      Map Object
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      FileToCopy
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      PDFName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      AD_SetUserProperty
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AD_Pathname
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_AdminName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_AdminPassword
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_UserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_PropertyName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_PropertyValue
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetAttributeFromUC_Attribute
+aTYPE      G
+
+ePARAMETER 4
+aNAME      TargetView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      TargetEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      TargetAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      SourceView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      SourceEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      SourceAttributeName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetAttributeFromUC_String
+aTYPE      G
+
+ePARAMETER 4
+aNAME      vView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      SourceString
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetStringUpperLowerCase
+aTYPE      G
+
+ePARAMETER 4
+aNAME      StringToConvert
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ValidateAndSetState
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AnyView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      StateString
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      AD_GetUserProperty
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AD_Pathname
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_UserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_Password
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_Property
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ReturnProperty
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      AD_RemoveUser
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AD_Pathname
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_UserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_UserPassword
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      AD_AddNewUser
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AD_Pathname
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_LoginUserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_LoginPassword
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_NewUserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_NewUserPassword
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      AD_SetPassword
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AD_Pathname
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_LoginUserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_LoginPassword
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_UserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_Password
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      AD_ChangePassword
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AD_Pathname
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_LoginUserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_LoginPassword
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_UserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_OldPassword
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_NewPassword
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      AD_RemoveUserPassword
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ServerName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ServerPort
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Organization
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      UserName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      AD_AddUserPassword
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ServerName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ServerPort
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Organization
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      UserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      UserPassword
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      AD_AuthenticateUserPassword
+aTYPE      G
+
+ePARAMETER 4
+aNAME      szAD_Pathname
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_UserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AD_Password
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SendEmailForFilesWithCC
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AnyView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ResultSet
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      pchSMTPServer
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchRecipientEmailAddress
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchSenderEMailAddress
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchCC_EMailAddress
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchBCC_EMailAddress
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchEMailUserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchEMailPassword
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchSubjectLine
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchBodyFileName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Alternate Text File Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Embedded Images List
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchAttachmentFileName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      nMimeType
+aDATATYPE  N
+
+ePARAMETER 4
+aNAME      lConnection
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      CheckForTableAttribute
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ObjectView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ObjectName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      RemoveLeadingZerosFromAttrib
+aTYPE      G
+
+ePARAMETER 4
+aNAME      zView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szAttributeName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetEntityCursorByInteger
+aTYPE      G
+
+ePARAMETER 4
+aNAME      zView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      lControlValue
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      IntegerSearchValue
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      ScopingEntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ConvertISIR_NumberToAttribute
+aTYPE      G
+
+ePARAMETER 4
+aNAME      TargetView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      TargetEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      TargetAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ISIR_Value
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      FTPSendFile
+aTYPE      G
+
+ePARAMETER 4
+aNAME      vSubTask
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szServerAddress
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szUserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szPassword
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szLocalFileName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szServerFileName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      lControl
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      FixLegacyReportDate
+aTYPE      G
+
+ePARAMETER 4
+aNAME      wXferO
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      View To Legacy Transcript
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Entity
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Attribute
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Search String
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      WriteLibraryOLCN
+aTYPE      G
+
+ePARAMETER 4
+aNAME      View To Person Records
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      File Handle
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      SubSectionShowHideDisableTabs
+aTYPE      G
+
+ePARAMETER 4
+aNAME      View To User
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      View To Window
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Tab Tag
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      CreateBlobsFromLegacyTranscript
+aTYPE      G
+
+ePARAMETER 4
+aNAME      View To Window
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Object Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      LegacyAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      LegacyTranscriptFileName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      StartEmailClientForListReus
+aTYPE      G
+
+ePARAMETER 4
+aNAME      vResult
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Entity Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Attribute Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Context
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Scope
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      UseOnlySelectedEntities
+aDATATYPE  N
+
+ePARAMETER 4
+aNAME      UseParentSelectedEntities
+aDATATYPE  N
+
+ePARAMETER 4
+aNAME      Subject
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Copyto
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      BlindCopy
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Body
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Attachment
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      EmailClient Override
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Flags (reserved)
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      BlindCopyFlag
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      StartBlindEmailClientForList
+aTYPE      G
+
+ePARAMETER 4
+aNAME      vResult
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Entity Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Attribute Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Context
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Scope
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      UseOnlySelectedEntities
+aDATATYPE  N
+
+ePARAMETER 4
+aNAME      UseParentSelectedEntities
+aDATATYPE  N
+
+ePARAMETER 4
+aNAME      Subject
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Copyto
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      BlindCopy
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Body
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Attachment
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      EmailClient Override
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Flags (reserved)
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      WL_QC
+aTYPE      G
+
+ePARAMETER 4
+aNAME      FileHandle
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      Buffer
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      TransChar
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      NrAppendedBlankLines
+aDATATYPE  N
+
+eOPERATION 3
+aNAME      StartEmailClientForList
+aTYPE      G
+
+ePARAMETER 4
+aNAME      vResult
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Entity Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Attribute Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Context
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Scope
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      UseOnlySelectedEntities
+aDATATYPE  N
+
+ePARAMETER 4
+aNAME      UseParentSelectedEntities
+aDATATYPE  N
+
+ePARAMETER 4
+aNAME      Subject
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Copyto
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      BlindCopy
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Body
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Attachment
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      EmailClient Override
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Flags (reserved)
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      SendEmailForFiles
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ResultSet
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      pchSMTPServer
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchRecipientEmailAddress
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchSenderEMailAddress
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchEMailUserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchEMailPassword
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchSubjectLine
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchBodyFileName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Alternate Text File Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Embedded Images List
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      pchAttachmentFileName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      nMimeType
+aDATATYPE  N
+
+ePARAMETER 4
+aNAME      lConnection
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      ReturnSuffixOfFileName
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedSuffix
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      FileName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      StartEmailClientWithFiles
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AnyView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EmailAddress
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      SubjectLine
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      CopyToEmailAddress
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      BlindCopyEmailAddress
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      BodyFileName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AttachmentFileName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      EmailClientOverride
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Flags
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      MergeSingleRS_EntryWithTemplate
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ResultSet
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      TemplateFileName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      OutputFileName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Embedded Images
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ReturnedMergedText
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ReturnedMergedTextMaxLength
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      Mime Type   1-Text   2-HTML
+aDATATYPE  N
+
+eOPERATION 3
+aNAME      InsertOI_DataIntoEmailTemplate
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Map Object
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      SMTP Server
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      EMail User Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      EMail Password
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Sender EMail Address
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Subject Line
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Attachment File Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Template File Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Alternate Text Template Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Root Entity Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Flag  1 - Has Attachment; 2 - HTML (Text otw); 16 - Prompt
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      GetRTFPath
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToSubTask
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Flags
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      szTargetPath
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ParseBooleanExpression
+aTYPE      G
+
+ePARAMETER 4
+aNAME      zqFrame
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      WinShellExecute
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewSubTask
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szFileOrExeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szFileOpenCommand
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szExeParms
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetGeneralPath
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToSubTask
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Flags
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      szFileTyoe
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szTargetPath
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      DBQualEntityByString
+aTYPE      G
+
+ePARAMETER 4
+aNAME      vQualView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szOper
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szValue
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Exists
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      GetCurrentApplicationName
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedString
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      MaximumLength
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      ReadLine5000
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      LineBuffer
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      lFileHandle
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      InsertOI_DataIntoTemplateFile
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Map Object
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Output File Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Template File Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Alternate Text Template Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Root Entity Name
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetDataTypeForAttribute
+aTYPE      G
+
+ePARAMETER 4
+aNAME      DataType
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ObjectView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AttributeName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      AddSpacesToString
+aTYPE      G
+
+ePARAMETER 4
+aNAME      WorkString
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      FindStringInAttribute
+aTYPE      G
+
+ePARAMETER 4
+aNAME      SearchString
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ObjectView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AttributeName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ConvertExternalValueOfAttribute
+aTYPE      G
+
+ePARAMETER 4
+aNAME      SearchValue
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      InputSearchValue
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      QueryView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      QueryEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      QueryAttributeName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetHTMLPath
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToSubtask
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      nFlag
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      Target
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetRegistryCLSID
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnData
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szClassName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetImagingPath
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToSubtask
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      nFlag
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      Target
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      AGetRegistryValue
+aTYPE      G
+
+ePARAMETER 4
+aNAME      szResult
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szKey
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      CallObjectOperation
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToObject
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      vSubtask
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szObjectName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szOperationName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetWindowsUserName
+aTYPE      G
+
+ePARAMETER 4
+aNAME      UserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      MaxLengthOfName
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      RemoveLeadingBlanksFromAttrib
+aTYPE      G
+
+ePARAMETER 4
+aNAME      View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AttributeName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetButtonHeaderName
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ButtonHeaderName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      AddMonthsToDate
+aTYPE      G
+
+ePARAMETER 4
+aNAME      TargetView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      TargetEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      TargetAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      NumberOfMonths
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      SetDecimalPrecisionRounded
+aTYPE      G
+
+ePARAMETER 4
+aNAME      DecimalValue
+aDATATYPE  M
+
+ePARAMETER 4
+aNAME      NumberOfDecimals
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      zTrim
+aTYPE      G
+
+ePARAMETER 4
+aNAME      StringInOut
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      PersonName_FirstMiddleLast
+aTYPE      G
+
+ePARAMETER 4
+aNAME      vAnyObject
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szInternalEntityStructure
+aDATATYPE  O
+
+ePARAMETER 4
+aNAME      szInternalAttribStructure
+aDATATYPE  O
+
+ePARAMETER 4
+aNAME      nGetOrSetFlag
+aDATATYPE  N
+
+eOPERATION 3
+aNAME      PersonName_LastFirstMiddle
+aTYPE      G
+
+ePARAMETER 4
+aNAME      vAnyObject
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szInternalEntityStructure
+aDATATYPE  O
+
+ePARAMETER 4
+aNAME      szInternalAttribStructure
+aDATATYPE  O
+
+ePARAMETER 4
+aNAME      nGetOrSetFlag
+aDATATYPE  N
+
+eOPERATION 3
+aNAME      GetAttribNameFromStructure
+aTYPE      G
+
+ePARAMETER 4
+aNAME      InternalAttribStructure
+aDATATYPE  O
+
+ePARAMETER 4
+aNAME      AttribName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      dAdressLabelFull
+aTYPE      G
+
+ePARAMETER 4
+aNAME      vAnyObject
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szInternalEntityStructure
+aDATATYPE  O
+
+ePARAMETER 4
+aNAME      szInternalAttribStructure
+aDATATYPE  O
+
+ePARAMETER 4
+aNAME      nGetOrSetFlag
+aDATATYPE  N
+
+eOPERATION 3
+aNAME      dAdressLabel
+aTYPE      G
+
+ePARAMETER 4
+aNAME      vAnyObject
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szInternalEntityStructure
+aDATATYPE  O
+
+ePARAMETER 4
+aNAME      szInternalAttribStructure
+aDATATYPE  O
+
+ePARAMETER 4
+aNAME      nGetOrSetFlag
+aDATATYPE  N
+
+eOPERATION 3
+aNAME      GetEntityNameFromStructure
+aTYPE      G
+
+ePARAMETER 4
+aNAME      InternalEntityStructure
+aDATATYPE  O
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      AddressFormatToMultiLine
+aTYPE      G
+
+ePARAMETER 4
+aNAME      MultiLineAddress
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Line1
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Line2
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Line3
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      City
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      State
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      PostalCode
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetViewFromBlobAttribute
+aTYPE      G
+
+ePARAMETER 4
+aNAME      RetrievedView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      OI_View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      OI_EntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      OI_AttributeName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetBlobAttributeFromView
+aTYPE      G
+
+ePARAMETER 4
+aNAME      OI_View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      OI_EntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      OI_AttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ViewToSet
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SeparateName
+aTYPE      G
+
+ePARAMETER 4
+aNAME      FullName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      FirstName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      LastName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ReadLineIntoGlobalBuffer
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      hFile
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      SetAttributeFromTabField
+aTYPE      G
+
+ePARAMETER 4
+aNAME      Customer View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      FieldPosition
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      AddDaysToDate
+aTYPE      G
+
+ePARAMETER 4
+aNAME      TargetView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      TargetEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      TargetAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      NumberOfDays
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      ActivateWorkObjectFromFile
+aTYPE      G
+
+ePARAMETER 4
+aNAME      WorkView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szFileName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szLOD_Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      CompareAttributeByShortString
+aTYPE      G
+
+ePARAMETER 4
+aNAME      View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szCompareString
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      AddWorkingDaysToDate
+aTYPE      G
+
+ePARAMETER 4
+aNAME      TargetView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      TargetEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      TargetAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      NumberOfWorkingDays
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      GetDateAttributeDifferenceInDays
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedDays
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      vSourceView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      SourceEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      SourceAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      TargetView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      TargetEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      TargetAttributeName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      CharToCode
+aTYPE      G
+
+ePARAMETER 4
+aNAME      szStr
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      CodeToChar
+aTYPE      G
+
+ePARAMETER 4
+aNAME      szStr
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      sCode
+aDATATYPE  N
+
+eOPERATION 3
+aNAME      StrToDecimal
+aTYPE      G
+
+ePARAMETER 4
+aNAME      szStr
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      DecimalSumOf
+aTYPE      G
+
+ePARAMETER 4
+aNAME      vView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szParentEntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      StrToInt
+aTYPE      G
+
+ePARAMETER 4
+aNAME      szStr
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetEnvVariable
+aTYPE      G
+
+ePARAMETER 4
+aNAME      szReturnWert
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szVariableName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      nMaxReturnLen
+aDATATYPE  N
+
+eOPERATION 3
+aNAME      SetAttrFromStrByContext
+aTYPE      G
+
+ePARAMETER 4
+aNAME      View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Entity
+aDATATYPE  E
+
+ePARAMETER 4
+aNAME      Attribute
+aDATATYPE  A
+
+ePARAMETER 4
+aNAME      Value
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Context
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetAttrFromIntByContext
+aTYPE      G
+
+ePARAMETER 4
+aNAME      View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Entity
+aDATATYPE  E
+
+ePARAMETER 4
+aNAME      Attribute
+aDATATYPE  A
+
+ePARAMETER 4
+aNAME      Value
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      Context
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      AddToAttrFromIntByContext
+aTYPE      G
+
+ePARAMETER 4
+aNAME      View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Entity
+aDATATYPE  E
+
+ePARAMETER 4
+aNAME      Attribute
+aDATATYPE  A
+
+ePARAMETER 4
+aNAME      Value
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      Context
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetStrFromAttrByContext
+aTYPE      G
+
+ePARAMETER 4
+aNAME      Value
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ValueLen
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Entity
+aDATATYPE  E
+
+ePARAMETER 4
+aNAME      Attribute
+aDATATYPE  A
+
+ePARAMETER 4
+aNAME      Context
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetIntFromAttrByContext
+aTYPE      G
+
+ePARAMETER 4
+aNAME      Value
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Entity
+aDATATYPE  E
+
+ePARAMETER 4
+aNAME      Attribute
+aDATATYPE  A
+
+ePARAMETER 4
+aNAME      Context
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetCursorLatestEntity
+aTYPE      G
+
+ePARAMETER 4
+aNAME      View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Entity Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Attribute Name
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetAttributeFromCurrentDateTime
+aTYPE      G
+
+ePARAMETER 4
+aNAME      View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Entity Name
+aDATATYPE  E
+
+ePARAMETER 4
+aNAME      Attribute Name
+aDATATYPE  A
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      ZGLOBAL2
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      GetDOWNumber
+aTYPE      G
+
+ePARAMETER 4
+aNAME      szDateIn
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      CLEAN_ForLogout
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      ClearWebErrorMessage
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szMessage
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetWebErrorMessage
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szMessage
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      DeleteCheckOI_ForUpdate
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ObjectView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ObjectName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ObjectID
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      UserName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetCheckOI_ForUpdate
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ObjectView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ObjectName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ObjectID
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      UserName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetPersonFullNameSalutation
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedString
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      vOI
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetPersonNameMrOrMs
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedString
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      vOI
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetPersonGreetingSalutation
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedString
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      vOI
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetCurrentAgeFromDate
+aTYPE      G
+
+ePARAMETER 4
+aNAME      DateView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AttributeName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetPersonCombinedNameLFM
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      qPerson
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      CalculateTotalCostOfLivingCOA
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mFAProf
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ReturnedCOA
+aDATATYPE  M
+
+eOPERATION 3
+aNAME      CalculateTotalTuitionFeesCOA
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mFAProf
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ReturnedCOA
+aDATATYPE  M
+
+eOPERATION 3
+aNAME      CalculateTotalInstitutionalCOA
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mFAProf
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ReturnedCOA
+aDATATYPE  M
+
+eOPERATION 3
+aNAME      CalculateTotalCOA
+aTYPE      G
+
+ePARAMETER 4
+aNAME      qFAProf
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ReturnedTotal
+aDATATYPE  M
+
+eOPERATION 3
+aNAME      SetIPEDS_Ethnicity
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mViewContainingDemographics
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      MergeTemplateText
+aTYPE      G
+
+ePARAMETER 4
+aNAME      MergeDataView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      TemplateText
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ReturnedText
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SendSingleEmailForFile
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      RecipientEmailAddress
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      EmailBodyFileName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      EmailSubjectAreaText
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetPersonGreetingMrOrMs
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedString
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      vOI
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetCL_PositionalValue
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AnyView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szOutputLine
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szValueIn
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Length
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      DataType
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetAttributeByCL_PositionalValue
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AnyView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szLine
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      StartPosition
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      Length
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      szDataType
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ActivateDynamicDomain
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      DomainName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SendEmailMessage
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AnyView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      RecipientEmailAddress
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szSenderEmailAddress
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szMessageBody
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szSubjectText
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GenerateCampusID
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mPersonView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      PersonEntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetAttributeByCommaDelimitValue
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AnyView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szLine
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ValueCommaPos
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      SendSDO_NonresPetitionEmail
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      NonresPetitionOI
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      SendingUser
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      GetPersonCombinedNameSalErr
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedCombinedName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      vOI
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetSA_ProfileBalance
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AnyView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      SAProfileID
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      CreateSecuritySubSection
+aTYPE      L
+
+ePARAMETER 4
+aNAME      View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Dialog Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Window Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Tab Control Name
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AllowAccess
+aDATATYPE  N
+
+eOPERATION 3
+aNAME      CreateSecurityAdminSubSection
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mUGroups
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      CREATE_SecuritySubSections_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      AllowAccess
+aDATATYPE  N
+
+eOPERATION 3
+aNAME      CREATE_MenuSecuritySubSection
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mUGroups
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szSubSectionName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      nInitAllowAccess
+aDATATYPE  N
+
+eOPERATION 3
+aNAME      ComputeNewHighExamScoreSAT
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedDecimal
+aDATATYPE  M
+
+ePARAMETER 4
+aNAME      mProspct
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      GetTimeDifferenceInMinutes
+aTYPE      G
+
+ePARAMETER 4
+aNAME      StartTimeView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      StartTimeEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      StartTimeAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      EndTimeView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EndTimeEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      EndTimeAttributeName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      PrintLegacyTranscript
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      TranscriptFile
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      mStudent
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      GenerateTransactionEntryWDesc
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AnyView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Description
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetPersonFullNameLFM
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedFullName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      vOI
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szEntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GenAndSetStudentEmailAddress
+aTYPE      G
+
+ePARAMETER 4
+aNAME      StudentView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      StudentEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      PersonEntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetUpAndStartEmailClientForListR
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mConList
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szIncludeEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szCreateItemEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szEmailEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szEmailAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szAlternateEmailEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szSelectedEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szAllEntriesFlag
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      BlindCopyFlag
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      SubjectLine
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Body
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ActivateDocumentsForDivByType
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      DocumentType
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ComputeHighExamScoreACT
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedScore
+aDATATYPE  M
+
+ePARAMETER 4
+aNAME      ProspectView
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      ComputeHighExamScoreSAT
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedScore
+aDATATYPE  M
+
+ePARAMETER 4
+aNAME      ProspectView
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      RetrieveCommaDeliminatedValue
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedValue
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szLine
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ParameterNumber
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      SetDateFromLegacyDate
+aTYPE      G
+
+ePARAMETER 4
+aNAME      TargetView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      TargetEntity
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      TargetAttribute
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      SourceView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      SourceEntity
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      SourceAttribute
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SetUpAndStartEmailClientForList
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szIncludeEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szEmailEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szAllEntriesFlag
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetPersonCombinedNameRanking
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedRanking
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      Salutation
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetPersonCombinedNameSalutation
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedCombinedName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      vOI
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetPersonCombinedGreetingMrMrs
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedGreeting
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      vOI
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szEntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetPersonCombinedGreetingFirst
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedGreeting
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      vOI
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szEntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetPersonCombinedNameMrAndMrs
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedCombinedName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      vOI
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szEntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetPersonCombinedNameWithFirst
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedCombinedName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      vOI
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szEntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      BuildFamilyRole
+aTYPE      G
+
+ePARAMETER 4
+aNAME      xPerson
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      FormatDocumentFromTemplate
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ResultSet
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      wXferO
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      zqMDocO
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      mUser
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SetAddressLongitudeLatitude
+aTYPE      G
+
+ePARAMETER 4
+aNAME      OI_View
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      AddressEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ZipCode
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GenerateTransactionEntry
+aTYPE      G
+
+ePARAMETER 4
+aNAME      OIView
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      InitializeDynamicDomain
+aTYPE      G
+
+ePARAMETER 4
+aNAME      DOMAINT
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      ActivateDomainsForDivision
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      ActivateDocumentsForDivision
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      GetPersonFullName
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ReturnedFullName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ViewObject2
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szEntityName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      OperatorWebPrompt
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Title
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Message
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      OperatorErrorResponse
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Title
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Message
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      InitializeDynamicDomains
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AnyView
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      GenerateSeasonalAddresses
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ResultSetView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      wXferO
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ObjectViewName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GetZipLatLong
+aTYPE      G
+
+ePARAMETER 4
+aNAME      szZipCode
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      zViewAny
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      dLatitude
+aDATATYPE  M
+
+ePARAMETER 4
+aNAME      dLongitude
+aDATATYPE  M
+
+eOPERATION 3
+aNAME      GetDaysInMonth
+aTYPE      G
+
+ePARAMETER 4
+aNAME      szDateIn
+aDATATYPE  S
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      ZGLOBAL3
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      DISPLAY_HTML_Graph
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      GenerateLine
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AnyView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      lFileHandle
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      OutputLine
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      REMOVE_FamilyRoleR
+aTYPE      G
+
+ePARAMETER 4
+aNAME      REMOVE_FamilyRoleR
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      ADD_FamilyRoleR
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      UPDATE_FamilyPersonR
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SetImportStringAttribute
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AnyView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szInputString
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      StartingPosition
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      Length
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      VALIDATE_AdministrationSecurityG
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      CloseSplitWindow_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      View to Window
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      AreaName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      FrameName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      RefreshCloseSplitWindow_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      View to Window
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      AreaName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      FrameName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      DetailName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      zCloseWindow
+aTYPE      G
+
+ePARAMETER 4
+aNAME      vWindowToClose
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      ExecuteQueryForGenerate
+aTYPE      G
+
+ePARAMETER 4
+aNAME      zqSQuery
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      BuildFolderParentPlanData
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mCPList
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      mCPListRoot
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SHOW_FamilyTreeFindTop
+aTYPE      G
+
+ePARAMETER 4
+aNAME      FamilyT
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      FamilyTR
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SHOW_FamilyTreeRecurs
+aTYPE      L
+
+ePARAMETER 4
+aNAME      FamilyT
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      FamilyCT
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      RootParentID
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      SHOW_FamilyTree
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mPerson
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      ExecuteQueryForContactList
+aTYPE      G
+
+ePARAMETER 4
+aNAME      zqSQuery
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DeleteGeneralTask_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      TaskName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      DELETE_Plan_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DELETE_Folder_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_PlanData_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DELETE_Event_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWwindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DELETE_Group_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_Group_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DELETE_User_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_User_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      UPDATE_ContactListDetail_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szFunctionalSubArea
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      szDialogName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      UPDATE_FolderDetail_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      UPDATE_PlanDetail_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      UPDATE_EventDetail_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_AnnouncementPrompt_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_Announcement_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      ZGLOBAL4
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      DELETE_Security_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SetSSN_ToSecurityValue
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewOI
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      AttributeName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SAVE_Security_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_SecurityPrompt_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DELETE_SecurityPrompt_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBAL5
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      ComputeEarnedCredits
+aTYPE      G
+
+ePARAMETER 4
+aNAME      lTrnscpt
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ReturnedEarnedCredits
+aDATATYPE  M
+
+eOPERATION 3
+aNAME      GetEnrollmentStatus
+aTYPE      G
+
+ePARAMETER 4
+aNAME      EnrollmentSubobjectView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      EnrollmentDate
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      StudentID
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      ReturnedEnrollmentStatus
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ComputeGradePointAverage
+aTYPE      G
+
+ePARAMETER 4
+aNAME      lTrnscpt
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ReturnedGPA
+aDATATYPE  M
+
+eOPERATION 3
+aNAME      ComputeGPA_Divisor
+aTYPE      G
+
+ePARAMETER 4
+aNAME      lTrnscpt
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ReturnedDivisor
+aDATATYPE  M
+
+eOPERATION 3
+aNAME      ComputeAttemptedCredits
+aTYPE      G
+
+ePARAMETER 4
+aNAME      lTrnscpt
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ReturnedAttemptedCredits
+aDATATYPE  M
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBALB
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      SAVE_SAStudentData_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      GenerateAGS_StudentCOA
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mFAProf
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ProgramID
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      CollegeYearID
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      GenerateSA_ChargesEnd
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      GenerateSA_ChargesBegin
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      TermID
+aDATATYPE  L
+
+eOPERATION 3
+aNAME      GenerateSA_Charges
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mSAProf
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      mPerson
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_SAStudent_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBALC
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      UPDATE_ChurchDetail_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DropChurchObject
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mChurch
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_ChurchData_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DELETE_Church_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_Church_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBALG
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      PICK_ChartEntry_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      VSubtask
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SEND_BankFile
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToSubtask
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      mCheckWO
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      CREATE_BankFile
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToSubtask
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      mCheckWO
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_VendorData_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      Prompt
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      SAVE_Vendor_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      UPDATE_VendorDetail_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      PICK_PreVendor_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      UPDATE_GLChartOfAccountsDetail_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      UPDATE_ChartOfAccounts_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DELETE_Budgeting_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_Budgeting_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_BudgetingData_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToSubtask
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      PromptString
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      PICK_BudgetEntry_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      PICK_Journal_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DELETE_Inquiry_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_Inquiry_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_InquiryData_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToData
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szFlag
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      UPDATE_FindListDetail_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      szFunctionalSubArea
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Dialogue
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      UPDATE_GLInquiry_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      zAnyView
+aDATATYPE  V
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBALI
+aLANGUAGETYPE J
+
+eOPERATION 3
+aNAME      MoodleIMSExport
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      metabaseJSON
+aTYPE      G
+
+ePARAMETER 4
+aNAME      siteurl
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      secret
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      dasboardNumber
+aDATATYPE  N
+
+eOPERATION 3
+aNAME      ExportToQuickbooks
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      ExportGenQueryPro
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      ExportGenQueryCls
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      ExportGenQueryEnr
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      ExportGenQueryPeop
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      OpenLDAPExport
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      OLDAP_AuthenticateUserPassword
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      UserName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      Password
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      CanvasLMSExport
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      OpalsExport
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      ZGLOBALJ
+aLANGUAGETYPE J
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBALL
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      SAVE_Class_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      CHANGE_ClassByTermOwner
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      CHANGE_ClassByDateOwner
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SHOW_Awarded
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      UpdateCreditHoursForClass
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mClass
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      UPDATE_ClassDetail_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      PICK_PreClass_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DELETE_Class_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_ClassData_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBALO
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      UPDATE_OrganizationDetail_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      PICK_PreOrganization_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_Organization_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_OrganizationData_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      PromptFlag
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      DELETE_Organization_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBALP
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      UPDATE_ProspectDetail_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      CreateFASAForStudent
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mProspt
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      mPerson
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      PICK_PreProspect_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_Prospect_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_ProspectData_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      PromptFlag
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      DELETE_Prospect_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBALQ
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      ActivateQueryViewByName
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ReturnedQueryView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      QueryViewName
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GenerateLineWithTrace
+aTYPE      G
+
+ePARAMETER 4
+aNAME      AnyView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      FileHandle
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      OutputLine
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      TraceLineFlag
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GenerateColumnChartHTML
+aTYPE      G
+
+ePARAMETER 4
+aNAME      SourceObjectView
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      GraphTitle
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      BaseValueTitle
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      BaseEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ChildEntityName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      BaseAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ChildTitleName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      ChildChartValueAttributeName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      OutputDirectoryAndFileName
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      GenerateTableFlag
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ExecuteQueryUsingCachedFrame
+aTYPE      G
+
+ePARAMETER 4
+aNAME      lURunRpt
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ResultSet
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      zqFrame
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      ExecuteQueryForReportOrMailing
+aTYPE      G
+
+ePARAMETER 4
+aNAME      lRunRortOrMailing
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ReturnedResultSet
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ReturnedzqFrame
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      GetLPLR_SourceDirectory
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ReturnedDirectory
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      ActivateUpdateXOD
+aTYPE      G
+
+ePARAMETER 4
+aNAME      vXOD
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      zqFrame
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      QueryViewName
+aDATATYPE  S
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBALR
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      SAVE_PersonData_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_VehicleRegistration
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      PICK_PrePerson_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DELETE_Person_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      UPDATE_PersonDetail_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_Person_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBALS
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      SAVE_SchoolData_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_School_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DELETE_School_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBALT
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      DO_HRCleanUp
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      GET_HonorFromAverage
+aTYPE      G
+
+ePARAMETER 4
+aNAME      szAverage
+aDATATYPE  M
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      GradeScale
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      szHonor
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GET_GradeFromType
+aTYPE      G
+
+ePARAMETER 4
+aNAME      GradeScale
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      GradeType
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      GradeLetter
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      GET_GradeType
+aTYPE      G
+
+ePARAMETER 4
+aNAME      GradeScale
+aDATATYPE  L
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      GradeLetter
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      GradeType
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      CHANGE_UserCanSeeList
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      CleanupLODs
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DO_RegistrarCleanUp
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      BUILD_ProposedScheduleEntry
+aTYPE      G
+
+ePARAMETER 4
+aNAME      mStuPSH
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      lTermLST
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_FacultyData_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_Faculty_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViwToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DELETE_Faculty_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_StudentData_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_Student_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DELETE_Student_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBALU
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      PICK_PreCourse_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_Course_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      DELETE_Course_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      UPDATE_CourseDetail_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_CourseData_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBALV
+aLANGUAGETYPE J
+
+eOPERATION 3
+aNAME      GetSysUpdates
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      ApplySysUpdate
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      UpdateID
+aDATATYPE  N
+
+ePARAMETER 4
+aNAME      ErrorNote
+aDATATYPE  S
+
+ePARAMETER 4
+aNAME      UpdateStatus
+aDATATYPE  S
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBALW
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      WebReturnToHomePage
+aTYPE      G
+
+ePARAMETER 4
+aNAME      wWebXfer
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      wWebPers
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      WebSwitchRoles
+aTYPE      G
+
+ePARAMETER 4
+aNAME      wWebPers
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      wWebXfer
+aDATATYPE  V
+
+ePARAMETER 4
+aNAME      ShowStudentFlag
+aDATATYPE  S
+
+eOPERATION 3
+aNAME      CleanupObjects
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eGLOBALOPERATIONSOURCEFILE 2
+aNAME      zGLOBALX
+aLANGUAGETYPE V
+
+eOPERATION 3
+aNAME      DELETE_Employee_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      GENERATE_DistributionEntries
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ContractOrEmployeeView
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      PICK_PreEmployee_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      UPDATE_EmployeeDetail_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_EmployeeData_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+
+eOPERATION 3
+aNAME      SAVE_Employee_G
+aTYPE      G
+
+ePARAMETER 4
+aNAME      ViewToWindow
+aDATATYPE  V
+

@@ -1,0 +1,827 @@
+z1000-Zeidon    ZGLOBAL2 TZOGSRCO 09/21/17   10:12:49 1.0a2    
+eGlobalOperationGroup 1
+aZKey      354012881
+aNextZKeyToAssign 354013137
+aName      ZGLOBAL2
+aDesc      VML Operations
+aExtension VML
+aLanguageType V
+
+eOperation 2
+aName      GetDOWNumber
+aZKey      354012882
+aDesc      Get Dow of week number
+aType      G
+aReturnDesc DOWNumber
+aReturnDataType L
+
+eParameter 3
+aShortDesc szDateIn
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012883
+
+eOperation 2
+aName      CLEAN_ForLogout
+aZKey      354013136
+aType      G
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013137
+
+eOperation 2
+aName      SetWebErrorMessage
+aZKey      354013130
+aType      G
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013131
+
+eParameter 3
+aShortDesc szMessage
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013132
+
+eOperation 2
+aName      DeleteCheckOI_ForUpdate
+aZKey      354012884
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ObjectView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354012885
+
+eParameter 3
+aShortDesc ObjectName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012886
+
+eParameter 3
+aShortDesc ObjectID
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      354012887
+
+eParameter 3
+aShortDesc UserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012888
+
+eOperation 2
+aName      SetCheckOI_ForUpdate
+aZKey      354012889
+aDesc      Checks an OI for locking and sets it if OK.
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ObjectView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354012890
+
+eParameter 3
+aShortDesc ObjectName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012891
+
+eParameter 3
+aShortDesc ObjectID
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      354012892
+
+eParameter 3
+aShortDesc UserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012893
+
+eOperation 2
+aName      GetCurrentAgeFromDate
+aZKey      354012906
+aType      G
+aReturnDesc Age
+aReturnDataType L
+
+eParameter 3
+aShortDesc DateView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354012907
+
+eParameter 3
+aShortDesc EntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012908
+
+eParameter 3
+aShortDesc AttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012909
+
+eOperation 2
+aName      MergeTemplateText
+aZKey      354012928
+aDesc      Merge data from a Template string into a Result string
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc MergeDataView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354012929
+
+eParameter 3
+aShortDesc TemplateText
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012930
+
+eParameter 3
+aShortDesc ReturnedText
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      354012931
+
+eOperation 2
+aName      SendSingleEmailForFile
+aZKey      354012932
+aDesc      Format a one email to a single User from a file just formatted
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354012933
+
+eParameter 3
+aShortDesc RecipientEmailAddress
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012934
+
+eParameter 3
+aShortDesc EmailBodyFileName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012935
+
+eParameter 3
+aShortDesc EmailSubjectAreaText
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012936
+
+eOperation 2
+aName      SetCL_PositionalValue
+aZKey      354012941
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc AnyView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354012942
+
+eParameter 3
+aShortDesc szOutputLine
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012943
+
+eParameter 3
+aShortDesc szValueIn
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012944
+
+eParameter 3
+aShortDesc Length
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      354012945
+
+eParameter 3
+aShortDesc DataType
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012946
+
+eOperation 2
+aName      SetAttributeByCL_PositionalValue
+aZKey      354012947
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc AnyView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354012948
+
+eParameter 3
+aShortDesc EntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012949
+
+eParameter 3
+aShortDesc AttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012950
+
+eParameter 3
+aShortDesc szLine
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012951
+
+eParameter 3
+aShortDesc StartPosition
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      354012952
+
+eParameter 3
+aShortDesc Length
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      354012953
+
+eParameter 3
+aShortDesc szDataType
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012954
+
+eOperation 2
+aName      ActivateDynamicDomain
+aZKey      354012955
+aDesc      Activates the dynamic domain passed in.
+aType      G
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354012956
+
+eParameter 3
+aShortDesc DomainName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012957
+
+eOperation 2
+aName      SendEmailMessage
+aZKey      354012958
+aDesc      Send an Email Message to a User Address
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc AnyView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354012959
+
+eParameter 3
+aShortDesc RecipientEmailAddress
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012960
+
+eParameter 3
+aShortDesc szSenderEmailAddress
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012961
+
+eParameter 3
+aShortDesc szMessageBody
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012962
+
+eParameter 3
+aShortDesc szSubjectText
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012963
+
+eOperation 2
+aName      SetAttributeByCommaDelimitValue
+aZKey      354012967
+aDesc      Set an Attribute from a value in a comma delimited file.
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc AnyView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354012968
+
+eParameter 3
+aShortDesc szEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012969
+
+eParameter 3
+aShortDesc szAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012970
+
+eParameter 3
+aShortDesc szLine
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012971
+
+eParameter 3
+aShortDesc ValueCommaPos
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      354012972
+
+eOperation 2
+aName      CreateSecuritySubSection
+aZKey      354012984
+aType      L
+
+eParameter 3
+aShortDesc View
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354012985
+
+eParameter 3
+aShortDesc Dialog Name
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012986
+
+eParameter 3
+aShortDesc Window Name
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012987
+
+eParameter 3
+aShortDesc Tab Control Name
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354012988
+
+eParameter 3
+aShortDesc AllowAccess
+aDataType  N
+aPFlag     N
+aUFlag     N
+aZKey      354012989
+
+eOperation 2
+aName      GetTimeDifferenceInMinutes
+aZKey      354013002
+aDesc      Return the time difference for two Time attributes in minutes
+aType      G
+aReturnDesc DifferenceInMinutes
+aReturnDataType L
+
+eParameter 3
+aShortDesc StartTimeView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013003
+
+eParameter 3
+aShortDesc StartTimeEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013004
+
+eParameter 3
+aShortDesc StartTimeAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013005
+
+eParameter 3
+aShortDesc EndTimeView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013006
+
+eParameter 3
+aShortDesc EndTimeEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013007
+
+eParameter 3
+aShortDesc EndTimeAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013008
+
+eOperation 2
+aName      GenerateTransactionEntryWDesc
+aZKey      354013013
+aDesc      Generate Transaction entry with description
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc AnyView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013014
+
+eParameter 3
+aShortDesc Description
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013015
+
+eOperation 2
+aName      GetPersonFullNameLFM
+aZKey      354013016
+aType      G
+
+eParameter 3
+aShortDesc ReturnedFullName
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      354013017
+
+eParameter 3
+aShortDesc vOI
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013018
+
+eParameter 3
+aShortDesc szEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013019
+
+eOperation 2
+aName      GenAndSetStudentEmailAddress
+aZKey      354013020
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc StudentView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013021
+
+eParameter 3
+aShortDesc StudentEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013022
+
+eParameter 3
+aShortDesc PersonEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013023
+
+eOperation 2
+aName      RetrieveCommaDeliminatedValue
+aZKey      354013045
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ReturnedValue
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      354013046
+
+eParameter 3
+aShortDesc szLine
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013047
+
+eParameter 3
+aShortDesc ParameterNumber
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      354013048
+
+eOperation 2
+aName      SetDateFromLegacyDate
+aZKey      354013049
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc TargetView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013050
+
+eParameter 3
+aShortDesc TargetEntity
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013051
+
+eParameter 3
+aShortDesc TargetAttribute
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013052
+
+eParameter 3
+aShortDesc SourceView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013053
+
+eParameter 3
+aShortDesc SourceEntity
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013054
+
+eParameter 3
+aShortDesc SourceAttribute
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013055
+
+eOperation 2
+aName      GenerateTransactionEntry
+aZKey      354013096
+aDesc      Generate a Transaction entry for the view passed in.
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc OIView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013097
+
+eOperation 2
+aName      InitializeDynamicDomain
+aZKey      354013098
+aDesc      Initialize Domain Values from static values for a Domain
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc DOMAINT
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013099
+
+eOperation 2
+aName      GetPersonFullName
+aZKey      354013104
+aDesc      Combines FirstName, MiddleName and LastName to create wFullName for any entity.
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc ReturnedFullName
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      354013105
+
+eParameter 3
+aShortDesc ViewObject2
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013106
+
+eParameter 3
+aShortDesc szEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013107
+
+eOperation 2
+aName      OperatorWebPrompt
+aZKey      354013108
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013109
+
+eParameter 3
+aShortDesc Title
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013110
+
+eParameter 3
+aShortDesc Message
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013111
+
+eOperation 2
+aName      OperatorErrorResponse
+aZKey      354013112
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013113
+
+eParameter 3
+aShortDesc Title
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013114
+
+eParameter 3
+aShortDesc Message
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013115
+
+eOperation 2
+aName      InitializeDynamicDomains
+aZKey      354013116
+aDesc      Initialize Dynamic Domains
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc AnyView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013117
+
+eOperation 2
+aName      GenerateSeasonalAddresses
+aZKey      354013118
+aDesc      Generate seasonal addresses for a Result Set
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc ResultSetView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013119
+
+eParameter 3
+aShortDesc wXferO
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      354013120
+
+eParameter 3
+aShortDesc ObjectViewName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013121
+
+eOperation 2
+aName      GetDaysInMonth
+aZKey      354013127
+aType      G
+aReturnDesc Days on Month
+aReturnDataType L
+
+eParameter 3
+aShortDesc szDateIn
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      354013128
+

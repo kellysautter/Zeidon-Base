@@ -1,0 +1,725 @@
+// Find FIXTHISNEWCORE
+///-----------------------------------------------------------------------------------------------
+///
+///   Menu on window operations
+///
+///-----------------------------------------------------------------------------------------------
+/*************************************************************************************************
+*
+**    OPERATION: AddMenuItem
+**
+**
+*************************************************************************************************/
+LOCAL OPERATION
+AddMenuItem( VIEW sAppMgr BASED ON LOD sAppMgr )
+  END
+
+/*************************************************************************************************
+**
+**    OPERATION: DeleteMenuItem
+**
+**
+*************************************************************************************************/
+LOCAL OPERATION
+DeleteMenuItem( VIEW sAppMgr BASED ON LOD sAppMgr )
+  END
+
+///-----------------------------------------------------------------------------------------------
+///
+///   Derived Attributes
+///
+///-----------------------------------------------------------------------------------------------
+/*************************************************************************************************
+**
+**    OPERATION: dMenuGeneralName
+**
+**
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dMenuGeneralName( VIEW sAppMgr BASED ON LOD sAppMgr,
+                  STRING ( 32 ) InternalEntityStructure,
+                  STRING ( 32 ) InternalAttribStructure,
+                  SHORT GetOrSetFlag )
+   STRING (  32  ) szString
+
+   CASE GetOrSetFlag
+      OF zDERIVED_GET:
+            /* end zDERIVED_GET */
+      OF zDERIVED_SET:
+
+      /* end zDERIVED_SET */
+   END  /* case */
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: dSpecificGeneralDialog
+**
+**
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dSpecificGeneralDialog( VIEW sAppMgr BASED ON LOD sAppMgr,
+                        STRING ( 32 ) InternalEntityStructure,
+                        STRING ( 32 ) InternalAttribStructure,
+                        SHORT GetOrSetFlag )
+   STRING (  32  ) szString
+
+   CASE GetOrSetFlag
+      OF zDERIVED_GET:
+            /* end zDERIVED_GET */
+      OF zDERIVED_SET:
+
+      /* end zDERIVED_SET */
+   END  /* case */
+END
+
+///-----------------------------------------------------------------------------------------------
+///
+///   General Task Operations
+///
+///-----------------------------------------------------------------------------------------------
+/*************************************************************************************************
+**
+**    OPERATION: CreateGeneralTask
+**
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+CreateGeneralTask( VIEW sAppMgr BASED ON LOD sAppMgr,
+                   STRING ( 32 ) GeneralMenuName,
+                   STRING ( 32 ) GeneralName )
+
+   CREATE ENTITY sAppMgr.GeneralTask
+   // sAppMgr.GeneralTask.SpecificDialogName = GeneralMenuName
+   sAppMgr.GeneralTask.MenuName    = GeneralMenuName
+   sAppMgr.GeneralTask.GeneralName = GeneralName
+   CREATE ENTITY sAppMgr.WindowList
+   sAppMgr.WindowList.SpecificDialogName = sAppMgr.GeneralTask.SpecificDialogName
+   sAppMgr.WindowList.MenuName           = sAppMgr.GeneralTask.dMenuName
+   AddMenuItem( sAppMgr )
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: DeleteGeneralTask
+**
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+DeleteGeneralTask( VIEW sAppMgr BASED ON LOD sAppMgr,
+                   STRING ( 50 ) GeneralName )
+
+   SET CURSOR FIRST sAppMgr.GeneralTask
+      WHERE sAppMgr.GeneralTask.GeneralName = GeneralName
+      TraceLineS( GeneralName, ":<<<<<<<<<<<<<<<<<<<<<<<<<<" )
+   IF RESULT >= zCURSOR_SET
+      TraceLineS( GeneralName, ":<< found it <" )
+      SET CURSOR FIRST sAppMgr.WindowList
+         WHERE sAppMgr.WindowList.MenuName =  sAppMgr.GeneralTask.dMenuName
+      TraceLineS( sAppMgr.GeneralTask.dMenuName, ":<<< dMenu Name <<" )
+      IF RESULT >= zCURSOR_SET
+         DeleteMenuItem( sAppMgr )
+      END
+      DELETE ENTITY sAppMgr.GeneralTask
+   END
+END
+
+///-----------------------------------------------------------------------------------------------
+///
+///   Loading and Building Stuff
+///
+///-----------------------------------------------------------------------------------------------
+/*************************************************************************************************
+**
+**    OPERATION: CreateFunctionalAreas
+**
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+CreateFunctionalAreas( VIEW  sAppMgr BASED ON LOD sAppMgr )
+
+     // reposition back on the first one
+    SET CURSOR FIRST sAppMgr.FunctionalSubArea
+    // reposition back on the first one
+    SET CURSOR FIRST sAppMgr.FunctionalArea
+
+END
+
+///-----------------------------------------------------------------------------------------------
+///
+///   Functional Area Window Management Functions
+///
+///-----------------------------------------------------------------------------------------------
+/*************************************************************************************************
+**
+**    OPERATION: AddSplitWindow
+**
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+AddSplitWindow( VIEW sAppMgr BASED ON LOD sAppMgr,
+                STRING ( 32 ) szFunctionalArea,
+                STRING ( 32 ) szFunctionalSubArea,
+                STRING ( 32 ) szWindowName,
+                STRING ( 32 ) szHasFrame,
+                VIEW  ViewToSplitWindow )
+
+   SET CURSOR FIRST sAppMgr.FunctionalArea
+      WHERE sAppMgr.FunctionalArea.FunctionalAreaName = szFunctionalArea
+   IF RESULT >= zCURSOR_SET
+      SET CURSOR FIRST sAppMgr.FunctionalSubArea
+         WHERE sAppMgr.FunctionalSubArea.FunctionalSubAreaName = szFunctionalSubArea
+      IF RESULT >= zCURSOR_SET
+         SET CURSOR LAST sAppMgr.SplitWindow
+         CREATE ENTITY sAppMgr.SplitWindow AFTER
+         sAppMgr.SplitWindow.WindowName = szWindowName
+         sAppMgr.SplitWindow.HasFrame = szHasFrame
+         NAME VIEW ViewToSplitWindow szWindowName
+         RETURN 0
+      END
+   ELSE
+      RETURN 2
+   END
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: IsSplitWindowAdded
+**
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+IsSplitWindowAdded( VIEW sAppMgr BASED ON LOD sAppMgr,
+                    STRING ( 32 ) szFunctionalArea,
+                    STRING ( 32 ) szFunctionalSubArea,
+                    STRING ( 32 ) szWindowName )
+
+   VIEW sAppMgr2 BASED ON LOD sAppMgr
+
+   CreateViewFromView( sAppMgr2, sAppMgr )
+   SET CURSOR FIRST sAppMgr2.FunctionalArea
+      WHERE sAppMgr2.FunctionalArea.FunctionalAreaName = szFunctionalArea
+   IF RESULT >= zCURSOR_SET
+      SET CURSOR FIRST sAppMgr2.FunctionalSubArea
+         WHERE sAppMgr2.FunctionalSubArea.FunctionalSubAreaName = szFunctionalSubArea
+      IF RESULT >= zCURSOR_SET
+         SET CURSOR FIRST sAppMgr2.SplitWindow
+            WHERE sAppMgr2.SplitWindow.WindowName = szWindowName
+         IF RESULT >= zCURSOR_SET
+            DropView( sAppMgr2 )
+            RETURN 1
+         END
+      END
+   END
+   DropView( sAppMgr2 )
+   RETURN 0
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: CloseSplitWindow
+**
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+CloseSplitWindow( VIEW sAppMgr BASED ON LOD sAppMgr,
+                  STRING ( 32 ) szFunctionalArea,
+                  STRING ( 32 ) szFunctionalSubArea,
+                  STRING ( 32 ) szWindowName )
+   VIEW vWindow
+   STRING (  32  ) szTemp
+
+   SET CURSOR FIRST sAppMgr.FunctionalArea
+      WHERE sAppMgr.FunctionalArea.FunctionalAreaName = szFunctionalArea
+   IF RESULT >= zCURSOR_SET
+      SET CURSOR FIRST sAppMgr.FunctionalSubArea
+         WHERE sAppMgr.FunctionalSubArea.FunctionalSubAreaName = szFunctionalSubArea
+      IF RESULT >= zCURSOR_SET
+         // if the window name is blank, then close all the subwindows for a functional area.
+         IF szWindowName = ""
+            FOR EACH sAppMgr.SplitWindow
+               szTemp = sAppMgr.SplitWindow.WindowName
+               // FIXTHISNEWCORE GET VIEW vWindow NAMED szTemp
+               GetViewByName( vWindow, szTemp, 0, zLEVEL_TASK )
+               IF sAppMgr.SplitWindow.HasFrame = "Y"
+                  CloseFrame( vWindow )
+               END
+               DELETE ENTITY sAppMgr.SplitWindow NONE
+            END
+            RETURN 0
+         ELSE
+            SET CURSOR FIRST sAppMgr.SplitWindow
+               WHERE sAppMgr.SplitWindow.WindowName = szWindowName
+            IF RESULT >= zCURSOR_SET
+               // FIXTHISNEWCORE GET VIEW vWindow NAMED szWindowName
+               GetViewByName( vWindow, szWindowName, 0, zLEVEL_TASK )
+               
+               IF sAppMgr.SplitWindow.HasFrame = "Y"
+                  CloseFrame( vWindow )
+               END
+               DELETE ENTITY sAppMgr.SplitWindow
+               RETURN 0
+            END
+         END
+         RETURN 2
+      END
+      RETURN 2
+   END
+   RETURN 2
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: CloseSplitWindow
+**
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+DetatchWindow( VIEW sAppMgr BASED ON LOD sAppMgr,
+                  STRING ( 32 ) szFunctionalArea,
+                  STRING ( 32 ) szFunctionalSubArea,
+                  STRING ( 32 ) szWindowName )
+   VIEW vWindow
+   STRING (  32  ) szTemp
+
+   SET CURSOR FIRST sAppMgr.FunctionalArea
+      WHERE sAppMgr.FunctionalArea.FunctionalAreaName = szFunctionalArea
+   IF RESULT >= zCURSOR_SET
+      SET CURSOR FIRST sAppMgr.FunctionalSubArea
+         WHERE sAppMgr.FunctionalSubArea.FunctionalSubAreaName = szFunctionalSubArea
+      IF RESULT >= zCURSOR_SET
+         // if the window name is blank, then close all the subwindows for a functional area.
+         IF szWindowName = ""
+            FOR EACH sAppMgr.SplitWindow
+               DELETE ENTITY sAppMgr.SplitWindow NONE
+            END
+            RETURN 0
+         ELSE
+            SET CURSOR FIRST sAppMgr.SplitWindow
+               WHERE sAppMgr.SplitWindow.WindowName = szWindowName
+            IF RESULT >= zCURSOR_SET
+               DELETE ENTITY sAppMgr.SplitWindow
+               RETURN 0
+            END
+         END
+         RETURN 2
+      END
+      RETURN 2
+   END
+   RETURN 2
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: CloseAllSplitWindows
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+CloseAllSplitWindows( VIEW sAppMgr BASED ON LOD sAppMgr,
+                      STRING (  32  ) szDialogName,
+                      STRING ( 32 )   szFunctionalArea )
+   VIEW vWindow
+   STRING (  50  )    szWindowName
+
+   SET CURSOR FIRST sAppMgr.FunctionalArea
+      WHERE sAppMgr.FunctionalArea.FunctionalAreaName = szFunctionalArea
+   IF RESULT >= zCURSOR_SET
+      FOR EACH sAppMgr.SplitWindow WITHIN sAppMgr.FunctionalArea
+         szWindowName = sAppMgr.SplitWindow.WindowName
+         // FIXTHISNEWCORE GET VIEW vWindow NAMED szWindowName
+         GetViewByName( vWindow, szWindowName, 0, zLEVEL_TASK )
+         //IF sAppMgr.SplitWindow.HasFrame = "Y"
+           //CloseFrame( vWindow )
+         //END
+         DELETE ENTITY sAppMgr.SplitWindow NONE
+      END
+      RETURN 0
+   END
+   RETURN 2
+END
+
+
+/*************************************************************************************************
+**
+**    OPERATION: GetActiveSplitWindow
+**
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+GetActiveSplitWindow( VIEW sAppMgr BASED ON LOD sAppMgr,
+                      VIEW vWindow,
+                      STRING ( 32 ) szFunctionalArea,
+                      STRING ( 32 ) szFunctionalSubArea )
+
+   STRING (  50  ) szWindow
+   VIEW sAppMgr2 BASED ON LOD sAppMgr
+
+   CreateViewFromView( sAppMgr2, sAppMgr )
+   SET CURSOR FIRST sAppMgr2.FunctionalArea
+      WHERE sAppMgr2.FunctionalArea.FunctionalAreaName = szFunctionalArea
+   IF RESULT >= zCURSOR_SET
+      SET CURSOR FIRST sAppMgr2.FunctionalSubArea
+         WHERE sAppMgr2.FunctionalSubArea.FunctionalSubAreaName = szFunctionalSubArea
+      IF RESULT >= zCURSOR_SET
+         szWindow = sAppMgr2.SplitWindow.WindowName
+         DropView( sAppMgr2 )
+         RETURN 1
+      END
+   END
+   DropView( sAppMgr2 )
+   RETURN 0
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: RefreshSplitWindow
+**
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+RefreshSplitWindow( VIEW sAppMgr BASED ON LOD sAppMgr,
+                    STRING ( 32 ) szFunctionalArea,
+                    STRING ( 32 ) szFunctionalSubArea,
+                    STRING ( 32 ) szWindowName )
+
+   STRING ( 50 ) szWindow
+   VIEW vWindow
+   VIEW sAppMgr2 BASED ON LOD sAppMgr
+
+   CreateViewFromView( sAppMgr2, sAppMgr )
+   SET CURSOR FIRST sAppMgr2.FunctionalArea
+      WHERE sAppMgr2.FunctionalArea.FunctionalAreaName = szFunctionalArea
+   IF RESULT >= zCURSOR_SET
+      SET CURSOR FIRST sAppMgr2.FunctionalSubArea
+         WHERE sAppMgr2.FunctionalSubArea.FunctionalSubAreaName = szFunctionalSubArea
+      IF RESULT >= zCURSOR_SET
+         SET CURSOR FIRST sAppMgr2.SplitWindow
+            WHERE sAppMgr2.SplitWindow.WindowName = szWindowName
+         IF RESULT >= zCURSOR_SET
+            szWindow = sAppMgr2.SplitWindow.WindowName
+            // FIXTHISNEWCORE GET VIEW vWindow NAMED szWindowName
+            GetViewByName( vWindow, szWindowName, 0, zLEVEL_TASK )
+            RefreshWindow( vWindow )
+         END
+         DropView( sAppMgr2 )
+         RETURN 1
+      END
+   END
+   DropView( sAppMgr2 )
+   RETURN 0
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: RefreshAllSplitWindows
+**
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+RefreshAllSplitWindows( VIEW sAppMgr BASED ON LOD sAppMgr,
+                        STRING ( 32 ) szFunctionalArea,
+                        STRING ( 32 ) szFunctionalSubArea )
+
+   STRING ( 50 ) szWindow
+   VIEW vWindow
+   VIEW sAppMgr2 BASED ON LOD sAppMgr
+
+   CreateViewFromView( sAppMgr2, sAppMgr )
+   SET CURSOR FIRST sAppMgr2.FunctionalArea
+      WHERE sAppMgr2.FunctionalArea.FunctionalAreaName = szFunctionalArea
+   IF RESULT >= zCURSOR_SET
+      SET CURSOR FIRST sAppMgr2.FunctionalSubArea
+         WHERE sAppMgr2.FunctionalSubArea.FunctionalSubAreaName = szFunctionalSubArea
+      IF RESULT >= zCURSOR_SET
+         FOR EACH sAppMgr2.SplitWindow
+            szWindow = sAppMgr2.SplitWindow.WindowName
+            // FIXTHISNEWCORE GET VIEW vWindow NAMED szWindow
+            GetViewByName( vWindow, szWindow, 0, zLEVEL_TASK )
+            RefreshWindow( vWindow )
+         END
+         DropView( sAppMgr2 )
+         RETURN 1
+      END
+   END
+   DropView( sAppMgr2 )
+   RETURN 0
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: MapSplitWindow
+**
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+MapAllSplitWindows( VIEW sAppMgr BASED ON LOD sAppMgr,
+                STRING ( 32 ) szFunctionalArea,
+                STRING ( 32 ) szFunctionalSubArea )
+   STRING ( 50 ) szWindow
+   SHORT         nRC
+   VIEW          vWindow
+   VIEW sAppMgr2 BASED ON LOD sAppMgr
+
+   CreateViewFromView( sAppMgr2, sAppMgr )
+   SET CURSOR FIRST sAppMgr2.FunctionalArea
+      WHERE sAppMgr2.FunctionalArea.FunctionalAreaName = szFunctionalArea
+   IF RESULT >= zCURSOR_SET
+      SET CURSOR FIRST sAppMgr2.FunctionalSubArea
+         WHERE sAppMgr2.FunctionalSubArea.FunctionalSubAreaName = szFunctionalSubArea
+      IF RESULT >= zCURSOR_SET
+         FOR EACH sAppMgr2.SplitWindow
+            szWindow = sAppMgr2.SplitWindow.WindowName
+            // FIXTHISNEWCORE GET VIEW vWindow NAMED szWindow
+            GetViewByName( vWindow, szWindow, 0, zLEVEL_TASK )
+            IF vWindow = 0
+               nRC = 0
+            ELSE
+               nRC = MapWindow( vWindow )
+            END
+         END
+         DropView( sAppMgr2 )
+         RETURN nRC
+      END
+   END
+   DropView( sAppMgr2 )
+   RETURN 0
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: MapSplitWindow
+**
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+MapSplitWindow( VIEW sAppMgr BASED ON LOD sAppMgr,
+                STRING ( 32 ) szFunctionalArea,
+                STRING ( 32 ) szFunctionalSubArea,
+                STRING ( 32 ) szWindowName )
+   VIEW sAppMgr2 BASED ON LOD sAppMgr
+   STRING ( 50 ) szWindow
+   SHORT         nRC
+   VIEW          vWindow
+
+   nRC = 0
+   CreateViewFromView( sAppMgr2, sAppMgr )
+   SET CURSOR FIRST sAppMgr2.FunctionalArea
+      WHERE sAppMgr2.FunctionalArea.FunctionalAreaName = szFunctionalArea
+   IF RESULT >= zCURSOR_SET
+      SET CURSOR FIRST sAppMgr2.FunctionalSubArea
+         WHERE sAppMgr2.FunctionalSubArea.FunctionalSubAreaName = szFunctionalSubArea
+      IF RESULT >= zCURSOR_SET
+         SET CURSOR FIRST sAppMgr2.SplitWindow
+            WHERE sAppMgr2.SplitWindow.WindowName = szWindowName
+         IF RESULT >= zCURSOR_SET
+            szWindow = sAppMgr2.SplitWindow.WindowName
+            // FIXTHISNEWCORE GET VIEW vWindow NAMED szWindow
+            GetViewByName( vWindow, szWindow, 0, zLEVEL_TASK )
+            IF vWindow = 0
+               TraceLineS( "MapSplitWindow view not found: ", szWindow )
+               RETURN 0
+            END
+            nRC = MapWindow( vWindow )
+            IF nRC = 1
+               // There was a mapping error, so return accordingly.
+               DropView( sAppMgr2 )
+               RETURN 2
+            END
+         END
+      END
+   END
+   DropView( sAppMgr2 )
+   RETURN nRC
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: SaveLastViews
+**       preserve the last views for functional areas that use the same view. Save mPerson from
+**          Donor to DonorsPerson etc. Note this is called before the change to a new area
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+SaveLastViews( VIEW sAppMgr BASED ON LOD sAppMgr )
+   STRING (  50  ) szFunctionalAreaName
+   STRING (  50  ) szFunctionalSubAreaName
+   STRING (  50  ) szViewName
+   VIEW  vView
+   SHORT nRC
+
+   szFunctionalAreaName = sAppMgr.FunctionalArea.FunctionalAreaName
+   szFunctionalSubAreaName = sAppMgr.FunctionalSubArea.FunctionalSubAreaName
+
+   // if we are going to donor, check for mPerson, mChurch, and mOrg. IF they Exist, drop that name
+   //    after saving them to another name. Otherwise if we aree coming from donor do the same thing,
+
+   // see if the person view is there, if so save it as a name of SubArea+mPerson
+   
+   // FIXTHISNEWCORE GET VIEW  vView  NAMED "mPerson"
+   // IF  RESULT > 0
+   nRC = GetViewByName( vView, "mPerson", 0, zLEVEL_TASK )
+   IF nRC > 0
+      
+         IF szFunctionalSubAreaName = "Students"
+            szViewName = "mPerson" + "Student"
+         ELSE
+            szViewName = "mPerson" + szFunctionalSubAreaName
+         END
+      NAME VIEW  vView  szViewName
+      DropNameForView( vView, "mPerson", 0, zLEVEL_TASK )
+   END
+   // see if the Church view is there, if so save it as a name of SubArea+mChurch
+   // FIXTHISNEWCORE GET VIEW  vView  NAMED "mChurch"
+   // IF  RESULT > 0
+   nRC = GetViewByName( vView, "mChurch", 0, zLEVEL_TASK )
+   IF  nRC > 0
+      szViewName = "mChurch" + szFunctionalSubAreaName
+      NAME VIEW  vView  szViewName
+      DropNameForView( vView, "mChurch", 0, zLEVEL_TASK )
+      szViewName = "mDonorSM" + szFunctionalSubAreaName
+      GET VIEW vView NAMED "mDonorSM"
+      IF RESULT >= 0
+         NAME VIEW  vView  szViewName
+         DropNameForView( vView, "mDonorSM", sAppMgr, zLEVEL_TASK )
+      END
+      szViewName = "mDonor" + szFunctionalSubAreaName
+      GET VIEW vView NAMED "mDonor"
+      IF RESULT >= 0
+         NAME VIEW  vView  szViewName
+         DropNameForView( vView, "mDonor", sAppMgr, zLEVEL_TASK )
+      END
+   END
+   // see if the Org view is there, if so save it as a name of SubArea+mOrg
+   // FIXTHISNEWCORE GET VIEW  vView  NAMED "mOrg"
+   // IF  RESULT > 0
+   nRC = GetViewByName( vView, "mOrg", 0, zLEVEL_TASK )
+   IF nRC  > 0
+      szViewName = "mOrg" + szFunctionalSubAreaName
+      NAME VIEW  vView  szViewName
+      DropNameForView( vView, "mOrg", 0, zLEVEL_TASK )
+   END
+
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: RestoreLastViews
+**       this restores the views we saved above. if they exist. This is called AFTER the poistion
+**         is set. ( ie at the end of GOTO_subarea )
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+RestoreLastViews( VIEW sAppMgr BASED ON LOD sAppMgr )
+   STRING (  50  ) szFunctionalAreaName
+   STRING (  50  ) szFunctionalSubAreaName
+   STRING (  50  ) szViewName
+   VIEW  vView
+   SHORT nRC 
+   
+   szFunctionalAreaName = sAppMgr.FunctionalArea.FunctionalAreaName
+   szFunctionalSubAreaName = sAppMgr.FunctionalSubArea.FunctionalSubAreaName
+
+   // if we are going to donor, check for mPerson, mChurch, and mOrg. IF they Exist, drop that name
+   //    after saving them to another name. Otherwise if we aree coming from donor do the same thing,
+
+   // see if the person view is there, if so save it as a name of SubArea+mPerson
+   szViewName = "mPerson" + szFunctionalSubAreaName
+   // FIXTHISNEWCORE GET VIEW  vView  NAMED szViewName
+   // IF  RESULT > 0
+   nRC = GetViewByName( vView, szViewName, 0, zLEVEL_TASK )
+   IF nRC > 0
+      NAME VIEW  vView  "mPerson"
+      DropNameForView( vView, szViewName, 0, zLEVEL_TASK )
+   END
+   // see if the Church view is there, if so save it as a name of SubArea+mChurch
+   szViewName = "mChurch" + szFunctionalSubAreaName
+   // FIXTHISNEWCORE GET VIEW  vView  NAMED szViewName
+   // IF  RESULT > 0
+   nRC = GetViewByName( vView, szViewName, 0, zLEVEL_TASK )
+   IF nRC > 0
+      NAME VIEW  vView  "mChurch"
+      DropNameForView( vView, szViewName, 0, zLEVEL_TASK )
+      szViewName = "mDonorSM" + szFunctionalSubAreaName
+      nRC = GetViewByName( vView, szViewName, 0, zLEVEL_TASK )
+      IF nRC >= 0
+         NAME VIEW  vView  "mDonorSM"
+         DropNameForView( vView, szViewName, sAppMgr, zLEVEL_TASK )
+      END
+      szViewName = "mDonor" + szFunctionalSubAreaName
+      nRC = GetViewByName( vView, szViewName, 0, zLEVEL_TASK )
+      IF nRC >= 0
+         NAME VIEW  vView  "mDonor"
+         DropNameForView( vView, szViewName, sAppMgr, zLEVEL_TASK )
+      END
+   END
+   // see if the Org view is there, if so save it as a name of SubArea+mOrg
+   szViewName = "mOrg" + szFunctionalSubAreaName
+   // FIXTHISNEWCORE GET VIEW  vView  NAMED szViewName
+   // IF  RESULT > 0
+   nRC = GetViewByName( vView, szViewName, 0, zLEVEL_TASK )
+   IF nRC > 0
+      NAME VIEW  vView  "mOrg"
+      DropNameForView( vView, szViewName, 0, zLEVEL_TASK )
+   END
+
+END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: dFunctionalAreaTr
+**    
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dFunctionalAreaTr( VIEW sAppMgr BASED ON LOD sAppMgr,
+                   STRING ( 32 ) InternalEntityStructure,
+                   STRING ( 32 ) InternalAttribStructure,
+                   SHORT GetOrSetFlag )
+
+STRING ( 100 ) szFunctionalArea
+ 
+   CASE GetOrSetFlag
+   OF   zDERIVED_GET:
+szFunctionalArea=sAppMgr.FunctionalArea.FunctionalAreaName
+
+  StoreStringInRecord ( sAppMgr, InternalEntityStructure,
+                               InternalAttribStructure, szFunctionalArea )
+
+        /* end zDERIVED_GET */
+   OF   zDERIVED_SET:
+
+        /* end zDERIVED_SET */
+   END  /* case */
+
+END
+/*************************************************************************************************
+**    
+**    OPERATION: dFunctionalAreaTr
+**    
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dFunctionalSubAreaTr( VIEW sAppMgr BASED ON LOD sAppMgr,
+                   STRING ( 32 ) InternalEntityStructure,
+                   STRING ( 32 ) InternalAttribStructure,
+                   SHORT GetOrSetFlag )
+
+STRING ( 100 ) szFunctionalArea
+ 
+   CASE GetOrSetFlag
+   OF   zDERIVED_GET:
+szFunctionalArea=sAppMgr.FunctionalSubArea.FunctionalSubAreaName
+
+  StoreStringInRecord ( sAppMgr, InternalEntityStructure,
+                               InternalAttribStructure, szFunctionalArea )
+
+        /* end zDERIVED_GET */
+   OF   zDERIVED_SET:
+
+        /* end zDERIVED_SET */
+   END  /* case */
+
+END

@@ -1,0 +1,167 @@
+
+
+/*************************************************************************************************
+**
+**    OPERATION: DeleteGeneralTask
+**
+**
+*************************************************************************************************/
+GLOBAL OPERATION
+DeleteGeneralTask_G( VIEW ViewToWindow,
+                     STRING ( 32 ) TaskName )
+
+   VIEW sAppMgr BASED ON LOD sAppMgr
+
+   GetViewByName( sAppMgr, "sAppMgr", ViewToWindow, zLEVEL_TASK )
+   DeleteGeneralTask( sAppMgr, TaskName )
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: CloseWindow
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+zCloseWindow( VIEW vWindowToClose )
+
+   SetWindowState( vWindowToClose, 9 , 0 ) // zWINDOW_DESTROY
+   
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION:  RefreshCloseSplitWindow_G
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+RefreshCloseSplitWindow_G( VIEW ViewToWindow,
+                           STRING ( 32 ) szAreaName,
+                           STRING ( 32 ) szFrameName,
+                           STRING ( 32 ) szDetailName )
+
+   VIEW sAppMgr  BASED ON LOD sAppMgr
+   STRING ( 32 ) szWindowName
+
+   GetViewByName( sAppMgr, "sAppMgr", ViewToWindow, zLEVEL_TASK )
+   SET CURSOR FIRST sAppMgr.SplitWindow
+              WHERE sAppMgr.SplitWindow.WindowName != szFrameName
+   IF RESULT >= zCURSOR_SET
+      szWindowName = sAppMgr.SplitWindow.WindowName
+      IF szWindowName = szDetailName
+         RefreshSplitWindow( sAppMgr, szAreaName, szFrameName, szDetailName )
+         RETURN 0
+      ELSE
+         CloseSplitWindow( sAppMgr, szAreaName, szFrameName, szWindowName )
+         RETURN 1
+      END
+   END
+
+   RETURN 2
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION:  CloseSplitWindow_G
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+CloseSplitWindow_G( VIEW ViewToWindow,
+                    STRING ( 32 ) szAreaName,
+                    STRING ( 32 ) szFrameName )
+
+   VIEW sAppMgr  BASED ON LOD sAppMgr
+
+   GetViewByName( sAppMgr, "sAppMgr", ViewToWindow, zLEVEL_TASK )
+   SET CURSOR FIRST sAppMgr.SplitWindow
+              WHERE sAppMgr.SplitWindow.WindowName = "ContactListDetail"
+   IF RESULT >= zCURSOR_SET
+      CloseSplitWindow( sAppMgr, szAreaName, szFrameName, "ContactListDetail" )
+   END
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: VALIDATE_AdministrationSecurityG
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+VALIDATE_AdministrationSecurityG( VIEW ViewToWindow )
+
+   VIEW mUser BASED ON LOD mUser
+   SHORT nRC
+   STRING ( 6 ) szPermissions
+   
+   // Check security Settings
+   GetViewByName( mUser, "mUser", ViewToWindow, zLEVEL_TASK )
+   nRC = SectionAccessAllowed( mUser, "", "GeneralLedger", "Administration", szPermissions )
+   IF  nRC < 0 OR szPermissions = "     "
+      MessageSend ( ViewToWindow, "zGlobal3009", "Access",
+                    "Access to Administration is denied by your security settings.",
+                    zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      SetWindowActionBehavior( ViewToWindow, zWAB_StayOnWindow, "", "" )
+      RETURN 2
+   END
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: SetImportStringAttribute
+**    Set an Attribute for a an imported data string field.
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+SetImportStringAttribute( VIEW AnyView,
+                          STRING ( 32 ) szEntityName,
+                          STRING ( 32 ) szAttributeName,
+                          STRING ( 2048 ) szInputString,
+                          INTEGER StartingPosition,
+                          INTEGER Length )
+
+   STRING ( 1000 ) szString
+   STRING ( 1000 ) szStringT
+   
+   szString = szInputString[ StartingPosition:Length ]
+   zLTrim( szString, szStringT, 1000)
+   zRTrim( szStringT, szString, 1000 )
+   IF szString = "0" 
+      szString = ""  
+   END
+   SetAttributeFromString( AnyView, szEntityName, szAttributeName, szString )
+
+END
+
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: GenerateLine
+**    Write out a generated line to an output file with option trace.
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+GenerateLine( VIEW AnyView,
+              INTEGER lFileHandle,
+              STRING ( 5000 ) szOutputLine )
+
+   // This is just a SysWriteLine.
+   SysWriteLine( AnyView, lFileHandle, szOutputLine )
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: DISPLAY_HTML_Graph
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+DISPLAY_HTML_Graph( VIEW ViewToWindow )
+
+   SHORT nRC
+   
+   nRC = WinShellExecute( ViewToWindow, "C:\Program Files (x86)\Mozilla Firefox\firefox.exe", "", "c:\temp\TestHTMLYear.html" )
+       //WinShellExecute( ViewToWindow, "c:\program files\internet explorer\iexplore.exe", "", "c:\temp\TestHTMLYear.html" )
+
+END

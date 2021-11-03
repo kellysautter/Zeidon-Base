@@ -1,0 +1,1311 @@
+
+/*************************************************************************************************
+**
+**    OPERATION: GetDOWNumber
+**
+**    Get Dow of week number
+**
+*************************************************************************************************/
+GLOBAL OPERATION
+GetDOWNumber( STRING ( 32 ) szDate )
+   INTEGER nDOY
+   STRING (  10  ) szDayOfWeek
+
+   UfFormatDateTime( szDayOfWeek, szDate, "DDD" )
+
+   IF  szDayOfWeek = "SUN"
+       nDOY = 1
+       RETURN nDOY
+   END
+   IF  szDayOfWeek = "MON"
+       nDOY = 2
+       RETURN nDOY
+   END
+   IF  szDayOfWeek = "TUE"
+       nDOY = 3
+       RETURN nDOY
+   END
+   IF  szDayOfWeek = "WED"
+       nDOY = 4
+       RETURN nDOY
+   END
+   IF  szDayOfWeek = "THU"
+       nDOY = 5
+       RETURN nDOY
+   END
+   IF  szDayOfWeek = "FRI"
+       nDOY = 6
+       RETURN nDOY
+   END
+   IF  szDayOfWeek = "SAT"
+       nDOY = 7
+       RETURN nDOY
+   END
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: GetDaysInMonth
+**
+**
+*************************************************************************************************/
+GLOBAL OPERATION
+GetDaysInMonth( STRING ( 32 ) szDate )
+
+   INTEGER nDays
+   INTEGER nLeapYear
+   STRING (  10  ) szMonth
+
+   UfFormatDateTime( szMonth, szDate, "M" )
+
+   IF szMonth = "4" OR szMonth = "6" OR szMonth = "9" OR szMonth = "11"
+      nDays = 30
+      RETURN nDays
+   END
+   IF szMonth = "1" OR szMonth = "3" OR szMonth = "5" OR szMonth = "7"
+         OR szMonth = "8" OR szMonth = "10" OR szMonth = "12"
+      nDays = 31
+      RETURN nDays
+   END
+   IF szMonth = "2"
+      nLeapYear = zDateIsLeapYear( szDate )
+      IF nLeapYear > 0
+         nDays = 29
+         RETURN nDays
+      ELSE
+         nDays = 28
+         RETURN nDays
+      END
+   END
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: GenerateSeasonalAddresses
+**
+**    Generate seasonal addresses for a Result Set
+**
+*************************************************************************************************/
+GLOBAL OPERATION
+GenerateSeasonalAddresses( VIEW vResultSet,
+                           VIEW wXferO BASED ON LOD wXferO,
+                           STRING ( 32 ) ObjectViewName )
+
+   STRING ( 32 ) RootEntityName
+   STRING ( 32 ) AddressEntityName
+   STRING ( 32 ) PrimaryAddressEntityName
+   STRING ( 8 )  szSeasonalDate
+   STRING ( 4 )  szSeasonalMonthDay
+   STRING ( 4 )  szFromMonthDay
+   STRING ( 4 )  szToMonthDay
+   SHORT nRC
+
+   // Generate the derived entity CurrentMailingAddress for query objects that have that entity defined in the LOD.
+   // It is expected that the object has the Address entity named "Address" and the Primary Address named "PrimaryAddress",
+   // unless it is identified as an exception below, as for qDonor and qDonate.
+   
+   // Exist if the object does not have a CurrentMailingAddress entity.
+   nRC = zLodContainsEntity( vResultSet, "CurrentMailingAddress" )
+   IF nRC < 0
+      RETURN 
+   END
+   
+   // Determine the Address/Primary address entity names for those objects that aren't using the standard Address and
+   // PrimaryAddress entity names.
+   IF ObjectViewName = "qProspct"
+      AddressEntityName        = "Address"
+      PrimaryAddressEntityName = "AllAddress"
+   ELSE
+      IF ObjectViewName = "qDonor" OR ObjectViewName = "qDonate" OR ObjectViewName = "qDonCmb"
+         AddressEntityName        = "DonorPersonAddress"
+         PrimaryAddressEntityName = "DonorPersonPrimaryAddress"
+      ELSE
+         AddressEntityName        = "Address"
+         PrimaryAddressEntityName = "PrimaryAddress"
+      END
+   END
+
+   // A Current Mailing address is always generated depending on the following two rules.
+   // 1. If an address exists with a date range that includes the SeasonalAddressDate sent
+   //    to this operation, then include that address.
+   // 2. Otherwise, include the PrimaryAddress as the CurrentMailingAddress.
+   // Note that if no SeasonalAddressDate exists, we always include the PrimaryAddress as the CurrentMailingAddress.
+
+   IF wXferO.Root.SeasonalAddressDate = ""
+      szSeasonalDate = wXferO.Root.dCurrentDate
+   ELSE
+      szSeasonalDate = wXferO.Root.SeasonalAddressDate
+   END
+   szSeasonalMonthDay = szSeasonalDate[5:4]
+   
+   // Loop through each root entity and create CurrentMailingAddress entity.
+   zGetFirstEntityNameForView( vResultSet, RootEntityName )
+   nRC = SetCursorFirstEntity( vResultSet, RootEntityName, "" )
+   LOOP WHILE nRC >= zCURSOR_SET
+   
+      IF szSeasonalDate != ""
+         // A Seasonal Date has been specified, so process each Address entry.
+         nRC = SetCursorFirstEntity( vResultSet, AddressEntityName, "" )
+         LOOP WHILE nRC >= zCURSOR_SET
+            GetStringFromAttribute( szFromMonthDay, vResultSet, AddressEntityName, "ValidFromMonthDay" )
+            GetStringFromAttribute( szToMonthDay, vResultSet, AddressEntityName, "ValidToMonthDay" )
+            
+            // There are two different situations for the compare:
+            // 1. The FromMonthDay is less than the ToMonthDay, meaning both dates will be for the same year.
+            // 2. The FromMonthDay is greater than the ToMonthDay, meaning the two dates are for different years.
+            // In the first case, we do a simple compare of the two values to szSeasonalMonthDay.
+            // In the second case, we will have to do two compares, the first involving the period from FromMonthDay to 12/31
+            // and the second involving the period from 01/01 to ToMonthDay.
+            // Skip the code if either szFromMonthDay or szToMonthDay are null
+            IF szFromMonthDay != "" AND szToMonthDay != ""
+               IF szFromMonthDay < szToMonthDay
+                  // Simple single compare
+                  IF szSeasonalMonthDay >= szFromMonthDay AND 
+                     szSeasonalMonthDay <= szToMonthDay
+                  
+                     IF vResultSet.CurrentMailingAddress DOES NOT EXIST
+                        IncludeSubobjectFromSubobject( vResultSet, "CurrentMailingAddress",
+                                                       vResultSet, AddressEntityName, zPOS_AFTER )
+                     END
+                  END
+               ELSE
+                  // More complex double compare
+                  IF ( szSeasonalMonthDay >= szFromMonthDay AND szSeasonalMonthDay <= "1231" ) OR
+                     ( szSeasonalMonthDay >= "0101"        AND szSeasonalMonthDay <=  szToMonthDay )
+         
+                     IF vResultSet.CurrentMailingAddress DOES NOT EXIST
+                        IncludeSubobjectFromSubobject( vResultSet, "CurrentMailingAddress",
+                                                       vResultSet, AddressEntityName, zPOS_AFTER )
+                     END
+                  END
+               END
+            END
+            nRC = SetCursorNextEntity( vResultSet, AddressEntityName, "" )
+         END
+      END
+   
+      // Include Primary Address if we didn't get a seasonal match above.
+      IF vResultSet.CurrentMailingAddress DOES NOT EXIST
+         nRC = CheckExistenceOfEntity( vResultSet, PrimaryAddressEntityName )
+         IF nRC >= zCURSOR_SET
+            IncludeSubobjectFromSubobject( vResultSet, "CurrentMailingAddress",
+                                           vResultSet, PrimaryAddressEntityName, zPOS_AFTER )
+         ELSE
+            // If that fails, include Address.
+            nRC = CheckExistenceOfEntity( vResultSet, AddressEntityName )
+             IF nRC >= zCURSOR_SET
+                IncludeSubobjectFromSubobject( vResultSet, "CurrentMailingAddress",
+                                               vResultSet, AddressEntityName, zPOS_AFTER )
+            END
+         END
+      END
+   
+      nRC = SetCursorNextEntity( vResultSet, RootEntityName, "" )
+   END
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: InitializeDynamicDomain
+**
+**    Initialize Domain Values from static values for a Domain
+**
+*************************************************************************************************/
+GLOBAL OPERATION
+InitializeDynamicDomain( VIEW DOMAINT BASED ON LOD DOMAINT )
+
+   VIEW vXDM
+   VIEW  sHost REGISTERED AS sHost
+   STRING ( 400 ) szFileName
+
+   // Initialize all Dynamic Domains with the values specified in the static Domain definition.
+
+   // Activate the XDM object.
+   GetApplDirectoryFromView( szFileName, DOMAINT, zAPPL_DIR_OBJECT, 400 )
+IF sHost.Host.OSSystem = "Windows"
+           szFileName = szFileName + "\zeidon.xdm"
+       ELSE
+           szFileName = szFileName + "/zeidon.xdm"
+       END
+   // 536870912 is ACTIVATE_SYSTEM in the following activate statement.
+   ActivateOI_FromFile( vXDM, "TZDMXGPO", DOMAINT, szFileName,zSingle )
+   NAME VIEW vXDM "XDM"
+   SET CURSOR FIRST vXDM.Domain WHERE vXDM.Domain.Name = DOMAINT.Domain.Name
+
+   // Merge in any DomainValue entries that are not already there.
+   FOR EACH vXDM.TableEntry WHERE vXDM.TableEntry.InternalValue != ""
+      SET CURSOR FIRST DOMAINT.DomainValue
+                 WHERE DOMAINT.DomainValue.InternalStringValue = vXDM.TableEntry.InternalValue
+      IF RESULT < zCURSOR_SET
+         SET CURSOR LAST DOMAINT.DomainValue
+         CREATE ENTITY DOMAINT.DomainValue
+         DOMAINT.DomainValue.InternalStringValue = vXDM.TableEntry.InternalValue
+         DOMAINT.DomainValue.ExternalDescription = vXDM.TableEntry.ExternalValue
+      END
+   END
+   SET CURSOR FIRST DOMAINT.DomainValue
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: InitializeDynamicDomains
+**
+**
+*************************************************************************************************/
+GLOBAL OPERATION
+InitializeDynamicDomains( VIEW AnyView )
+
+   VIEW vXDM
+   VIEW DOMAINT  BASED ON LOD DOMAINT
+   VIEW DOMAINT2 BASED ON LOD DOMAINT
+      VIEW  sHost REGISTERED AS sHost
+   STRING ( 400 ) szFileName
+
+   // Initialize all Dynamic Domains with the values specified in the static Domain definition.
+
+   // Activate the XDM object.
+   GetApplDirectoryFromView( szFileName, AnyView, zAPPL_DIR_OBJECT, 400 )
+IF sHost.Host.OSSystem = "Windows"
+           szFileName = szFileName + "\zeidon.xdm"
+       ELSE
+           szFileName = szFileName + "/zeidon.xdm"
+       END
+   // 536870912 is ACTIVATE_SYSTEM in the following activate statement.
+   ActivateOI_FromFile( vXDM, "TZDMXGPO", AnyView, szFileName, zSingle )
+   NAME VIEW vXDM "XDM"
+
+   // Loop through each Dynamic Domain in the XDM, activating the Dynamic Domain and
+   // merging the values in the XDM.
+   FOR EACH vXDM.Domain
+      IF vXDM.Domain.OperName != "" AND vXDM.TableEntry EXISTS
+         ACTIVATE DOMAINT WHERE DOMAINT.Domain.Name = vXDM.Domain.Name
+         IF RESULT < 0
+            ACTIVATE DOMAINT EMPTY
+            CREATE ENTITY DOMAINT.Domain
+            DOMAINT.Domain.Name = vXDM.Domain.Name
+         END
+         CreateViewFromView( DOMAINT2, DOMAINT )
+
+         SET CURSOR FIRST DOMAINT2.Domain
+         OrderEntityForView( DOMAINT2, "DomainValue", "ExternalDescription A" )
+
+         FOR EACH vXDM.TableEntry WHERE vXDM.TableEntry.InternalValue != ""
+            SET CURSOR FIRST DOMAINT.DomainValue
+                       WHERE DOMAINT.DomainValue.InternalStringValue = vXDM.TableEntry.InternalValue
+            IF RESULT < zCURSOR_SET
+               CREATE ENTITY DOMAINT.DomainValue
+               DOMAINT.DomainValue.InternalStringValue = vXDM.TableEntry.InternalValue
+               DOMAINT.DomainValue.ExternalDescription = vXDM.TableEntry.ExternalValue
+            END
+         END
+         COMMIT DOMAINT
+         DropObjectInstance( DOMAINT )
+      END
+   END
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: GetPersonFullName
+**
+**    Combines FirstName, MiddleName and LastName to create szFullName for any entity.
+**
+*************************************************************************************************/
+GLOBAL OPERATION
+GetPersonFullName( STRING ( 100 ) szFullName,
+                   VIEW           vOI,
+                   STRING ( 32 )  szEntityName )
+
+   STRING ( 30 )  szFirstName
+   STRING ( 30 )  szMiddleName
+   STRING ( 30 )  szLastName
+   STRING ( 10 )  szSuffix
+
+   szFullName = ""
+   GetStringFromAttribute( szFirstName, vOI, szEntityName, "FirstName" )
+   IF szFirstName != ""
+      szFullName = szFirstName
+   END
+   GetStringFromAttribute( szMiddleName, vOI, szEntityName, "MiddleName" )
+   IF szMiddleName != ""
+      IF szFullName != ""
+         szFullName = szFullName + " "
+      END
+      szFullName = szFullName + szMiddleName
+   END
+   GetStringFromAttribute( szLastName, vOI, szEntityName, "LastName" )
+   GetStringFromAttribute( szSuffix, vOI, szEntityName, "Suffix" )
+   IF szSuffix != ""
+      szLastName = szLastName + " " + szSuffix
+   END
+   IF szLastName != ""
+      IF szFullName != ""
+         szFullName = szFullName + " "
+      END
+      szFullName = szFullName + szLastName
+   END
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: GetPersonFullNameLFM
+**
+**    Combines FirstName, MiddleName and LastName to create szFullName for any entity.
+**
+*************************************************************************************************/
+GLOBAL OPERATION
+GetPersonFullNameLFM( STRING ( 100 ) szFullName,
+                      VIEW           vOI,
+                      STRING ( 32 )  szEntityName )
+
+   STRING ( 30 )  szFirstName
+   STRING ( 30 )  szMiddleName
+   STRING ( 30 )  szLastName
+   STRING ( 10 )  szSuffix
+
+   
+   GetStringFromAttribute( szLastName, vOI, szEntityName, "LastName" )
+   GetStringFromAttribute( szSuffix, vOI, szEntityName, "Suffix" )
+   IF szSuffix != ""
+      szLastName = szLastName + " " + szSuffix
+   END
+   IF szLastName != "" 
+      szFullName = szLastName + ","
+   END
+   GetStringFromAttribute( szFirstName, vOI, szEntityName, "FirstName" )
+   IF szFirstName != ""
+      szFullName = szFullName + " " + szFirstName
+   END
+   GetStringFromAttribute( szMiddleName, vOI, szEntityName, "MiddleName" )
+   IF szMiddleName != ""
+      szFullName = szFullName + " " + szMiddleName
+   END
+
+END
+
+
+/*************************************************************************************************
+**
+**    OPERATION: GenerateTransactionEntry
+**
+**    Generate a Transaction entry for the view passed in.
+**
+*************************************************************************************************/
+GLOBAL OPERATION
+GenerateTransactionEntry( VIEW OIView )
+
+   VIEW mUser BASED ON LOD  mUser
+   SHORT nRC
+
+   nRC = ObjectInstanceUpdated( OIView )
+   IF nRC > 0
+      nRC = GetViewByName( mUser, "mUser", OIView, zLEVEL_TASK )
+      IF nRC < 0
+         // Use task view in case we're running under Web.
+         GetViewByName( mUser, "mUser", OIView, zLEVEL_TASK )
+      END
+      IF nRC >= 0
+         SET CURSOR LAST OIView.Transaction
+         CREATE ENTITY OIView.Transaction
+         OIView.Transaction.UserID   = mUser.User.ID
+         OIView.Transaction.UserName = mUser.User.UserName
+         SetAttributeFromCurrentDateTime( OIView, "Transaction", "TransDateTime" )
+      END
+   END
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: GenerateTransactionEntryWDesc
+**
+**    Generate a Transaction entry for the view passed in.
+**
+*************************************************************************************************/
+GLOBAL OPERATION
+GenerateTransactionEntryWDesc( VIEW OIView,
+                               STRING ( 50 ) szDescription )
+
+   VIEW mUser BASED ON LOD  mUser
+   SHORT nRC
+
+   nRC = ObjectInstanceUpdated( OIView )
+   IF nRC > 0
+      nRC = GetViewByName( mUser, "mUser", OIView, zLEVEL_TASK )
+      IF nRC < 0
+         // Use task view in case we're running under Web.
+         nRC = GetViewByName( mUser, "mUser", OIView, zLEVEL_TASK )
+      END
+      IF nRC >= 0
+         SET CURSOR LAST OIView.Transaction
+         CREATE ENTITY OIView.Transaction
+         OIView.Transaction.UserID      = mUser.User.ID
+         OIView.Transaction.UserName    = mUser.User.UserName
+         OIView.Transaction.Description = szDescription
+         SetAttributeFromCurrentDateTime( OIView, "Transaction", "TransDateTime" )
+      END
+   END
+
+END
+
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: SetDateFromLegacyDate
+**    
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+SetDateFromLegacyDate( VIEW TargetView,
+                       STRING ( 32 ) TargetEntityName,
+                       STRING ( 32 ) TargetAttributeName,
+                       VIEW SourceView,
+                       STRING ( 32 ) SourceEntityName,
+                       STRING ( 32 ) SourceAttributeName )
+                       
+   STRING ( 8 ) szLS_Date
+   STRING ( 8 ) szNewDate
+   STRING ( 4 ) szYear
+   STRING ( 2 ) szMonth
+   STRING ( 2 ) szDay
+   SHORT  nRC 
+   
+   GetStringFromAttributeByContext( szLS_Date, 
+                                    SourceView, SourceEntityName, SourceAttributeName, "", 8 )
+   nRC = zstrlen( szLS_Date )
+   IF nRC < 7
+      szNewDate = ""
+   ELSE
+      IF nRC = 7
+         szMonth = "0" + szLS_Date[1:1]
+         szDay   = szLS_Date[2:2]
+         szYear  = szLS_Date[4:4]
+      ELSE
+         szMonth = szLS_Date[1:2]
+         szDay   = szLS_Date[3:2]
+         szYear  = szLS_Date[5:4]
+      END
+      szNewDate = szYear + szMonth + szDay
+   END
+   SetAttributeFromString( TargetView, TargetEntityName, TargetAttributeName, szNewDate )
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: RetrieveCommaDeliminatedValue
+**    
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+RetrieveCommaDeliminatedValue( STRING ( 5000 ) ReturnedValue,
+                               STRING ( 5000 ) szLine,
+                               INTEGER ParameterNumber )
+
+   INTEGER Length
+   INTEGER ParameterPosition
+   INTEGER CommaPos
+   STRING ( 1 )   szComma
+   STRING ( 5000 ) szValue
+
+   // Return the value at the comma deliminated position ParameterNumber.
+   Length = zstrlen( szLine )
+   szValue = ""
+   CommaPos = 1
+   ParameterPosition = 1
+   szComma = szLine[ CommaPos: 1 ]
+   LOOP WHILE ParameterPosition <= ParameterNumber AND CommaPos <= Length
+      IF szComma = QUOTES
+         // The entry IS contained in quotes.
+         CommaPos = CommaPos + 1
+         szComma = szLine[ CommaPos: 1 ]
+         szValue = ""
+         LOOP WHILE CommaPos < Length AND szComma != QUOTES
+            szValue = szValue + szComma
+            CommaPos = CommaPos + 1
+            szComma = szLine[ CommaPos: 1 ]
+         END
+         CommaPos = CommaPos + 2
+         IF CommaPos < Length
+            szComma = szLine[ CommaPos: 1 ]
+         END
+         ParameterPosition = ParameterPosition + 1
+      ELSE
+         // The entry is NOT contained in quotes.
+         szValue = ""
+         LOOP WHILE CommaPos < Length AND szComma != "," 
+            szValue = szValue + szComma
+            CommaPos = CommaPos + 1
+            szComma = szLine[ CommaPos: 1 ]
+         END
+         IF szComma != ","
+            szComma = szLine[ CommaPos: 1 ]
+            szValue = szValue + szComma
+         END
+         CommaPos = CommaPos + 1
+         szComma = szLine[ CommaPos: 1 ]
+         ParameterPosition = ParameterPosition + 1
+      END
+   END
+   
+   // If the ParameterPosition is the same value as the ParameterNumber, then the last value was null. If not,
+   // the ParameterPosition got incremented one more time as the non-null value was processed.
+   IF ParameterNumber = ParameterPosition
+      ReturnedValue = ""
+   ELSE
+      ReturnedValue = szValue
+   END
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: SetAttributeByCommaDelimitValue
+**    Set an Attribute from a value in a comma delimited file.
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+SetAttributeByCommaDelimitValue( VIEW AnyView,
+                                 STRING ( 32 )    szEntityName,
+                                 STRING ( 32 )    szAttributeName,
+                                 STRING ( 4000 ) szLine,
+                                 INTEGER ValueCommaPos )
+
+   STRING ( 4000 )  szValue
+   
+   RetrieveCommaDeliminatedValue( szValue, szLine, ValueCommaPos )
+   SetAttributeFromString( AnyView, szEntityName, szAttributeName, szValue )
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: SetAttributeByCL_PositionalValue
+**    Set an Attribute from a value in a positional file.
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+SetAttributeByCL_PositionalValue( VIEW AnyView,
+                                  STRING ( 32 )    szEntityName,
+                                  STRING ( 32 )    szAttributeName,
+                                  STRING ( 4000 ) szLine,
+                                  INTEGER StartPosition,
+                                  INTEGER Length,
+                                  STRING ( 1 ) szDataType )
+
+   STRING ( 1000 )  szValueIn
+   STRING ( 1000 )  szValueOut
+   STRING (  5 )    szZipCode5
+   STRING (  4 )    szZipCode4
+   INTEGER          IntegerValue
+   DECIMAL          DecimalValue1
+   DECIMAL          DecimalValue2
+   
+   // Set the attribute from a string identified by position and length.
+   // Make sure that we trim any blanks off the end of the string.
+   // Since this is a CommonLine attribute, make sure that any nulls are filled with blanks.
+   IF Length > 1000
+      MessageSend( AnyView, "zGlobal2005", "Set Attribute by Positional Value",
+                   "Length cannot exceed 1000 characters.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+   szValueIn = szLine[ StartPosition: Length ]
+   zRTrim( szValueIn, szValueOut, 1000 )
+   IF szDataType = "Z"
+      // Zip Code for 9 Digits
+      szZipCode5 = szValueOut[1:5]
+      szZipCode4 = szValueOut[6:4]
+      IF szZipCode5 = "00000"
+         szValueOut = ""
+      ELSE
+         szValueOut = szZipCode5
+         IF szZipCode4 != "0000"
+            szValueOut = szZipCode5 + szZipCode4
+         END
+      END
+      SetAttributeFromString( AnyView, szEntityName, szAttributeName, szValueOut )
+   ELSE
+      IF szDataType = "N"
+         // Whole Number
+         IntegerValue = zStringToInteger( szValueIn )
+         SetAttributeFromInteger( AnyView, szEntityName, szAttributeName, IntegerValue )
+      ELSE
+         IF szDataType = "D"
+            // Decimal with two decimal digits.
+            IntegerValue = zStringToInteger( szValueIn ) 
+            DecimalValue1 = IntegerValue
+            DecimalValue2 = DecimalValue1 / 100
+            SetAttributeFromDecimal( AnyView, szEntityName, szAttributeName, DecimalValue2 )
+         ELSE
+            // Default is String.
+            SetAttributeFromString( AnyView, szEntityName, szAttributeName, szValueOut )
+         END
+      END
+   END
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: SetCL_PositionalValue
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+SetCL_PositionalValue( VIEW AnyView,
+                       STRING ( 4000 ) szLine,
+                       STRING ( 1000 ) szValueIn,
+                       INTEGER TargetLength,
+                       STRING ( 1 ) szDataType )
+
+   STRING ( 1000 ) szValueOut
+   STRING (  5 )   szZipCode5
+   STRING (  4 )   szZipCode4
+   SHORT  SourceLength
+   SHORT  PadLength
+   
+   // Set the Input string value at the end of the Output line for the length specified.
+   // Make sure that we pad the output value with zeros or blanks, depending on data type.
+   // Regular strings get padded with blanks on the right.
+   // Numbers get padded with zeros on the left.
+   // ZipCodes get padded with zeros on the right.
+   IF TargetLength > 1000
+      MessageSend( AnyView, "zGlobal2005", "Set string by Positional Value",
+                   "Length cannot exceed 1000 characters.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+   
+   SourceLength = zstrlen( szValueIn )
+   PadLength = TargetLength - SourceLength
+   IF szDataType = "N"
+      // Number field, which is padded with zeros on the left.
+      szValueOut = ""
+      LOOP WHILE PadLength > 0
+         szValueOut = szValueOut + "0"
+         PadLength = PadLength - 1
+      END
+      szValueOut = szValueOut + szValueIn
+   ELSE
+      IF szDataType = "Z"
+         // Zip Code.
+         IF SourceLength = 0
+            szValueOut = "000000000"
+         ELSE
+            IF SourceLength = 5
+               szValueOut = szValueIn + "0000"
+            ELSE
+               szValueOut = szValueIn
+            END
+         END
+      ELSE
+         // The default is simple text padded with blanks on the right.
+         szValueOut = szValueIn
+         LOOP WHILE PadLength > 0
+            szValueOut = szValueOut + " "
+            PadLength = PadLength - 1
+         END
+      END
+   END
+   
+   // Add resulting string to end of szLine.
+   szLine = szLine + szValueOut
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: GenAndSetStudentEmailAddress
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+GenAndSetStudentEmailAddress( VIEW mStudent,
+                              STRING ( 50 ) StudentEntityName,
+                              STRING ( 50 ) PersonEntityName )
+
+/*   VIEW mProsStu  BASED ON LOD mProsStu
+   VIEW mUser     BASED ON LOD mUser
+   STRING ( 1 )  MiddleInitial
+   STRING ( 50 ) FirstName
+   STRING ( 50 ) LastName
+   STRING ( 50 ) eMailBase
+   STRING ( 50 ) eMailAddress
+   STRING ( 2 )  szCount
+   INTEGER       Count
+   GetStringFromAttribute( FirstName, mStudent, PersonEntityName, "FirstName" )
+   GetStringFromAttribute( LastName, mStudent, PersonEntityName, "LastName" )
+   GetStringFromAttribute( MiddleInitial, mStudent, PersonEntityName, "MiddleName" )
+   MiddleInitial = mStudent.Person.MiddleName 
+   IF MiddleInitial = ""
+      eMailBase = FirstName + "." + LastName
+   ELSE
+      eMailBase = FirstName + "." + MiddleInitial + "." + LastName
+   END
+   eMailAddress = eMailBase + "@enc.edu"
+   ACTIVATE mProsStu WHERE mProsStu.Student.eMailAddress = eMailAddress
+   IF RESULT >= 0
+      Count = 1
+      LOOP WHILE RESULT >= 0
+         DropObjectInstance( mProsStu )
+         Count = Count + 1
+         szCount = Count
+         eMailAddress = eMailBase + szCount + "@enc.edu"
+         ACTIVATE mProsStu WHERE mProsStu.Student.eMailAddress = eMailAddress
+      END
+   END
+   DropObjectInstance( mProsStu )
+   SetAttributeFromString( mStudent, "Student", "eMailAddress", eMailAddress )
+*/
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: GetTimeDifferenceInMinutes
+**    Return the time difference for two Time attributes in minutes
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+GetTimeDifferenceInMinutes( VIEW StartTimeView,
+                            STRING ( 32 ) StartTimeEntityName,
+                            STRING ( 32 ) StartTimeAttributeName,
+                            VIEW EndTimeView,
+                            STRING ( 32 ) EndTimeEntityName,
+                            STRING ( 32 ) EndTimeAttributeName )
+
+   STRING ( 20 ) szStartTime
+   STRING ( 20 ) szEndTime
+   STRING ( 2 )  szTimeHours
+   STRING ( 2 )  szTimeMinutes
+   INTEGER  TimeHours
+   INTEGER  TimeMinutes
+   INTEGER  StartTimeInMinutes
+   INTEGER  EndTimeInMinutes
+   INTEGER  TimeDifference
+   
+   // Compute StartTime in basic Minutes from start of day.
+   GetStringFromAttribute( szStartTime, StartTimeView, StartTimeEntityName, StartTimeAttributeName )
+   szTimeHours   = szStartTime[9:2]
+   szTimeMinutes = szStartTime[11:2]
+   TimeHours   = zStringToInteger( szTimeHours )
+   TimeMinutes = zStringToInteger( szTimeMinutes )
+   StartTimeInMinutes = 60 * TimeHours + TimeMinutes
+   
+   // Compute EndTime in basic Minutes from End of day.
+   GetStringFromAttribute( szEndTime, EndTimeView, EndTimeEntityName, EndTimeAttributeName )
+   szTimeHours   = szEndTime[9:2]
+   szTimeMinutes = szEndTime[11:2]
+   TimeHours   = zStringToInteger( szTimeHours )
+   TimeMinutes = zStringToInteger( szTimeMinutes )
+   EndTimeInMinutes = 60 * TimeHours + TimeMinutes
+   
+   // Compute Difference.
+   TimeDifference = EndTimeInMinutes - StartTimeInMinutes
+   RETURN TimeDifference
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: CREATE_SecuritySubSections_G
+**
+*************************************************************************************************/
+LOCAL OPERATION
+CreateSecuritySubSection( VIEW   mUGroups,
+                          STRING ( 32 ) szDlgName,
+                          STRING ( 32 ) szWndName,
+                          STRING ( 32 ) szTabCtrl,
+                          SHORT  nInitAllowAccess )
+
+
+   VIEW    vDialog
+   INTEGER lControl1
+   INTEGER lControl2
+   STRING ( 256 ) szNameExt
+   SHORT   nRC
+
+   GetApplDirectoryFromView( szNameExt, mUGroups, zAPPL_DIR_OBJECT, 256 )
+   szNameExt = szNameExt + "\"+szDlgName
+   szNameExt = szNameExt + ".XWD"
+
+   // Activate using SfActivateSysOI_FromFile so that the kzwdlgxo.xod
+   // does not have to be in the application LPLR.
+   nRC = SfActivateSysOI_FromFile( vDialog, "KZWDLGXO", mUGroups,
+                                   szNameExt, zSINGLE )
+   IF nRC = 0
+
+      lControl1 = zQUAL_STRING + zPOS_FIRST
+      lControl2 = zQUAL_STRING + zPOS_FIRST + zRECURS
+      IF SetEntityCursor( vDialog, "Wnd", "Tag", lControl1,
+                          szWndName, "", "", 0,
+                          "Dlg", "" ) >= zCURSOR_SET AND
+         SetEntityCursor( vDialog, "Ctrl", "Tag", lControl2,
+                          szTabCtrl, "", "", 0,
+                          "Wnd", "" ) >= zCURSOR_SET
+
+         FOR EACH  vDialog.CtrlCtrl
+
+            CREATE ENTITY  mUGroups.SecuritySubSection 
+            mUGroups.SecuritySubSection.SubSectionName = vDialog.CtrlCtrl.Tag
+            IF nInitAllowAccess = 1
+               mUGroups.SecuritySubSection.AllowAccess ="N"  
+            END
+
+         END
+      END
+
+      DropObjectInstance( vDialog )
+   END
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: SendEmailMessage
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+SendEmailMessage( VIEW mUser BASED ON LOD mUser,
+                  STRING ( 255 )   szRecipientEmailAddress,
+                  STRING ( 255 )   szSenderEmailAddress,
+                  STRING ( 10000 ) szMessageText,
+                  STRING ( 255 )   szSubjectText )
+
+   STRING ( 255 )  szSMTPServer
+   STRING ( 255 )  szUserEmailAddress
+   STRING ( 255 )  szUserEmailName
+   STRING ( 50 )   szUserEmailPassword
+   STRING ( 10 )   szCreatedDate
+   STRING ( 20 )   szPetitionReason
+   INTEGER         lConnection
+   SHORT           nRC
+   VIEW  sHost REGISTERED AS sHost
+   // Send an email message to the standard SDO email address (SDO@enc.edu) notifying SDO that a Nonresidency Petition
+   // has been filed.
+   
+   // Validate email settings and retrieve email values.
+   nRC = ValidateEmailValues( mUser, szSMTPServer, szUserEmailAddress, szUserEmailName, szUserEmailPassword )
+   IF nRC < 0
+      // An error occurred, so return with error. The message has already been sent.
+      RETURN 2
+   END
+   
+                           nRC = SendEmail(sHost,szUserEmailAddress,szRecipientEmailAddress,szSubjectText,szMessageText,"")
+   IF nRC < 0
+      MessageSend( mUser, "zGlobal2006", "Send Email",
+                   "There was an error sending the Email message.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+   END
+   TraceLineS( "*** Email Sent successfully to: ", szUserEmailAddress )
+   
+   // Shut down the connection.
+
+
+END
+
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: ActivateDynamicDomain
+**    Activates the dynamic domain passed in.
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+ActivateDynamicDomain( VIEW ViewToWindow,
+                       STRING ( 32 ) szDomainName )
+
+   VIEW DOMAINT   BASED ON LOD  DOMAINT
+   VIEW DOMAINTN  BASED ON LOD  DOMAINT
+   VIEW DOMAINTNC BASED ON LOD DOMAINT
+   STRING ( 50 ) szName
+/* KJS 06/22/17 - We don't need to load X_ domains in zeidon-joe.
+   ACTIVATE DOMAINT MULTIPLE
+      WHERE DOMAINT.Domain.Name = szDomainName
+      
+   // Create an entry for this dynamic Domain.
+   CreateViewFromView( DOMAINTN, DOMAINT )
+   szName = "X_" + DOMAINT.Domain.Name
+   NAME VIEW DOMAINTN szName
+   
+   // Create an entry for each Domain Context.
+   FOR EACH DOMAINTN.Context 
+      CREATE ENTITY DOMAINT.Domain 
+      DOMAINT.Domain.Name = DOMAINTN.Context.Name 
+      FOR EACH DOMAINTN.ContextDomainValue 
+         CREATE ENTITY DOMAINT.DomainValue 
+         DOMAINT.DomainValue.InternalStringValue = DOMAINTN.ContextDomainValue.InternalStringValue 
+         DOMAINT.DomainValue.ExternalDescription = DOMAINTN.ContextDomainValue.ExternalDescription 
+      END
+      CreateViewFromView( DOMAINTNC, DOMAINT )
+      szName = "X_" + DOMAINTNC.Domain.Name
+      OrderEntityForView( DOMAINTNC, "DomainValue", "ExternalDescription A" )
+      NAME VIEW DOMAINTNC szName
+   END
+*/
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: SendSingleEmailForFile
+**    Format a one email to a single User from a file just formatted
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+SendSingleEmailForFile( VIEW ViewToWindow,
+                        STRING ( 256 ) RecipientEmailAddress,
+                        STRING ( 256 ) EmailBodyFileName,
+                        STRING ( 256 ) EmailSubjectAreaText )
+
+   VIEW mUser     BASED ON LOD mUser
+   VIEW sHost     BASED ON LOD sHost
+   STRING ( 256 ) szSMTPServer
+   STRING ( 256 ) szSenderEMailAddress
+   STRING ( 256 ) szRecipientEmailAddress
+   STRING ( 256 ) szEMailUserName
+   STRING ( 256 ) szEMailPassword
+   STRING ( 256 ) Msg
+   INTEGER lConnection
+   SHORT nRC
+   
+   nRC = GetViewByName( mUser, "mUser", ViewToWindow, zLEVEL_TASK )
+   IF nRC < 0
+      // Use task view in case we're running under Web.
+      nRC = GetViewByName( mUser, "mUser", ViewToWindow, zLEVEL_TASK )
+   END
+   nRC = GetViewByName( sHost, "sHost", ViewToWindow, zLEVEL_TASK )
+   IF nRC < 0
+      // Use task view in case we're running under Web.
+      nRC = GetViewByName( sHost, "sHost", ViewToWindow, zLEVEL_TASK )
+   END
+   
+   // Make sure Email information has been specified.
+   szSMTPServer = mUser.User.SMTPServer
+   IF szSMTPServer = ""
+      szSMTPServer = sHost.Host.SMTPServer
+   END
+   IF szSMTPServer = ""
+      Msg = "An SMTP server must be specified on the Host before email can be used."
+      MessageSend( ViewToWindow, "zGlobal2007", "Select EMail Document",
+                   Msg,
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      SetWindowActionBehavior( ViewToWindow, zWAB_StayOnWindow, "", "" )
+      RETURN 2
+   END
+
+   szSenderEMailAddress = mUser.User.eMailUserName
+   IF szSenderEMailAddress = ""
+      Msg = "The sender's email address must be specified on the person record before email can be used."
+      MessageSend( ViewToWindow, "zGlobal2008", "Select EMail Document",
+                   Msg,
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      SetWindowActionBehavior( ViewToWindow, zWAB_StayOnWindow, "", "" )
+      RETURN 2
+   END
+
+   szEMailUserName = mUser.User.eMailUserName
+   IF szEMailUserName = ""
+      Msg = "The sender's email user name must be specified on the System Admin USER record before email can be used."
+      MessageSend( ViewToWindow, "zGlobal2009", "Select EMail Document",
+                   Msg,
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      SetWindowActionBehavior( ViewToWindow, zWAB_StayOnWindow, "", "" )
+      RETURN 2
+   END
+
+   GetStringFromAttributeByContext( szEMailPassword, mUser, "User",
+                                    "eMailPassword", "PasswordUL", 256 )
+   IF szEMailPassword = ""
+      Msg = "The sender's email password must be specified on the System Admin USER record before email can be used."
+      MessageSend( ViewToWindow, "zGlobal2010", "Select EMail Document",
+                   Msg,
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      SetWindowActionBehavior( ViewToWindow, zWAB_StayOnWindow, "", "" )
+      RETURN 2
+   END
+   
+   // Send Email
+  
+   nRC = SendEmailForFiles( ViewToWindow,
+                            ViewToWindow,
+                            szSMTPServer,
+                            szRecipientEmailAddress,
+                            szSenderEMailAddress,
+                            szEMailUserName,
+                            szEMailPassword,
+                            "subjectline",
+                            EmailBodyFileName ,
+                            "",
+                            "",
+                            "",
+                            1,   // File Type is text.
+                            lConnection )
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: MergeTemplateText
+**    
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+MergeTemplateText( VIEW MergeDataView,
+                   STRING ( 10000 ) szTemplateText,
+                   STRING ( 10000 ) szReturnedText )
+
+
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: GetCurrentAgeFromDate
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+GetCurrentAgeFromDate( VIEW vDateView,
+                       STRING ( 32 ) szEntityName,
+                       STRING ( 32 ) szAttributeName )
+
+   VIEW wXferO   REGISTERED AS wXferO
+   STRING ( 7 ) szDateOfBirth
+   STRING ( 7 ) szCurrentDate
+   STRING ( 4 ) szYear
+   STRING ( 3 ) szDay
+   INTEGER CurrentYear
+   INTEGER CurrentDay
+   INTEGER BirthYear
+   INTEGER BirthDay
+   INTEGER Age
+
+   // Return the Age for the attribute defined in the parameters.
+   
+   // Birth Date
+   GetStringFromAttributeByContext( szDateOfBirth, vDateView, szEntityName, szAttributeName, "YYYYJJJ", 7 )
+   IF szDateOfBirth = ""
+      RETURN 2
+   END
+   szYear = szDateOfBirth[1:4]
+   szDay  = szDateOfBirth[5:3]
+   BirthYear = zStringToInteger( szYear )
+   BirthDay  = zStringToInteger( szDay )
+   
+   // Current Date
+   GetStringFromAttributeByContext( szCurrentDate, wXferO, "Root", "dCurrentDate", "YYYYJJJ", 7 )
+   szYear = szCurrentDate[1:4]
+   szDay  = szCurrentDate[5:3]
+   CurrentYear = zStringToInteger( szYear )
+   CurrentDay  = zStringToInteger( szDay )
+   
+   // Compute Age
+   IF BirthDay < CurrentDay
+      // The Birth Date has already occurred for the current year, so simply subtract the years.
+      Age = CurrentYear - BirthYear
+   ELSE
+      // The Birth Date hasn't occurred for the current year, so subtract the years plus one additional year.
+      Age = CurrentYear - BirthYear - 1
+   END
+   RETURN Age
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: SetCheckOI_ForUpdate
+**    Checks an OI for locking and sets it if OK.
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+SetCheckOI_ForUpdate( VIEW ObjectView,
+                      STRING ( 32 ) szObjectName,
+                      INTEGER       ObjectID,
+                      STRING ( 32 ) szUserName )
+
+   VIEW wXferO  REGISTERED AS wXferO
+   VIEW ZPLOCKO BASED ON LOD  ZPLOCKO
+   STRING ( 15 ) szObjectID
+   STRING ( 20 ) szCurrentDateTime
+   STRING ( 20 ) szCompareDateTime
+   STRING ( 2 )  szHour
+   STRING ( 1 )  szHourSingle
+   STRING ( 2 )  szHourSuffix
+   INTEGER       Hour
+
+   // Checks if the Object identified by view, Object Name and User Name is currently locked for update.
+   // If it is locked, it set the OI to read-only and returns a 2.
+   // If it is unlocked, it locks it and returns a 0.
+   // Note that we'll only keep a lock for one hour.
+   
+   // Check if the OI and key are locked by a different User and make the OI read-only and return 2 if they are.
+   szObjectID = ObjectID    // The KeyValue is the ID converted to a string.
+   ACTIVATE ZPLOCKO WHERE ZPLOCKO.ZeidonLock.LOD_Name = szObjectName
+                      AND ZPLOCKO.ZeidonLock.KeyValue = szObjectID
+   IF RESULT >= 0
+      IF ZPLOCKO.ZeidonLock.UserName != szUserName
+         // We will see if the User set the lock more than 1 hour ago, and will remove the lock if so.
+         szCurrentDateTime = wXferO.Root.dCurrentDateTime 
+         szHour       = szCurrentDateTime[9:2]
+         szHourSuffix = szCurrentDateTime[11:7]
+         Hour = zStringToInteger( szHour )
+         IF Hour >= 1
+            Hour = Hour - 1 
+         END
+         IF Hour < 10
+            szHourSingle = Hour
+            szHour = "0" + szHourSingle
+         ELSE 
+            szHour = Hour
+         END
+         
+         szCompareDateTime = szCurrentDateTime[1:8] + szHour + szHourSuffix
+         IF szCompareDateTime > ZPLOCKO.ZeidonLock.Timestamp 
+            // The current lock is over an hour old, so just remove it and continue to setting lock below.
+            DELETE ENTITY ZPLOCKO.ZeidonLock 
+            COMMIT ZPLOCKO
+            DropObjectInstance( ZPLOCKO )
+         ELSE
+            // There is another User lock on this Object/ID, so don't allow lock.
+            DropObjectInstance( ZPLOCKO )
+            SetViewReadOnly( ObjectView )
+            RETURN 2
+         END
+      ELSE
+         // It's the same User, so delete current lock and reset lock below to pick up new time.
+         DELETE ENTITY ZPLOCKO.ZeidonLock 
+         COMMIT ZPLOCKO
+         DropObjectInstance( ZPLOCKO )
+      END
+   ELSE
+      DropObjectInstance( ZPLOCKO )
+   END
+   
+   // Set the lock. Note that after setting the lock, we will check to see if someone managed to set a lock for the
+   // same OI at the same time. If so, we will remove the lock and and 
+   ACTIVATE ZPLOCKO EMPTY 
+   CREATE ENTITY ZPLOCKO.ZeidonLock 
+   ZPLOCKO.ZeidonLock.LOD_Name = szObjectName
+   ZPLOCKO.ZeidonLock.KeyValue = szObjectID
+   ZPLOCKO.ZeidonLock.UserName = szUserName
+   SetAttributeFromCurrentDateTime( ZPLOCKO, "ZeidonLock", "Timestamp" ) 
+   COMMIT  ZPLOCKO
+   DropObjectInstance( ZPLOCKO )
+   
+   // Now check to see if anyone else managed to create same lock during the time we just did.
+   ACTIVATE ZPLOCKO WHERE ZPLOCKO.ZeidonLock.LOD_Name  = szObjectName
+                      AND ZPLOCKO.ZeidonLock.KeyValue  = szObjectID
+                      AND ZPLOCKO.ZeidonLock.UserName != szUserName
+   IF RESULT >= 0
+      // Someone else has the lock, so delete the one we just created and return as read-only.
+      ACTIVATE ZPLOCKO WHERE ZPLOCKO.ZeidonLock.LOD_Name = szObjectName
+                         AND ZPLOCKO.ZeidonLock.KeyValue = szObjectID
+                         AND ZPLOCKO.ZeidonLock.UserName = szUserName
+      NAME VIEW ZPLOCKO "ZPLOCKODelete"
+      DELETE ENTITY ZPLOCKO.ZeidonLock 
+      COMMIT  ZPLOCKO
+      DropObjectInstance( ZPLOCKO )
+      SetViewReadOnly( ObjectView )
+      RETURN 2
+   ELSE
+      DropObjectInstance( ZPLOCKO )
+   END
+   
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: DeleteCheckOI_ForUpdate
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+DeleteCheckOI_ForUpdate( VIEW ObjectView,
+                         STRING ( 32 ) szObjectName,
+                         INTEGER       ObjectID,
+                         STRING ( 32 ) szUserName )
+
+   VIEW ZPLOCKO BASED ON LOD  ZPLOCKO
+   STRING ( 15 ) szObjectID
+ 
+   // Delete the lock instance for the ObjectName, ObjectID and UserName.
+   szObjectID = ObjectID    // The KeyValue is the ID converted to a string.
+   ACTIVATE ZPLOCKO WHERE ZPLOCKO.ZeidonLock.LOD_Name = szObjectName
+                      AND ZPLOCKO.ZeidonLock.KeyValue = szObjectID
+                      AND ZPLOCKO.ZeidonLock.UserName = szUserName
+   IF RESULT >= 0 
+      NAME VIEW ZPLOCKO "ZPLOCKODelete"
+      DELETE ENTITY ZPLOCKO.ZeidonLock 
+      COMMIT  ZPLOCKO
+      DropObjectInstance( ZPLOCKO )
+   END
+
+END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: SetWebErrorMessage
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+SetWebErrorMessage( VIEW ViewToWindow,
+                    STRING ( 32 ) szMessage )
+
+   VIEW wXferO REGISTERED AS wXferO 
+   
+   wXferO.Root.WebErrorMessage = szMessage
+
+END
+
+ 
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: CLEAN_ForLogout
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+CLEAN_ForLogout( VIEW ViewToWindow )
+
+VIEW mUser   BASED ON LOD mUser
+   VIEW wXferO  BASED ON LOD wXferO
+    VIEW sHost  BASED ON LOD sHost
+VIEW  DOMAINT BASED ON LOD DOMAINT
+
+VIEW  DOMAINTL BASED ON LOD DOMAINTL
+VIEW  DOMAINTLST BASED ON LOD DOMAINTL
+SHORT nRC
+   // Need to do this because if the WEB page keeps getting refreshed it will keep loading instances
+   GET VIEW  wXferO  NAMED "wXferO"
+   IF  RESULT > 0
+     DropObjectInstance( wXferO )
+   END
+
+ GET VIEW  sHost  NAMED "sHost"
+   IF  RESULT > 0
+     DropObjectInstance( sHost )
+   END
+
+   GET VIEW  mUser  NAMED "mUser"
+   IF  RESULT > 0
+     DropObjectInstance( mUser )
+   END
+  nRC = GetViewByName( DOMAINT, "DOMAINT", ViewToWindow, zLEVEL_TASK )
+   IF nRC > 0
+   //   DropObjectInstance( DOMAINT )
+         DropView ( DOMAINT )
+   END
+
+   GET VIEW  DOMAINTL  NAMED "DOMAINTL"
+   IF  RESULT > 0
+   //  DropObjectInstance( DOMAINTL )
+        DropView ( DOMAINTL )
+   END
+TraceLineS("Before delete general task","1")
+DeleteGeneralTask_G(ViewToWindow,"nazsis")
+TraceLineS("After delete general task","2")
+END

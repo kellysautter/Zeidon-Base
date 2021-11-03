@@ -1,0 +1,211 @@
+z1000-Zeidon    ZGLOBAL3 TZOGSRCO 09/21/17   10:12:56 1.0a2    
+eGlobalOperationGroup 1
+aZKey      222113448
+aNextZKeyToAssign 222113538
+aName      ZGLOBAL3
+aDesc      Shared Dialog Operations for multi -tasking
+aExtension VML
+aLanguageType V
+
+eOperation 2
+aName      DISPLAY_HTML_Graph
+aZKey      222113451
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      222113452
+
+eOperation 2
+aName      GenerateLine
+aZKey      222113453
+aDesc      Write out a generated line to an output file with option trace.
+aType      G
+
+eParameter 3
+aShortDesc AnyView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      222113454
+
+eParameter 3
+aShortDesc lFileHandle
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      222113455
+
+eParameter 3
+aShortDesc OutputLine
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      222113456
+
+eOperation 2
+aName      SetImportStringAttribute
+aZKey      222113463
+aDesc      Set an Attribute for a an imported data string field.
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc AnyView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      222113464
+
+eParameter 3
+aShortDesc szEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      222113465
+
+eParameter 3
+aShortDesc szAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      222113466
+
+eParameter 3
+aShortDesc szInputString
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      222113467
+
+eParameter 3
+aShortDesc StartingPosition
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      222113468
+
+eParameter 3
+aShortDesc Length
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      222113469
+
+eOperation 2
+aName      VALIDATE_AdministrationSecurityG
+aZKey      222113470
+aDesc      Validate security for Administration functions
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      222113471
+
+eOperation 2
+aName      CloseSplitWindow_G
+aZKey      222113472
+aDesc      Same bit of code for a bunch of places ... trying to standardize the "Split Frame" code.
+aType      G
+aReturnDesc not used
+aReturnDataType N
+
+eParameter 3
+aShortDesc View to Window
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      222113473
+
+eParameter 3
+aShortDesc AreaName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      222113474
+
+eParameter 3
+aShortDesc FrameName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      222113475
+
+eOperation 2
+aName      RefreshCloseSplitWindow_G
+aZKey      222113476
+aDesc      Same bit of code for a bunch of places ... trying to standardize the "Split Frame" code.
+aType      G
+aReturnDesc 0-OK; 1-Update required
+aReturnDataType N
+
+eParameter 3
+aShortDesc View to Window
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      222113477
+
+eParameter 3
+aShortDesc AreaName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      222113478
+
+eParameter 3
+aShortDesc FrameName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      222113479
+
+eParameter 3
+aShortDesc DetailName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      222113480
+
+eOperation 2
+aName      zCloseWindow
+aZKey      222113481
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc vWindowToClose
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      222113482
+
+eOperation 2
+aName      DeleteGeneralTask_G
+aZKey      222113499
+aType      G
+aReturnDesc Return Code
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      222113500
+
+eParameter 3
+aShortDesc TaskName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      222113501
+

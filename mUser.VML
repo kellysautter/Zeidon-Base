@@ -1,0 +1,268 @@
+/*************************************************************************************************
+**
+**    OPERATION: ActivateUser
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+ActivateUser( VIEW mUser BASED ON LOD mUser,
+              VIEW ViewToSubtask,
+              INTEGER UserID )
+
+   ACTIVATE  mUser WHERE mUser.User.ID = UserID
+     
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: ActivateUser
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+ActivateUserLST( VIEW mUser BASED ON LOD mUser,
+                 VIEW ViewToSubtask )
+
+ 
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: dFullPersonNameLFM
+**
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dFullPersonNameLFM( VIEW mUser BASED ON LOD mUser,
+                    STRING ( 32 ) InternalEntityStructure,
+                    STRING ( 32 ) InternalAttribStructure,
+                    SHORT GetOrSetFlag )
+   STRING (  254  ) szString
+
+   CASE GetOrSetFlag
+      OF zDERIVED_GET:
+      
+         // Note that you can't use the reusable global operation because the derived attribute is
+         // on User instead of Person.
+         IF mUser.Person EXISTS
+            szString = mUser.Person.LastName + ", " +
+                       mUser.Person.FirstName + " " +
+                       mUser.Person.MiddleName
+         ELSE
+            szString = mUser.User.UserName
+         END
+         // Store the calculated value in the object.
+         StoreStringInRecord ( mUser,
+                               InternalEntityStructure, InternalAttribStructure, szString )
+
+        /* end zDERIVED_GET */
+      OF zDERIVED_SET:
+
+        /* end zDERIVED_SET */
+   END  /* case */
+
+END
+
+
+
+/*************************************************************************************************
+**
+**    OPERATION: dFullPersonNameLFM
+**
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dEmailAddress( VIEW mUser BASED ON LOD mUser,
+               STRING ( 32 ) InternalEntityStructure,
+               STRING ( 32 ) InternalAttribStructure,
+               SHORT GetOrSetFlag )
+   STRING (  254  ) szEmailAddress
+
+   CASE GetOrSetFlag
+      OF zDERIVED_GET:
+      
+         // Use the users preferred email if it is available first
+      
+         IF mUser.Person EXISTS
+             szEmailAddress = mUser.Person.PreferredEmail 
+         END
+      
+         IF szEmailAddress = ""
+            szEmailAddress = mUser.User.eMailAddress 
+         END
+         
+                 IF szEmailAddress = ""
+            szEmailAddress = mUser.Person.eMailAddress
+         END
+      
+         // Store the calculated value in the object.
+         StoreStringInRecord ( mUser,
+                               InternalEntityStructure, InternalAttribStructure, szEmailAddress )
+
+        /* end zDERIVED_GET */
+      OF zDERIVED_SET:
+
+        /* end zDERIVED_SET */
+   END  /* case */
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: dPersonRoles
+**    
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dPersonRoles( VIEW mUser BASED ON LOD mUser,
+              STRING ( 32 ) InternalEntityStructure,
+              STRING ( 32 ) InternalAttribStructure,
+              SHORT GetOrSetFlag )
+   CASE GetOrSetFlag
+      OF zDERIVED_GET:
+         /* end zDERIVED_GET */
+   OF   zDERIVED_SET:
+
+        /* end zDERIVED_SET */
+   END  /* case */
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: AccessAllowed
+**    
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+AccessAllowed( VIEW mUser BASED ON LOD mUser,
+               STRING ( 32 ) szAdminDiv,
+               STRING ( 32 ) szFunctionalArea )
+
+
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: AccessAllowed
+**    
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+SectionAccessAllowed( VIEW mUser BASED ON LOD mUser,
+                      STRING ( 128 ) szAdminDiv,
+                      STRING ( 128 ) szArea,
+                      STRING ( 128 ) szSection,
+                      STRING ( 6 ) szPermissionString )
+  
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: DocAccessAllowed
+**    
+**     // > 1 = all 1 = read 0 = none
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+DocumentAccessAllowed( VIEW mUser BASED ON LOD mUser,
+                       STRING ( 128 ) szAdminDiv,
+                       STRING ( 128 ) szArea )
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: ObjectConstraints
+**    
+*************************************************************************************************/
+OBJECT CONSTRAINT OPERATION
+ObjectConstraints( VIEW mUser BASED ON LOD mUser,
+                   SHORT Event,
+                   SHORT State )
+
+   CASE Event
+   OF   zOCE_ACTIVATE:
+   
+          /* end zOCE_ACTIVATE */
+   OF   zOCE_ACTIVATE_EMPTY:
+
+        /* end zOCE_ACTIVATE_EMPTY */
+   OF   zOCE_COMMIT:
+   
+           // Set CreatedDateTime, if it's currently null.
+      IF mUser.User.CreatedDateTime = ""
+         SetAttributeFromCurrentDateTime( mUser, "User", "CreatedDateTime" )
+         mUser.User.CreatedBy = "System Admin Dialog"
+      END
+      
+
+        /* end zOCE_COMMIT */
+   OF   zOCE_DROPOI:
+
+        /* end zOCE_DROPOI */
+   END  /* case */
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: SubSectAccessAllowed
+**    
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+SubSectAccessAllowed( VIEW mUser BASED ON LOD mUser,
+                      STRING ( 128 ) szAdminDiv,
+                      STRING ( 128 ) szArea,
+                      STRING ( 128 ) szSection,
+                      STRING ( 50 )  szSubSectionName )
+
+   
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: SecuritySectionPos
+**    Position on security section for Tab security access
+**    
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+SecuritySectionPos( VIEW mUser   BASED ON LOD mUser,
+                    VIEW sAppMgr BASED ON LOD sAppMgr )
+
+   
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: ValidateEmailValues
+**    
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+ValidateEmailValues( VIEW mUser BASED ON LOD mUser,
+                     STRING ( 255 ) szSMTPServer,
+                     STRING ( 255 ) szUserEmailAddress,
+                     STRING ( 255 ) szEmailUserName,
+                     STRING ( 255 ) szEmailPassword )
+   
+ END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: dWelcomeMsg
+**    
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dWelcomeMsg( VIEW mUser BASED ON LOD mUser,
+             STRING ( 32 ) InternalEntityStructure,
+             STRING ( 32 ) InternalAttribStructure,
+             SHORT GetOrSetFlag )
+
+   STRING (  254  ) szWebMsg
+
+   CASE GetOrSetFlag
+      OF zDERIVED_GET:
+               
+    
+        /* end zDERIVED_GET */
+      OF zDERIVED_SET:
+
+        /* end zDERIVED_SET */
+   END  /* case */
+
+END

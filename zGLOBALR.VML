@@ -1,0 +1,218 @@
+
+/*************************************************************************************************
+**
+**    OPERATION: SAVE_Person_G
+**
+*************************************************************************************************/
+GLOBAL OPERATION
+SAVE_Person_G( VIEW ViewToWindow )
+
+   VIEW sAppMgr   BASED ON LOD sAppMgr
+   VIEW mPerson   BASED ON LOD mPerson
+   VIEW mPerson2  BASED ON LOD mPerson
+   
+   VIEW mConListR BASED ON LOD mConList
+   VIEW mConList BASED ON LOD mConList
+   VIEW vSubtask
+   STRING ( 50 ) szFunctionalArea
+   STRING ( 1 )  NewPersonFlag
+   INTEGER ViewCluster
+   INTEGER Ignore
+   INTEGER nRC
+       STRING (  50  ) szListName
+   STRING (  25  ) szTodaysDate
+   STRING (  25  ) szDate
+   VIEW  mUser REGISTERED AS mUser
+       VIEW wXferO   REGISTERED AS      wXferO
+
+   // Validate Person data.
+   GET VIEW mPerson NAMED "mPerson"
+   IF mPerson = 0
+      RETURN 1
+   END
+
+   IF mPerson.Person.ID = ""
+      NewPersonFlag = "Y"
+   ELSE
+      NewPersonFlag = "N"
+   END
+  TraceLineS("Save Person","2") 
+   // Don't allow save if Primary Address hasn't been specified.
+   IF mPerson.PrimaryAddress DOES NOT EXIST
+      MessageSend( ViewToWindow, "zGlobalR001", "Save Person Information",
+                   "A Primary Address must be specified",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   ELSE
+      IF mPerson.PrimaryAddress.Line1         = "" 
+         
+         MessageSend( ViewToWindow, "zGlobalR002", "Save Person Information",
+                      "A Primary Address must have a first line",
+                      zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+         RETURN 2
+      END
+   END
+
+   nRC = AcceptSubobject( mPerson, "Person" )
+   IF nRC < 0
+      RETURN nRC
+   END
+  TraceLineS("Save Person","5") 
+   // Make sure that Demographics entity exists.
+   IF mPerson.Demographics DOES NOT EXIST
+      CREATE ENTITY mPerson.Demographics  
+   END
+
+   GetViewByName( sAppMgr, "sAppMgr", ViewToWindow, zLEVEL_TASK )
+   szFunctionalArea = sAppMgr.FunctionalArea.FunctionalAreaName
+     
+   GenerateTransactionEntry( mPerson  )
+   CreateViewCluster( ViewToWindow, ViewCluster )
+   AddToViewCluster( ViewCluster, mPerson, 0)
+  
+   nRC = CommitMultipleObjectInstances( ViewCluster, Ignore )
+   IF nRC < 0
+   
+      DropViewCluster( ViewCluster )
+        MessageSend( ViewToWindow, "zGlobalR003", "Save",
+                    "Save was NOT successful. Correct errors and retry.",
+                   zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+      RETURN 2
+   END
+   DropViewCluster( ViewCluster )
+          wXferO.Root.SearchName =  szListName
+
+ 
+ 
+END
+/*************************************************************************************************
+**
+**    OPERATION: DELETE_Person_G
+**
+**
+*************************************************************************************************/
+GLOBAL OPERATION
+DELETE_Person_G( VIEW ViewToWindow )
+
+   VIEW sAppMgr   REGISTERED AS  sAppMgr
+   VIEW mPerson2   BASED ON LOD  mPerson
+   VIEW mPerson   REGISTERED AS  mPerson
+   STRING ( 64 )  szTag
+   STRING ( 50 )  szFunctionalArea
+   STRING ( 256 ) szMsg
+   SHORT  bDeleted
+   SHORT  nReturn
+   SHORT  nRC
+  INTEGER personID
+   nReturn = 0
+   bDeleted = 0  // didn't do anything
+   szFunctionalArea = sAppMgr.FunctionalArea.FunctionalAreaName
+
+            
+            // A Person was selected to Delete.
+            nRC =ValidateDeletePerson( mPerson )
+          
+            IF nRC != 2
+               bDeleted = 2
+               
+            
+                          ACTIVATE mPerson2 SINGLEFORUPDATE WHERE mPerson2.Person.ID = mPerson.Person.ID
+             EXCLUDE mPerson2.PrimaryForPerson  
+            DELETE ENTITY mPerson2.Person
+            COMMIT mPerson2
+            DropObjectInstance( mPerson2 )
+               DropObjectInstance( mPerson )
+                       ELSE
+               DropObjectInstance( mPerson )
+               nReturn = 2
+            END
+
+      
+   RETURN nReturn
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: UPDATE_PersonDetail_G
+**
+**
+*************************************************************************************************/
+GLOBAL OPERATION
+UPDATE_PersonDetail_G( VIEW ViewToWindow )
+
+   INTEGER nRC
+   VIEW    sAppMgr  BASED ON LOD  sAppMgr
+   VIEW    vSubtask
+   VIEW    vPersonsWindow
+   STRING ( 50 ) szSplitName
+   STRING ( 50 ) szFunctionalArea
+
+   szSplitName = "People"
+   GetViewByName( sAppMgr, "sAppMgr", ViewToWindow, zLEVEL_TASK )
+   szFunctionalArea = sAppMgr.FunctionalArea.FunctionalAreaName
+
+   nRC = IsSplitWindowAdded( sAppMgr, szFunctionalArea, "People", "PersonDetail" )
+   IF nRC = 1 // already there so skip
+      GET VIEW  vSubtask NAMED "PersonDetail"
+      RefreshWindow( vSubtask )
+      RETURN 0
+   END
+
+   // Make sure you get the view to the "Persons" split window not ADMITD window
+   GET VIEW vPersonsWindow NAMED "People"
+
+   sAppMgr.sAppMgr.CreateWindowAsFrameFlag = "Y"
+   vSubtask = AttachSubtaskToPane( vPersonsWindow, szSplitName, "mPersonD", "PersonDetail", 1 )
+   sAppMgr.sAppMgr.CreateWindowAsFrameFlag = ""
+   AddSplitWindow( sAppMgr, szFunctionalArea, "People", "PersonDetail", "", vSubtask )
+
+END
+
+/*************************************************************************************************
+**
+**    OPERATION: SAVE_PersonData_G
+**
+*************************************************************************************************/
+GLOBAL OPERATION
+SAVE_PersonData_G( VIEW ViewToWindow )
+
+   VIEW sAppMgr   REGISTERED AS  sAppMgr
+
+   VIEW mPerson   REGISTERED AS  mPerson
+    VIEW mUser     REGISTERED AS  mUser
+   STRING ( 64 ) szWindowName
+   STRING ( 50 ) szFunctionalArea
+   STRING ( 10 ) szPermissionString
+   STRING ( 256 ) szMsg
+   SHORT   nRC
+   SHORT   nRC2
+ 
+
+       GET VIEW mPerson NAMED "mPerson"
+      IF RESULT >= 0
+       
+            nRC = SAVE_Person_G( ViewToWindow )
+            IF nRC < 0
+               RETURN nRC
+            END
+               
+         RETURN nRC
+      END
+  TraceLineS("Save Person Data G","6") 
+
+END
+
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: PICK_PrePerson_G
+**    
+*************************************************************************************************/
+GLOBAL OPERATION
+PICK_PrePerson_G( VIEW ViewToWindow )
+
+
+
+END

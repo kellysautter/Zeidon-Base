@@ -1,0 +1,1449 @@
+z1000-Zeidon    TABLESA  TZDGSRCO 09/21/17   10:14:40 1.0a2    
+eDomainGroup 1
+aZKey      110000045
+aNextZKeyToAssign 110000673
+aName      TablesA
+aDesc      Initial grouping of simple Tables
+aExtension C
+aWorkNumeric 6
+
+eDomain    2
+aZKey      110000052
+aName      State
+aDesc      US States and Canadian Provinces
+aDomainType T
+aJavaClass com.quinsoft.zeidon.domains.DynamicTableDomain
+aDataType  S
+aMaxStringLth 20
+aContextRestriction N
+
+eContext   3
+aZKey      110000053
+aName      OnlineAppState
+
+eTableEntry 4
+aZKey      110000055
+aExternalValue AK
+aInternalValue AK
+
+eTableEntry 4
+aZKey      110000056
+aExternalValue AL
+aInternalValue AL
+
+eTableEntry 4
+aZKey      110000057
+aExternalValue AR
+aInternalValue AR
+
+eTableEntry 4
+aZKey      110000058
+aExternalValue AZ
+aInternalValue AZ
+
+eTableEntry 4
+aZKey      110000059
+aExternalValue CA
+aInternalValue CA
+
+eTableEntry 4
+aZKey      110000060
+aExternalValue CO
+aInternalValue CO
+
+eTableEntry 4
+aZKey      110000061
+aExternalValue CT
+aInternalValue CT
+
+eTableEntry 4
+aZKey      110000062
+aExternalValue DE
+aInternalValue DE
+
+eTableEntry 4
+aZKey      110000063
+aExternalValue FL
+aInternalValue FL
+
+eTableEntry 4
+aZKey      110000064
+aExternalValue GA
+aInternalValue GA
+
+eTableEntry 4
+aZKey      110000065
+aExternalValue HI
+aInternalValue HI
+
+eTableEntry 4
+aZKey      110000066
+aExternalValue IA
+aInternalValue IA
+
+eTableEntry 4
+aZKey      110000067
+aExternalValue ID
+aInternalValue ID
+
+eTableEntry 4
+aZKey      110000068
+aExternalValue IL
+aInternalValue IL
+
+eTableEntry 4
+aZKey      110000069
+aExternalValue IN
+aInternalValue IN
+
+eTableEntry 4
+aZKey      110000070
+aExternalValue KS
+aInternalValue KS
+
+eTableEntry 4
+aZKey      110000071
+aExternalValue KY
+aInternalValue KY
+
+eTableEntry 4
+aZKey      110000072
+aExternalValue LA
+aInternalValue LA
+
+eTableEntry 4
+aZKey      110000073
+aExternalValue MA
+aInternalValue MA
+
+eTableEntry 4
+aZKey      110000074
+aExternalValue MD
+aInternalValue MD
+
+eTableEntry 4
+aZKey      110000075
+aExternalValue ME
+aInternalValue ME
+
+eTableEntry 4
+aZKey      110000076
+aExternalValue MI
+aInternalValue MI
+
+eTableEntry 4
+aZKey      110000077
+aExternalValue MN
+aInternalValue MN
+
+eTableEntry 4
+aZKey      110000078
+aExternalValue MO
+aInternalValue MO
+
+eTableEntry 4
+aZKey      110000079
+aExternalValue MS
+aInternalValue MS
+
+eTableEntry 4
+aZKey      110000080
+aExternalValue MT
+aInternalValue MT
+
+eTableEntry 4
+aZKey      110000081
+aExternalValue NC
+aInternalValue NC
+
+eTableEntry 4
+aZKey      110000082
+aExternalValue ND
+aInternalValue ND
+
+eTableEntry 4
+aZKey      110000083
+aExternalValue NE
+aInternalValue NE
+
+eTableEntry 4
+aZKey      110000084
+aExternalValue NH
+aInternalValue NH
+
+eTableEntry 4
+aZKey      110000085
+aExternalValue NJ
+aInternalValue NJ
+
+eTableEntry 4
+aZKey      110000086
+aExternalValue NM
+aInternalValue NM
+
+eTableEntry 4
+aZKey      110000087
+aExternalValue NV
+aInternalValue NV
+
+eTableEntry 4
+aZKey      110000088
+aExternalValue NY
+aInternalValue NY
+
+eTableEntry 4
+aZKey      110000089
+aExternalValue OH
+aInternalValue OH
+
+eTableEntry 4
+aZKey      110000090
+aExternalValue OK
+aInternalValue OK
+
+eTableEntry 4
+aZKey      110000091
+aExternalValue OR
+aInternalValue OR
+
+eTableEntry 4
+aZKey      110000092
+aExternalValue PA
+aInternalValue PA
+
+eTableEntry 4
+aZKey      110000093
+aExternalValue RI
+aInternalValue RI
+
+eTableEntry 4
+aZKey      110000094
+aExternalValue SC
+aInternalValue SC
+
+eTableEntry 4
+aZKey      110000095
+aExternalValue SD
+aInternalValue SD
+
+eTableEntry 4
+aZKey      110000096
+aExternalValue TN
+aInternalValue TN
+
+eTableEntry 4
+aZKey      110000097
+aExternalValue TX
+aInternalValue TX
+
+eTableEntry 4
+aZKey      110000098
+aExternalValue UT
+aInternalValue UT
+
+eTableEntry 4
+aZKey      110000099
+aExternalValue VA
+aInternalValue VA
+
+eTableEntry 4
+aZKey      110000100
+aExternalValue VT
+aInternalValue VT
+
+eTableEntry 4
+aZKey      110000101
+aExternalValue WA
+aInternalValue WA
+
+eTableEntry 4
+aZKey      110000102
+aExternalValue WI
+aInternalValue WI
+
+eTableEntry 4
+aZKey      110000103
+aExternalValue WV
+aInternalValue WV
+
+eTableEntry 4
+aZKey      110000104
+aExternalValue WY
+aInternalValue WY
+
+eContext   3
+aZKey      110000105
+aName      State
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110000107
+aExternalValue AA
+aInternalValue AA
+
+eTableEntry 4
+aZKey      110000108
+aExternalValue AB
+aInternalValue AB
+
+eTableEntry 4
+aZKey      110000109
+aExternalValue AE
+aInternalValue AE
+
+eTableEntry 4
+aZKey      110000110
+aExternalValue AK
+aInternalValue AK
+
+eTableEntry 4
+aZKey      110000111
+aExternalValue AL
+aInternalValue AL
+
+eTableEntry 4
+aZKey      110000112
+aExternalValue AP
+aInternalValue AP
+
+eTableEntry 4
+aZKey      110000113
+aExternalValue AR
+aInternalValue AR
+
+eTableEntry 4
+aZKey      110000114
+aExternalValue AZ
+aInternalValue AZ
+
+eTableEntry 4
+aZKey      110000115
+aExternalValue BC
+aInternalValue BC
+
+eTableEntry 4
+aZKey      110000116
+aExternalValue CA
+aInternalValue CA
+
+eTableEntry 4
+aZKey      110000117
+aExternalValue CO
+aInternalValue CO
+
+eTableEntry 4
+aZKey      110000118
+aExternalValue CT
+aInternalValue CT
+
+eTableEntry 4
+aZKey      110000119
+aExternalValue DC
+aInternalValue DC
+
+eTableEntry 4
+aZKey      110000120
+aExternalValue DE
+aInternalValue DE
+
+eTableEntry 4
+aZKey      110000121
+aExternalValue FL
+aInternalValue FL
+
+eTableEntry 4
+aZKey      110000122
+aExternalValue GA
+aInternalValue GA
+
+eTableEntry 4
+aZKey      110000123
+aExternalValue GU
+aInternalValue GU
+
+eTableEntry 4
+aZKey      110000124
+aExternalValue HI
+aInternalValue HI
+
+eTableEntry 4
+aZKey      110000125
+aExternalValue IA
+aInternalValue IA
+
+eTableEntry 4
+aZKey      110000126
+aExternalValue ID
+aInternalValue ID
+
+eTableEntry 4
+aZKey      110000127
+aExternalValue IL
+aInternalValue IL
+
+eTableEntry 4
+aZKey      110000128
+aExternalValue IN
+aInternalValue IN
+
+eTableEntry 4
+aZKey      110000129
+aExternalValue KS
+aInternalValue KS
+
+eTableEntry 4
+aZKey      110000130
+aExternalValue KY
+aInternalValue KY
+
+eTableEntry 4
+aZKey      110000131
+aExternalValue LA
+aInternalValue LA
+
+eTableEntry 4
+aZKey      110000132
+aExternalValue MA
+aInternalValue MA
+
+eTableEntry 4
+aZKey      110000133
+aExternalValue MB
+aInternalValue MB
+
+eTableEntry 4
+aZKey      110000134
+aExternalValue MD
+aInternalValue MD
+
+eTableEntry 4
+aZKey      110000135
+aExternalValue ME
+aInternalValue ME
+
+eTableEntry 4
+aZKey      110000136
+aExternalValue MI
+aInternalValue MI
+
+eTableEntry 4
+aZKey      110000137
+aExternalValue MN
+aInternalValue MN
+
+eTableEntry 4
+aZKey      110000138
+aExternalValue MO
+aInternalValue MO
+
+eTableEntry 4
+aZKey      110000139
+aExternalValue MS
+aInternalValue MS
+
+eTableEntry 4
+aZKey      110000140
+aExternalValue MT
+aInternalValue MT
+
+eTableEntry 4
+aZKey      110000141
+aExternalValue NB
+aInternalValue NB
+
+eTableEntry 4
+aZKey      110000142
+aExternalValue NC
+aInternalValue NC
+
+eTableEntry 4
+aZKey      110000143
+aExternalValue ND
+aInternalValue ND
+
+eTableEntry 4
+aZKey      110000144
+aExternalValue NE
+aInternalValue NE
+
+eTableEntry 4
+aZKey      110000145
+aExternalValue NF
+aInternalValue NF
+
+eTableEntry 4
+aZKey      110000146
+aExternalValue NH
+aInternalValue NH
+
+eTableEntry 4
+aZKey      110000147
+aExternalValue NJ
+aInternalValue NJ
+
+eTableEntry 4
+aZKey      110000148
+aExternalValue NL
+aInternalValue NL
+
+eTableEntry 4
+aZKey      110000149
+aExternalValue NM
+aInternalValue NM
+
+eTableEntry 4
+aZKey      110000150
+aExternalValue NS
+aInternalValue NS
+
+eTableEntry 4
+aZKey      110000151
+aExternalValue NT
+aInternalValue NT
+
+eTableEntry 4
+aZKey      110000152
+aExternalValue NV
+aInternalValue NV
+
+eTableEntry 4
+aZKey      110000153
+aExternalValue NY
+aInternalValue NY
+
+eTableEntry 4
+aZKey      110000154
+aExternalValue OH
+aInternalValue OH
+
+eTableEntry 4
+aZKey      110000155
+aExternalValue OK
+aInternalValue OK
+
+eTableEntry 4
+aZKey      110000156
+aExternalValue ON
+aInternalValue ON
+
+eTableEntry 4
+aZKey      110000157
+aExternalValue OR
+aInternalValue OR
+
+eTableEntry 4
+aZKey      110000158
+aExternalValue PA
+aInternalValue PA
+
+eTableEntry 4
+aZKey      110000159
+aExternalValue PE
+aInternalValue PE
+
+eTableEntry 4
+aZKey      110000160
+aExternalValue PR
+aInternalValue PR
+
+eTableEntry 4
+aZKey      110000161
+aExternalValue QC
+aInternalValue QC
+
+eTableEntry 4
+aZKey      110000162
+aExternalValue RI
+aInternalValue RI
+
+eTableEntry 4
+aZKey      110000163
+aExternalValue SC
+aInternalValue SC
+
+eTableEntry 4
+aZKey      110000164
+aExternalValue SD
+aInternalValue SD
+
+eTableEntry 4
+aZKey      110000165
+aExternalValue SK
+aInternalValue SK
+
+eTableEntry 4
+aZKey      110000166
+aExternalValue TN
+aInternalValue TN
+
+eTableEntry 4
+aZKey      110000167
+aExternalValue TX
+aInternalValue TX
+
+eTableEntry 4
+aZKey      110000168
+aExternalValue UT
+aInternalValue UT
+
+eTableEntry 4
+aZKey      110000169
+aExternalValue VA
+aInternalValue VA
+
+eTableEntry 4
+aZKey      110000170
+aExternalValue Error for Convert (vt)
+aInternalValue VI
+
+eTableEntry 4
+aZKey      110000171
+aExternalValue VT
+aInternalValue VT
+
+eTableEntry 4
+aZKey      110000172
+aExternalValue WA
+aInternalValue WA
+
+eTableEntry 4
+aZKey      110000173
+aExternalValue WI
+aInternalValue WI
+
+eTableEntry 4
+aZKey      110000174
+aExternalValue WV
+aInternalValue WV
+
+eTableEntry 4
+aZKey      110000175
+aExternalValue WY
+aInternalValue WY
+
+eTableEntry 4
+aZKey      110000176
+aExternalValue YK
+aInternalValue YK
+
+eContext   3
+aZKey      110000177
+aDesc      Country
+aName      Country
+
+eContext   3
+aZKey      110000178
+aName      OnlineAppCountry
+
+eSelectedOperation 3
+aName      zdmDynamicTable
+aZKey      110000048
+aType      M
+
+eDomain    2
+aZKey      110000669
+aName      SecurityQuestions
+aDesc      Security Question validations for forgotten passwords.
+aDomainType T
+aJavaClass org.nazarene.nazsis.domains.DynamicTableDomainSortA
+aDataType  S
+aMaxStringLth 254
+aContextRestriction N
+
+eContext   3
+aZKey      110000670
+aName      SecurityQuestions
+aIsDefault Y
+
+eSelectedOperation 3
+
+eDomain    2
+aZKey      110000183
+aName      BooleanTrueFalse
+aDesc      Boolean operator true or false
+aDomainType T
+aJavaClass com.quinsoft.zeidon.domains.StaticTableDomain
+aDataType  S
+aMaxStringLth 1
+aContextRestriction N
+
+eContext   3
+aZKey      110000184
+aName      BooleanTrueFalse
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110000185
+aExternalValue True
+aInternalValue 0
+
+eTableEntry 4
+aZKey      110000186
+aExternalValue False
+aInternalValue 1
+
+eDomain    2
+aZKey      110000195
+aName      UserAuthorizationLevel
+aDomainType T
+aJavaClass com.quinsoft.zeidon.domains.StaticTableDomain
+aDataType  S
+aMaxStringLth 10
+aContextRestriction N
+
+eContext   3
+aZKey      110000196
+aName      UserAuthorizationLevel
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110000198
+aExternalValue Windows Access
+aInternalValue Windows
+
+eTableEntry 4
+aZKey      110000199
+aExternalValue Web Access
+aInternalValue Web
+
+eTableEntry 4
+aZKey      110000200
+aExternalValue Prospect
+aInternalValue Prospect
+
+eTableEntry 4
+aZKey      110000201
+aExternalValue FERPA
+aInternalValue FERPA
+
+eDomain    2
+aZKey      110000202
+aName      UserLoginAuthenticationType
+aDesc      How a User is authenticated during login.
+aDomainType T
+aJavaClass org.nazarene.nazsis.domains.DynamicTableDomainWContext
+aDataType  S
+aMaxStringLth 10
+aContextRestriction N
+
+eContext   3
+aZKey      110000203
+aName      UserLoginAuthenticationType
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110000205
+aExternalValue Internal
+aInternalValue Internal
+
+eTableEntry 4
+aZKey      110000206
+aExternalValue Active Directory
+aInternalValue AD
+
+eTableEntry 4
+aZKey      110000207
+aExternalValue Internal
+aInternalValue I
+
+eSelectedOperation 3
+
+eDomain    2
+aZKey      110000226
+aName      Year
+aDesc      4 Digit Year
+aDomainType F
+aJavaClass com.quinsoft.zeidon.domains.StringDomain
+aDataType  S
+aMaxStringLth 4
+aContextRestriction N
+
+eContext   3
+aZKey      110000227
+aName      Year
+aEditString 9999
+aIsDefault Y
+
+eDomain    2
+aZKey      110000251
+aName      UserStatus
+aDomainType T
+aJavaClass org.nazarene.nazsis.domains.DynamicTableDomainWContext
+aDataType  S
+aMaxStringLth 1
+aContextRestriction N
+
+eContext   3
+aZKey      110000252
+aName      UserStatus
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110000254
+aExternalValue Active
+aInternalValue A
+
+eTableEntry 4
+aZKey      110000255
+aExternalValue Inactive
+aInternalValue I
+
+eSelectedOperation 3
+
+eDomain    2
+aZKey      110000271
+aName      BooleanOperator
+aDesc      Boolean operators AND or OR
+aDomainType T
+aJavaClass org.nazarene.nazsis.domains.DynamicTableDomainWContext
+aDataType  S
+aMaxStringLth 1
+aContextRestriction N
+
+eContext   3
+aZKey      110000272
+aName      BooleanOperator
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110000273
+aExternalValue And
+aInternalValue A
+
+eTableEntry 4
+aZKey      110000274
+aExternalValue Or
+aInternalValue O
+
+eDomain    2
+aZKey      110000280
+aName      StandardTimes
+aDesc      Standard daytime times to make entering times easlier.
+aDomainType T
+aJavaClass com.quinsoft.zeidon.domains.DynamicTableDomain
+aDataType  S
+aMaxStringLth 10
+aContextRestriction N
+
+eContext   3
+aZKey      110000281
+aName      StandardTimes
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110000282
+aExternalValue 8:00 AM
+aInternalValue 8:00 AM
+
+eTableEntry 4
+aZKey      110000283
+aExternalValue 8:30 AM
+aInternalValue 8:30 AM
+
+eTableEntry 4
+aZKey      110000284
+aExternalValue 9:00 AM
+aInternalValue 9:00 AM
+
+eTableEntry 4
+aZKey      110000285
+aExternalValue 9:30 AM
+aInternalValue 9:30 AM
+
+eTableEntry 4
+aZKey      110000286
+aExternalValue 10:00 AM
+aInternalValue 10:00 AM
+
+eTableEntry 4
+aZKey      110000287
+aExternalValue 10:30 AM
+aInternalValue 10:30 AM
+
+eTableEntry 4
+aZKey      110000288
+aExternalValue 11:00 AM
+aInternalValue 11:00 AM
+
+eTableEntry 4
+aZKey      110000289
+aExternalValue 11:30 AM
+aInternalValue 11:30 AM
+
+eTableEntry 4
+aZKey      110000290
+aExternalValue 12:00 PM
+aInternalValue 12:00 PM
+
+eTableEntry 4
+aZKey      110000291
+aExternalValue 12:30 PM
+aInternalValue 12:30 PM
+
+eTableEntry 4
+aZKey      110000292
+aExternalValue 1:00 PM
+aInternalValue 1:00 PM
+
+eTableEntry 4
+aZKey      110000293
+aExternalValue 1:30 PM
+aInternalValue 1:30 PM
+
+eTableEntry 4
+aZKey      110000294
+aExternalValue 2:00 PM
+aInternalValue 2:00 PM
+
+eTableEntry 4
+aZKey      110000295
+aExternalValue 2:30 PM
+aInternalValue 2:30 PM
+
+eTableEntry 4
+aZKey      110000296
+aExternalValue 3:00 PM
+aInternalValue 3:00 PM
+
+eTableEntry 4
+aZKey      110000297
+aExternalValue 3:30 PM
+aInternalValue 3:30 PM
+
+eTableEntry 4
+aZKey      110000298
+aExternalValue 4:00 PM
+aInternalValue 4:00 PM
+
+eTableEntry 4
+aZKey      110000299
+aExternalValue 4:30 PM
+aInternalValue 4:30 PM
+
+eTableEntry 4
+aZKey      110000300
+aExternalValue 5:00 PM
+aInternalValue 5:00 PM
+
+eTableEntry 4
+aZKey      110000301
+aExternalValue 5:30 PM
+aInternalValue 5:30 PM
+
+eTableEntry 4
+aZKey      110000302
+aExternalValue 6:00 PM
+aInternalValue 6:00 PM
+
+eTableEntry 4
+aZKey      110000303
+aExternalValue 6:30 PM
+aInternalValue 6:30 PM
+
+eTableEntry 4
+aZKey      110000304
+aExternalValue 7:00 PM
+aInternalValue 7:00 PM
+
+eTableEntry 4
+aZKey      110000305
+aExternalValue 7:30 PM
+aInternalValue 7:30 PM
+
+eTableEntry 4
+aZKey      110000306
+aExternalValue 8:00 PM
+aInternalValue 8:00 PM
+
+eTableEntry 4
+aZKey      110000307
+aExternalValue 8:30 PM
+aInternalValue 8:30 PM
+
+eTableEntry 4
+aZKey      110000308
+aExternalValue 9:00 PM
+aInternalValue 9:00 PM
+
+eTableEntry 4
+aZKey      110000309
+aExternalValue 9:30 PM
+aInternalValue 9:30 PM
+
+eTableEntry 4
+aZKey      110000310
+aExternalValue 10:00 PM
+aInternalValue 10:00 PM
+
+eDomain    2
+aZKey      110000357
+aName      Ethnicity
+aDesc      Ethnic Origins
+aDomainType T
+aJavaClass org.nazarene.nazsis.domains.DynamicTableDomainWContext
+aDataType  S
+aMaxStringLth 2
+aContextRestriction N
+
+eContext   3
+aZKey      110000358
+aName      Ethnicity
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110000359
+aExternalValue White
+aInternalValue W
+
+eTableEntry 4
+aZKey      110000360
+aExternalValue Hispanic
+aInternalValue H
+
+eTableEntry 4
+aZKey      110000361
+aExternalValue Asian
+aInternalValue A
+
+eTableEntry 4
+aZKey      110000362
+aExternalValue Black
+aInternalValue B
+
+eTableEntry 4
+aZKey      110000363
+aExternalValue Native American
+aInternalValue I
+
+eTableEntry 4
+aZKey      110000364
+aExternalValue Other
+aInternalValue O
+
+eSelectedOperation 3
+
+eDomain    2
+aZKey      110000370
+aName      PrimaryLanguage
+aDesc      Identifies the primary language of the person
+aDomainType T
+aJavaClass org.nazarene.nazsis.domains.DynamicTableDomainWContext
+aDataType  S
+aMaxStringLth 5
+aContextRestriction N
+
+eContext   3
+aZKey      110000371
+aName      PrimaryLanguage
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110000372
+aExternalValue English
+aInternalValue EN
+
+eTableEntry 4
+aZKey      110000373
+aExternalValue French
+aInternalValue FR
+
+eTableEntry 4
+aZKey      110000374
+aExternalValue Spanish
+aInternalValue SP
+
+eSelectedOperation 3
+
+eDomain    2
+aZKey      110000533
+aName      DayOfWeek
+aDomainType T
+aJavaClass org.nazarene.nazsis.domains.DynamicTableDomainWContext
+aDataType  L
+aContextRestriction N
+
+eContext   3
+aZKey      110000534
+aName      DayOfWeek
+aJavaEditString EEEE
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110000535
+aExternalValue Sunday
+aInternalValue 1
+
+eTableEntry 4
+aZKey      110000536
+aExternalValue Monday
+aInternalValue 2
+
+eTableEntry 4
+aZKey      110000537
+aExternalValue Tuesday
+aInternalValue 3
+
+eTableEntry 4
+aZKey      110000538
+aExternalValue Wednesday
+aInternalValue 4
+
+eTableEntry 4
+aZKey      110000539
+aExternalValue Thursday
+aInternalValue 5
+
+eTableEntry 4
+aZKey      110000540
+aExternalValue Friday
+aInternalValue 6
+
+eTableEntry 4
+aZKey      110000541
+aExternalValue Saturday
+aInternalValue 7
+
+eDomain    2
+aZKey      110000544
+aName      FunctionalArea
+aDomainType T
+aJavaClass com.quinsoft.zeidon.domains.StaticTableDomain
+aDataType  S
+aMaxStringLth 30
+aContextRestriction N
+
+eContext   3
+aZKey      110000545
+aName      FunctionalArea
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110000546
+aExternalValue Admissions
+aInternalValue Admissions
+
+eTableEntry 4
+aZKey      110000662
+aExternalValue General
+aInternalValue General
+
+eTableEntry 4
+aZKey      110000547
+aExternalValue Development
+aInternalValue Development
+
+eTableEntry 4
+aZKey      110000548
+aExternalValue Alumni
+aInternalValue Alumni
+
+eTableEntry 4
+aZKey      110000549
+aExternalValue Churches
+aInternalValue Churches
+
+eTableEntry 4
+aZKey      110000550
+aExternalValue Academics
+aInternalValue Academics
+
+eTableEntry 4
+aZKey      110000551
+aExternalValue FinancialAid
+aInternalValue FinancialAid
+
+eTableEntry 4
+aZKey      110000552
+aExternalValue Student Life
+aInternalValue Student Life
+
+eTableEntry 4
+aZKey      110000553
+aExternalValue Faculty Services
+aInternalValue FacultyServices
+
+eTableEntry 4
+aZKey      110000554
+aExternalValue System Administration
+aInternalValue System Administration
+
+eTableEntry 4
+aZKey      110000555
+aExternalValue Reports
+aInternalValue Reports
+
+eTableEntry 4
+aZKey      110000556
+aExternalValue ReportUserGroup
+aInternalValue ReportUserGroup
+
+eTableEntry 4
+aZKey      110000557
+aExternalValue RunReports
+aInternalValue RunReports
+
+eTableEntry 4
+aZKey      110000558
+aExternalValue Mailings
+aInternalValue Mailings
+
+eTableEntry 4
+aZKey      110000559
+aExternalValue Students
+aInternalValue Students
+
+eTableEntry 4
+aZKey      110000560
+aExternalValue Retention
+aInternalValue Retention
+
+eTableEntry 4
+aZKey      110000561
+aExternalValue Student Accounts
+aInternalValue StudentAccounts
+
+eTableEntry 4
+aZKey      110000562
+aExternalValue Human Resources
+aInternalValue HumanResources
+
+eTableEntry 4
+aZKey      110000563
+aExternalValue VehicleRegistration
+aInternalValue VehicleRegistration
+
+eTableEntry 4
+aZKey      110000564
+aExternalValue Bursar
+aInternalValue Bursar
+
+eTableEntry 4
+aZKey      110000565
+aExternalValue GeneralLedger
+aInternalValue GeneralLedger
+
+eTableEntry 4
+aZKey      110000566
+aExternalValue Banking
+aInternalValue Banking
+
+eTableEntry 4
+aZKey      110000567
+aExternalValue Accounts Payable
+aInternalValue AccountsPayable
+
+eTableEntry 4
+aZKey      110000568
+aExternalValue People
+aInternalValue People
+
+eTableEntry 4
+aZKey      110000569
+aExternalValue Organizations
+aInternalValue Organizations
+
+eTableEntry 4
+aZKey      110000570
+aExternalValue Donors
+aInternalValue Donors
+
+eTableEntry 4
+aZKey      110000571
+aExternalValue School
+aInternalValue School
+
+eTableEntry 4
+aZKey      110000572
+aExternalValue Store
+aInternalValue Store
+
+eTableEntry 4
+aZKey      110000663
+aExternalValue Instructor Portal
+aInternalValue Instructor Portal
+
+eTableEntry 4
+aZKey      110000664
+aExternalValue Student Portal
+aInternalValue Student Portal
+
+eDomain    2
+aZKey      110000609
+aName      PersonnelSalutation
+aDesc      Personnel Salutation (Mr., Ms., Mrs.)
+aDomainType T
+aJavaClass org.nazarene.nazsis.domains.DynamicTableDomainWContextAndLang
+aDataType  S
+aMaxStringLth 5
+aContextRestriction N
+
+eContext   3
+aZKey      110000610
+aName      PersonnelSalutation
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110000611
+aExternalValue Mr.
+aInternalValue Mr.
+
+eTableEntry 4
+aZKey      110000612
+aExternalValue Mr.
+aInternalValue Mr
+
+eTableEntry 4
+aZKey      110000613
+aExternalValue Ms.
+aInternalValue Ms.
+
+eTableEntry 4
+aZKey      110000614
+aExternalValue Ms.
+aInternalValue Ms
+
+eTableEntry 4
+aZKey      110000615
+aExternalValue Mrs.
+aInternalValue Mrs
+
+eTableEntry 4
+aZKey      110000616
+aExternalValue Mrs.
+aInternalValue Mrs.
+
+eTableEntry 4
+aZKey      110000617
+aExternalValue Rev.
+aInternalValue Rev
+
+eTableEntry 4
+aZKey      110000618
+aExternalValue Rev.
+aInternalValue Rev.
+
+eTableEntry 4
+aZKey      110000619
+aExternalValue Miss
+aInternalValue Miss
+
+eTableEntry 4
+aZKey      110000620
+aExternalValue Dr.
+aInternalValue Dr.
+
+eTableEntry 4
+aZKey      110000621
+aExternalValue Dr.
+aInternalValue Dr
+
+eSelectedOperation 3
+
+eDomain    2
+aZKey      110000650
+aName      MaritalStatus
+aDomainType T
+aJavaClass org.nazarene.nazsis.domains.DynamicTableDomainWContext
+aDataType  S
+aMaxStringLth 1
+aContextRestriction N
+
+eContext   3
+aZKey      110000651
+aName      MaritalStatus
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110000652
+aExternalValue Married
+aInternalValue M
+
+eTableEntry 4
+aZKey      110000653
+aExternalValue Single
+aInternalValue S
+
+eTableEntry 4
+aZKey      110000654
+aExternalValue Divorced
+aInternalValue D
+
+eTableEntry 4
+aZKey      110000655
+aExternalValue Separated
+aInternalValue E
+
+eTableEntry 4
+aZKey      110000656
+aExternalValue Widow/er
+aInternalValue W
+
+eDomain    2
+aZKey      110000657
+aName      Country
+aDesc      Country
+aDomainType T
+aJavaClass org.nazarene.nazsis.domains.DynamicTableDomainWContext
+aDataType  S
+aMaxStringLth 3
+aContextRestriction N
+
+eContext   3
+aZKey      110000658
+aDesc      Country
+aName      Country
+aIsDefault Y
+
+eContext   3
+aZKey      110000671
+aName      DevelopingCountry
+
+eContext   3
+aZKey      110000659
+aName      OnlineAppCountry
+
+eSelectedOperation 3
+
+eOperation 2
+aName      zdmInteger
+aZKey      110000046
+aDesc      Integer Algorithm
+aType      M
+aReturnDataType N
+
+eOperation 2
+aName      zdmDecimal
+aZKey      110000047
+aType      M
+
+eOperation 2
+
+eOperation 2
+aName      zdmPassword
+aZKey      110000049
+aDesc      Password Algorithm
+aType      M
+aReturnDataType N
+
+eOperation 2
+aName      zdmQSNameLJNS
+aZKey      110000050
+aDesc      QuinSoft Name - left justified, no spaces
+aType      M
+aReturnDataType N
+
+eOperation 2
+aName      zdmText
+aZKey      110000051
+aDesc      Text Algorithm
+aType      M
+aReturnDataType N
+
+i129       126
+i145       126
+i152       126
+i196       126
+i202       126
+i257       126
+i269       126
+i272       126

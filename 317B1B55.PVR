@@ -1,0 +1,13 @@
+z1000-Zeidon    317B1B55 TZWDVORO 08/30/17   15:15:08 1.0a2    
+eViewObjRef 1
+aZKey      830151509
+aNextZKeyToAssign 830151509
+aName      DomainT
+aDesc      VOR automatically built from LOD Dialog
+
+eLOD       2
+aZKey      354013610
+aName      DomainT
+aDesc      Zeidon Dynamic Table Domain Object
+aDLL_Name  LODOPSYS
+

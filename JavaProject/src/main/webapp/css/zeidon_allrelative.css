@@ -1,0 +1,1121 @@
+/***********************************************/
+/* ALL RELATIVE                                */
+/***********************************************/
+/***********************************************/
+/* HTML TAG STYLES                             */
+/***********************************************/
+/* Colors
+blue (slate):#407fbf;
+light blue:  #99ccff;
+purple: 	 #ccccff; 
+gold:		 #ff9933;
+beige:       #ffcc99;
+*/
+
+* {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+/************* Outer container for everything on the page **************/
+/************************** Header Menu ********************************/
+/************* TOP Navigation styles **************/
+/************* Left Navigation **************/
+
+#xleftcontent {
+    width: 10%;
+    display: block;
+    float: left;
+    min-height: 100%;
+}
+#sidenavigation {
+    float: left;
+    margin: 0px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    min-height: 320px;
+    background: #99ccff;
+    display: block;
+}
+#sidenavigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#sidenavigation li {} #sidenavigation li a {
+    display: block;
+    padding: 2px;
+    background: #99ccff;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+}
+#sidenavigation li a:hover {
+    background-color: #d3d3d3;
+    color: #000000;
+    background-repeat: repeat-x;
+}
+#sidenavigation li a.sideselected {
+    background-color: #99ccff;
+    color: #000000;
+    background-repeat: repeat-x;
+}
+/** Topmenu Begin **/
+
+.topnavigation {
+    float: left;
+    margin: 0px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    background: #99ccff;
+    display: block;
+    width: 100%;
+border-width: 1px;
+    border-style: solid;
+    border-color: #7f7f7f;
+    border-top-width: 0px;
+}
+.topnavigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 4px;
+}
+.topnavigation li {
+    display: inline;
+}
+.topnavigation li a {
+    display: inline;
+    padding: 4px;
+    background: #99ccff;
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+}
+.topnavigation li a:hover {
+    background-color: #d1d1d1;
+    color: #000000;
+    background-repeat: repeat-x;
+}
+.topnavigation li a.sideselected {
+    background-color: #99ccff;
+    color: #000000;
+    background-repeat: repeat-x;
+}
+/** top menu end **/
+/** Content of the Page **/
+
+.reviewnodata {
+    color: #ff6666;
+}
+
+#content {
+    width: 846px;
+    display: block;
+    float: left;
+    text-align: left;
+    position: relative;
+    min-height: 300px;
+    padding-top: 0;
+    padding-right: 0px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    background-color: #ffffff;
+    min-height: 300px;
+    background-image: url(../images/top-gradient.gif);
+    background-repeat: repeat-x;
+}
+#contentblanksidemenu {
+    width: 860px;
+    display: block;
+    float: right;
+    text-align: left;
+    position: relative;
+    min-height: 300px;
+    padding-top: 0;
+    padding-bottom: 25px;
+    background-color: #ffffff;
+    background-image: url(../images/top-gradient.gif);
+    background-repeat: repeat-x;
+}
+/****************************************************************************/
+/******************************* Containers *********************************/
+/*
+ *.layoutgridism
+ * A simple, responsive, and handy CSS.layoutgrid by @cobyism
+ * https://github.com/cobyism.layoutgridism
+ */
+/* Preserve some sanity */
+
+.layoutgrid,
+.layoutunit {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* Set up some rules to govern the.layoutgrid */
+
+.layoutgrid {
+    display: block;
+    clear: both !important;
+}
+.layoutgrid .layoutunit {
+    float: left;
+    width: 100%;
+    padding: 10px;
+}
+.shaded-group {
+    background-color: lightgray;
+}
+.with-bottom-border {
+    border-bottom: 2px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: #407fbf;
+}
+/* This ensures the outer gutters are equal to the (doubled) inner gutters. */
+
+.layoutgrid .layoutunit: first-child {
+    padding-left: 20px;
+}
+.layoutgrid .layoutunit: last-child {
+    padding-right: 20px;
+}
+/* Nested.layoutgrids already have padding though, so let's nuke it */
+
+.layoutunit .layoutunit: first-child {
+    padding-left: 0;
+}
+.layoutunit .layoutunit: last-child {
+    padding-right: 0;
+}
+.layoutunit .layoutgrid: first-child > .layoutunit {
+    padding-top: 0;
+}
+.layoutunit .layoutgrid: last-child > .layoutunit {
+    padding-bottom: 0;
+}
+/* Let people nuke the gutters/padding completely in a couple of ways */
+
+.no-gutters .layoutunit,
+.layoutunit.no-gutters {
+    padding: 0 !important;
+}
+/* Wrapping at a maximum width is optional */
+
+.wrap .layoutgrid,
+.layoutgrid.wrap {
+    max-width: 978px;
+    margin: 0 auto;
+}
+/* sidenavigation one-sixth */
+/* Width classes also have shorthand versions numbered as fractions
+ * For example: for a.layoutgrid.layoutunit 1/3 (one third) of the parent width,
+ * simply apply class="w-1-3" to the element. */
+
+.layoutgrid .whole,
+.layoutgrid .w-1-1 {
+    width: 100%;
+}
+.layoutgrid .half,
+.layoutgrid .w-1-2 {
+    width: 50%;
+}
+.layoutgrid .one-third,
+.layoutgrid .w-1-3 {
+    width: 33.3332%;
+}
+.layoutgrid .two-thirds,
+.layoutgrid .w-2-3 {
+    width: 66.6665%;
+}
+.layoutgrid .one-quarter,
+.layoutgrid .w-1-4 {
+    width: 25%;
+}
+.layoutgrid .three-quarters,
+.layoutgrid .w-3-4 {
+    width: 75%;
+}
+.layoutgrid .one-fifth,
+.layoutgrid .w-1-5 {
+    width: 20%;
+}
+.layoutgrid .one-sixth,
+.layoutgrid .w-1-5 {
+    width: 16.667%;
+}
+.layoutgrid .two-fifths,
+.layoutgrid .w-2-5 {
+    width: 40%;
+}
+.layoutgrid .three-fifths,
+.layoutgrid .w-3-5 {
+    width: 60%;
+}
+.layoutgrid .four-fifths,
+.layoutgrid .w-4-5 {
+    width: 80%;
+}
+.layoutgrid .one-tenth,
+.layoutgrid .w-1-10 {
+    width: 10%;
+}
+.layoutgrid .golden-small,
+.layoutgrid .w-g-s {
+    width: 38.2716%;
+}
+/* Golden section: smaller piece */
+
+.layoutgrid .golden-large,
+.layoutgrid .w-g-l {
+    width: 61.7283%;
+}
+/* Golden section: larger piece */
+/* Clearfix after every .layoutgrid */
+
+.layoutgrid {
+    *zoom: 1;
+}
+.layoutgrid:before,
+.layoutgrid:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+.layoutgrid:after {
+    clear: both;
+}
+.layoutunit img.fit {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+unit img.fixed {
+    height: 74px;
+    width: 74px;
+    object-fit: cover;
+}
+/* Utility classes */
+
+.align-center {
+    text-align: center;
+}
+.align-left {
+    text-align: left;
+}
+.align-right {
+    text-align: right;
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.groupbox {
+    margin: 10px 0px 10px 0px;
+    text-align: left;
+}
+.undertogglegroupbox {
+    margin: 15px 0px 10px 0px;
+    text-align: left;
+}
+
+.iframebox {
+    margin: 0px 0px 0px 0px;
+    background-color: transparent;
+    border: 0;
+}
+
+.breadcrumbs {
+    text-align: left;
+    display: block;
+}
+.pagetitle {
+    text-align: left;
+    font-size: 14px;
+    display: block;
+    font-weight: bold;
+    padding: 5px;
+}
+.editbox {
+    font-size: 12px;
+}
+.centerloginbox {
+   width: 325px;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+.centerloginverifybox {
+   width: 350px;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+.adminpage {
+   min-height: 400px;
+    margin: 15px 0px 10px 0px;
+}
+.button {
+   border-top: 1px solid #4c87c3;
+   background: #407fbf;
+   background: -webkit-gradient(linear, left top, left bottom, from(#4c87c3), to(#407fbf));
+   background: -webkit-linear-gradient(top, #4c87c3, #407fbf);
+   background: -moz-linear-gradient(top, #4c87c3, #407fbf);
+   background: -ms-linear-gradient(top, #4c87c3, #407fbf);
+   background: -o-linear-gradient(top, #4c87c3, #407fbf);
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+  border-top-color: #648eb8;
+   background: #648eb8;
+   color: #ccc;
+   }
+
+
+.buttoncurrent {
+ border-top: 1px solid #a9a9a9;
+   background: #7f7f7f;
+   background: -webkit-gradient(linear, left top, left bottom, from(#a9a9a9), to(#7f7f7f));
+   background: -webkit-linear-gradient(top, #a9a9a9, #7f7f7f);
+   background: -moz-linear-gradient(top, #a9a9a9, #7f7f7f);
+   background: -ms-linear-gradient(top, #a9a9a9, #7f7f7f);
+   background: -o-linear-gradient(top, #a9a9a9, #7f7f7f);
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+}
+.button:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+}
+.buttongrid {
+   border-top: 1px solid #4c87c3;
+   background: #407fbf;
+   background: -webkit-gradient(linear, left top, left bottom, from(#4c87c3), to(#407fbf));
+   background: -webkit-linear-gradient(top, #4c87c3, #407fbf);
+   background: -moz-linear-gradient(top, #4c87c3, #407fbf);
+   background: -ms-linear-gradient(top, #4c87c3, #407fbf);
+   background: -o-linear-gradient(top, #4c87c3, #407fbf);
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   min-width: 100px;
+   }
+.buttongrid:hover {
+  border-top-color: #648eb8;
+   background: #648eb8;
+   color: #ccc;
+   }
+.buttongrid:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+}
+.buttonright {
+   border-top: 1px solid #4c87c3;
+   background: #407fbf;
+   background: -webkit-gradient(linear, left top, left bottom, from(#4c87c3), to(#407fbf));
+   background: -webkit-linear-gradient(top, #4c87c3, #407fbf);
+   background: -moz-linear-gradient(top, #4c87c3, #407fbf);
+   background: -ms-linear-gradient(top, #4c87c3, #407fbf);
+   background: -o-linear-gradient(top, #4c87c3, #407fbf);
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+    vertical-align: top;
+    position: relative;
+    width: auto;
+    float: right;
+}
+.buttonright:hover {
+  border-top-color: #648eb8;
+   background: #648eb8;
+   color: #ccc;
+}
+.buttonright:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+}
+/****************************************************************************/
+/******************************* end containers *****************************/
+/****************************************************************************/
+/****************************************************************************/
+/******************************* maincontent ********************************/
+/****************************************************************************/
+/*
+ *#maincontentism
+ * A simple, responsive, and handy CSS#maincontent by @cobyism
+ * https://github.com/cobyism#maincontentism
+ */
+/* Preserve some sanity */
+
+#maincontent,
+.layoutunit {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* Set up some rules to govern the#maincontent */
+
+#maincontent {
+    display: block;
+    clear: both !important;
+}
+#maincontent .layoutunit {
+    float: left;
+    width: 100%;
+    padding: 5px;
+}
+#maincontent .collapsable {
+    clear: left;
+    width: 100%;
+    padding: 5px;
+}
+.with-bottom-border {
+    border-bottom: 2px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: #407fbf;
+}
+/* This ensures the outer gutters are equal to the (doubled) inner gutters. */
+
+#maincontent .layoutunit: first-child {
+    padding-left: 20px;
+}
+#maincontent .layoutunit: last-child {
+    padding-right: 20px;
+}
+/* Nested#maincontents already have padding though, so let's nuke it */
+
+.layoutunit .layoutunit: first-child {
+    padding-left: 0;
+}
+.layoutunit .layoutunit: last-child {
+    padding-right: 0;
+}
+.layoutunit #maincontent: first-child > .layoutunit {
+    padding-top: 0;
+}
+.layoutunit #maincontent: last-child > .layoutunit {
+    padding-bottom: 0;
+}
+/* Let people nuke the gutters/padding completely in a couple of ways */
+
+.no-gutters .layoutunit,
+.layoutunit.no-gutters {
+    padding: 0 !important;
+}
+/* Wrapping at a maximum width is optional */
+
+.wrap #maincontent,
+#maincontent.wrap {
+    max-width: 978px;
+    margin: 0 auto;
+    float: left;
+    clear: left;
+}
+/* Width classes also have shorthand versions numbered as fractions
+ * For example: for a#maincontent.layoutunit 1/3 (one third) of the parent width,
+ * simply apply class="w-1-3" to the element. */
+
+#maincontent .whole,
+#maincontent .w-1-1 {
+    width: 100%;
+}
+#maincontent .half,
+#maincontent .w-1-2 {
+    width: 50%;
+}
+#maincontent .one-third,
+#maincontent .w-1-3 {
+    width: 33.3332%;
+}
+#maincontent .two-thirds,
+#maincontent .w-2-3 {
+    width: 66.6665%;
+}
+#maincontent .one-quarter,
+#maincontent .w-1-4 {
+    width: 25%;
+}
+#maincontent .three-quarters,
+#maincontent .w-3-4 {
+    width: 75%;
+}
+#maincontent .one-fifth,
+#maincontent .w-1-5 {
+    width: 20%;
+}
+#maincontent .one-sixth,
+#maincontent .w-1-5 {
+    width: 16.667%;
+}
+#maincontent .two-fifths,
+#maincontent .w-2-5 {
+    width: 40%;
+}
+#maincontent .three-fifths,
+#maincontent .w-3-5 {
+    width: 60%;
+}
+#maincontent .four-fifths,
+#maincontent .w-4-5 {
+    width: 80%;
+}
+#maincontent .one-tenth,
+#maincontent .w-1-10 {
+    width: 10%;
+}
+#maincontent .golden-small,
+#maincontent .w-g-s {
+    width: 38.2716%;
+}
+/* Golden section: smaller piece */
+
+#maincontent .golden-large,
+#maincontent .w-g-l {
+    width: 61.7283%;
+}
+/* Golden section: larger piece */
+/* Clearfix after every #maincontent */
+
+#maincontent {
+    *zoom: 1;
+}
+#maincontent:before,
+#maincontent:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+#maincontent:after {
+    clear: both;
+}
+.layoutunit img.fit {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+unit img.fixed {
+    height: 74px;
+    width: 74px;
+    object-fit: cover;
+}
+/* Utility classes */
+
+.align-center {
+    text-align: center;
+}
+.align-left {
+    text-align: left;
+}
+.align-right {
+    text-align: right;
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+/****************************************************************************/
+/******************************* END maincontent ****************************/
+/****************************************************************************/
+/******************************* Menu Stuff *********************************/
+/************* TOP Navigation styles **************/
+/* nav */
+
+.nav {
+    position: relative;
+    margin: 2px;
+    border-bottom: 1;
+}
+.nav ul {
+    margin: 0;
+    padding: 0;
+}
+.nav li {
+    margin: 0 5px 5px 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+.nav a {
+    padding: 0;
+    text-decoration: none;
+    color: #000;
+    line-height: 100%;
+}
+.nav a:hover {
+    color: #fff;
+}
+.nav .current a {
+    border-radius: 5px;
+}
+/* right nav */
+
+.nav.right ul {
+    text-align: right;
+}
+/* center nav */
+
+.nav.center ul {
+    text-align: center;
+}
+/****************************************************************************/
+/****************************************************************************/
+/* Expand the wrap a bit further on larger screens */
+
+@media screen and (min-width: 1180px) {
+    .wider .layoutgrid {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 480px) {
+    .nav {
+        border-bottom: 0;
+    }
+    .nav {
+        position: relative;
+        min-height: 40px;
+    }
+    .nav ul {
+        width: 180px;
+        padding: 5px 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: solid 1px #aaa;
+        background: #fff url('icon-menu.png') no-repeat 10px 11px;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    }
+    .nav li {
+        display: none;
+        /* hide all <li> items */
+        
+        margin: 0;
+    }
+    .nav .current {
+        display: block;
+        /* show only current <li> item */
+    }
+    .nav a {
+        display: block;
+        padding: 5px 5px 5px 32px;
+        text-align: left;
+        width: auto;
+    }
+    .nav .current a {
+        background: none;
+        color: #666;
+        width: auto;
+    }
+    /* on nav hover */
+    
+    .nav ul:hover {
+        background-image: none;
+    }
+    .nav ul:hover li {
+        display: block;
+        margin: 0 0 5px;
+    }
+    .nav ul:hover .current {
+        background: url('icon-menu.png') no-repeat 10px 7px;
+    }
+    /* right nav */
+    
+    .nav.right ul {
+        left: auto;
+        right: 0;
+    }
+    /* center nav */
+    
+    .nav.center ul {
+        left: 50%;
+        margin-left: -90px;
+    }
+}
+/* Responsive Stuff */
+
+@media screen and (max-width: 568px) {
+    /* Stack anything that isn't full-width on smaller screens */
+    
+    .layoutgrid .layoutunit {
+        width: 100% !important;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .layoutunit .layoutgrid .layoutunit {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    /* Sometimes, you just want to be different on small screens */
+    
+    .center-on-mobiles {
+        text-align: center !important;
+    }
+    .hide-on-mobiles {
+        display: none !important;
+    }
+    .nav {
+        position: relative;
+        min-height: 40px;
+    }
+    .nav ul {
+        width: 180px;
+        padding: 5px 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: solid 1px #aaa;
+        background: #fff url('icon-menu.png') no-repeat 10px 11px;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    }
+    .nav li {
+        display: none;
+        /* hide all <li> items */
+        
+        margin: 0;
+    }
+    .nav .current {
+        display: block;
+        /* show only current <li> item */
+    }
+    .nav a {
+        display: block;
+        padding: 5px 5px 5px 32px;
+        text-align: left;
+    }
+    .nav .current a {
+        background: none;
+        color: #666;
+    }
+    /* on nav hover */
+    
+    .nav ul:hover {
+        background-image: none;
+    }
+    .nav ul:hover li {
+        display: block;
+        margin: 0 0 5px;
+    }
+    .nav ul:hover .current {
+        background: url('icon-menu.png') no-repeat 10px 7px;
+    }
+    /* right nav */
+    
+    .nav.right ul {
+        left: auto;
+        right: 0;
+    }
+    /* center nav */
+    
+    .nav.center ul {
+        left: 50%;
+        margin-left: -90px;
+    }
+}
+@media screen and (max-width: 760px) {} header {
+    border-bottom: 1px solid #eee;
+    /* background-image: url(../images/logo.gif); */
+    
+    background-color:#407fbf;
+    /* #1142AA  darker purple 42.52.141 */
+    
+    background-repeat: no-repeat;
+border-width: 1px;
+    border-style: solid;
+    border-color: #7f7f7f;
+
+}
+header h1 a {
+    text-decoration: none;
+    color: #FFFFFF;
+    border-bottom: none;
+    text-align: left;
+    vertical-align: middle;
+}
+header p {
+    margin: 2em 0;
+}
+header,
+footer {
+    border-top: 1px solid #fff;
+}
+footer {
+    padding: 5px 0;
+}
+/************* Logo  **************/
+
+logo {
+    float: left;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    border-color: 407fbf;
+    color: #407fbf;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+label {
+    /*display: block;*/
+    
+    float: left;
+    width: 10em;
+    margin-right: 1em;
+}
+/* a {
+	display: block;
+	float: left;
+	font-size:11px;
+	width: 95%;
+}
+*/
+
+.label-one-third {
+    width: 33.33%;
+}
+input {
+    margin-top: 1px;
+    display: block;
+}
+input .checkbox {
+    margin-top: 1px;
+    display: inline;
+}
+checkboxtext {
+    margin-top: 1px;
+    display: inline;
+}
+.inputcalendar {
+    width: 80px;
+    display: block;
+}
+select {
+    display: block;
+}
+.datefield {
+    display: inline-block;
+    vertical-align: center;
+    float: none;
+    white-space: nowrap
+}
+.datefield img {
+    display: inline-block;
+    vertical-align: center;
+    float: none;
+    white-space: nowrap
+}
+.showhidetoggle {
+    font-size: 14px;
+    min-height: 32px;
+    width: 99.5%;
+    color: white;
+    padding-left: 5px;
+    padding-top: 8px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding-right: 5px;
+    background: #99ccff;
+    font-weight: 500;
+border-width: 1px;
+    border-style: solid;
+    border-color: #7f7f7f;
+}
+a[rel*="toggle"] {
+text-decoration: none; 
+vertical-align: middle;
+}
+.onelinecheckbox {
+    display: inline-flex;
+    white-space: nowrap;
+}
+.groupboxheader {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+.displayonlybox {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #7f7f7f;
+    display: inline-block;
+    min-width: 50px;
+    padding: 2px 30px 2px 0px;
+}
+.displayonlybox:empty {
+    width: 130px;
+    height: 14px;
+}
+.boxwithborder {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #7f7f7f;
+    padding: 10px;
+}
+.red {
+    color: red;
+}
+.dashboardbox {
+  width: 100%;
+  text-align: center;
+  vertical-align: center;
+display: inline-table;
+}
+.dashboardbox .grouptable {
+ width: 100%;
+  text-align: center;
+display: inline-table;
+ vertical-align: center;
+}
+.dashboardimagebackground {
+width: 100%;
+height: 100%;
+max-height: 250px;
+max-width: 250px;
+object-fit: contain;
+background-color: #407fbf;
+}
+.colorclear{
+background-color: #ffffff;
+}
+
+
+/************ Table Scrolling style *********/
+.tableScroll {
+    overflow: auto;
+    margin: 0 auto;
+    }
+
+.tableScroll half {
+    width: 50%;
+    }
+
+.tableScroll table {
+    width: 99%;        /*100% of container produces horiz. scroll in Mozilla*/
+    margin: 0;
+    border: none;
+    background-color: #f7f7f7;
+    border-collapse: separate; /* if I don't do this, on Firefox I get grid lines past the end of table */
+    border-spacing: 0px;
+    }
+.tableScroll table tr:hover{  /* can't get this to work!!! */
+  background-color: #E8E3D4;
+    }
+    
+.tableScroll table>tbody    {  /* child selector syntax which IE6 and older do not support*/
+    overflow: auto; 
+    overflow-x: hidden;
+    }
+.tableScroll thead tr    {
+    position:relative; 
+    top: expression(offsetParent.scrollTop); /*IE5+ only*/
+    }
+    
+.tableScroll thead td, thead th {
+    color: steelblue;
+    font-weight: bold;
+    border-top: solid 1px #d8d8d8;
+    }    
+    
+.tableScroll td    {
+    color: #000;
+    padding-top: 1px;
+    padding-right: 2px;
+    padding-bottom: 1px;
+    font-size: 11px;
+    }
+
+.tableScroll tfoot td    {
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: papayawhip;
+    color: steelblue;
+    border-top: solid 2px slategray;
+    }
+
+.tableScroll td:last-child {
+    padding-right: 20px; /*prevent Mozilla scrollbar from hiding cell content*/
+    }
+/***************************************************************************************************/
+.tableScrollMedium {
+    max-height: 300px;
+    overflow: auto;
+    margin: 0 auto;
+    overflow-x: hidden;
+    }
+.tableScrollSmall {
+    max-height: 100px;
+    overflow: auto;
+    margin: 0 auto;
+   overflow-x: hidden;
+    }
+.tableScrollLarge {
+    max-height: 500px;
+    overflow: auto;
+    margin: 0 auto;
+   overflow-x: hidden;
+    }
+img.ProfilePic {
+    height: auto; 
+    width: auto; 
+    max-width: 75%; 
+    max-height: 75%;
+}

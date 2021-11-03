@@ -1,0 +1,13 @@
+z1000-Zeidon    317A673E TZWDVORO 08/30/17   10:54:05 1.0a2    
+eViewObjRef 1
+aZKey      830105406
+aNextZKeyToAssign 830105406
+aName      sAppMgr
+aDesc      VOR automatically built from LOD Dialog
+
+eLOD       2
+aZKey      110121601
+aName      sAppMgr
+aDesc      System Application Manager
+aDLL_Name  LODOPSYS
+

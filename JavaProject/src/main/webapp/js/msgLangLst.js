@@ -1,0 +1,2 @@
+﻿var msgIDLst = [];
+var msgLst = [];

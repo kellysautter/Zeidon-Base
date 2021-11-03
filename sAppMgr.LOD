@@ -1,0 +1,1902 @@
+z1000-Zeidon    SAPPMGR  TZZOLODO 09/21/17   10:11:03 1.0a2    
+eLOD       1
+aZKey      110121601
+aNextZKeyToAssign 110121775
+aName      sAppMgr
+aDesc      System Application Manager
+
+eLOD_EntityParent 2
+aName      sAppMgr
+aIndentName sAppMgr
+aIndentLvl 0
+aZKey      110121680
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+
+eLOD_EntityChild 3
+aName      FunctionalArea
+aIndentName    FunctionalArea
+aIndentLvl 3
+aZKey      110121691
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   Y
+aInclSrc   Y
+aExclude   Y
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_EntityChild 4
+aName      FunctionalSubArea
+aIndentName       FunctionalSubArea
+aIndentLvl 6
+aZKey      110121696
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   Y
+aInclSrc   Y
+aExclude   Y
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_EntityChild 5
+aName      ToolbarNewAction
+aIndentName          ToolbarNewAction
+aIndentLvl 9
+aZKey      110121703
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 6
+aZKey      110121704
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 7
+aName      ToolbarNewActionName
+aZKey      110121705
+aLth       20
+
+eDomainRec 8
+aZKey      90000032
+aName      Text
+aDomainType E
+aDataType  S
+aMaxStringLth 254
+aDesc      Any Character String
+aContextRestriction N
+
+eLOD_EntityChild 5
+aName      ToolbarUpdateAction
+aIndentName          ToolbarUpdateAction
+aIndentLvl 9
+aZKey      110121706
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 6
+aZKey      110121707
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 7
+aName      ToolbarUpdateActionName
+aZKey      110121708
+aLth       20
+
+eDomainRec 8
+
+eLOD_EntityChild 5
+aName      ToolbarDeleteAction
+aIndentName          ToolbarDeleteAction
+aIndentLvl 9
+aZKey      110121709
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 6
+aZKey      110121710
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 7
+aName      ToolbarDeleteActionName
+aZKey      110121711
+aLth       20
+
+eDomainRec 8
+
+eLOD_EntityChild 5
+aName      SplitWindow
+aIndentName          SplitWindow
+aIndentLvl 9
+aZKey      110121712
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   Y
+aInclSrc   Y
+aExclude   Y
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 6
+aZKey      110121713
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 7
+aName      WindowName
+aZKey      110121714
+
+eDomainRec 8
+
+eLOD_AttributeRec 6
+aZKey      110121715
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 7
+aName      HasFrame
+aZKey      110121716
+
+eDomainRec 8
+aZKey      110000006
+aName      Y/N
+aDomainType T
+aDataType  S
+aMaxStringLth 1
+aDesc      Yes or No
+aContextRestriction N
+
+eLOD_AttributeRec 5
+aZKey      110121697
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      FunctionalSubAreaName
+aZKey      110121698
+aLth       30
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      110121774
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      dFunctionalSubAreaTr
+aZKey      110121775
+
+eDomainRec 7
+
+eLOD_AttrDerivationOperRec 6
+aName      dFunctionalSubAreaTr
+aClass     0
+aZKey      110121767
+aType      A
+aReturnDataType N
+
+eSourceFileForDARec 7
+aZKey      110121602
+aName      sAppMgr
+aLanguageType V
+aExtension VML
+
+eLOD_AttributeRec 5
+aZKey      110121699
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      LastSavedObject
+aZKey      110121700
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      110121701
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ContactListRecurringType
+aZKey      110121702
+aDesc      'R' if list is only recurring entries, 'A' if list is "all" entries.
+
+eDomainRec 7
+
+eLOD_AttributeRec 4
+aZKey      110121692
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      FunctionalAreaName
+aZKey      110121693
+
+eDomainRec 6
+aZKey      110000544
+aName      FunctionalArea
+aDomainType T
+aDataType  S
+aMaxStringLth 30
+aContextRestriction N
+
+eLOD_AttributeRec 4
+aZKey      110121772
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      dFunctionalAreaTr
+aZKey      110121773
+
+eDomainRec 6
+
+eLOD_AttrDerivationOperRec 5
+aName      dFunctionalAreaTr
+aClass     0
+aZKey      110121762
+aType      A
+aReturnDataType N
+
+eSourceFileForDARec 6
+
+eLOD_AttributeRec 4
+aZKey      110121694
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      ParentFunctionalAreaName
+aZKey      110121695
+
+eDomainRec 6
+
+eLOD_EntityChild 3
+aName      MenuToDelete
+aIndentName    MenuToDelete
+aIndentLvl 3
+aZKey      110121717
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+aSeqNo     0
+
+eLOD_AttributeRec 4
+aZKey      110121718
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      MenuTag
+aZKey      110121719
+
+eDomainRec 6
+
+eLOD_EntityChild 3
+aName      WindowList
+aIndentName    WindowList
+aIndentLvl 3
+aZKey      110121720
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+aSeqNo     0
+
+eLOD_AttributeRec 4
+aZKey      110121721
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      SpecificDialogName
+aZKey      110121722
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      110121723
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      MenuName
+aZKey      110121724
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      110121725
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      ParentName
+aZKey      110121726
+
+eDomainRec 6
+
+eLOD_EntityChild 3
+aName      CalendarTask
+aIndentName    CalendarTask
+aIndentLvl 3
+aZKey      110121727
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+aSeqNo     0
+
+eLOD_EntityChild 4
+aName      CalSplitWindow
+aIndentName       CalSplitWindow
+aIndentLvl 6
+aZKey      110121740
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 5
+aZKey      110121741
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      WindowName
+aZKey      110121742
+
+eDomainRec 7
+
+eLOD_EntityChild 4
+aName      ToolBarNewCalAction
+aIndentName       ToolBarNewCalAction
+aIndentLvl 6
+aZKey      110121743
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 5
+aZKey      110121744
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ToolbarNewCalActionName
+aZKey      110121745
+aLth       20
+
+eDomainRec 7
+
+eLOD_EntityChild 4
+aName      ToolBarUpdateCalAction
+aIndentName       ToolBarUpdateCalAction
+aIndentLvl 6
+aZKey      110121746
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 5
+aZKey      110121747
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ToolbarUpdateCalActionName
+aZKey      110121748
+aLth       20
+
+eDomainRec 7
+
+eLOD_EntityChild 4
+aName      ToolBarDeleteCalAction
+aIndentName       ToolBarDeleteCalAction
+aIndentLvl 6
+aZKey      110121749
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 5
+aZKey      110121750
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ToolbarDeleteCalActionName
+aZKey      110121751
+aLth       20
+
+eDomainRec 7
+
+eLOD_AttributeRec 4
+aZKey      110121728
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      UserID
+aZKey      110121729
+aDesc      id of client
+
+eDomainRec 6
+aZKey      90000044
+aName      Integer
+aDomainType E
+aDataType  L
+aMaxStringLth 4
+aDecimalFormat 0
+aDesc      Integer numbers from -lots to +lots.
+aContextRestriction N
+
+eLOD_AttributeRec 4
+aZKey      110121730
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      UserName
+aZKey      110121731
+
+eDomainRec 6
+aZKey      110001835
+aName      GeneralName_Address
+aDomainType E
+aDataType  S
+aMaxStringLth 50
+aDesc      General Text (names, streets, cities, etc.)
+aContextRestriction N
+
+eLOD_AttributeRec 4
+aZKey      110121732
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      VisibleDate
+aZKey      110121733
+
+eDomainRec 6
+aZKey      90000089
+aName      DateTime
+aDomainType A
+aDataType  T
+aMaxStringLth 20
+aDesc      Basic Timestamp Domain
+aContextRestriction N
+
+eLOD_AttributeRec 4
+aZKey      110121734
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      CurrentView
+aZKey      110121735
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      110121736
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      SpecificDialogName
+aZKey      110121737
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      110121738
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      dMenuName
+aZKey      110121739
+
+eDomainRec 6
+
+eLOD_EntityChild 3
+aName      GeneralTask
+aIndentName    GeneralTask
+aIndentLvl 3
+aZKey      110121752
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+aSeqNo     0
+
+eLOD_AttributeRec 4
+aZKey      110121753
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      GeneralName
+aZKey      110121754
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      110121755
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      SpecificDialogName
+aZKey      110121756
+
+eDomainRec 6
+
+eLOD_AttrDerivationOperRec 5
+aName      dSpecificGeneralDialog
+aClass     0
+aZKey      110121621
+aType      A
+aReturnDataType N
+
+eSourceFileForDARec 6
+
+eLOD_AttributeRec 4
+aZKey      110121757
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      MenuName
+aZKey      110121758
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      110121759
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      dMenuName
+aZKey      110121760
+
+eDomainRec 6
+
+eLOD_AttrDerivationOperRec 5
+aName      dMenuGeneralName
+aClass     0
+aZKey      110121616
+aType      A
+aReturnDataType N
+
+eSourceFileForDARec 6
+
+eLOD_AttributeRec 3
+aZKey      110121681
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      AppName
+aZKey      110121682
+aDesc      Application Name
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      110121683
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      FunctionalArea
+aZKey      110121684
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      110121685
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      CreateWindowAsFrameFlag
+aZKey      110121686
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      110121687
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      MapPinType
+aZKey      110121688
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      110121689
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      BatchDataEntryType
+aZKey      110121690
+aLth       1
+aDesc      Prospect, Alumni, etc.
+
+eDomainRec 5
+aZKey      90000028
+aName      AlphaNumeric
+aDomainType E
+aDataType  S
+aMaxStringLth 254
+aDecimalFormat 1234
+aDesc      Characters 'a-z', 'A-Z', '0-9'
+aContextRestriction N
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 3
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 4
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 5
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_AttrDerivationOper 4
+
+eSourceFileForDA 5
+
+eLOD_Attribute 3
+awkSequence 3
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_AttrDerivationOper 4
+
+eSourceFileForDA 5
+
+eLOD_Attribute 3
+awkSequence 3
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 4
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 3
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 3
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 4
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 5
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 6
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_AttrDerivationOper 4
+
+eSourceFileForDA 5
+
+eLOD_Attribute 3
+awkSequence 3
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 4
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_AttrDerivationOper 4
+
+eSourceFileForDA 5
+
+eSourceFile 2
+
+eOperation 3
+aName      AddMenuItem
+aZKey      110121603
+aType      L
+aClass     0
+
+eParameter 4
+aShortDesc sAppMgr
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110121604
+
+eOperation 3
+
+eParameter 4
+aShortDesc View to Instance
+aDataType  V
+aZKey      110121768
+
+eParameter 4
+aShortDesc Internal Entity Structure
+aDataType  S
+aZKey      110121769
+
+eParameter 4
+aShortDesc Internal Attrib Structure
+aDataType  S
+aZKey      110121770
+
+eParameter 4
+aShortDesc Get Or Set Flag
+aDataType  N
+aZKey      110121771
+
+eOperation 3
+aName      RestoreLastViews
+aZKey      110121605
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc sAppMgr
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110121606
+
+eOperation 3
+aName      CreateGeneralTask
+aZKey      110121607
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc sAppMgr
+aDataType  V
+aZKey      110121608
+
+eParameter 4
+aShortDesc GeneralMenuName
+aDataType  S
+aZKey      110121609
+
+eParameter 4
+aShortDesc GeneralName
+aDataType  S
+aZKey      110121610
+
+eOperation 3
+aName      DeleteGeneralTask
+aZKey      110121611
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc sAppMgr
+aDataType  V
+aZKey      110121612
+
+eParameter 4
+aShortDesc GeneralName
+aDataType  S
+aZKey      110121613
+
+eOperation 3
+aName      DeleteMenuItem
+aZKey      110121614
+aType      L
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc sAppMgr
+aDataType  V
+aZKey      110121615
+
+eOperation 3
+
+eParameter 4
+aShortDesc sAppMgr
+aDataType  V
+aZKey      110121617
+
+eParameter 4
+aShortDesc InternalEntityStructure
+aDataType  S
+aZKey      110121618
+
+eParameter 4
+aShortDesc InternalAttribStructure
+aDataType  S
+aZKey      110121619
+
+eParameter 4
+aShortDesc GetOrSetFlag
+aDataType  N
+aZKey      110121620
+
+eOperation 3
+
+eParameter 4
+aShortDesc sAppMgr
+aDataType  V
+aZKey      110121622
+
+eParameter 4
+aShortDesc InternalEntityStructure
+aDataType  S
+aZKey      110121623
+
+eParameter 4
+aShortDesc InternalAttribStructure
+aDataType  S
+aZKey      110121624
+
+eParameter 4
+aShortDesc GetOrSetFlag
+aDataType  N
+aZKey      110121625
+
+eOperation 3
+aName      CreateFunctionalAreas
+aZKey      110121626
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc View To Instance
+aDataType  V
+aZKey      110121627
+
+eOperation 3
+aName      AddSplitWindow
+aZKey      110121628
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc View To Instance
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110121629
+
+eParameter 4
+aShortDesc FunctionalArea
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110121630
+
+eParameter 4
+aShortDesc FunctionalSubArea
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110121631
+
+eParameter 4
+aShortDesc WindowName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110121632
+
+eParameter 4
+aShortDesc HasFrame
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110121633
+
+eParameter 4
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110121634
+
+eOperation 3
+aName      IsSplitWindowAdded
+aZKey      110121635
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc sAppMgr
+aDataType  V
+aZKey      110121636
+
+eParameter 4
+aShortDesc szFunctionalArea
+aDataType  S
+aZKey      110121637
+
+eParameter 4
+aShortDesc szFunctionalSubArea
+aDataType  S
+aZKey      110121638
+
+eParameter 4
+aShortDesc szWindowName
+aDataType  S
+aZKey      110121639
+
+eOperation 3
+aName      CloseSplitWindow
+aZKey      110121640
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc View To Instance
+aDataType  V
+aZKey      110121641
+
+eParameter 4
+aShortDesc szFunctionalArea
+aDataType  S
+aZKey      110121642
+
+eParameter 4
+aShortDesc szFunctionalSubArea
+aDataType  S
+aZKey      110121643
+
+eParameter 4
+aShortDesc szWindowName
+aDataType  S
+aZKey      110121644
+
+eOperation 3
+aName      DetatchWindow
+aZKey      110121645
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc View To Instance
+aDataType  V
+aZKey      110121646
+
+eParameter 4
+aShortDesc szFunctionalArea
+aDataType  S
+aZKey      110121647
+
+eParameter 4
+aShortDesc szFunctionalSubArea
+aDataType  S
+aZKey      110121648
+
+eParameter 4
+aShortDesc szWindowName
+aDataType  S
+aZKey      110121649
+
+eOperation 3
+aName      CloseAllSplitWindows
+aZKey      110121650
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc View To Instance
+aDataType  V
+aZKey      110121651
+
+eParameter 4
+aShortDesc szDialogName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110121652
+
+eParameter 4
+aShortDesc szFunctionalArea
+aDataType  S
+aZKey      110121653
+
+eOperation 3
+aName      GetActiveSplitWindow
+aZKey      110121654
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc View To Instance
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110121655
+
+eParameter 4
+aShortDesc vWindow
+aDataType  V
+aPFlag     Y
+aUFlag     N
+aZKey      110121656
+
+eParameter 4
+aShortDesc FunctionalArea
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110121657
+
+eParameter 4
+aShortDesc FunctionalSubArea
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110121658
+
+eOperation 3
+aName      RefreshSplitWindow
+aZKey      110121659
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc View To Instance
+aDataType  V
+aZKey      110121660
+
+eParameter 4
+aShortDesc szFunctionalArea
+aDataType  S
+aZKey      110121661
+
+eParameter 4
+aShortDesc szFunctionalSubArea
+aDataType  S
+aZKey      110121662
+
+eParameter 4
+aShortDesc szWindowName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110121663
+
+eOperation 3
+aName      RefreshAllSplitWindows
+aZKey      110121664
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc sAppMgr
+aDataType  V
+aZKey      110121665
+
+eParameter 4
+aShortDesc szFunctionalArea
+aDataType  S
+aZKey      110121666
+
+eParameter 4
+aShortDesc szFunctionalSubArea
+aDataType  S
+aZKey      110121667
+
+eOperation 3
+aName      MapAllSplitWindows
+aZKey      110121668
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc sAppMgr
+aDataType  V
+aZKey      110121669
+
+eParameter 4
+aShortDesc szFunctionalArea
+aDataType  S
+aZKey      110121670
+
+eParameter 4
+aShortDesc szFunctionalSubArea
+aDataType  S
+aZKey      110121671
+
+eOperation 3
+aName      MapSplitWindow
+aZKey      110121672
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc View To Instance
+aDataType  V
+aZKey      110121673
+
+eParameter 4
+aShortDesc szFunctionalArea
+aDataType  S
+aZKey      110121674
+
+eParameter 4
+aShortDesc szFunctionalSubArea
+aDataType  S
+aZKey      110121675
+
+eParameter 4
+aShortDesc szWindowName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110121676
+
+eOperation 3
+aName      SaveLastViews
+aZKey      110121677
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc sAppMgr
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110121678
+
+eOperation 3
+
+eParameter 4
+aShortDesc View to Instance
+aDataType  V
+aZKey      110121763
+
+eParameter 4
+aShortDesc Internal Entity Structure
+aDataType  S
+aZKey      110121764
+
+eParameter 4
+aShortDesc Internal Attrib Structure
+aDataType  S
+aZKey      110121765
+
+eParameter 4
+aShortDesc Get Or Set Flag
+aDataType  N
+aZKey      110121766
+
+ePOD       2
+aNAME      sAppMgr
+aZKey      110121679
+aTE_SourceZKey 110010889
+
+eTE_DB_Environ 3
+aName      Base
+aZKey      110010888
+aDesc      OakTree Support App
+aType      P
+
+eTE_DBMS_Source 4
+aName      base
+aZKey      110010889
+aParadigm  R
+aDBMS      SQLServer via ODBC
+aGenerateExecutable kzhsqlsb
+aExecutable kzhsqloa
+aGenKeyExecutable kzhgenky
+aDisplayOwner Y
+aDisplayDBMS_ID N
+aDBH_Data  376
+TZDBHODO *********************** ********************************************************************************************************z1000-Zeidon    ZTF_1760_TZDBHODO 11/18/15   13:58:09 1.0a2    
+eODBC      1
+aTimestampPrecision 3
+aTimestampAsString Y
+aBlobsLast Y
+aDropTables Y
+aAddTableNameToFK_Override Y
+aGenCreateIdxs Y
+aGenDropIdxs N
+aGenCreateTables Y
+
+
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+i11        7
+i15        7
+i19        7
+i25        7
+i28        7
+i33        7
+i36        7
+i42        7
+i44        30
+i47        39
+i51        7
+i55        7
+i58        7
+i61        7
+i66        7
+i70        7
+i74        7
+i78        7
+i90        7
+i93        7
+i96        7
+i100       84
+i103       84
+i105       30
+i108       84
+i111       84
+i113       30
+i116       84
+i119       39
+i122       22
+i125       7
+i129       1
+i130       114
+i131       115
+i132       84
+i133       117
+i134       118
+i135       39
+i136       120
+i137       121
+i138       22
+i139       123
+i140       124
+i141       7
+i142       126
+i143       127
+i144       128
+i145       2
+i146       37
+i147       38
+i148       39
+i149       40
+i150       41
+i151       7
+i152       43
+i153       30
+i154       45
+i155       46
+i156       39
+i157       3
+i158       23
+i159       24
+i160       7
+i161       26
+i162       27
+i163       7
+i164       29
+i165       30
+i166       31
+i167       32
+i168       7
+i169       34
+i170       35
+i171       7
+i172       4
+i173       5
+i174       6
+i175       7
+i176       8
+i177       9
+i178       10
+i179       7
+i180       12
+i181       13
+i182       14
+i183       7
+i184       16
+i185       17
+i186       18
+i187       7
+i188       20
+i189       21
+i190       22
+i191       48
+i192       49
+i193       50
+i194       7
+i195       52
+i196       53
+i197       54
+i198       7
+i199       56
+i200       57
+i201       7
+i202       59
+i203       60
+i204       7
+i205       62
+i206       79
+i207       80
+i208       81
+i209       82
+i210       83
+i211       84
+i212       85
+i213       86
+i214       87
+i215       88
+i216       89
+i217       7
+i218       91
+i219       92
+i220       7
+i221       94
+i222       95
+i223       7
+i224       63
+i225       64
+i226       65
+i227       7
+i228       67
+i229       68
+i230       69
+i231       7
+i232       71
+i233       72
+i234       73
+i235       7
+i236       75
+i237       76
+i238       77
+i239       7
+i240       97
+i241       98
+i242       99
+i243       84
+i244       101
+i245       102
+i246       84
+i247       104
+i248       30
+i249       106
+i250       107
+i251       84
+i252       109
+i253       110
+i254       84
+i255       112
+i256       30
+i257       30
+i260       29
+i276       112
+i281       104
+i339       43
+i347       258
+i348       30
+i349       288
+i350       30
+i351       310
+i352       30
+i353       300
+i354       30
+i355       286
+i356       30
+i357       267
+i358       30
+i359       271
+i360       30
+i361       274
+i362       30
+i363       305
+i364       30
+i365       43
+i366       30
+i367       29
+i368       30
+i369       112
+i370       30
+i371       104
+i372       30
+i373       314
+i374       30
+i375       295
+i376       30
+i377       328
+i378       30
+i379       332
+i380       30
+i381       324
+i382       30
+i383       319
+i384       30
+i385       265
+i386       30
+i387       337
+i388       30

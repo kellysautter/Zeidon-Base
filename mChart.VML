@@ -1,0 +1,543 @@
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: CreatePieChart
+**    
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+CreatePieChart( VIEW mChart BASED ON LOD mChart )
+
+    INTEGER iCnt
+
+    FOR EACH mChart.CodeLine 
+        DELETE ENTITY mChart.CodeLine  
+    END 
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>"
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "<script type='text/javascript'>"
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "// Load Charts and the corechart package."
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "google.charts.load('current', {'packages':['corechart']});"
+      
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "google.charts.setOnLoadCallback(drawPieChart" + mChart.Chart.Tag + ");"
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "function drawPieChart" + mChart.Chart.Tag + "() {"
+    
+    
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "    var chart = new google.visualization.PieChart(document.getElementById('" + mChart.Chart.Tag + "'));"    
+    
+
+    // Create the Columns
+    // It looks like if you have addColumn, you need to define "data" a little differently than if you don't and the first
+    // line of the rows contains the title. 
+    IF mChart.Column EXISTS
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "    var data = new google.visualization.DataTable();"
+        
+        iCnt = 0
+        FOR EACH mChart.Column 
+            CREATE ENTITY mChart.CodeLine 
+            mChart.CodeLine.Line = "data.addColumn(" + mChart.Column.Line  + ");"
+            iCnt = iCnt + 1
+            //data.addColumn('string', 'Topping');
+            //data.addColumn('number', 'Slices');
+        END
+        
+        // Create the rows
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "    data.addRows(["
+    ELSE 
+        // Create the rows
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "    var data = google.visualization.arrayToDataTable(["
+    END
+
+    iCnt = 0
+    FOR EACH mChart.Row 
+        // Set options for Current Order Status
+        IF iCnt > 0
+            mChart.CodeLine.Line = mChart.CodeLine.Line + ","
+        END
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "[" + mChart.Row.Line  + "]"
+        iCnt = iCnt + 1
+        //data.addRows([
+        //  ['Open', 12],
+        //  ['Scheduled', 23],
+        //  ['Closed', 60],
+        //  ['Delivered', 26],
+        //  ['Delivery In Progress', 26],
+        //  ['Pickup In Progress', 16],
+        //  ['Reviewed', 20]
+        //]);
+
+    END
+    IF iCnt > 0
+        mChart.CodeLine.Line = mChart.CodeLine.Line + "]);"     
+    END
+
+    // Create the Options
+    IF mChart.Option EXISTS 
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = mChart.Option.Line
+    END
+    // THIS IS THE OLD WAY
+    /*
+    // Create the Options
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "    var options = {"
+    iCnt = 0
+    FOR EACH mChart.Option 
+        // Set options for Current Order Status
+        IF iCnt > 0
+            mChart.CodeLine.Line = mChart.CodeLine.Line + ","
+        END
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = mChart.Option.Line 
+        iCnt = iCnt + 1
+        //title:'Current Order Status',
+        //               width:600,
+        //               height:300,
+        //               is3D: true,};
+    END
+    IF iCnt > 0
+        mChart.CodeLine.Line = mChart.CodeLine.Line + "};"     
+    END
+    */
+
+    // Instantiate and draw the chart for Sarah's pizza.
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "    chart.draw(data, options);"
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "}"
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "</script>"
+
+END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: CreateBarChart
+**    
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+CreateBarChart( VIEW mChart BASED ON LOD mChart )
+
+    INTEGER iCnt
+
+    FOR EACH mChart.CodeLine 
+        DELETE ENTITY mChart.CodeLine  
+    END 
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>"
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "<script type='text/javascript'>"
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "// Load Charts and the corechart package."
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "google.charts.load('current', {'packages':['corechart','bar']});"
+      
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "google.charts.setOnLoadCallback(drawBarChart" + mChart.Chart.Tag + ");"
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "function drawBarChart" + mChart.Chart.Tag + "() {"
+        
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "    var chart = new google.visualization.BarChart(document.getElementById('" + mChart.Chart.Tag + "'));"    
+
+    //CREATE ENTITY mChart.CodeLine 
+    //mChart.CodeLine.Line = "    var data = new google.visualization.DataTable();"
+
+    // Create the Columns
+    // It looks like if you have addColumn, you need to define "data" a little differently than if you don't and the first
+    // line of the rows contains the title. 
+    IF mChart.Column EXISTS
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "    var data = new google.visualization.DataTable();"
+        
+        iCnt = 0
+        FOR EACH mChart.Column 
+            CREATE ENTITY mChart.CodeLine 
+            mChart.CodeLine.Line = "data.addColumn(" + mChart.Column.Line  + ");"
+            iCnt = iCnt + 1
+            //data.addColumn('string', 'Topping');
+            //data.addColumn('number', 'Slices');
+        END
+        
+        // Create the rows
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "    data.addRows(["
+    ELSE 
+        // Create the rows
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "    var data = google.visualization.arrayToDataTable(["
+    END
+    
+    // Create the rows
+    iCnt = 0
+    FOR EACH mChart.Row 
+        // Set options for Current Order Status
+        IF iCnt > 0
+            mChart.CodeLine.Line = mChart.CodeLine.Line + ","
+        END
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "[" + mChart.Row.Line  + "]"
+        iCnt = iCnt + 1
+        //data.addRows([
+        //  ['Open', 12],
+        //  ['Scheduled', 23],
+        //  ['Closed', 60],
+        //  ['Delivered', 26],
+        //  ['Delivery In Progress', 26],
+        //  ['Pickup In Progress', 16],
+        //  ['Reviewed', 20]
+        //]);
+
+    END
+    IF iCnt > 0
+        mChart.CodeLine.Line = mChart.CodeLine.Line + "]);"     
+    END
+
+    // Create the Options
+    IF mChart.Option EXISTS 
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = mChart.Option.Line
+    END
+
+    // Instantiate and draw the chart.
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "    chart.draw(data, options);"
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "}"
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "</script>"
+
+/*
+      var data = google.visualization.arrayToDataTable([
+        ['Genre', 'Idle Hours', 
+         'Driving Hours', 'Parked Hours', { role: 'annotation' } ],
+        ['Sunday', 10, 8, 6, ''],
+        ['Monday', 12,  12, 0, ''],
+        ['Tuesday', 15,  6, 3, ''],
+        ['Wednesday', 13, 7, 4, ''],
+        ['Thursday', 12,  4, 8, ''],
+        ['Friday', 10, 9, 5, ''],
+        ['Saturday', 8, 12, 4, '']
+      ]);
+      var options = {
+        title: 'Fleet Utilization',
+        width: 600,
+        height: 400,
+        legend: { position: 'top', maxLines: 3 },
+        bar: { groupWidth: '75%' },
+        isStacked: true,
+      };
+      
+*/
+
+END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: CreateColumnChart
+**    
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+CreateColumnChart( VIEW mChart BASED ON LOD mChart )
+
+
+    INTEGER iCnt
+
+    FOR EACH mChart.CodeLine 
+        DELETE ENTITY mChart.CodeLine  
+    END 
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>"
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "<script type='text/javascript'>"
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "// Load Charts and the corechart package."
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "google.charts.load('current', {'packages':['corechart','bar']});"
+      
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "google.charts.setOnLoadCallback(drawColumnChart" + mChart.Chart.Tag + ");"
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "function drawColumnChart" + mChart.Chart.Tag + "() {"
+        
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "    var chart = new google.visualization.ColumnChart(document.getElementById('" + mChart.Chart.Tag + "'));"    
+
+    // Create the Columns
+    // It looks like if you have addColumn, you need to define "data" a little differently than if you don't and the first
+    // line of the rows contains the title. 
+    IF mChart.Column EXISTS
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "    var data = new google.visualization.DataTable();"
+        
+        iCnt = 0
+        FOR EACH mChart.Column 
+            CREATE ENTITY mChart.CodeLine 
+            mChart.CodeLine.Line = "data.addColumn(" + mChart.Column.Line  + ");"
+            iCnt = iCnt + 1
+            //data.addColumn('string', 'Topping');
+            //data.addColumn('number', 'Slices');
+        END
+        
+        // Create the rows
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "    data.addRows(["
+    ELSE 
+        // Create the rows
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "    var data = google.visualization.arrayToDataTable(["
+    END
+
+    iCnt = 0
+    FOR EACH mChart.Row 
+        // Set options for Current Order Status
+        IF iCnt > 0
+            mChart.CodeLine.Line = mChart.CodeLine.Line + ","
+        END
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "[" + mChart.Row.Line  + "]"
+        iCnt = iCnt + 1
+        //data.addRows([
+        //  ['Open', 12],
+        //  ['Scheduled', 23],
+        //  ['Closed', 60],
+        //  ['Delivered', 26],
+        //  ['Delivery In Progress', 26],
+        //  ['Pickup In Progress', 16],
+        //  ['Reviewed', 20]
+        //]);
+
+    END
+    IF iCnt > 0
+        mChart.CodeLine.Line = mChart.CodeLine.Line + "]);"     
+    END
+    
+    // Create the Options
+    IF mChart.Option EXISTS 
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = mChart.Option.Line
+    END
+
+    // Instantiate and draw the chart.
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "    chart.draw(data, options);"
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "}"
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "</script>"
+
+
+END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: CreateComboChart
+**    
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+CreateComboChart( VIEW mChart BASED ON LOD mChart )
+
+
+    INTEGER iCnt
+
+    FOR EACH mChart.CodeLine 
+        DELETE ENTITY mChart.CodeLine  
+    END 
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>"
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "<script type='text/javascript'>"
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "// Load Charts and the corechart package."
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "google.charts.load('current', {'packages':['corechart']});"
+      
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "google.charts.setOnLoadCallback(drawComboChart" + mChart.Chart.Tag + ");"
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "function drawComboChart" + mChart.Chart.Tag + "() {"
+        
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "    var chart = new google.visualization.ComboChart(document.getElementById('" + mChart.Chart.Tag + "'));"    
+
+
+    // Create the Columns
+    // It looks like if you have addColumn, you need to define "data" a little differently than if you don't and the first
+    // line of the rows contains the title. 
+    IF mChart.Column EXISTS
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "    var data = new google.visualization.DataTable();"
+        
+        iCnt = 0
+        FOR EACH mChart.Column 
+            CREATE ENTITY mChart.CodeLine 
+            mChart.CodeLine.Line = "data.addColumn(" + mChart.Column.Line  + ");"
+            iCnt = iCnt + 1
+            //data.addColumn('string', 'Topping');
+            //data.addColumn('number', 'Slices');
+        END
+        
+        // Create the rows
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "    data.addRows(["
+    ELSE 
+        // Create the rows
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "    var data = google.visualization.arrayToDataTable(["
+    END
+
+    iCnt = 0
+    FOR EACH mChart.Row 
+        // Set options for Current Order Status
+        IF iCnt > 0
+            mChart.CodeLine.Line = mChart.CodeLine.Line + ","
+        END
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "[" + mChart.Row.Line  + "]"
+        iCnt = iCnt + 1
+
+    END
+    IF iCnt > 0
+        mChart.CodeLine.Line = mChart.CodeLine.Line + "]);"     
+    END
+    
+    // Create the Options
+    IF mChart.Option EXISTS 
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = mChart.Option.Line
+    END
+
+    // Instantiate and draw the chart.
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "    chart.draw(data, options);"
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "}"
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "</script>"
+
+END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: CreateTimeLine
+**    
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+CreateTimeLine( VIEW mChart BASED ON LOD mChart )
+
+
+    INTEGER iCnt
+
+    FOR EACH mChart.CodeLine 
+        DELETE ENTITY mChart.CodeLine  
+    END 
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>"
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "<script type='text/javascript'>"
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "// Load Charts and the corechart package."
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "google.charts.load('current', {packages:['timeline']});"
+      
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "google.charts.setOnLoadCallback(drawTimeline" + mChart.Chart.Tag + ");"
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "function drawTimeline" + mChart.Chart.Tag + "() {"
+        
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "    var chart = new google.visualization.Timeline(document.getElementById('" + mChart.Chart.Tag + "'));"    
+   
+
+    // Create the Columns
+    // It looks like if you have addColumn, you need to define "data" a little differently than if you don't and the first
+    // line of the rows contains the title. 
+    IF mChart.Column EXISTS
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "    var data = new google.visualization.DataTable();"
+        
+        iCnt = 0
+        FOR EACH mChart.Column 
+            CREATE ENTITY mChart.CodeLine 
+            mChart.CodeLine.Line = "data.addColumn(" + mChart.Column.Line  + ");"
+            iCnt = iCnt + 1
+            //data.addColumn('string', 'Topping');
+            //data.addColumn('number', 'Slices');
+        END
+        
+        // Create the rows
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "    data.addRows(["
+    ELSE 
+        // Create the rows
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "    var data = google.visualization.arrayToDataTable(["
+    END
+
+    iCnt = 0
+    FOR EACH mChart.Row 
+        // Set options for Current Order Status
+        IF iCnt > 0
+            mChart.CodeLine.Line = mChart.CodeLine.Line + ","
+        END
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = "[" + mChart.Row.Line  + "]"
+        iCnt = iCnt + 1
+
+    END
+    IF iCnt > 0
+        mChart.CodeLine.Line = mChart.CodeLine.Line + "]);"     
+    END
+    
+    // Create the Options
+    IF mChart.Option EXISTS 
+        CREATE ENTITY mChart.CodeLine 
+        mChart.CodeLine.Line = mChart.Option.Line
+    END
+
+    // Instantiate and draw the chart.
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "    chart.draw(data, options);"
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "}"
+
+    CREATE ENTITY mChart.CodeLine 
+    mChart.CodeLine.Line = "</script>"
+
+
+
+
+END

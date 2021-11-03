@@ -1,0 +1,129 @@
+
+/*************************************************************************************************
+**    
+**    OPERATION: dQueryViewType
+**    
+**    
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dQueryViewType( VIEW zqSQuery BASED ON LOD zqSQuery,
+                STRING ( 32 ) InternalEntityStructure,
+                STRING ( 32 ) InternalAttribStructure,
+                SHORT GetOrSetFlag )
+
+   VIEW wXferO  REGISTERED AS wXferO
+   VIEW wXferO2 BASED ON LOD  wXferO
+   STRING ( 50 ) szQueryType
+
+   CASE GetOrSetFlag
+   OF   zDERIVED_GET:
+
+      szQueryType = ""
+      CreateViewFromView( wXferO2, wXferO )
+      SET CURSOR FIRST wXferO.QueryObject 
+                 WHERE wXferO.QueryObject.ObjectName = zqSQuery.StoredQuery.ObjectName 
+      IF RESULT >= zCURSOR_SET
+         szQueryType = wXferO.QueryObject.ExternalName 
+      END
+      DropView( wXferO2 )
+      StoreStringInRecord ( zqSQuery,
+                            InternalEntityStructure, InternalAttribStructure, szQueryType )
+      
+        /* end zDERIVED_GET */
+   OF   zDERIVED_SET:
+
+        /* end zDERIVED_SET */
+   END  /* case */
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: ObjectConstraint
+**    
+*************************************************************************************************/
+OBJECT CONSTRAINT OPERATION
+ObjectConstraint( VIEW zqSQuery BASED ON LOD zqSQuery,
+                  SHORT Event,
+                  SHORT State )
+
+   CASE Event
+   OF   zOCE_ACTIVATE:
+
+        /* end zOCE_ACTIVATE */
+   OF   zOCE_ACTIVATE_EMPTY:
+
+        /* end zOCE_ACTIVATE_EMPTY */
+   OF   zOCE_COMMIT:
+   
+      // Set the Create and Modify Dates.
+      IF zqSQuery.StoredQuery EXISTS
+         SetAttributeFromCurrentDateTime( zqSQuery, "StoredQuery", "ModifiedDateTime" )
+         IF zqSQuery.StoredQuery.ID = ""
+            zqSQuery.StoredQuery.CreatedDateTime = zqSQuery.StoredQuery.ModifiedDateTime
+         END
+      END
+
+        /* end zOCE_COMMIT */
+   OF   zOCE_DROPOI:
+
+        /* end zOCE_DROPOI */
+   END  /* case */
+
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: ResyncQueryToReport
+**    
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+ResyncQueryToReport( VIEW zqSQuery BASED ON LOD zqSQuery )
+
+
+   VIEW mReport  BASED ON LOD  mReport
+   VIEW zqFrameN BASED ON LOD  zqFrame
+   VIEW zqFrameO BASED ON LOD  zqFrame
+   STRING ( 32 ) szReturn
+   
+   // Resync the Query with the Report.
+   ACTIVATE mReport WHERE mReport.Report.ID = zqSQuery.UsingReport.ID
+   NAME VIEW mReport "mUsingReport"
+   SetOI_FromBlob( zqFrameN, szReturn, zqSQuery,
+                   zqSQuery, "StoredQuery", "QueryBlob", zSINGLE )
+   SetOI_FromBlob( zqFrameO, szReturn, zqSQuery,
+                   mReport , "StoredQuery", "QueryBlob", zSINGLE )
+   NAME VIEW zqFrameN "zqFrameN"
+   NAME VIEW zqFrameO "zqFrameO"
+   
+   DELETE ENTITY mReport.StoredQuery 
+   
+   CREATE ENTITY mReport.StoredQuery
+   SetMatchingAttributesByName( mReport,     "StoredQuery",
+                                zqSQuery, "StoredQuery", zSET_NULL )
+   SetAttributeFromString( mReport, "StoredQuery", "Type", "M" )
+   IncludeSubobjectFromSubobject( mReport,     "CreatingUser",
+                                  zqSQuery, "CreatingUser", zPOS_AFTER )
+   IncludeSubobjectFromSubobject( mReport,     "CreatingStoredQuery",
+                                  zqSQuery, "StoredQuery", zPOS_AFTER )
+   
+   // Set the ReportInterfaceFlag from the Query being deleted.
+   FOR EACH zqFrameO.GeneralParameter 
+      IF zqFrameO.GeneralParameter.ReportInterfaceFlag = "Y"
+         SET CURSOR FIRST zqFrameN.GeneralParameter 
+                    WHERE zqFrameN.GeneralParameter.EntityName    = zqFrameO.GeneralParameter.EntityName 
+                      AND zqFrameN.GeneralParameter.AttributeName = zqFrameO.GeneralParameter.AttributeName 
+         IF RESULT >= zCURSOR_SET
+            zqFrameN.GeneralParameter.ReportInterfaceFlag = "Y"
+         END
+      END
+   END
+   SetBlobFromOI( mReport , "StoredQuery", "QueryBlob", zqFrameN, zINCREMENTAL )
+   
+   COMMIT mReport
+   
+   DropObjectInstance( mReport )
+   DropObjectInstance( zqFrameN )
+   DropObjectInstance( zqFrameO )
+
+END

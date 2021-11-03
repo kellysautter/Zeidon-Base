@@ -1,0 +1,15 @@
+z1000-Zeidon    TABLEF   TZDGSRCO 10/23/15   09:05:06 1.0a2    
+eDomainGroup 1
+aZKey      110001802
+aName      TableF
+aDesc      Financial Table Values
+aExtension C
+aWorkNumeric 12
+
+eOperation 2
+aName      zdmDecimal
+aZKey      110001803
+aDesc      Decimal Domain Algorithm
+aType      M
+aReturnDataType N
+

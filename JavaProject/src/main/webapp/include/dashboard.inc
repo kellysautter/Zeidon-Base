@@ -1,0 +1,1 @@
+﻿<iframe src="http://127.0.0.1:3000/embed/dashboard/eyJhbGciOiJIUzI1NiJ9.eyJyZXNvdXJjZSI6eyJkYXNoYm9hcmQiOjF9LCJwYXJhbXMiOnsiIjoiIn19._Bynkn-2wz3bkTB-x32MOQw5Yj13YjU1jlSYvIQOHwg#bordered=true&titled=true" width="800" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

@@ -1,0 +1,3096 @@
+z1000-Zeidon    ZGLOBAL1 TZOGSRCO 09/21/17   10:12:40 1.0a2    
+eGlobalOperationGroup 1
+aZKey      110276032
+aNextZKeyToAssign 110276640
+aName      ZGLOBAL1
+aDesc      Global Operations in C
+aExtension Java
+aLanguageType J
+
+eOperation 2
+aName      ConvertLineToEntity
+aZKey      110276033
+aDesc      Convert data in a comma or tab delimited record to attribute values in an entity.
+aType      G
+aReturnDesc Return Code
+aReturnDataType N
+
+eParameter 3
+aShortDesc EntityView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276034
+
+eParameter 3
+aShortDesc XOD_View
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276035
+
+eParameter 3
+aShortDesc RecordArea
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276036
+
+eParameter 3
+aShortDesc DelimiterType
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276037
+
+eParameter 3
+aShortDesc MaxRecordLth
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276038
+
+eOperation 2
+aName      DELETE_File
+aZKey      110276639
+aType      G
+
+eParameter 3
+aShortDesc FileName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276640
+
+eOperation 2
+aName      IntToDecimal
+aZKey      110276637
+aType      G
+aReturnDataType M
+
+eParameter 3
+aShortDesc IntStr
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276638
+
+eOperation 2
+aName      DecimalToInt
+aZKey      110276635
+aType      G
+aReturnDataType L
+
+eParameter 3
+aShortDesc intStr
+aDataType  M
+aPFlag     N
+aUFlag     N
+aZKey      110276636
+
+eOperation 2
+aName      strIsInteger
+aZKey      110276606
+aDesc      Return 1 if it is an integer, 0 if it is not.
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc StringIn
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276607
+
+eOperation 2
+aName      strIsNumber
+aZKey      110276604
+aDesc      Return 1 if it is a number, 0 if not. A number can be float, integer, hex, scientific notation.
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc StringIn
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276605
+
+eOperation 2
+aName      strUpper
+aZKey      110276602
+aDesc      Change string to Upper Case
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc StringInOut
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276603
+
+eOperation 2
+aName      ValidateEmailAddress
+aZKey      110276600
+aDesc      0 if valid, negative if not
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc emailAddress
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276601
+
+eOperation 2
+aName      ReturnFileNameFromPath
+aZKey      110276597
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ReturnedFileName
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276598
+
+eParameter 3
+aShortDesc FileName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276599
+
+eOperation 2
+aName      ConvertDecimalToString
+aZKey      110276591
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc DecimalValue
+aDataType  M
+aPFlag     N
+aUFlag     N
+aZKey      110276592
+
+eParameter 3
+aShortDesc StringValue
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276593
+
+eParameter 3
+aShortDesc DecimalPositions
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276594
+
+eOperation 2
+aName      IsNumber
+aZKey      110276589
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc Str
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276590
+
+eOperation 2
+aName      strSubstringCompareIgnoreCase
+aZKey      110276586
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc MainString
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276587
+
+eParameter 3
+aShortDesc SubString
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276588
+
+eOperation 2
+aName      strLen
+aZKey      110276584
+aDesc      Return the length of a string.
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc StringIn
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276585
+
+eOperation 2
+aName      PRINT_ExcelReport_Jasper
+aZKey      110276582
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276583
+
+eOperation 2
+aName      strLower
+aZKey      110276580
+aDesc      Change string to Lower Case
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc StringInOut
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276581
+
+eOperation 2
+aName      strFirstWord
+aZKey      110276578
+aDesc      Get the first characters up to a space in a string
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc StringInOut
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276579
+
+eOperation 2
+aName      strLeft
+aZKey      110276575
+aDesc      Return left indicated number of characters of a string
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc StringInOut
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276576
+
+eParameter 3
+aShortDesc retval
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276577
+
+eOperation 2
+aName      SendEmail
+aZKey      110276566
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc sHost
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276567
+
+eParameter 3
+aShortDesc SenderEmail
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276568
+
+eParameter 3
+aShortDesc RecipientEmail
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276569
+
+eParameter 3
+aShortDesc SubjectLine
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276570
+
+eParameter 3
+aShortDesc BodyMsg
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276571
+
+eParameter 3
+aShortDesc AttachmentFileName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276572
+
+eOperation 2
+aName      CheckPassword
+aZKey      110276563
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc Password
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276564
+
+eOperation 2
+aName      CallJasperReport
+aZKey      110276549
+aDesc      Call a Jasper Report for Execution
+aType      G
+aReturnDesc ReturnCode
+
+eParameter 3
+aShortDesc ViewtoObject
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276550
+
+eParameter 3
+aShortDesc RptName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276552
+
+eOperation 2
+aName      CheckPasswordInternal
+aZKey      110276546
+aDesc      Provide the username and password entered by the user. Check the user database for a match and hash to see if the password is the same as saved for the user.  Returns 0 if successful, -1 if not.
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType L
+aThrowsException Y
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276547
+
+eParameter 3
+aShortDesc Username
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276562
+
+eParameter 3
+aShortDesc EnteredPassword
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276548
+
+eOperation 2
+aName      GetPasswordHash
+aZKey      110276543
+aDesc      Get the password hash in hex.
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType L
+aThrowsException Y
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276558
+
+eParameter 3
+aShortDesc InputString
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276561
+
+eParameter 3
+aShortDesc HashedString
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276545
+
+eParameter 3
+aShortDesc SaltVal
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276557
+
+eOperation 2
+aName      GetHexHash
+aZKey      110276538
+aDesc      Get a hex hash value for a submitted string in 
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType L
+aThrowsException Y
+
+eParameter 3
+aShortDesc InputString
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276539
+
+eParameter 3
+aShortDesc HashedString
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276540
+
+eParameter 3
+aShortDesc HashType
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276542
+
+eOperation 2
+aName      ConvertXML_SpecialCharacters
+aZKey      110276039
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc AnyView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276040
+
+eParameter 3
+aShortDesc ReturnedString
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276041
+
+eParameter 3
+aShortDesc SourceString
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276042
+
+eParameter 3
+aShortDesc ReturnedStringLength
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276043
+
+eOperation 2
+aName      ConvertTabStringToEntity
+aZKey      110276044
+aDesc      Convert data in a comma or tab delimited record to attribute values in an entity.
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc EntityView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276045
+
+eParameter 3
+aShortDesc szEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276046
+
+eParameter 3
+aShortDesc RecordArea
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276047
+
+eParameter 3
+aShortDesc MaxRecordLth
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276048
+
+eOperation 2
+aName      AD_SetUserProperty
+aZKey      110276053
+aDesc      Set an AD property for a user
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc AD_Pathname
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276054
+
+eParameter 3
+aShortDesc AD_AdminName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276055
+
+eParameter 3
+aShortDesc AD_AdminPassword
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276056
+
+eParameter 3
+aShortDesc AD_UserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276057
+
+eParameter 3
+aShortDesc AD_PropertyName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276058
+
+eParameter 3
+aShortDesc AD_PropertyValue
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276059
+
+eOperation 2
+aName      SetAttributeFromUC_Attribute
+aZKey      110276060
+aDesc      Set Attribute from Attribute, converting the source string to upper case in the process.
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc TargetView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276061
+
+eParameter 3
+aShortDesc TargetEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276062
+
+eParameter 3
+aShortDesc TargetAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276063
+
+eParameter 3
+aShortDesc SourceView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276064
+
+eParameter 3
+aShortDesc SourceEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276065
+
+eParameter 3
+aShortDesc SourceAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276066
+
+eOperation 2
+aName      SetAttributeFromUC_String
+aZKey      110276067
+aDesc      Set Attribute from String, converting string to upper case.
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc vView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276068
+
+eParameter 3
+aShortDesc EntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276069
+
+eParameter 3
+aShortDesc AttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276070
+
+eParameter 3
+aShortDesc SourceString
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276071
+
+eOperation 2
+aName      SetStringUpperLowerCase
+aZKey      110276072
+aDesc      Set characters in a string to a combination of upper and lower case, witht he 1st character of a work in upper case.
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc StringToConvert
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276073
+
+eOperation 2
+aName      ValidateAndSetState
+aZKey      110276074
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc AnyView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276075
+
+eParameter 3
+aShortDesc szEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276076
+
+eParameter 3
+aShortDesc szAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276077
+
+eParameter 3
+aShortDesc StateString
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276078
+
+eOperation 2
+aName      AD_GetUserProperty
+aZKey      110276079
+aDesc      Get the value of an Active Directory property for the user.
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc AD_Pathname
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276080
+
+eParameter 3
+aShortDesc AD_UserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276081
+
+eParameter 3
+aShortDesc AD_Password
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276082
+
+eParameter 3
+aShortDesc AD_Property
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276083
+
+eParameter 3
+aShortDesc ReturnProperty
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276084
+
+eOperation 2
+aName      AD_RemoveUser
+aZKey      110276085
+aDesc      Remove user from Active Directory
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc AD_Pathname
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276086
+
+eParameter 3
+aShortDesc AD_UserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276087
+
+eParameter 3
+aShortDesc AD_UserPassword
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276088
+
+eOperation 2
+aName      AD_AddNewUser
+aZKey      110276089
+aDesc      Add a new user to Active Directory
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc AD_Pathname
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276090
+
+eParameter 3
+aShortDesc AD_LoginUserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276091
+
+eParameter 3
+aShortDesc AD_LoginPassword
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276092
+
+eParameter 3
+aShortDesc AD_NewUserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276093
+
+eParameter 3
+aShortDesc AD_NewUserPassword
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276094
+
+eOperation 2
+aName      AD_SetPassword
+aZKey      110276095
+aDesc      Set password in  Active Directory
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc AD_Pathname
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276096
+
+eParameter 3
+aShortDesc AD_LoginUserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276097
+
+eParameter 3
+aShortDesc AD_LoginPassword
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276098
+
+eParameter 3
+aShortDesc AD_UserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276099
+
+eParameter 3
+aShortDesc AD_Password
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276100
+
+eOperation 2
+aName      AD_ChangePassword
+aZKey      110276101
+aDesc      Change the user password through Active Directory
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc AD_Pathname
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276102
+
+eParameter 3
+aShortDesc AD_LoginUserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276103
+
+eParameter 3
+aShortDesc AD_LoginPassword
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276104
+
+eParameter 3
+aShortDesc AD_UserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276105
+
+eParameter 3
+aShortDesc AD_OldPassword
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276106
+
+eParameter 3
+aShortDesc AD_NewPassword
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276107
+
+eOperation 2
+aName      AD_RemoveUserPassword
+aZKey      110276108
+aDesc      Remove Active Directory User with Password
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ServerName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276109
+
+eParameter 3
+aShortDesc ServerPort
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276110
+
+eParameter 3
+aShortDesc Organization
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276111
+
+eParameter 3
+aShortDesc UserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276112
+
+eOperation 2
+aName      AD_AddUserPassword
+aZKey      110276113
+aDesc      Add Active Directory User and Password
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ServerName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276114
+
+eParameter 3
+aShortDesc ServerPort
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276115
+
+eParameter 3
+aShortDesc Organization
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276116
+
+eParameter 3
+aShortDesc UserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276117
+
+eParameter 3
+aShortDesc UserPassword
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276118
+
+eOperation 2
+aName      AD_AuthenticateUserPassword
+aZKey      110276119
+aDesc      Authenticate User Name and Password against Active Directory.
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc szAD_Pathname
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276120
+
+eParameter 3
+aShortDesc AD_UserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276121
+
+eParameter 3
+aShortDesc AD_Password
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276122
+
+eOperation 2
+aName      SendEmailForFilesWithCC
+aZKey      110276123
+aDesc      Same as SendEmailForFiles except it supports CC and BCC copies.
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc AnyView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276124
+
+eParameter 3
+aShortDesc ResultSet
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276125
+
+eParameter 3
+aShortDesc pchSMTPServer
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276126
+
+eParameter 3
+aShortDesc pchRecipientEmailAddress
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276127
+
+eParameter 3
+aShortDesc pchSenderEMailAddress
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276128
+
+eParameter 3
+aShortDesc pchCC_EMailAddress
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276129
+
+eParameter 3
+aShortDesc pchBCC_EMailAddress
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276130
+
+eParameter 3
+aShortDesc pchEMailUserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276131
+
+eParameter 3
+aShortDesc pchEMailPassword
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276132
+
+eParameter 3
+aShortDesc pchSubjectLine
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276133
+
+eParameter 3
+aShortDesc pchBodyFileName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276134
+
+eParameter 3
+aShortDesc Alternate Text File Name
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276135
+
+eParameter 3
+aShortDesc Embedded Images List
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276136
+
+eParameter 3
+aShortDesc pchAttachmentFileName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276137
+
+eParameter 3
+aShortDesc nMimeType
+aDataType  N
+aPFlag     N
+aUFlag     N
+aZKey      110276138
+
+eParameter 3
+aShortDesc lConnection
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276139
+
+eOperation 2
+aName      CheckForTableAttribute
+aZKey      110276140
+aDesc      Check if an attribute has a table domain
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ObjectView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276141
+
+eParameter 3
+aShortDesc EntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276142
+
+eParameter 3
+aShortDesc AttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276143
+
+eParameter 3
+aShortDesc ObjectName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276144
+
+eOperation 2
+aName      RemoveLeadingZerosFromAttrib
+aZKey      110276145
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc zView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276146
+
+eParameter 3
+aShortDesc szEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276147
+
+eParameter 3
+aShortDesc szAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276148
+
+eOperation 2
+aName      SetEntityCursorByInteger
+aZKey      110276149
+aDesc      Does a SetEntityCursor for an Integer, since the regular SetEntityCursor doesn't work for an integeri in VML.
+aType      G
+aReturnDesc RerturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc zView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276150
+
+eParameter 3
+aShortDesc szEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276151
+
+eParameter 3
+aShortDesc szAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276152
+
+eParameter 3
+aShortDesc lControlValue
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276153
+
+eParameter 3
+aShortDesc IntegerSearchValue
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276154
+
+eParameter 3
+aShortDesc ScopingEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276155
+
+eOperation 2
+aName      ConvertISIR_NumberToAttribute
+aZKey      110276156
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc TargetView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276157
+
+eParameter 3
+aShortDesc TargetEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276158
+
+eParameter 3
+aShortDesc TargetAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276159
+
+eParameter 3
+aShortDesc ISIR_Value
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276160
+
+eOperation 2
+aName      FTPSendFile
+aZKey      110276161
+aDesc      268
+zSHORT OPERATION
+FTPSendFile( zVIEW  vSubtask,
+             zPCHAR pszServerAddress,
+             zPCHAR pszUserName,
+             zPCHAR pszPassword,
+             zPCHAR pszLocalFileName,
+             zPCHAR pszServerFileName,
+             zLONG  lControl )
+ 
+aType      G
+aReturnDesc nRC
+aReturnDataType N
+
+eParameter 3
+aShortDesc vSubTask
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276162
+
+eParameter 3
+aShortDesc szServerAddress
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276163
+
+eParameter 3
+aShortDesc szUserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276164
+
+eParameter 3
+aShortDesc szPassword
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276165
+
+eParameter 3
+aShortDesc szLocalFileName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276166
+
+eParameter 3
+aShortDesc szServerFileName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276167
+
+eParameter 3
+aShortDesc lControl
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276168
+
+eOperation 2
+aName      WL_QC
+aZKey      110276218
+aDesc      Convert an instance of a special character in  a buffer and then write out the buffer.
+aType      G
+aReturnDataType N
+aThrowsException Y
+
+eParameter 3
+aShortDesc FileHandle
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276219
+
+eParameter 3
+aShortDesc Buffer
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276220
+
+eParameter 3
+aShortDesc TransChar
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276221
+
+eParameter 3
+aShortDesc NrAppendedBlankLines
+aDataType  N
+aPFlag     N
+aUFlag     N
+aZKey      110276222
+
+eOperation 2
+aName      SendEmailForFiles
+aZKey      110276238
+aDesc      Send an Email message, passing in body and attachment file names
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276239
+
+eParameter 3
+aShortDesc ResultSet
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276240
+
+eParameter 3
+aShortDesc pchSMTPServer
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276241
+
+eParameter 3
+aShortDesc pchRecipientEmailAddress
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276242
+
+eParameter 3
+aShortDesc pchSenderEMailAddress
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276243
+
+eParameter 3
+aShortDesc pchEMailUserName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276244
+
+eParameter 3
+aShortDesc pchEMailPassword
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276245
+
+eParameter 3
+aShortDesc pchSubjectLine
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276246
+
+eParameter 3
+aShortDesc pchBodyFileName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276247
+
+eParameter 3
+aShortDesc Alternate Text File Name
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276248
+
+eParameter 3
+aShortDesc Embedded Images List
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276249
+
+eParameter 3
+aShortDesc pchAttachmentFileName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276250
+
+eParameter 3
+aShortDesc nMimeType
+aDataType  N
+aPFlag     N
+aUFlag     N
+aZKey      110276251
+
+eParameter 3
+aShortDesc lConnection
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276252
+
+eOperation 2
+aName      ReturnSuffixOfFileName
+aZKey      110276253
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ReturnedSuffix
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276254
+
+eParameter 3
+aShortDesc FileName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276255
+
+eOperation 2
+aName      GetRTFPath
+aZKey      110276287
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToSubTask
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276288
+
+eParameter 3
+aShortDesc Flags
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276289
+
+eParameter 3
+aShortDesc szTargetPath
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276290
+
+eOperation 2
+aName      ParseBooleanExpression
+aZKey      110276291
+aDesc      Parse a Boolean Expression as part of a Query
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc zqFrame
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276292
+
+eOperation 2
+aName      WinShellExecute
+aZKey      110276293
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewSubTask
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276294
+
+eParameter 3
+aShortDesc szFileOrExeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276295
+
+eParameter 3
+aShortDesc szFileOpenCommand
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276296
+
+eParameter 3
+aShortDesc szExeParms
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276297
+
+eOperation 2
+aName      GetGeneralPath
+aZKey      110276298
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToSubTask
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276299
+
+eParameter 3
+aShortDesc Flags
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276300
+
+eParameter 3
+aShortDesc szFileTyoe
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276301
+
+eParameter 3
+aShortDesc szTargetPath
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276302
+
+eOperation 2
+aName      DBQualEntityByString
+aZKey      110276303
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc vQualView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276304
+
+eParameter 3
+aShortDesc szEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276305
+
+eParameter 3
+aShortDesc szAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276306
+
+eParameter 3
+aShortDesc szOper
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276307
+
+eParameter 3
+aShortDesc szValue
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276308
+
+eParameter 3
+aShortDesc Exists
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276309
+
+eOperation 2
+aName      GetCurrentApplicationName
+aZKey      110276310
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc ReturnedString
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276311
+
+eParameter 3
+aShortDesc MaximumLength
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276312
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276313
+
+eOperation 2
+aName      ReadLine5000
+aZKey      110276314
+aDesc      Read a line into a 5000 character string
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType L
+aThrowsException Y
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276315
+
+eParameter 3
+aShortDesc LineBuffer
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276316
+
+eParameter 3
+aShortDesc lFileHandle
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276317
+
+eOperation 2
+aName      GetDataTypeForAttribute
+aZKey      110276325
+aDesc      Return the Data Type for an attribute
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc DataType
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276326
+
+eParameter 3
+aShortDesc ObjectView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276327
+
+eParameter 3
+aShortDesc EntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276328
+
+eParameter 3
+aShortDesc AttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276329
+
+eOperation 2
+aName      AddSpacesToString
+aZKey      110276330
+aDesc      Add spaces at capital letter points within a name
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc WorkString
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276331
+
+eOperation 2
+aName      FindStringInAttribute
+aZKey      110276332
+aDesc      Find a string value within the instance of a text attribute
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc SearchString
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276333
+
+eParameter 3
+aShortDesc ObjectView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276334
+
+eParameter 3
+aShortDesc EntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276335
+
+eParameter 3
+aShortDesc AttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276336
+
+eOperation 2
+aName      ConvertExternalValueOfAttribute
+aZKey      110276337
+aDesc      Convert external value of attribute to internal value.
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc SearchValue
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276338
+
+eParameter 3
+aShortDesc InputSearchValue
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276339
+
+eParameter 3
+aShortDesc QueryView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276340
+
+eParameter 3
+aShortDesc QueryEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276341
+
+eParameter 3
+aShortDesc QueryAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276342
+
+eOperation 2
+aName      GetHTMLPath
+aZKey      110276343
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToSubtask
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276344
+
+eParameter 3
+aShortDesc nFlag
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276345
+
+eParameter 3
+aShortDesc Target
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276346
+
+eOperation 2
+aName      GetRegistryCLSID
+aZKey      110276347
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ReturnData
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276348
+
+eParameter 3
+aShortDesc szClassName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276349
+
+eOperation 2
+aName      GetImagingPath
+aZKey      110276350
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToSubtask
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276351
+
+eParameter 3
+aShortDesc nFlag
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276352
+
+eParameter 3
+aShortDesc Target
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276353
+
+eOperation 2
+aName      AGetRegistryValue
+aZKey      110276354
+aDesc      test
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc szResult
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276355
+
+eParameter 3
+aShortDesc szKey
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276356
+
+eOperation 2
+aName      CallObjectOperation
+aZKey      110276357
+aType      G
+aReturnDataType L
+
+eParameter 3
+aShortDesc ViewToObject
+aDataType  V
+aPFlag     Y
+aUFlag     N
+aZKey      110276358
+
+eParameter 3
+aShortDesc vSubtask
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276359
+
+eParameter 3
+aShortDesc szObjectName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276360
+
+eParameter 3
+aShortDesc szOperationName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276361
+
+eOperation 2
+aName      GetWindowsUserName
+aZKey      110276362
+aType      G
+aReturnDataType L
+
+eParameter 3
+aShortDesc UserName
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276363
+
+eParameter 3
+aShortDesc MaxLengthOfName
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276364
+
+eOperation 2
+aName      RemoveLeadingBlanksFromAttrib
+aZKey      110276365
+aType      G
+aReturnDesc Return Code
+aReturnDataType N
+
+eParameter 3
+aShortDesc View
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276366
+
+eParameter 3
+aShortDesc EntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276367
+
+eParameter 3
+aShortDesc AttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276368
+
+eOperation 2
+aName      GetButtonHeaderName
+aZKey      110276369
+aDesc      this can only be used inside the button action for the new list box
+aType      G
+aReturnDataType L
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276370
+
+eParameter 3
+aShortDesc ButtonHeaderName
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276371
+
+eOperation 2
+aName      AddMonthsToDate
+aZKey      110276372
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc TargetView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276373
+
+eParameter 3
+aShortDesc TargetEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276374
+
+eParameter 3
+aShortDesc TargetAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276375
+
+eParameter 3
+aShortDesc NumberOfMonths
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276376
+
+eOperation 2
+aName      SetDecimalPrecisionRounded
+aZKey      110276377
+aType      G
+aReturnDataType L
+
+eParameter 3
+aShortDesc DecimalValue
+aDataType  M
+aPFlag     Y
+aUFlag     N
+aZKey      110276378
+
+eParameter 3
+aShortDesc NumberOfDecimals
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276379
+
+eOperation 2
+aName      zTrim
+aZKey      110276380
+aDesc      trim whitespace from front and back
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc StringInOut
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276381
+
+eOperation 2
+aName      PersonName_FirstMiddleLast
+aZKey      110276382
+aDesc      Person's name  formated Lastname last
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc vAnyObject
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276383
+
+eParameter 3
+aShortDesc szInternalEntityStructure
+aDataType  O
+aPFlag     Y
+aUFlag     N
+aZKey      110276384
+
+eParameter 3
+aShortDesc szInternalAttribStructure
+aDataType  O
+aPFlag     Y
+aUFlag     N
+aZKey      110276385
+
+eParameter 3
+aShortDesc nGetOrSetFlag
+aDataType  N
+aPFlag     N
+aUFlag     N
+aZKey      110276386
+
+eOperation 2
+aName      PersonName_LastFirstMiddle
+aZKey      110276387
+aDesc      Person's name formated Lastname first
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc vAnyObject
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276388
+
+eParameter 3
+aShortDesc szInternalEntityStructure
+aDataType  O
+aPFlag     Y
+aUFlag     N
+aZKey      110276389
+
+eParameter 3
+aShortDesc szInternalAttribStructure
+aDataType  O
+aPFlag     Y
+aUFlag     N
+aZKey      110276390
+
+eParameter 3
+aShortDesc nGetOrSetFlag
+aDataType  N
+aPFlag     N
+aUFlag     N
+aZKey      110276391
+
+eOperation 2
+aName      GetAttribNameFromStructure
+aZKey      110276392
+aDesc      used in derived attribute VML functions for generality of code
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc InternalAttribStructure
+aDataType  O
+aPFlag     Y
+aUFlag     N
+aZKey      110276393
+
+eParameter 3
+aShortDesc AttribName
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276394
+
+eOperation 2
+aName      dAdressLabelFull
+aZKey      110276395
+aDesc      multiline address (with name and Attn lines)
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc vAnyObject
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276396
+
+eParameter 3
+aShortDesc szInternalEntityStructure
+aDataType  O
+aPFlag     Y
+aUFlag     N
+aZKey      110276397
+
+eParameter 3
+aShortDesc szInternalAttribStructure
+aDataType  O
+aPFlag     Y
+aUFlag     N
+aZKey      110276398
+
+eParameter 3
+aShortDesc nGetOrSetFlag
+aDataType  N
+aPFlag     N
+aUFlag     N
+aZKey      110276399
+
+eOperation 2
+aName      dAdressLabel
+aZKey      110276400
+aDesc      multiline address (without name, but Attn lines)
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc vAnyObject
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276401
+
+eParameter 3
+aShortDesc szInternalEntityStructure
+aDataType  O
+aPFlag     Y
+aUFlag     N
+aZKey      110276402
+
+eParameter 3
+aShortDesc szInternalAttribStructure
+aDataType  O
+aPFlag     Y
+aUFlag     N
+aZKey      110276403
+
+eParameter 3
+aShortDesc nGetOrSetFlag
+aDataType  N
+aPFlag     N
+aUFlag     N
+aZKey      110276404
+
+eOperation 2
+aName      GetEntityNameFromStructure
+aZKey      110276405
+aDesc      used in derived operations and entity constraints
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc InternalEntityStructure
+aDataType  O
+aPFlag     Y
+aUFlag     N
+aZKey      110276406
+
+eParameter 3
+aShortDesc EntityName
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276407
+
+eOperation 2
+aName      AddressFormatToMultiLine
+aZKey      110276408
+aDesc      can be used for display or labels
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc MultiLineAddress
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276409
+
+eParameter 3
+aShortDesc Line1
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276410
+
+eParameter 3
+aShortDesc Line2
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276411
+
+eParameter 3
+aShortDesc Line3
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276412
+
+eParameter 3
+aShortDesc City
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276413
+
+eParameter 3
+aShortDesc State
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276414
+
+eParameter 3
+aShortDesc PostalCode
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276415
+
+eOperation 2
+aName      GetViewFromBlobAttribute
+aZKey      110276416
+aDesc      Get a view from a blob attribute
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc RetrievedView
+aDataType  V
+aPFlag     Y
+aUFlag     N
+aZKey      110276417
+
+eParameter 3
+aShortDesc OI_View
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276418
+
+eParameter 3
+aShortDesc OI_EntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276419
+
+eParameter 3
+aShortDesc OI_AttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276420
+
+eOperation 2
+aName      SetBlobAttributeFromView
+aZKey      110276421
+aDesc      Set a blob attribute from a view.
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc OI_View
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276422
+
+eParameter 3
+aShortDesc OI_EntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276423
+
+eParameter 3
+aShortDesc OI_AttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276424
+
+eParameter 3
+aShortDesc ViewToSet
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276425
+
+eOperation 2
+aName      SeparateName
+aZKey      110276426
+aDesc      Separate a name into first and last names
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc FullName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276427
+
+eParameter 3
+aShortDesc FirstName
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276428
+
+eParameter 3
+aShortDesc LastName
+aDataType  S
+aPFlag     Y
+aUFlag     N
+aZKey      110276429
+
+eOperation 2
+aName      ReadLineIntoGlobalBuffer
+aZKey      110276430
+aDesc      Read a line into a global buffer area.
+aType      G
+aReturnDesc ReturnCode
+aReturnDataType N
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276431
+
+eParameter 3
+aShortDesc hFile
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276432
+
+eOperation 2
+aName      SetAttributeFromTabField
+aZKey      110276433
+aDesc      Set Attribute From Tab Delineated Field
+aType      G
+aReturnDesc Return Code
+aReturnDataType N
+
+eParameter 3
+aShortDesc Customer View
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276434
+
+eParameter 3
+aShortDesc EntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276435
+
+eParameter 3
+aShortDesc AttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276436
+
+eParameter 3
+aShortDesc FieldPosition
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276437
+
+eOperation 2
+aName      AddDaysToDate
+aZKey      110276438
+aDesc      Add Days To a Date Attribute
+aType      G
+aReturnDesc Return Code
+aReturnDataType N
+
+eParameter 3
+aShortDesc TargetView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276439
+
+eParameter 3
+aShortDesc TargetEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276440
+
+eParameter 3
+aShortDesc TargetAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276441
+
+eParameter 3
+aShortDesc NumberOfDays
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276442
+
+eOperation 2
+aName      ActivateWorkObjectFromFile
+aZKey      110276443
+aDesc      Activate a work object from a file
+aType      G
+aReturnDesc Return Code
+aReturnDataType N
+
+eParameter 3
+aShortDesc WorkView
+aDataType  V
+aPFlag     Y
+aUFlag     N
+aZKey      110276444
+
+eParameter 3
+aShortDesc szFileName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276445
+
+eParameter 3
+aShortDesc szLOD_Name
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276446
+
+eParameter 3
+aShortDesc ViewToWindow
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276447
+
+eOperation 2
+aName      CompareAttributeByShortString
+aZKey      110276448
+aDesc      Compare a string to an attribute for the length of the string.
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc View
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276449
+
+eParameter 3
+aShortDesc EntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276450
+
+eParameter 3
+aShortDesc AttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276451
+
+eParameter 3
+aShortDesc szCompareString
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276452
+
+eOperation 2
+aName      AddWorkingDaysToDate
+aZKey      110276453
+aDesc      Add a number of working days to a date
+aType      G
+aReturnDesc Return Code
+aReturnDataType N
+
+eParameter 3
+aShortDesc TargetView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276454
+
+eParameter 3
+aShortDesc TargetEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276455
+
+eParameter 3
+aShortDesc TargetAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276456
+
+eParameter 3
+aShortDesc NumberOfWorkingDays
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276457
+
+eOperation 2
+aName      GetDateAttributeDifferenceInDays
+aZKey      110276458
+aDesc      Gets the difference between two dates in days
+aType      G
+aReturnDesc Return Code
+aReturnDataType N
+
+eParameter 3
+aShortDesc ReturnedDays
+aDataType  L
+aPFlag     Y
+aUFlag     N
+aZKey      110276459
+
+eParameter 3
+aShortDesc vSourceView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276460
+
+eParameter 3
+aShortDesc SourceEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276461
+
+eParameter 3
+aShortDesc SourceAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276462
+
+eParameter 3
+aShortDesc TargetView
+aDataType  V
+aPFlag     N
+aUFlag     N
+aZKey      110276463
+
+eParameter 3
+aShortDesc TargetEntityName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276464
+
+eParameter 3
+aShortDesc TargetAttributeName
+aDataType  S
+aPFlag     N
+aUFlag     N
+aZKey      110276465
+
+eOperation 2
+aName      CharToCode
+aZKey      110276466
+aDesc      Converts char to ASCII code
+aType      G
+aReturnDesc ASCII code of char
+aReturnDataType N
+
+eParameter 3
+aShortDesc szStr
+aDataType  S
+aPFlag     N
+aZKey      110276467
+
+eOperation 2
+aName      CodeToChar
+aZKey      110276468
+aDesc      Converts ASCII code to a char
+aType      G
+aReturnDesc -
+
+eParameter 3
+aShortDesc szStr
+aDataType  S
+aPFlag     N
+aZKey      110276469
+
+eParameter 3
+aShortDesc sCode
+aDataType  N
+aPFlag     N
+aZKey      110276470
+
+eOperation 2
+aName      StrToDecimal
+aZKey      110276471
+aDesc      Converts a string to a decimal value
+aType      G
+aReturnDesc Decimal value of string
+aReturnDataType M
+
+eParameter 3
+aShortDesc szStr
+aDataType  S
+aPFlag     N
+aZKey      110276472
+
+eOperation 2
+aName      DecimalSumOf
+aZKey      110276473
+aDesc      Computes the sum of a decimal attribute over all instances of an entity
+aType      G
+aReturnDesc Sum
+aReturnDataType M
+
+eParameter 3
+aShortDesc vView
+aDataType  V
+aPFlag     N
+aZKey      110276474
+
+eParameter 3
+aShortDesc szEntityName
+aDataType  S
+aPFlag     N
+aZKey      110276475
+
+eParameter 3
+aShortDesc szAttributeName
+aDataType  S
+aPFlag     N
+aZKey      110276476
+
+eParameter 3
+aShortDesc szParentEntityName
+aDataType  S
+aPFlag     N
+aZKey      110276477
+
+eOperation 2
+aName      StrToInt
+aZKey      110276478
+aDesc      String in Integer wandeln
+aType      G
+aReturnDataType L
+
+eParameter 3
+aShortDesc szStr
+aDataType  S
+aPFlag     N
+aZKey      110276479
+
+eOperation 2
+aName      GetEnvVariable
+aZKey      110276480
+aDesc      Lese Environment-Variable
+aType      G
+aReturnDesc 0 - OK
+aReturnDataType N
+
+eParameter 3
+aShortDesc szReturnWert
+aDataType  S
+aZKey      110276481
+
+eParameter 3
+aShortDesc szVariableName
+aDataType  S
+aPFlag     N
+aZKey      110276482
+
+eParameter 3
+aShortDesc nMaxReturnLen
+aDataType  N
+aPFlag     N
+aZKey      110276483
+
+eOperation 2
+aName      SetAttrFromStrByContext
+aZKey      110276484
+aDesc      Setze Wert eines Attributs von einen String mit Kontextangabe
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc View
+aDataType  V
+aPFlag     N
+aZKey      110276485
+
+eParameter 3
+aShortDesc Entity
+aDataType  E
+aPFlag     N
+aZKey      110276486
+
+eParameter 3
+aShortDesc Attribute
+aDataType  A
+aPFlag     N
+aZKey      110276487
+
+eParameter 3
+aShortDesc Value
+aDataType  S
+aPFlag     N
+aZKey      110276488
+
+eParameter 3
+aShortDesc Context
+aDataType  S
+aPFlag     N
+aZKey      110276489
+
+eOperation 2
+aName      SetAttrFromIntByContext
+aZKey      110276490
+aDesc      Setze Wert eines Attributs von einen Integerwert mit Kontextangabe
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc View
+aDataType  V
+aPFlag     N
+aZKey      110276491
+
+eParameter 3
+aShortDesc Entity
+aDataType  E
+aPFlag     N
+aZKey      110276492
+
+eParameter 3
+aShortDesc Attribute
+aDataType  A
+aPFlag     N
+aZKey      110276493
+
+eParameter 3
+aShortDesc Value
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276494
+
+eParameter 3
+aShortDesc Context
+aDataType  S
+aPFlag     N
+aZKey      110276495
+
+eOperation 2
+aName      AddToAttrFromIntByContext
+aZKey      110276496
+aDesc      Addiere zu einem Attribut einen Integerwert mit Kontextangabe
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc View
+aDataType  V
+aPFlag     N
+aZKey      110276497
+
+eParameter 3
+aShortDesc Entity
+aDataType  E
+aPFlag     N
+aZKey      110276498
+
+eParameter 3
+aShortDesc Attribute
+aDataType  A
+aPFlag     N
+aZKey      110276499
+
+eParameter 3
+aShortDesc Value
+aDataType  L
+aPFlag     N
+aUFlag     N
+aZKey      110276500
+
+eParameter 3
+aShortDesc Context
+aDataType  S
+aPFlag     N
+aZKey      110276501
+
+eOperation 2
+aName      GetStrFromAttrByContext
+aZKey      110276502
+aDesc      Lese String aus Attribut mit Kontextangabe
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc Value
+aDataType  S
+aPFlag     Y
+aZKey      110276503
+
+eParameter 3
+aShortDesc ValueLen
+aDataType  L
+aPFlag     N
+aZKey      110276504
+
+eParameter 3
+aShortDesc View
+aDataType  V
+aPFlag     N
+aZKey      110276505
+
+eParameter 3
+aShortDesc Entity
+aDataType  E
+aPFlag     N
+aZKey      110276506
+
+eParameter 3
+aShortDesc Attribute
+aDataType  A
+aPFlag     N
+aZKey      110276507
+
+eParameter 3
+aShortDesc Context
+aDataType  S
+aPFlag     N
+aZKey      110276508
+
+eOperation 2
+aName      GetIntFromAttrByContext
+aZKey      110276509
+aDesc      Lese Integer-Wert aus Attribut mit Kontextangabe
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc Value
+aDataType  L
+aPFlag     Y
+aUFlag     N
+aZKey      110276510
+
+eParameter 3
+aShortDesc View
+aDataType  V
+aPFlag     N
+aZKey      110276511
+
+eParameter 3
+aShortDesc Entity
+aDataType  E
+aPFlag     N
+aZKey      110276512
+
+eParameter 3
+aShortDesc Attribute
+aDataType  A
+aPFlag     N
+aZKey      110276513
+
+eParameter 3
+aShortDesc Context
+aDataType  S
+aPFlag     N
+aZKey      110276514
+
+eOperation 2
+aName      SetCursorLatestEntity
+aZKey      110276515
+aDesc      Sets cursor to entity with latest date/time stamp
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc View
+aDataType  V
+aZKey      110276516
+
+eParameter 3
+aShortDesc Entity Name
+aDataType  S
+aZKey      110276517
+
+eParameter 3
+aShortDesc Attribute Name
+aDataType  S
+aZKey      110276518
+
+eOperation 2
+aName      SetAttributeFromCurrentDateTime
+aZKey      110276519
+aDesc      Set a Date/Time Stamp attribute from current Date/Time
+aType      G
+aReturnDataType N
+
+eParameter 3
+aShortDesc View
+aDataType  V
+aZKey      110276520
+
+eParameter 3
+aShortDesc Entity Name
+aDataType  E
+aZKey      110276521
+
+eParameter 3
+aShortDesc Attribute Name
+aDataType  A
+aZKey      110276522
+

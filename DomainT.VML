@@ -1,0 +1,124 @@
+
+/*************************************************************************************************
+**
+**    OPERATION: ActivateDomainList
+**
+**
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+ActivateDomainList( VIEW DOMAINTLST BASED ON LOD DOMAINT,
+                    VIEW zAnyView )
+
+   VIEW DOMAINT BASED ON LOD DOMAINT
+   VIEW DOMAINTDG BASED ON LOD DOMAINT
+
+   ACTIVATE DOMAINTLST RootOnlyMultiple
+
+   GET VIEW DOMAINT NAMED "DOMAINT"
+   IF RESULT >= 0
+      IF DOMAINTLST.Domain EXISTS
+         SET CURSOR FIRST DOMAINTLST.Domain WHERE
+            DOMAINT.Domain.Name = DOMAINTLST.Domain.Name
+      END
+      DropView ( DOMAINT )
+   END
+
+   NAME VIEW DOMAINTLST "DOMAINTLST"
+   
+END
+
+/*************************************************************************************************
+**    
+**    OPERATION: AcceptDomainValue
+**    
+*************************************************************************************************/
+ENTITY CONSTRAINT OPERATION
+AcceptDomainValue( VIEW DOMAINT BASED ON LOD DOMAINT,
+                   STRING ( 32 ) NameOfEntity,
+                   SHORT Event,
+                   SHORT State )
+
+   VIEW DOMAINTV BASED ON LOD DOMAINT
+   STRING ( 1 ) szDuplicateFlag
+   STRING ( 256 )  szDomain
+   STRING ( 256 )  szExt1
+   STRING ( 256 )  szExt2
+   STRING ( 256 )  szInternal
+   STRING ( 600 )  szMsg
+   INTEGER      Position
+   INTEGER      PositionTemp
+
+   CASE Event
+   OF   zECE_ACCEPT:
+
+   // Check that internal value is unique.
+   // Note that we may not have an ID yet so we will have to check position to determine if we are
+   // on same entity.
+   TraceLineS("In accept domain value: ","1")
+   GetAbsolutePositionForEntity( Position, DOMAINT, "DomainValue" )
+      TraceLineS("In accept domain value: ","2")
+   CreateViewFromView( DOMAINTV, DOMAINT )
+   SET CURSOR FIRST DOMAINTV.DomainValue 
+              WHERE DOMAINTV.DomainValue.InternalStringValue = DOMAINTV.DomainValue.InternalStringValue 
+   IF RESULT >= zCURSOR_SET 
+      TraceLineS("In accept domain value: ","3")
+      // We found a duplicate, but it could be the same entity.
+      GetAbsolutePositionForEntity( PositionTemp, DOMAINTV, "DomainValue" )
+         TraceLineS("In accept domain value: ","4")
+      IF PositionTemp != Position
+         TraceLineS("In accept domain value: ","5")
+         // We've found internal value at different position, so it's an error.
+         szDuplicateFlag = "Y"
+      ELSE
+         TraceLineS("In accept domain value: ","6")
+         // The duplicate is the same entity, so look for another entity.
+         SET CURSOR NEXT DOMAINTV.DomainValue 
+                    WHERE DOMAINTV.DomainValue.InternalStringValue = DOMAINTV.DomainValue.InternalStringValue 
+         IF RESULT >= zCURSOR_SET 
+            TraceLineS("In accept domain value: ","7")
+            // We've found internal value at different position, so it's an error.
+            szDuplicateFlag = "Y"
+         END
+            TraceLineS("In accept domain value: ","8")
+      END
+         TraceLineS("In accept domain value: ","9")
+      IF szDuplicateFlag = "Y"
+         szDomain = DOMAINT.Domain.Name 
+         szExt1 = DOMAINT.DomainValue.ExternalDescription 
+         szExt2 = DOMAINTV.DomainValue.ExternalDescription 
+         szInternal = DOMAINT.DomainValue.InternalStringValue 
+         szMsg = "A Domain Value with the same Internal value already exists. Domain: "
+         szMsg = szMsg + szDomain
+         szMsg = szMsg + " has the same Internal value: " + szInternal
+         szMsg = szMsg + " for the following external values: " + szExt1 + ", " + szExt2
+         TraceLineS("In accept domain value: ","10")
+         DropView( DOMAINTV )
+         MessageSend( DOMAINT, "DomainT001", "Accept Domain Value",
+                      szMsg,
+                      zMSGQ_OBJECT_CONSTRAINT_ERROR, 0 )
+         RETURN 2
+      END
+         TraceLineS("In accept domain value: ","11")
+   END
+   
+   DropView( DOMAINTV )
+
+        /* end zECE_ACCEPT */
+   OF   zECE_CANCEL:
+
+        /* end zECE_CANCEL */
+   OF   zECE_CREATE:
+
+        /* end zECE_CREATE */
+   OF   zECE_DELETE:
+
+        /* end zECE_DELETE */
+   OF   zECE_EXCLUDE:
+
+        /* end zECE_EXCLUDE */
+   OF   zECE_INCLUDE:
+
+        /* end zECE_INCLUDE */
+   END  /* case */
+
+END

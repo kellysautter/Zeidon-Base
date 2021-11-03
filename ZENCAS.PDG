@@ -1,0 +1,156 @@
+z1000-Zeidon    ZENCAS   TZDGSRCO 09/21/17   10:15:37 1.0a2    
+eDomainGroup 1
+aZKey      110004526
+aNextZKeyToAssign 110005223
+aName      ZENCAS
+aDesc      Unique Domains for ZENCAS
+aExtension C
+aWorkNumeric 0
+
+eDomain    2
+aZKey      110004880
+aName      PhoneAreaCodeExchange
+aDesc      Phone exchange and optional Area Code
+aDomainType T
+aJavaClass org.nazarene.nazsis.domains.DynamicTableDomainWContext
+aDataType  S
+aMaxStringLth 7
+aContextRestriction N
+
+eContext   3
+aZKey      110004881
+aName      PhoneAreaCodeExchange
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110004883
+aExternalValue 745
+aInternalValue 745
+
+eSelectedOperation 3
+aName      zdmDynamicTable
+aZKey      110004527
+aType      M
+
+eDomain    2
+aZKey      110005147
+aName      ContactListType
+aDomainType T
+aJavaClass com.quinsoft.zeidon.domains.StaticTableDomain
+aDataType  S
+aMaxStringLth 1
+aContextRestriction N
+
+eContext   3
+aZKey      110005148
+aName      ContactListType
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110005150
+aExternalValue Alumni
+aInternalValue A
+
+eTableEntry 4
+aZKey      110005151
+aExternalValue Church
+aInternalValue C
+
+eTableEntry 4
+aZKey      110005152
+aExternalValue Donor
+aInternalValue D
+
+eTableEntry 4
+aZKey      110005153
+aExternalValue Employee
+aInternalValue E
+
+eTableEntry 4
+aZKey      110005154
+aExternalValue Fund
+aInternalValue F
+
+eTableEntry 4
+aZKey      110005155
+aExternalValue JournalDetail
+aInternalValue G
+
+eTableEntry 4
+aZKey      110005156
+aExternalValue Cohort
+aInternalValue H
+
+eTableEntry 4
+aZKey      110005157
+aExternalValue AwardSource
+aInternalValue I
+
+eTableEntry 4
+aZKey      110005158
+aExternalValue Journal Entry
+aInternalValue J
+
+eTableEntry 4
+aZKey      110005159
+aExternalValue Class
+aInternalValue L
+
+eTableEntry 4
+aZKey      110005160
+aExternalValue Donation
+aInternalValue N
+
+eTableEntry 4
+aZKey      110005161
+aExternalValue Organization
+aInternalValue O
+
+eTableEntry 4
+aZKey      110005162
+aExternalValue Prospect
+aInternalValue P
+
+eTableEntry 4
+aZKey      110005163
+aExternalValue Person
+aInternalValue R
+
+eTableEntry 4
+aZKey      110005164
+aExternalValue School
+aInternalValue S
+
+eTableEntry 4
+aZKey      110005165
+aExternalValue Student
+aInternalValue T
+
+eTableEntry 4
+aZKey      110005166
+aExternalValue Course
+aInternalValue U
+
+eTableEntry 4
+aZKey      110005167
+aExternalValue FA Student
+aInternalValue X
+
+eTableEntry 4
+aZKey      110005168
+aExternalValue Vendor
+aInternalValue V
+
+eTableEntry 4
+aZKey      110005169
+aExternalValue Web
+aInternalValue W
+
+eTableEntry 4
+aZKey      110005170
+aExternalValue Faculty
+aInternalValue Y
+
+eOperation 2
+
+i28        4

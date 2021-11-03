@@ -1,0 +1,154 @@
+/*************************************************************************************************
+**
+**    OPERATION: PrebuildMainMenu
+**
+**
+*************************************************************************************************/
+DIALOG OPERATION
+PrebuildMainMenu( VIEW ViewToWindow )
+   VIEW sAppMgr  BASED ON LOD  sAppMgr
+   VIEW mUser    REGISTERED AS mUser
+   VIEW mUserLST BASED ON LOD  mUser
+   VIEW lUserLST BASED ON LOD  lUser
+   VIEW wXferO   REGISTERED AS  wXferO
+   VIEW sHost    REGISTERED AS  sHost
+   VIEW mUGroups BASED ON LOD  mUGroups
+   VIEW DOMAINT  BASED ON LOD  DOMAINT
+   INTEGER  nRC
+
+   SfSetApplicationTask( ViewToWindow, 0 )
+
+   SetNameForView( ViewToWindow, "DashboardMenu", ViewToWindow, zLEVEL_TASK )
+     nRC = GetViewByName( sAppMgr, "sAppMgr", ViewToWindow, zLEVEL_TASK )
+   IF nRC > 0
+      DropObjectInstance( sAppMgr )
+   END
+   nRC = GetViewByName( DOMAINT, "DOMAINT", ViewToWindow, zLEVEL_TASK )
+   IF nRC > 0
+      DropObjectInstance( DOMAINT )
+   END
+   ActivateEmptyObjectInstance( sAppMgr, "sAppMgr", ViewToWindow,
+                                zSINGLE + zLEVEL_TASK )
+   CREATE ENTITY sAppMgr.sAppMgr
+      sAppMgr.sAppMgr.AppName = "base"
+   SetNameForView( sAppMgr, "sAppMgr", ViewToWindow, zLEVEL_TASK )
+
+   ActivateEmptyObjectInstance( wXferO, "wXferO", ViewToWindow,
+                                zSINGLE + zLEVEL_TASK )
+
+   sHost.Host.CurrentUserID   = mUser.User.ID
+   sHost.Host.CurrentUserName = mUser.User.UserName
+
+
+   GET VIEW mUser  NAMED "mUser"
+   IF  RESULT >= 0
+      DropObjectInstance ( mUser )
+   END
+   
+         ActivateUser( mUser, ViewToWindow, sHost.Host.CurrentUserID )
+   NAME VIEW mUser "mUser"
+   SetNameForView( mUser, "mUser", ViewToWindow, zLEVEL_TASK )
+
+   GET VIEW mUGroups  NAMED "mUGroups"
+   IF  RESULT >= 0
+      DropObjectInstance ( mUGroups )
+   END
+   ACTIVATE mUGroups ROOTONLYMULTIPLE
+   NAME VIEW  mUGroups  "mUGroups"
+   
+         ActivateDomainList( DOMAINT, sHost )
+   SetNameForView( DOMAINT, "DOMAINTLST", sHost, zLEVEL_TASK )
+
+
+END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: GOTO_Registrar
+**    
+*************************************************************************************************/
+DIALOG OPERATION
+GOTO_Registrar( VIEW ViewToWindow )
+  
+  END
+
+/*************************************************************************************************
+**
+**    OPERATION: StudentAccounts
+**
+**
+*************************************************************************************************/
+DIALOG OPERATION
+GOTO_StudentAccounts( VIEW ViewToWindow )
+  END
+/*************************************************************************************************
+**
+**    OPERATION: GOTO_Administration
+**
+**
+*************************************************************************************************/
+DIALOG OPERATION
+GOTO_Administration( VIEW ViewToWindow )
+
+
+
+
+  END
+/*************************************************************************************************
+**
+**    OPERATION: GOTO_Administration
+**
+**
+*************************************************************************************************/
+DIALOG OPERATION
+GOTO_Admissions( VIEW ViewToWindow )
+ END
+
+
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: GOTO_Students
+**    
+*************************************************************************************************/
+DIALOG OPERATION
+GOTO_MainMEnu( VIEW ViewToWindow )
+
+     
+END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: GOTO_ChangePassword
+**    
+*************************************************************************************************/
+DIALOG OPERATION
+GOTO_ChangePassword( VIEW ViewToWindow )
+
+VIEW sAppMgr REGISTERED AS sAppMgr
+
+SET CURSOR FIRST sAppMgr.FunctionalArea
+      WHERE sAppMgr.FunctionalArea.FunctionalAreaName =  "General"
+      
+SET CURSOR FIRST sAppMgr.FunctionalSubArea
+      WHERE sAppMgr.FunctionalSubArea.FunctionalSubAreaName =  "Account"
+
+
+END
+
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: GOTO_Help
+**    
+*************************************************************************************************/
+DIALOG OPERATION
+GOTO_Help( VIEW ViewToWindow )
+
+
+
+END

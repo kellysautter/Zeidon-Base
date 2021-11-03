@@ -1,0 +1,13 @@
+z1000-Zeidon    317AF57E TZWDVORO 08/30/17   14:18:21 1.0a2    
+eViewObjRef 1
+aZKey      830141822
+aNextZKeyToAssign 830141822
+aName      KZMSGQOO
+aDesc      VOR automatically built from LOD Dialog
+
+eLOD       2
+aZKey      86699273
+aName      KZMSGQOO
+aDesc      Message Queue Handler
+aDLL_Name  KZMSGQAA
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="HomeDirectory" class="com.quinsoft.zeidon.config.HomeDirectoryFromEnvVar"/>
+	
+	<bean id="PreferencesFactory" class="com.quinsoft.zeidon.config.ZeidonIniPreferencesFactory">
+		<constructor-arg ref="HomeDirectory" />
+	</bean>
+
+	<bean id="ZeidonLogger" class="com.quinsoft.zeidon.TaskLogger">
+		<constructor-arg value=" [system] " />
+	</bean>
+	
+	<bean id="ApplicationList" class="com.quinsoft.zeidon.standardoe.ApplicationList">
+		<constructor-arg ref="HomeDirectory" />
+		<constructor-arg ref="ZeidonLogger" />
+	</bean>
+	
+	<bean id="DomainLoader" class="com.quinsoft.zeidon.standardoe.DomainLoader"/>
+	
+	<bean id="ObjectEngine" class="com.quinsoft.zeidon.standardoe.JavaObjectEngine">
+		<constructor-arg ref="HomeDirectory" />
+		<constructor-arg ref="ApplicationList" />
+		<constructor-arg ref="DomainLoader" />
+		<constructor-arg ref="ZeidonLogger" />
+		<constructor-arg ref="PreferencesFactory" />
+	</bean>
+</beans>

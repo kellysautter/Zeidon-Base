@@ -1,0 +1,88 @@
+z1000-Zeidon    BASE     TZDGSRCO 05/06/16   09:25:20 1.0a2    
+eDomainGroup 1
+aZKey      110000001
+aNextZKeyToAssign 110000018
+aName      Base
+aExtension C
+
+eDomain    2
+aZKey      110000002
+aName      Blob
+aDesc      A do nothing domain for blobs
+aDomainType E
+aJavaClass com.quinsoft.zeidon.domains.BlobDomain
+aDataType  B
+aContextRestriction N
+
+eContext   3
+aZKey      110000003
+aName      BLOB
+aIsDefault Y
+
+eDomain    2
+aZKey      110000004
+aName      XML_SubentityPosition
+aDesc      Used to position expansion of a subentity within parenet attributes in generating an XML file from an object instance.
+aDomainType E
+aJavaClass com.quinsoft.zeidon.domains.StringDomain
+aDataType  S
+aMaxStringLth 32
+aContextRestriction N
+
+eContext   3
+aZKey      110000005
+aName      XML_SubentityPosition
+aIsDefault Y
+
+eDomain    2
+aZKey      110000006
+aName      Y/N
+aDesc      Yes or No
+aDomainType T
+aJavaClass com.quinsoft.zeidon.domains.StaticTableDomain
+aDataType  S
+aMaxStringLth 1
+aContextRestriction N
+
+eContext   3
+aZKey      110000007
+aName      Default
+
+eTableEntry 4
+aZKey      110000008
+aExternalValue Default
+aInternalValue Y
+
+eTableEntry 4
+aZKey      110000009
+aInternalValue N
+
+eContext   3
+aZKey      110000010
+aName      Y/N
+aIsDefault Y
+
+eTableEntry 4
+aZKey      110000011
+aExternalValue Y
+aInternalValue Y
+
+eTableEntry 4
+aZKey      110000012
+aExternalValue N
+aInternalValue N
+
+eContext   3
+aZKey      110000013
+aName      Yes/No
+
+eTableEntry 4
+aZKey      110000014
+aExternalValue Yes
+aInternalValue Y
+
+eTableEntry 4
+aZKey      110000015
+aExternalValue No
+aInternalValue N
+

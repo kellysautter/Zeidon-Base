@@ -1,0 +1,13 @@
+z1000-Zeidon    317A65CA TZWDVORO 08/30/17   10:50:33 1.0a2    
+eViewObjRef 1
+aZKey      830105034
+aNextZKeyToAssign 830105034
+aName      mUGroups
+aDesc      VOR automatically built from LOD Dialog
+
+eLOD       2
+aZKey      354015043
+aName      mUGroups
+aDesc      User Groups
+aDLL_Name  LODOPS_A
+

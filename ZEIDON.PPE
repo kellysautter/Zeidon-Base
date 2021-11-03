@@ -1,0 +1,3663 @@
+z1000-Zeidon    ZEIDON   TZPESRCO 10/23/15   09:47:33 1.0a2    
+ePresEnvDef 1
+aZKey      334001252
+aName      ZEIDON
+aLastCtrl  28
+aLastFont  3
+
+eWindowStyle 2
+aZKey      334001253
+aTag       Primary Window
+aDesc      Overlapped window with caption, system menu, sizing border, min/
+aStyle     13565952
+
+eEventDef  3
+aZKey      334001254
+aTag       PreBuild
+aType      1
+
+eEventDef  3
+aZKey      334001255
+aTag       PostBuild (Pre MapFromOI)
+aType      2
+
+eEventDef  3
+aZKey      334001256
+aTag       SetupWindow (Post MapFromOI)
+aType      2097152
+
+eEventDef  3
+aZKey      334001257
+aTag       CleanupWindow
+aType      4194304
+
+eEventDef  3
+aZKey      334001258
+aTag       Receive Focus
+aType      4
+
+eEventDef  3
+aZKey      334001259
+aTag       ChildReceiveFocus
+aType      1073741824
+
+eEventDef  3
+aZKey      334001260
+aTag       ChildLoseFocus
+aType      16
+
+eEventDef  3
+aZKey      334001261
+aTag       NotifyChildrenOfReceiveFocus
+aType      1024
+
+eEventDef  3
+aZKey      334001262
+aTag       ReceiveFocusAndNotifyChildren
+aType      1028
+
+eEventDef  3
+aZKey      334001263
+aTag       Return from Subwindow
+aType      8
+
+eEventDef  3
+aZKey      334001264
+aTag       MapWindowToOI
+aType      8388608
+
+eEventDef  3
+aZKey      334001265
+aTag       RefreshWindow
+aType      512
+
+eEventDef  3
+aZKey      334001266
+aTag       System Close
+aType      256
+
+eEventDef  3
+aZKey      334001267
+aTag       PaletteChanged
+aType      4096
+
+eEventDef  3
+aZKey      334001268
+aTag       NotifyChildrenOfPaletteChange
+aType      2048
+
+eEventDef  3
+aZKey      334001269
+aTag       PalleteChangedAndNotifyChildren
+aType      6144
+
+eEventDef  3
+aZKey      334001270
+aTag       System Minimize
+aType      32
+
+eEventDef  3
+aZKey      334001271
+aTag       System Maximize
+aType      64
+
+eEventDef  3
+aZKey      334001272
+aTag       System Restore
+aType      128
+
+eEventDef  3
+aZKey      334001273
+aTag       Init Menu
+aType      268435456
+
+eEventDef  3
+aZKey      334001274
+aTag       Init Popup
+aType      536870912
+
+eEventDef  3
+aZKey      334001275
+aTag       Size
+aType      8192
+
+eEventDef  3
+aZKey      334001276
+aTag       Acquire
+aType      33554432
+
+eEventDef  3
+aZKey      334001277
+aTag       Mouse Move
+aType      16384
+
+eEventDef  3
+aZKey      334001278
+aTag       Left Button Down
+aType      65536
+
+eEventDef  3
+aZKey      334001279
+aTag       Left Button Up
+aType      131072
+
+eEventDef  3
+aZKey      334001280
+aTag       Left Button Click
+aType      196608
+
+eEventDef  3
+aZKey      334001281
+aTag       Left Button Dblclk
+aType      262144
+
+eEventDef  3
+aZKey      334001282
+aTag       Left Button BeginDrag
+aType      327680
+
+eEventDef  3
+aZKey      334001283
+aTag       Left Button DoDrop
+aType      393216
+
+eEventDef  3
+aZKey      334001284
+aTag       Right Button Down
+aType      458752
+
+eEventDef  3
+aZKey      334001285
+aTag       Right Button Up
+aType      524288
+
+eEventDef  3
+aZKey      334001286
+aTag       Right Button Click
+aType      589824
+
+eEventDef  3
+aZKey      334001287
+aTag       Right Button Dblclk
+aType      655360
+
+eEventDef  3
+aZKey      334001288
+aTag       Right Button Drag
+aType      720896
+
+eEventDef  3
+aZKey      334001289
+aTag       Right Button Drop
+aType      786432
+
+eEventDef  3
+aZKey      334001290
+aTag       FileNew
+aType      -2138046464
+
+eEventDef  3
+aZKey      334001291
+aTag       PrinterSetup
+aType      -2146435072
+
+eEventDef  3
+aZKey      334001292
+aTag       PrintPreview
+aType      -2145386496
+
+eEventDef  3
+aZKey      334001293
+aTag       FilePrint
+aType      -2144337920
+
+eEventDef  3
+aZKey      334001294
+aTag       FileOpen
+aType      -2136997888
+
+eEventDef  3
+aZKey      334001295
+aTag       FileClose
+aType      -2135949312
+
+eEventDef  3
+aZKey      334001296
+aTag       FileCloseAll
+aType      -2134900736
+
+eEventDef  3
+aZKey      334001297
+aTag       FileSave
+aType      -2133852160
+
+eEventDef  3
+aZKey      334001298
+aTag       FileSaveAs
+aType      -2132803584
+
+eEventDef  3
+aZKey      334001299
+aTag       FileExit
+aType      -2046820352
+
+eEventDef  3
+aZKey      334001300
+aTag       MDI_ChildSize
+aType      -2030043136
+
+eEventDef  3
+aZKey      334001301
+aTag       MDI_ChildSetFocus
+aType      -2013265920
+
+eEventDef  3
+aZKey      334001302
+aTag       EditCut
+aType      -2143289344
+
+eEventDef  3
+aZKey      334001303
+aTag       EditCopy
+aType      -2142240768
+
+eEventDef  3
+aZKey      334001304
+aTag       EditPaste
+aType      -2141192192
+
+eEventDef  3
+aZKey      334001305
+aTag       EditUndo
+aType      -2131755008
+
+eEventDef  3
+aZKey      334001306
+aTag       EditRedo
+aType      -2130706432
+
+eEventDef  3
+aZKey      334001307
+aTag       EditFind
+aType      -2113929216
+
+eEventDef  3
+aZKey      334001308
+aTag       EditFindNext
+aType      -2097152000
+
+eEventDef  3
+aZKey      334001309
+aTag       EditReplace
+aType      -2080374784
+
+eEventDef  3
+aZKey      334001310
+aTag       HelpAbout
+aType      -2063597568
+
+eWindowStyle 2
+aZKey      334001311
+aTag       Dialog Box
+aDesc      Dialog box with caption, non-sizable border
+aStyle     -2134376448
+aStyleEx   1
+
+eEventDef  3
+aZKey      334001312
+aTag       Pre-Build
+aType      1
+
+eEventDef  3
+aZKey      334001313
+aTag       PostBuild (Pre MapFromOI)
+aType      2
+
+eEventDef  3
+aZKey      334001314
+aTag       SetupWindow (Post MapFromOI)
+aType      2097152
+
+eEventDef  3
+aZKey      334001315
+aTag       Receive Focus
+aType      4
+
+eEventDef  3
+aZKey      334001316
+aTag       Return from Subwindow
+aType      8
+
+eEventDef  3
+aZKey      334001317
+aTag       MapWindowToOI
+aType      8388608
+
+eEventDef  3
+aZKey      334001318
+aTag       RefreshWindow
+aType      512
+
+eEventDef  3
+aZKey      334001319
+aTag       System Close
+aType      256
+
+eEventDef  3
+aZKey      334001320
+aTag       Acquire
+aType      33554432
+
+eWindowStyle 2
+aZKey      334001321
+aTag       Sizeable Dialog Box
+aStyle     -2134114304
+
+eEventDef  3
+aZKey      334001322
+aTag       Pre-Build
+aType      1
+
+eEventDef  3
+aZKey      334001323
+aTag       PostBuild (Pre MapFromOI)
+aType      2
+
+eEventDef  3
+aZKey      334001324
+aTag       SetupWindow (Post MapFromOI)
+aType      2097152
+
+eEventDef  3
+aZKey      334001325
+aTag       Receive Focus
+aType      4
+
+eEventDef  3
+aZKey      334001326
+aTag       Return from Subwindow
+aType      8
+
+eEventDef  3
+aZKey      334001327
+aTag       MapWindowToOI
+aType      8388608
+
+eEventDef  3
+aZKey      334001328
+aTag       Refresh Window
+aType      512
+
+eEventDef  3
+aZKey      334001329
+aTag       Init Popup
+aType      536870912
+
+eEventDef  3
+aZKey      334001330
+aTag       ReceiveFocusAndNotifyChildren
+aType      1028
+
+eEventDef  3
+aZKey      334001331
+aTag       NotifyChildrenOfReceiveFocus
+aType      1024
+
+eEventDef  3
+aZKey      334001332
+aTag       System Close
+aType      256
+
+eEventDef  3
+aZKey      334001333
+aTag       Acquire
+aType      33554432
+
+eWindowStyle 2
+aZKey      334001334
+aTag       Frame
+aStyle     -1874853888
+
+eEventDef  3
+aZKey      334001335
+aTag       Pre-Build
+aType      1
+
+eEventDef  3
+aZKey      334001336
+aTag       PostBuild (Pre MapFromOI)
+aType      2
+
+eEventDef  3
+aZKey      334001337
+aTag       SetupWindow (Post MapFromOI)
+aType      2097152
+
+eEventDef  3
+aZKey      334001338
+aTag       Receive Focus
+aType      4
+
+eEventDef  3
+aZKey      334001339
+aTag       Return from Subwindow
+aType      8
+
+eEventDef  3
+aZKey      334001340
+aTag       System Close
+aType      256
+
+eEventDef  3
+aZKey      334001341
+aTag       System Minimize
+aType      32
+
+eEventDef  3
+aZKey      334001342
+aTag       System Maximize
+aType      64
+
+eEventDef  3
+aZKey      334001343
+aTag       System Restore
+aType      128
+
+eEventDef  3
+aZKey      334001344
+aTag       Init Menu
+aType      268435456
+
+eEventDef  3
+aZKey      334001345
+aTag       Init Popup
+aType      536870912
+
+eEventDef  3
+aZKey      334001346
+aTag       Acquire
+aType      33554432
+
+eWindowStyle 2
+aZKey      334001347
+aTag       Dashboard Window
+
+eEventDef  3
+aZKey      334001348
+aTag       PreBuild
+aType      1
+
+eEventDef  3
+aZKey      334001349
+aTag       PostBuild (Pre MapFromOI)
+aType      2
+
+eWindowStyle 2
+aZKey      334001350
+aTag       Popup Window
+
+eEventDef  3
+aZKey      334001351
+aTag       PreBuild
+aType      1
+
+eEventDef  3
+aZKey      334001352
+aTag       PostBuild (Pre MapFromOI)
+aType      2
+
+eControlDef 2
+aZKey      334001353
+aKey       4003
+aTag       ActiveBar
+aRT_DLL_Name ZDCTL
+aRT_OperationName ActiveX
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZActiveXMsg
+aPainterBitmap Active
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_ActiveX
+aInvisible -1
+aGUID      {4932CEF4-2CAA-11D2-A165-0060081C43D9}
+aActiveX_Script ActBar2Script
+aActiveX_ScriptDLL ActBar2
+
+eCtrlEventDef 3
+aZKey      334001354
+aTag       ToolClick
+aType      320
+
+eCtrlEventDef 3
+aZKey      334001355
+aTag       Reset
+aType      76
+
+eCtrlEventDef 3
+aZKey      334001356
+aTag       NewToolbar
+aType      77
+
+eCtrlEventDef 3
+aZKey      334001357
+aTag       ComboDrop
+aType      78
+
+eCtrlEventDef 3
+aZKey      334001358
+aTag       ComboSelChange
+aType      79
+
+eCtrlEventDef 3
+aZKey      334001359
+aTag       TextChange
+aType      80
+
+eCtrlEventDef 3
+aZKey      334001360
+aTag       BandOpen
+aType      81
+
+eCtrlEventDef 3
+aZKey      334001361
+aTag       BandClose
+aType      82
+
+eCtrlEventDef 3
+aZKey      334001362
+aTag       ToolDblClick
+aType      321
+
+eCtrlEventDef 3
+aZKey      334001363
+aTag       BandMove
+aType      87
+
+eCtrlEventDef 3
+aZKey      334001364
+aTag       BandResize
+aType      88
+
+eCtrlEventDef 3
+aZKey      334001365
+aTag       Error
+aType      111
+
+eCtrlEventDef 3
+aZKey      334001366
+aTag       DataReady
+aType      120
+
+eCtrlEventDef 3
+aZKey      334001367
+aTag       MouseEnter
+aType      122
+
+eCtrlEventDef 3
+aZKey      334001368
+aTag       MouseExit
+aType      123
+
+eCtrlEventDef 3
+aZKey      334001369
+aTag       MenuItemEnter
+aType      129
+
+eCtrlEventDef 3
+aZKey      334001370
+aTag       MenuItemExit
+aType      130
+
+eCtrlEventDef 3
+aZKey      334001371
+aTag       KeyDown
+aType      -602
+
+eCtrlEventDef 3
+aZKey      334001372
+aTag       KeyUp
+aType      -604
+
+eCtrlEventDef 3
+aZKey      334001373
+aTag       ChildBandChange
+aType      283
+
+eCtrlEventDef 3
+aZKey      334001374
+aTag       CustomizeBegin
+aType      257
+
+eCtrlEventDef 3
+aZKey      334001375
+aTag       FileDrop
+aType      223
+
+eCtrlEventDef 3
+aZKey      334001376
+aTag       CustomizeEnd
+aType      256
+
+eCtrlEventDef 3
+aZKey      334001377
+aTag       MouseDown
+aType      -605
+
+eCtrlEventDef 3
+aZKey      334001378
+aTag       MouseMove
+aType      -606
+
+eCtrlEventDef 3
+aZKey      334001379
+aTag       MouseUp
+aType      -607
+
+eCtrlEventDef 3
+aZKey      334001380
+aTag       Resize
+aType      235
+
+eCtrlEventDef 3
+aZKey      334001381
+aTag       BandDock
+aType      291
+
+eCtrlEventDef 3
+aZKey      334001382
+aTag       BandUndock
+aType      292
+
+eCtrlEventDef 3
+aZKey      334001383
+aTag       ToolReset
+aType      296
+
+eCtrlEventDef 3
+aZKey      334001384
+aTag       ToolGotFocus
+aType      85
+
+eCtrlEventDef 3
+aZKey      334001385
+aTag       ToolLostFocus
+aType      86
+
+eCtrlEventDef 3
+aZKey      334001386
+aTag       WhatsThisHelp
+aType      301
+
+eCtrlEventDef 3
+aZKey      334001387
+aTag       CustomizeHelp
+aType      307
+
+eCtrlEventDef 3
+aZKey      334001388
+aTag       ToolKeyDown
+aType      310
+
+eCtrlEventDef 3
+aZKey      334001389
+aTag       ToolKeyUp
+aType      311
+
+eCtrlEventDef 3
+aZKey      334001390
+aTag       Click
+aType      -600
+
+eCtrlEventDef 3
+aZKey      334001391
+aTag       DblClick
+aType      323
+
+eCtrlEventDef 3
+aZKey      334001392
+aTag       CustomizeToolClick
+aType      329
+
+eCtrlEventDef 3
+aZKey      334001393
+aTag       ToolKeyPress
+aType      348
+
+eCtrlEventDef 3
+aZKey      334001394
+aTag       ToolComboClose
+aType      349
+
+eControlDef 2
+aZKey      334001395
+aKey       4008
+aTag       ActiveMovie
+aRT_DLL_Name ZDCTL
+aRT_OperationName ActiveX
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZActiveXMsg
+aPainterBitmap Active
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_ActiveX
+aInvisible -1
+aGUID      {05589FA1-C356-11CE-BF01-00AA0055595A}
+aActiveX_Script AMovieScript
+aActiveX_ScriptDLL ZAMOVIE
+
+eCtrlMapDef 3
+aZKey      334001396
+aDesc      An attribute that holds a file name
+aTag       Movie
+aType      A
+aIterator  N
+
+eControlDef 2
+aZKey      334001397
+aKey       4000
+aTag       ActiveX
+aRT_DLL_Name ZDCTL
+aRT_OperationName ActiveX
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZActiveXMsg
+aPainterBitmap Active
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_ActiveX
+aInvisible -1
+
+eControlDef 2
+aZKey      334001398
+aKey       2080
+aTag       Bitmap
+aId        28
+aRT_DLL_Name ZDCTL
+aRT_OperationName BmpCtl
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZBitmapMsg
+aPainterConvertOperationName ConvertBitmap
+aPainterBitmap BMPCTL
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_BMPCTL
+aAcceptsAllParents Y
+aAcceptsAllChildren Y
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001399
+aTag       Left Click
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001400
+aTag       Left DblClick
+aType      3
+
+eCtrlEventDef 3
+aZKey      334001401
+aTag       Right Click
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001402
+aTag       Right DblClick
+aType      6
+
+eControlDef 2
+aZKey      334001403
+aKey       2085
+aTag       BitmapBtn
+aId        9
+aRT_DLL_Name ZDCTL
+aRT_OperationName BitmapButton
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZBitmapMsg
+aPainterConvertOperationName ConvertBitmapBtn
+aPainterBitmap BITMAP
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_BITMAPBTN
+aAcceptsAllParents Y
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001404
+aTag       ButtonPress
+aType      1
+
+eControlDef 2
+aZKey      334001405
+aKey       1060
+aTag       Calendar
+aId        33
+aRT_DLL_Name ZDCTL
+aRT_OperationName Calendar
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZCalendarMsg
+aPainterBitmap CALENDAR
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_Calendar
+aAcceptsAllParents Y
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001406
+aTag       DropDown
+aType      32
+
+eCtrlEventDef 3
+aZKey      334001407
+aTag       CloseUp
+aType      64
+
+eCtrlEventDef 3
+aZKey      334001408
+aTag       DateTime Change
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001409
+aTag       User String
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001410
+aTag       Key Down
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001411
+aTag       Format
+aType      8
+
+eCtrlEventDef 3
+aZKey      334001412
+aTag       Format Query
+aType      16
+
+eControlDef 2
+aZKey      334001413
+aKey       1040
+aTag       CheckBox
+aId        13
+aRT_DLL_Name ZDCTL
+aRT_OperationName CheckBox
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZCheckMsg
+aPainterConvertOperationName ConvertCheckBox
+aPainterBitmap CHECK
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_CHECK
+aAcceptsAllParents Y
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001414
+aTag       SelectionChanged
+aType      1
+
+eControlDef 2
+aZKey      334001415
+aKey       4009
+aTag       CodeSense Edit Control 2.0
+aRT_DLL_Name ZDCTL
+aRT_OperationName ActiveX
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZActiveXMsg
+aPainterBitmap Active
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_ActiveX
+aAcceptsAllParents Y
+aInvisible -1
+aGUID      {A0F69707-2D87-4B20-9471-FBC003427134}
+aActiveX_Script TZVMLEditScript
+aActiveX_ScriptDLL tzvmledt
+
+eCtrlEventDef 3
+aZKey      334001416
+aTag       Change
+aType      0
+
+eCtrlEventDef 3
+aZKey      334001417
+aTag       HScroll
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001418
+aTag       VScroll
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001419
+aTag       SelChange
+aType      3
+
+eCtrlEventDef 3
+aZKey      334001420
+aTag       ViewChange
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001421
+aTag       ModifiedChange
+aType      5
+
+eCtrlEventDef 3
+aZKey      334001422
+aTag       ShowProps
+aType      6
+
+eCtrlEventDef 3
+aZKey      334001423
+aTag       PropsChange
+aType      7
+
+eCtrlEventDef 3
+aZKey      334001424
+aTag       Create
+aType      8
+
+eCtrlEventDef 3
+aZKey      334001425
+aTag       Destroy
+aType      9
+
+eCtrlEventDef 3
+aZKey      334001426
+aTag       SetFocus
+aType      10
+
+eCtrlEventDef 3
+aZKey      334001427
+aTag       KillFocus
+aType      11
+
+eCtrlEventDef 3
+aZKey      334001428
+aTag       Click
+aType      12
+
+eCtrlEventDef 3
+aZKey      334001429
+aTag       DblClick
+aType      13
+
+eCtrlEventDef 3
+aZKey      334001430
+aTag       RDblClick
+aType      14
+
+eCtrlEventDef 3
+aZKey      334001431
+aTag       Return
+aType      15
+
+eCtrlEventDef 3
+aZKey      334001432
+aTag       RClick
+aType      16
+
+eCtrlEventDef 3
+aZKey      334001433
+aTag       DeleteLine
+aType      17
+
+eCtrlEventDef 3
+aZKey      334001434
+aTag       CmdFailure
+aType      18
+
+eCtrlEventDef 3
+aZKey      334001435
+aTag       RegisteredCmd
+aType      19
+
+eCtrlEventDef 3
+aZKey      334001436
+aTag       KeyDown
+aType      20
+
+eCtrlEventDef 3
+aZKey      334001437
+aTag       KeyUp
+aType      21
+
+eCtrlEventDef 3
+aZKey      334001438
+aTag       KeyPress
+aType      22
+
+eCtrlEventDef 3
+aZKey      334001439
+aTag       MouseDown
+aType      23
+
+eCtrlEventDef 3
+aZKey      334001440
+aTag       MouseMove
+aType      25
+
+eCtrlEventDef 3
+aZKey      334001441
+aTag       MouseUp
+aType      24
+
+eCtrlEventDef 3
+aZKey      334001442
+aTag       OvertypeChange
+aType      26
+
+eCtrlEventDef 3
+aZKey      334001443
+aTag       FindWrapped
+aType      27
+
+eCtrlEventDef 3
+aZKey      334001444
+aTag       CodeList
+aType      28
+
+eCtrlEventDef 3
+aZKey      334001445
+aTag       CodeListSelMade
+aType      29
+
+eCtrlEventDef 3
+aZKey      334001446
+aTag       CodeListCancel
+aType      30
+
+eCtrlEventDef 3
+aZKey      334001447
+aTag       CodeListChar
+aType      31
+
+eCtrlEventDef 3
+aZKey      334001448
+aTag       CodeTip
+aType      32
+
+eCtrlEventDef 3
+aZKey      334001449
+aTag       CodeTipCancel
+aType      33
+
+eCtrlEventDef 3
+aZKey      334001450
+aTag       CodeTipUpdate
+aType      34
+
+eCtrlEventDef 3
+aZKey      334001451
+aTag       CodeListSelWord
+aType      35
+
+eCtrlEventDef 3
+aZKey      334001452
+aTag       CodeListSelChange
+aType      36
+
+eCtrlEventDef 3
+aZKey      334001453
+aTag       CodeListHotTrack
+aType      37
+
+eCtrlEventDef 3
+aZKey      334001454
+aTag       CodeTipInitialize
+aType      38
+
+eControlDef 2
+aZKey      334001455
+aKey       1050
+aTag       ComboBox
+aId        14
+aRT_DLL_Name ZDCTL
+aRT_OperationName ComboBox
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZComboBoxMsg
+aPainterConvertOperationName ConvertComboBox
+aPainterBitmap COMBO
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_COMBO
+aAcceptsAllParents Y
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001456
+aTag       SelectChange
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001457
+aTag       SelectEnd
+aType      256
+
+eCtrlEventDef 3
+aZKey      334001458
+aTag       DblClick (Simple)
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001459
+aTag       EditChange
+aType      5
+
+eCtrlEventDef 3
+aZKey      334001460
+aTag       EditUpdate
+aType      6
+
+eCtrlEventDef 3
+aZKey      334001461
+aTag       SetFocus
+aType      3
+
+eCtrlEventDef 3
+aZKey      334001462
+aTag       KillFocus
+aType      4
+
+eControlDef 2
+aZKey      334001463
+aKey       1051
+aTag       ComboBoxCtl
+aId        38
+aRT_DLL_Name ZDCTL
+aPainterDLL_Name TZCTL
+
+eControlDef 2
+aZKey      334001464
+aKey       1070
+aTag       ControlBar
+aId        39
+aRT_DLL_Name ZDCTL
+aRT_OperationName ControlBar
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZControlBarMsg
+aPainterConvertOperationName ConvertControlBar
+aPainterBitmap CtrlBar
+aMaintenanceDialog TZPNTBAD
+aMaintenanceWindow UPD_ControlBar
+aAcceptsAllChildren Y
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001465
+aTag       OnOpen
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001466
+aTag       OnClose
+aType      2
+
+eControlDef 2
+aZKey      334001467
+aKey       1071
+aTag       ControlBarCtl
+aId        40
+aRT_DLL_Name ZDCTL
+aRT_OperationName ControlBarDlg
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZControlBarMsg
+aPainterConvertOperationName ConvertControlBar
+aMaintenanceDialog TZPNTBAD
+aMaintenanceWindow UPD_ControlBar
+aRequiresParent Y
+aInvisible -1
+
+eValidParent 3
+
+eControlDef 2
+aZKey      334001468
+aKey       4010
+aTag       DateEdit
+aRT_DLL_Name ZDCTL
+aRT_OperationName ActiveX
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZActiveXMsg
+aPainterBitmap Active
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_ActiveX
+aAcceptsAllParents Y
+aInvisible -1
+aGUID      {CC696B63-4159-11D0-BDCB-0020A90B183A}
+aActiveX_Script DateEditScript
+aActiveX_ScriptDLL TzAxCtl
+
+eCtrlEventDef 3
+aZKey      334001469
+aTag       KeyDown
+aType      -602
+
+eCtrlEventDef 3
+aZKey      334001470
+aTag       KeyUp
+aType      -604
+
+eCtrlEventDef 3
+aZKey      334001471
+aTag       MouseDown
+aType      -605
+
+eCtrlEventDef 3
+aZKey      334001472
+aTag       MouseUp
+aType      -607
+
+eCtrlEventDef 3
+aZKey      334001473
+aTag       MouseMove
+aType      -606
+
+eCtrlEventDef 3
+aZKey      334001474
+aTag       Click
+aType      -600
+
+eCtrlEventDef 3
+aZKey      334001475
+aTag       DblClick
+aType      -601
+
+eCtrlEventDef 3
+aZKey      334001476
+aTag       KeyPress
+aType      -603
+
+eCtrlEventDef 3
+aZKey      334001477
+aTag       GotFocusEvent
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001478
+aTag       LostFocusEvent
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001479
+aTag       Change
+aType      3
+
+eControlDef 2
+aZKey      334001480
+aKey       1065
+aTag       DayTimer
+aId        41
+aRT_DLL_Name ZDCTL
+aRT_OperationName DayTimer
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZDayTimerMsg
+aPainterConvertOperationName ConvertDayTimer
+aPainterBitmap DayTimer
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_DayTimer
+aAcceptsAllParents Y
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001481
+aTag       SelectDate
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001482
+aTag       SelectAppointment
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001483
+aTag       SelectCalendar
+aType      3
+
+eCtrlEventDef 3
+aZKey      334001484
+aTag       SelectAgenda
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001485
+aTag       SelectFullDayAppointment
+aType      5
+
+eCtrlEventDef 3
+aZKey      334001486
+aTag       SelectFullDayWindow
+aType      6
+
+eCtrlEventDef 3
+aZKey      334001487
+aTag       SelectDayMonthYear
+aType      7
+
+eCtrlEventDef 3
+aZKey      334001488
+aTag       DoubleClickDate
+aType      16
+
+eCtrlEventDef 3
+aZKey      334001489
+aTag       DoubleClickAppointment
+aType      32
+
+eCtrlEventDef 3
+aZKey      334001490
+aTag       DoubleClickCalendar
+aType      48
+
+eCtrlEventDef 3
+aZKey      334001491
+aTag       DoubleClickAgenda
+aType      64
+
+eCtrlEventDef 3
+aZKey      334001492
+aTag       DoubleClickFullDayAppointment
+aType      80
+
+eCtrlEventDef 3
+aZKey      334001493
+aTag       DoubleClickFullDayWindow
+aType      96
+
+eCtrlEventDef 3
+aZKey      334001494
+aTag       DoubleClickDayMonthYear
+aType      112
+
+eCtrlEventDef 3
+aZKey      334001495
+aTag       RightClickDate
+aType      256
+
+eCtrlEventDef 3
+aZKey      334001496
+aTag       RightClickAppointment
+aType      512
+
+eCtrlEventDef 3
+aZKey      334001497
+aTag       RightClickCalendar
+aType      768
+
+eCtrlEventDef 3
+aZKey      334001498
+aTag       RightClickAgenda
+aType      1024
+
+eCtrlEventDef 3
+aZKey      334001499
+aTag       RightClickFullDayAppointment
+aType      1280
+
+eCtrlEventDef 3
+aZKey      334001500
+aTag       RightClickFullDayWindow
+aType      1536
+
+eCtrlEventDef 3
+aZKey      334001501
+aTag       RightClickDayMonthYear
+aType      1792
+
+eCtrlEventDef 3
+aZKey      334001502
+aTag       AppointmentAlarm
+aType      65536
+
+eCtrlEventDef 3
+aZKey      334001503
+aTag       EditChangeAppointment
+aType      268435456
+
+eControlDef 2
+aZKey      334001504
+aKey       1010
+aTag       EditBox
+aId        7
+aRT_DLL_Name ZDCTL
+aRT_OperationName Edit
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZEditMsg
+aPainterConvertOperationName ConvertEditBox
+aPainterBitmap EDIT
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_EDIT
+aAcceptsAllParents Y
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001505
+aTag       GetFocus
+aType      16
+
+eCtrlEventDef 3
+aZKey      334001506
+aTag       LoseFocus
+aType      17
+
+eCtrlEventDef 3
+aZKey      334001507
+aTag       Change
+aType      18
+
+eCtrlEventDef 3
+aZKey      334001508
+aTag       Enter
+aType      20
+
+eCtrlEventDef 3
+aZKey      334001509
+aTag       KeyDown
+aType      21
+
+eCtrlEventDef 3
+aZKey      334001510
+aTag       KeyUp
+aType      22
+
+eCtrlEventDef 3
+aZKey      334001511
+aTag       Character
+aType      23
+
+eCtrlEventDef 3
+aZKey      334001512
+aTag       Click
+aType      24
+
+eControlDef 2
+aZKey      334001513
+aKey       1009
+aTag       EditGroup
+aId        37
+aRT_DLL_Name ZDCTL
+aRT_OperationName EditGroup
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZEditMsg
+aPainterConvertOperationName ConvertEditGroup
+aPainterBitmap EDITGOUP
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_EDIT
+aAcceptsAllParents Y
+aInvisible -1
+
+eValidChild 3
+
+eControlDef 2
+aZKey      334001514
+aKey       2005
+aTag       ERDiagram
+aId        22
+aRT_DLL_Name TZCTL
+aRT_OperationName ER_Diagram
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZERD_Msg
+aPainterConvertOperationName ConvertERD
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_ERD
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001515
+aTag       Node Create
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001516
+aTag       Node Left Click
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001517
+aTag       Node Left DblClick
+aType      3
+
+eCtrlEventDef 3
+aZKey      334001518
+aTag       Node Right Click
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001519
+aTag       Node Right DblClick
+aType      5
+
+eCtrlEventDef 3
+aZKey      334001520
+aTag       Arc Create
+aType      6
+
+eCtrlEventDef 3
+aZKey      334001521
+aTag       Arc Left Click
+aType      7
+
+eCtrlEventDef 3
+aZKey      334001522
+aTag       Arc Left DblClick
+aType      8
+
+eCtrlEventDef 3
+aZKey      334001523
+aTag       Arc Right Click
+aType      9
+
+eCtrlEventDef 3
+aZKey      334001524
+aTag       Arc Right DblClick
+aType      10
+
+eCtrlEventDef 3
+aZKey      334001525
+aTag       Open Space Left Click
+aType      11
+
+eCtrlEventDef 3
+aZKey      334001526
+aTag       Open Space Left DblClick
+aType      12
+
+eCtrlEventDef 3
+aZKey      334001527
+aTag       Open Space Right Click
+aType      13
+
+eCtrlEventDef 3
+aZKey      334001528
+aTag       Open Space Right DblClick
+aType      14
+
+eControlDef 2
+aZKey      334001529
+aKey       2050
+aTag       Graph
+aId        3
+aRT_DLL_Name ZDCTL
+aRT_OperationName GSW
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZGraphMsg
+aPainterConvertOperationName ConvertGraph
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_GRAPH
+aInvisible -1
+
+eControlDef 2
+aZKey      334001530
+aKey       4004
+aTag       Graphs
+aRT_DLL_Name TZCTL
+aRT_OperationName ActiveX
+aPainterDLL_Name TZCTL
+aGUID      {827E9F50-96A4-11CF-823E-000021570103}
+aActiveX_Script MsGraphScript
+aActiveX_ScriptDLL MsGraph
+
+eCtrlEventDef 3
+aZKey      334001531
+aTag       HotHit
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001532
+aTag       SDKHit
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001533
+aTag       SDKPaint
+aType      3
+
+eCtrlEventDef 3
+aZKey      334001534
+aTag       SDKPress
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001535
+aTag       SDKTrack
+aType      5
+
+eCtrlEventDef 3
+aZKey      334001536
+aTag       ToolHit
+aType      6
+
+eCtrlEventDef 3
+aZKey      334001537
+aTag       PropertiesSet
+aType      7
+
+eCtrlEventDef 3
+aZKey      334001538
+aTag       Click
+aType      -600
+
+eCtrlEventDef 3
+aZKey      334001539
+aTag       DblClick
+aType      -601
+
+eCtrlEventDef 3
+aZKey      334001540
+aTag       KeyDown
+aType      -602
+
+eCtrlEventDef 3
+aZKey      334001541
+aTag       KeyPress
+aType      -603
+
+eCtrlEventDef 3
+aZKey      334001542
+aTag       KeyUp
+aType      -604
+
+eCtrlEventDef 3
+aZKey      334001543
+aTag       MouseDown
+aType      -605
+
+eCtrlEventDef 3
+aZKey      334001544
+aTag       MouseMove
+aType      -606
+
+eCtrlEventDef 3
+aZKey      334001545
+aTag       MouseUp
+aType      -607
+
+eCtrlMapDef 3
+aZKey      334001546
+aDesc      Scoping entity (not required)
+aTag       Scope
+aType      S
+aIterator  N
+
+eCtrlMapDef 3
+aZKey      334001547
+aDesc      Entity to traverse
+aTag       Iterator
+aType      E
+aIterator  Y
+
+eCtrlMapDef 3
+aZKey      334001548
+aDesc      Attribute to be mapped to the X-Axis
+aTag       X-Axis
+aType      A
+aIterator  N
+
+eCtrlMapDef 3
+aZKey      334001549
+aDesc      Attribute to be mapped to the Y-Axis
+aTag       Y-Axis
+aType      A
+aIterator  N
+
+eCtrlMapDef 3
+aZKey      334001550
+aDesc      Attribute to be mapped to the Z-Axis
+aTag       Z-Axis
+aType      A
+aIterator  N
+
+eControlDef 2
+aZKey      334001551
+aKey       2010
+aTag       Grid
+aId        19
+aRT_DLL_Name ZDCTL
+aRT_OperationName SS
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZGridMsg
+aPainterConvertOperationName ConvertGrid
+aPainterBitmap Grid
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_SS
+aAcceptsAllParents Y
+aAcceptsAllChildren Y
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001552
+aTag       Cell Select
+aType      72
+
+eCtrlEventDef 3
+aZKey      334001553
+aTag       Pre Cell Select Change
+aType      71
+
+eCtrlEventDef 3
+aZKey      334001554
+aTag       Pre Row Select Change
+aType      73
+
+eCtrlEventDef 3
+aZKey      334001555
+aTag       Right Button Down
+aType      80
+
+eCtrlEventDef 3
+aZKey      334001556
+aTag       Row Select
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001557
+aTag       Row Double Click
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001558
+aTag       Begin Edit
+aType      3
+
+eCtrlEventDef 3
+aZKey      334001559
+aTag       End Edit
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001560
+aTag       Before Paste Cell
+aType      6
+
+eCtrlEventDef 3
+aZKey      334001561
+aTag       After Paste Cell
+aType      7
+
+eCtrlEventDef 3
+aZKey      334001562
+aTag       Column Click
+aType      5
+
+eCtrlEventDef 3
+aZKey      334001563
+aTag       CheckBoxChange
+aType      81
+
+eCtrlEventDef 3
+aZKey      334001564
+aTag       DeleteRowData
+aType      82
+
+eValidChild 3
+aId        4
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_SSEDIT_CTL
+aPainterC_OperationName TZGridMsg
+aPainterDLL_Name TZCTL
+aRT_DLL_Name ZDCTL
+aInvisible -1
+aKey       2011
+aRequiresParent Y
+aTag       GridEditCtl
+aZKey      334001569
+
+eValidChild 3
+aId        5
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_SSCOMBO_CTL
+aPainterC_OperationName TZGridMsg
+aPainterDLL_Name TZCTL
+aRT_DLL_Name ZDCTL
+aInvisible -1
+aKey       2012
+aRequiresParent Y
+aTag       GridComboCtl
+aZKey      334001566
+
+eValidChild 3
+aId        6
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_SSCHECK_CTL
+aPainterC_OperationName TZGridMsg
+aPainterDLL_Name TZCTL
+aRT_DLL_Name ZDCTL
+aInvisible -1
+aKey       2013
+aTag       GridCheckCtl
+aZKey      334001565
+
+eValidChild 3
+aAcceptsAllParents Y
+aId        8
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_PUSH
+aPainterBitmap PUSH
+aPainterC_OperationName TZPushMsg
+aPainterConvertOperationName ConvertButton
+aPainterDLL_Name TZCTL
+aRT_DLL_Name ZDCTL
+aRT_OperationName PushButton
+aInvisible -1
+aKey       1020
+aTag       PushBtn
+aZKey      334001721
+
+eValidChild 3
+
+eValidChild 3
+
+eValidParent 3
+
+eConvertsSelfToChild 3
+
+eControlDef 2
+
+eValidParent 3
+
+eControlDef 2
+
+eCtrlEventDef 3
+aZKey      334001567
+aTag       SelectChange
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001568
+aTag       SelectEnd
+aType      256
+
+eValidParent 3
+
+eConvertsSelfToChild 3
+aZKey      334001734
+aTag       TabCtl
+aId        29
+aRT_DLL_Name ZDCTL
+aRT_OperationName TabDlg
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZTabMsg
+aPainterConvertOperationName ConvertTabCtl
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_TAB
+aAcceptsAllChildren Y
+aInvisible -1
+aKey       2091
+aRequiresParent Y
+aForceUpdateOnCreate Y
+
+eControlDef 2
+
+eCtrlEventDef 3
+aZKey      334001570
+aTag       HotText
+aType      1
+
+eValidParent 3
+
+eValidParent 3
+
+eValidParent 3
+aZKey      334001733
+aTag       Tab
+aId        17
+aRT_DLL_Name ZDCTL
+aRT_OperationName Tab
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZTabMsg
+aPainterConvertOperationName ConvertTab
+aPainterBitmap TAB
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_TAB
+aInvisible -1
+aKey       2090
+aAcceptsAllChildren Y
+
+eControlDef 2
+aZKey      334001571
+aKey       2014
+aTag       GridSubCtl
+aId        42
+aRT_DLL_Name ZDCTL
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZGridMsg
+aPainterBitmap GridSub
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_SSSUB_CTL
+aAcceptsAllChildren Y
+aRequiresParent Y
+aInvisible -1
+aPlaceHolder Y
+
+eValidParent 3
+
+eControlDef 2
+aZKey      334001572
+aKey       1090
+aTag       GroupBox
+aId        16
+aRT_DLL_Name ZDCTL
+aRT_OperationName GroupBox
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZGroupBoxMsg
+aPainterConvertOperationName ConvertGroupBox
+aPainterBitmap GRPBOX
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_GROUP
+aAcceptsAllParents Y
+aAcceptsAllChildren Y
+aInvisible -1
+
+eControlDef 2
+aZKey      334001573
+aKey       2070
+aTag       HierDiag
+aId        23
+aRT_DLL_Name ZDCTL
+aRT_OperationName HierDiagram
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZERD_Msg
+aPainterConvertOperationName ConvertERD
+aPainterBitmap HIER
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_ERD
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001574
+aTag       Node Left Click
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001575
+aTag       Node Left DblClick
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001576
+aTag       Node Right Click
+aType      3
+
+eCtrlEventDef 3
+aZKey      334001577
+aTag       Node Right DblClick
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001578
+aTag       Node Expand
+aType      5
+
+eCtrlEventDef 3
+aZKey      334001579
+aTag       Node Collapse
+aType      6
+
+eCtrlEventDef 3
+aZKey      334001580
+aTag       Open Space Left Click
+aType      7
+
+eCtrlEventDef 3
+aZKey      334001581
+aTag       Open Space Left DblClick
+aType      8
+
+eCtrlEventDef 3
+aZKey      334001582
+aTag       Open Space Right Click
+aType      9
+
+eCtrlEventDef 3
+aZKey      334001583
+aTag       Open Space Right DblClick
+aType      10
+
+eControlDef 2
+aZKey      334001584
+aKey       2060
+aTag       Icon
+aId        10
+aRT_DLL_Name ZDCTL
+aRT_OperationName IconCtl
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZIconMsg
+aPainterConvertOperationName ConvertIcon
+aPainterBitmap ICON
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_ICON
+aAcceptsAllParents Y
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001585
+aTag       Left Click
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001586
+aTag       Left DblClick
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001587
+aTag       Right Click
+aType      3
+
+eCtrlEventDef 3
+aZKey      334001588
+aTag       Right DblClick
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001589
+aTag       Get Focus
+aType      5
+
+eValidChild 3
+aId        27
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_LISTCTL
+aPainterC_OperationName TZListBoxMsg
+aPainterDLL_Name TZCTL
+aRT_DLL_Name ZDCTL
+aInvisible -1
+aKey       1081
+aRequiresParent Y
+aTag       ListBoxCtl
+aZKey      334001677
+
+eConvertsSelfToChild 3
+
+eControlDef 2
+aZKey      334001634
+aKey       4002
+aTag       INVISIBLE
+aRT_DLL_Name ZDCTL
+aRT_OperationName ActiveX
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZActiveXMsg
+aPainterBitmap Active
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_ActiveX
+aAcceptsAllParents Y
+aInvisible 1
+aGUID      {00028C00-0000-0000-0000-000000000046}
+aActiveX_Script MsDBGridScript
+aActiveX_ScriptDLL MSDBGrid
+
+eCtrlEventDef 3
+aZKey      334001635
+aTag       Click
+aType      -600
+
+eCtrlEventDef 3
+aZKey      334001636
+aTag       DblClick
+aType      -601
+
+eCtrlEventDef 3
+aZKey      334001637
+aTag       AfterColUpdate
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001638
+aTag       AfterDelete
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001639
+aTag       AfterInsert
+aType      3
+
+eCtrlEventDef 3
+aZKey      334001640
+aTag       AfterUpdate
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001641
+aTag       BeforeColUpdate
+aType      5
+
+eCtrlEventDef 3
+aZKey      334001642
+aTag       BeforeDelete
+aType      6
+
+eCtrlEventDef 3
+aZKey      334001643
+aTag       BeforeInsert
+aType      7
+
+eCtrlEventDef 3
+aZKey      334001644
+aTag       BeforeUpdate
+aType      8
+
+eCtrlEventDef 3
+aZKey      334001645
+aTag       ColResize
+aType      9
+
+eCtrlEventDef 3
+aZKey      334001646
+aTag       HeadClick
+aType      10
+
+eCtrlEventDef 3
+aZKey      334001647
+aTag       RowColChange
+aType      11
+
+eCtrlEventDef 3
+aZKey      334001648
+aTag       RowResize
+aType      13
+
+eCtrlEventDef 3
+aZKey      334001649
+aTag       Scroll
+aType      14
+
+eCtrlEventDef 3
+aZKey      334001650
+aTag       SelChange
+aType      15
+
+eCtrlEventDef 3
+aZKey      334001651
+aTag       SplitChange
+aType      24
+
+eCtrlEventDef 3
+aZKey      334001652
+aTag       Change
+aType      16
+
+eCtrlEventDef 3
+aZKey      334001653
+aTag       Error
+aType      22
+
+eCtrlEventDef 3
+aZKey      334001654
+aTag       AfterColEdit
+aType      25
+
+eCtrlEventDef 3
+aZKey      334001655
+aTag       BeforeColEdit
+aType      26
+
+eCtrlEventDef 3
+aZKey      334001656
+aTag       ColEdit
+aType      27
+
+eCtrlEventDef 3
+aZKey      334001657
+aTag       ButtonClick
+aType      33
+
+eCtrlEventDef 3
+aZKey      334001658
+aTag       OnAddNew
+aType      37
+
+eValidParent 3
+aZKey      334001691
+aTag       MsgBar
+aId        20
+aRT_DLL_Name ZDCTL
+aRT_OperationName DIL
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZDilMsg
+aPainterConvertOperationName ConvertDIL
+aPainterBitmap DIL
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_DIL
+aInvisible -1
+aKey       2020
+
+eCtrlMapDef 3
+aZKey      334001659
+aDesc      Scoping entity (not required)
+aTag       Scope
+aType      S
+aIterator  N
+
+eCtrlMapDef 3
+aZKey      334001660
+aDesc      One for each column of data
+aTag       Column
+aType      A
+aIterator  Y
+
+eControlDef 2
+aZKey      334001590
+aKey       4017
+aTag       INVISIBLE
+aRT_DLL_Name ZDCTL
+aRT_OperationName ActiveX
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZActiveXMsg
+aPainterBitmap Active
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_ActiveX
+aInvisible 1
+aGUID      {9EEA74CB-D2D8-11D2-8AAE-0008C7D2400A}
+aActiveX_Script HPFOCXScript
+aActiveX_ScriptDLL HPFOCX
+
+eCtrlEventDef 3
+aZKey      334001591
+aTag       MouseEnter
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001592
+aTag       MouseExit
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001593
+aTag       DropDownClick
+aType      3
+
+eCtrlEventDef 3
+aZKey      334001594
+aTag       Click
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001595
+aTag       DblClick
+aType      5
+
+eCtrlEventDef 3
+aZKey      334001596
+aTag       KeyDown
+aType      6
+
+eCtrlEventDef 3
+aZKey      334001597
+aTag       KeyPress
+aType      7
+
+eCtrlEventDef 3
+aZKey      334001598
+aTag       KeyUp
+aType      8
+
+eCtrlEventDef 3
+aZKey      334001599
+aTag       MouseDown
+aType      9
+
+eCtrlEventDef 3
+aZKey      334001600
+aTag       MouseMove
+aType      10
+
+eCtrlEventDef 3
+aZKey      334001601
+aTag       MouseUp
+aType      11
+
+eValidParent 3
+aZKey      334001661
+aTag       ListBox
+aId        15
+aRT_DLL_Name ZDCTL
+aRT_OperationName ListBox
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZListBoxMsg
+aPainterConvertOperationName ConvertListBox
+aPainterBitmap LIST
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_LIST
+aAcceptsAllParents Y
+aInvisible -1
+aKey       1080
+
+eControlDef 2
+aZKey      334001602
+aKey       4005
+aTag       INVISIBLE
+aRT_DLL_Name ZDCTL
+aRT_OperationName ActiveX
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZActiveXMsg
+aPainterBitmap Active
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_ActiveX
+aInvisible 1
+aGUID      {00028CF6-0000-0000-0000-000000000046}
+aActiveX_Script TBDropDownScript
+aActiveX_ScriptDLL TrueGrid
+
+eCtrlEventDef 3
+aZKey      334001603
+aTag       Click
+aType      -600
+
+eCtrlEventDef 3
+aZKey      334001604
+aTag       DblClick
+aType      -601
+
+eCtrlEventDef 3
+aZKey      334001605
+aTag       ColResize
+aType      9
+
+eCtrlEventDef 3
+aZKey      334001606
+aTag       HeadClick
+aType      10
+
+eCtrlEventDef 3
+aZKey      334001607
+aTag       FootClick
+aType      54
+
+eCtrlEventDef 3
+aZKey      334001608
+aTag       RowResize
+aType      13
+
+eCtrlEventDef 3
+aZKey      334001609
+aTag       Scroll
+aType      14
+
+eCtrlEventDef 3
+aZKey      334001610
+aTag       SelChange
+aType      15
+
+eCtrlEventDef 3
+aZKey      334001611
+aTag       MouseMove
+aType      -606
+
+eCtrlEventDef 3
+aZKey      334001612
+aTag       MouseDown
+aType      -605
+
+eCtrlEventDef 3
+aZKey      334001613
+aTag       MouseUp
+aType      -607
+
+eCtrlEventDef 3
+aZKey      334001614
+aTag       KeyUp
+aType      -604
+
+eCtrlEventDef 3
+aZKey      334001615
+aTag       KeyDown
+aType      -602
+
+eCtrlEventDef 3
+aZKey      334001616
+aTag       KeyPress
+aType      -603
+
+eCtrlEventDef 3
+aZKey      334001617
+aTag       ClassicRead
+aType      43
+
+eCtrlEventDef 3
+aZKey      334001618
+aTag       UnboundFindData
+aType      50
+
+eCtrlEventDef 3
+aZKey      334001619
+aTag       Error
+aType      22
+
+eCtrlEventDef 3
+aZKey      334001620
+aTag       UnboundColumnFetch
+aType      23
+
+eCtrlEventDef 3
+aZKey      334001621
+aTag       FirstRowChange
+aType      28
+
+eCtrlEventDef 3
+aZKey      334001622
+aTag       LeftColChange
+aType      29
+
+eCtrlEventDef 3
+aZKey      334001623
+aTag       FormatText
+aType      30
+
+eCtrlEventDef 3
+aZKey      334001624
+aTag       ValueItemError
+aType      35
+
+eCtrlEventDef 3
+aZKey      334001625
+aTag       FetchCellStyle
+aType      36
+
+eCtrlEventDef 3
+aZKey      334001626
+aTag       Paint
+aType      38
+
+eCtrlEventDef 3
+aZKey      334001627
+aTag       ColMove
+aType      39
+
+eCtrlEventDef 3
+aZKey      334001628
+aTag       PostEvent
+aType      40
+
+eCtrlEventDef 3
+aZKey      334001629
+aTag       DropDownOpen
+aType      47
+
+eCtrlEventDef 3
+aZKey      334001630
+aTag       DropDownClose
+aType      48
+
+eCtrlEventDef 3
+aZKey      334001631
+aTag       RowChange
+aType      52
+
+eCtrlEventDef 3
+aZKey      334001632
+aTag       FetchRowStyle
+aType      51
+
+eCtrlEventDef 3
+aZKey      334001633
+aTag       LayoutReady
+aType      65
+
+eControlDef 2
+
+eCtrlEventDef 3
+aZKey      334001662
+aTag       Pick (Single Click)
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001663
+aTag       Enter (Double Click)
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001664
+aTag       ButtonClick Pre-Sort (new style)
+aType      11
+
+eCtrlEventDef 3
+aRegWEB    Y
+aZKey      334001665
+aTag       Button Click (new style)
+aType      10
+
+eCtrlEventDef 3
+aZKey      334001666
+aTag       Right Button Down
+aType      12
+
+eCtrlEventDef 3
+aZKey      334001667
+aTag       Right Button Up
+aType      13
+
+eCtrlEventDef 3
+aZKey      334001668
+aTag       Right Button Click
+aType      14
+
+eCtrlEventDef 3
+aZKey      334001669
+aTag       Right Button Dblclk
+aType      15
+
+eCtrlEventDef 3
+aZKey      334001670
+aTag       Right Button Drag
+aType      16
+
+eCtrlEventDef 3
+aZKey      334001671
+aTag       Right Button Drop
+aType      17
+
+eCtrlEventDef 3
+aZKey      334001672
+aTag       Left Mouse BeginDrag
+aType      1048576
+
+eCtrlEventDef 3
+aZKey      334001673
+aTag       Left Mouse QueryDrop
+aType      1048577
+
+eCtrlEventDef 3
+aZKey      334001674
+aTag       Left Mouse Drop Target
+aType      1048578
+
+eCtrlEventDef 3
+aZKey      334001675
+aTag       Left Mouse Drop Source
+aType      1048579
+
+eCtrlEventDef 3
+aZKey      334001676
+aTag       Pre-selection change (new style)
+aType      256
+
+eValidChild 3
+
+eConvertsSelfToChild 3
+
+eControlDef 2
+
+eValidParent 3
+
+eValidParent 3
+
+eValidParent 3
+
+eValidParent 3
+
+eControlDef 2
+aZKey      334001678
+aKey       1015
+aTag       MLEdit
+aId        18
+aRT_DLL_Name ZDCTL
+aRT_OperationName MLE
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZMLEditMsg
+aPainterConvertOperationName ConvertMLE
+aPainterBitmap MLE
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_EDIT
+aAcceptsAllParents Y
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001679
+aTag       KeyDown
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001680
+aTag       Character
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001681
+aTag       SysKeyDown
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001682
+aTag       SysCharacter
+aType      8
+
+eCtrlEventDef 3
+aZKey      334001683
+aTag       Paint
+aType      16
+
+eCtrlEventDef 3
+aZKey      334001684
+aTag       SetFocus
+aType      32
+
+eCtrlEventDef 3
+aZKey      334001685
+aTag       KillFocus
+aType      64
+
+eCtrlEventDef 3
+aZKey      334001686
+aTag       LoseFocus
+aType      64
+
+eCtrlEventDef 3
+aZKey      334001687
+aTag       HorizontalScroll
+aType      256
+
+eCtrlEventDef 3
+aZKey      334001688
+aTag       VerticalScroll
+aType      512
+
+eCtrlEventDef 3
+aZKey      334001689
+aTag       Change
+aType      1024
+
+eCtrlEventDef 3
+aZKey      334001690
+aTag       Update
+aType      2048
+
+eValidChild 3
+aId        24
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_DILITEM
+aPainterC_OperationName TZDilMsg
+aPainterDLL_Name TZCTL
+aRT_DLL_Name ZDCTL
+aInvisible -1
+aKey       2021
+aTag       MsgBarCtl
+aZKey      334001692
+
+eConvertsSelfToChild 3
+
+eControlDef 2
+
+eValidChild 3
+
+eConvertsSelfToChild 3
+
+eControlDef 2
+
+eValidParent 3
+
+eControlDef 2
+aZKey      334001693
+aKey       4007
+aTag       Olectra2D
+aRT_DLL_Name ZDCTL
+aRT_OperationName ActiveX
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZActiveXMsg
+aPainterBitmap Active
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_ActiveX
+aInvisible -1
+aGUID      {92D71E93-25A8-11CF-A640-9986B64D9618}
+aActiveX_Script Olectra2DScript
+aActiveX_ScriptDLL Olectra2D
+
+eCtrlEventDef 3
+aZKey      334001694
+aTag       Click
+aType      -600
+
+eCtrlEventDef 3
+aZKey      334001695
+aTag       DblClick
+aType      -601
+
+eCtrlEventDef 3
+aZKey      334001696
+aTag       KeyDown
+aType      -602
+
+eCtrlEventDef 3
+aZKey      334001697
+aTag       KeyPress
+aType      -603
+
+eCtrlEventDef 3
+aZKey      334001698
+aTag       KeyUp
+aType      -604
+
+eCtrlEventDef 3
+aZKey      334001699
+aTag       MouseDown
+aType      -605
+
+eCtrlEventDef 3
+aZKey      334001700
+aTag       MouseUp
+aType      -607
+
+eCtrlEventDef 3
+aZKey      334001701
+aTag       ModifyEnd
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001702
+aTag       ModifyStart
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001703
+aTag       PlotAreaModify
+aType      3
+
+eCtrlEventDef 3
+aZKey      334001704
+aTag       View3DModify
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001705
+aTag       ZoomAxisModify
+aType      7
+
+eValidParent 3
+
+eValidParent 3
+
+eControlDef 2
+aZKey      334001706
+aKey       2030
+aTag       Outliner
+aId        21
+aRT_DLL_Name ZDCTL
+aRT_OperationName Outliner
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZOutlinerMsg
+aPainterConvertOperationName ConvertOutliner
+aPainterBitmap OUTLIN
+aMaintenanceDialog TZPNOLAD
+aMaintenanceWindow OUTLINER_Object
+aAcceptsAllParents Y
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001707
+aTag       Pre Select Change
+aType      7
+
+eCtrlEventDef 3
+aZKey      334001708
+aTag       Select Change (single click)
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001709
+aTag       Double Click
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001710
+aTag       Right Button on Item
+aType      8
+
+eCtrlEventDef 3
+aZKey      334001711
+aTag       Right Button on Background
+aType      11
+
+eCtrlEventDef 3
+aZKey      334001712
+aTag       Expanding (opening child)
+aType      3
+
+eCtrlEventDef 3
+aZKey      334001713
+aTag       Collapsing (closing child)
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001714
+aTag       Expanded (child opened)
+aType      5
+
+eCtrlEventDef 3
+aZKey      334001715
+aTag       Collapsed (child closed)
+aType      6
+
+eCtrlEventDef 3
+aZKey      334001716
+aTag       Begin Edit Label
+aType      9
+
+eCtrlEventDef 3
+aZKey      334001717
+aTag       End Edit Label
+aType      10
+
+eControlDef 2
+aZKey      334001718
+aKey       2031
+aTag       OutlinerCtl
+aId        25
+aRT_DLL_Name ZDCTL
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZOutlinerCtlMsg
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_OUTLINER
+aInvisible -1
+
+eControlDef 2
+aZKey      334001719
+aKey       2000
+aTag       PainterControl
+aId        26
+aRT_DLL_Name TZCTL
+aRT_OperationName PainterControlBar
+aPainterDLL_Name TZCTL
+aPainterC_OperationName PainterPaintControl
+aInvisible -1
+
+eControlDef 2
+aZKey      334001720
+aKey       2040
+aTag       Palette
+aId        2
+aRT_DLL_Name ZDCTL
+aRT_OperationName Palette
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZPaletteMsg
+aMaintenanceDialog TZPNTBAD
+aMaintenanceWindow TZPNTBAD
+aInvisible -1
+
+eValidParent 3
+aZKey      334001725
+aTag       RadioGrp
+aId        11
+aRT_DLL_Name ZDCTL
+aRT_OperationName RadioBtnGroup
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZRadioMsg
+aPainterConvertOperationName ConvertRadioBtnGroup
+aPainterBitmap RADIO
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_RADIOGRP
+aAcceptsAllParents Y
+aInvisible -1
+aKey       1030
+aAcceptsAllChildren Y
+
+eControlDef 2
+
+eCtrlEventDef 3
+aZKey      334001722
+aTag       ButtonPress
+aType      1
+
+eValidChild 3
+aId        12
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_RADIO
+aPainterC_OperationName TZRadioMsg
+aPainterConvertOperationName ConvertRadioBtn
+aPainterDLL_Name TZCTL
+aRT_DLL_Name ZDCTL
+aRT_OperationName RadioBtn
+aInvisible -1
+aKey       1031
+aRequiresParent Y
+aTag       RadioBtn
+aZKey      334001723
+
+eValidChild 3
+
+eConvertsSelfToChild 3
+
+eControlDef 2
+
+eCtrlEventDef 3
+aRegWEB    A
+aZKey      334001724
+aTag       Selection Changed
+aType      1
+
+eValidChild 3
+aAcceptsAllChildren Y
+aId        31
+aMaintenanceDialog TZRPUPZD
+aMaintenanceWindow UPD_GROUP
+aPainterBitmap GRP
+aPainterC_OperationName TZGroupRptMsg
+aPainterDLL_Name TZCTL
+aRT_DLL_Name n/a
+aInvisible -2
+aKey       3010
+aRequiresParent Y
+aTag       Rpt_GroupSubset
+aZKey      334001727
+
+eValidParent 3
+
+eControlDef 2
+
+eValidChild 3
+
+eValidChild 3
+
+eValidParent 3
+aZKey      334001726
+aTag       Rpt_GroupSet
+aId        30
+aRT_DLL_Name n/a
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZGroupSetRptMsg
+aPainterBitmap GRPSET
+aMaintenanceDialog TZRPUPZD
+aMaintenanceWindow UPD_GROUPSET
+aInvisible -2
+aKey       3000
+
+eConvertsSelfToChild 3
+
+eControlDef 2
+
+eValidChild 3
+
+eValidParent 3
+
+eControlDef 2
+
+eValidParent 3
+
+eValidParent 3
+
+eValidParent 3
+aZKey      334001730
+aTag       Rpt_Shape
+aId        32
+aRT_DLL_Name n/a
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZShapeMsg
+aPainterBitmap SHAPE
+aMaintenanceDialog TZRPUPZD
+aMaintenanceWindow UPD_SHAPE
+aInvisible -2
+aKey       3050
+aAcceptsAllChildren Y
+aRequiresParent Y
+
+eControlDef 2
+aZKey      334001728
+aKey       3030
+aTag       Rpt_MLE
+aId        18
+aRT_DLL_Name n/a
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZMLEditMsg
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_EDIT
+aRequiresParent Y
+aInvisible -2
+
+eValidParent 3
+
+eValidParent 3
+
+eControlDef 2
+aZKey      334001729
+aKey       3040
+aTag       Rpt_PicGraphic
+aId        28
+aRT_DLL_Name n/a
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZBitmapMsg
+aPainterBitmap BMPCTL
+aMaintenanceDialog TZRPUPZD
+aMaintenanceWindow UPD_GRAPHICS
+aRequiresParent Y
+aInvisible -2
+
+eValidParent 3
+
+eValidParent 3
+
+eControlDef 2
+
+eValidParent 3
+
+eValidParent 3
+
+eControlDef 2
+aZKey      334001731
+aKey       3020
+aTag       Rpt_Text
+aId        1
+aRT_DLL_Name n/a
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZTextMsg
+aPainterBitmap TEXT
+aMaintenanceDialog TZRPUPZD
+aMaintenanceWindow UPD_TEXT
+aRequiresParent Y
+aInvisible -2
+
+eValidChild 3
+
+eValidChild 3
+
+eValidChild 3
+
+eValidChild 3
+
+eValidChild 3
+
+eValidParent 3
+
+eValidParent 3
+
+eConvertsSelfToChild 3
+
+eControlDef 2
+aZKey      334001732
+aKey       1005
+aTag       RTEdit
+aRT_DLL_Name ZDCTL
+aRT_OperationName RTE
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZRTEMsg
+aPainterConvertOperationName ConvertRTE
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_RTEDIT
+aInvisible -1
+
+eValidParent 3
+
+eControlDef 2
+
+eValidParent 3
+
+eConvertsSelfToChild 3
+
+eControlDef 2
+
+eCtrlEventDef 3
+aRegWEB    Y
+aZKey      334001735
+aTag       Check Tab (PreLeave)
+aType      2
+
+eCtrlEventDef 3
+aRegWEB    Y
+aZKey      334001736
+aTag       Enter Tab (Pre MapFromOI)
+aType      3
+
+eCtrlEventDef 3
+aRegWEB    Y
+aZKey      334001737
+aTag       Enter Tab (Post MapFromOI)
+aType      1
+
+eValidParent 3
+
+eValidParent 3
+
+eControlDef 2
+aZKey      334001738
+aKey       4001
+aTag       TBEdit
+aRT_DLL_Name ZDCTL
+aRT_OperationName ActiveX
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZActiveXMsg
+aPainterBitmap Active
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_ActiveX
+aInvisible -1
+aGUID      {DEA843D5-DAA2-11D1-95B2-0060973B3B55}
+aActiveX_Script TBEditScript
+aActiveX_ScriptDLL TZCTL
+
+eCtrlEventDef 3
+aZKey      334001739
+aTag       SetInsertMode
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001740
+aTag       RightMouseClick
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001741
+aTag       SetLine
+aType      3
+
+eCtrlEventDef 3
+aZKey      334001742
+aTag       SetOverwriteMode
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001743
+aTag       Keystroke
+aType      5
+
+eControlDef 2
+aZKey      334001744
+aKey       1000
+aTag       Text
+aId        1
+aRT_DLL_Name ZDCTL
+aRT_OperationName Text
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZTextMsg
+aPainterConvertOperationName ConvertText
+aPainterBitmap TEXT
+aMaintenanceDialog TZPNCTAD
+aMaintenanceWindow UPD_TEXT
+aAcceptsAllParents Y
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001745
+aTag       HotText
+aType      1
+
+eControlDef 2
+aZKey      334001746
+aKey       1025
+aTag       Timer
+aId        34
+aRT_DLL_Name ZDCTL
+aRT_OperationName Timer
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZTimerMsg
+aPainterConvertOperationName ConvertTimer
+aPainterBitmap TIMER
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UpdateTimer
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001747
+aTag       Timer
+aType      1
+
+eControlDef 2
+aZKey      334001748
+aKey       2100
+aTag       ToolBar
+aId        35
+aRT_DLL_Name ZDCTL
+aRT_OperationName ToolBar
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZToolBarMsg
+aPainterConvertOperationName ConvertToolBar
+aPainterBitmap ToolBar
+aMaintenanceDialog TZPNTBAD
+aMaintenanceWindow UPD_ToolBar
+aInvisible -1
+
+eCtrlEventDef 3
+aZKey      334001749
+aTag       Select
+aType      1
+
+eValidChild 3
+
+eControlDef 2
+aZKey      334001750
+aKey       2101
+aTag       ToolBarCtl
+aId        36
+aRT_DLL_Name ZDCTL
+aRT_OperationName ToolBarDlg
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZToolBarMsg
+aPainterConvertOperationName ConvertToolBar
+aMaintenanceDialog TZPNCTLD
+aMaintenanceWindow UPD_ToolBar
+aInvisible -1
+
+eValidParent 3
+
+eControlDef 2
+aZKey      334001751
+aKey       4006
+aTag       TrueGrid
+aRT_DLL_Name ZDCTL
+aRT_OperationName ActiveX
+aPainterDLL_Name TZCTL
+aPainterC_OperationName TZActiveXMsg
+aPainterConvertOperationName ConvertTrueGrid
+aPainterBitmap Active
+aMaintenanceDialog TZAXCFGD
+aMaintenanceWindow TZAXGRIDCFG
+aInvisible -1
+aGUID      {00028CD1-0000-0000-0000-000000000046}
+aActiveX_Script TrueGridScript
+aActiveX_ScriptDLL TrueGrid
+
+eCtrlEventDef 3
+aZKey      334001752
+aTag       Click
+aType      -600
+
+eCtrlEventDef 3
+aZKey      334001753
+aTag       DblClick
+aType      -601
+
+eCtrlEventDef 3
+aZKey      334001754
+aTag       AfterColUpdate
+aType      1
+
+eCtrlEventDef 3
+aZKey      334001755
+aTag       AfterDelete
+aType      2
+
+eCtrlEventDef 3
+aZKey      334001756
+aTag       AfterInsert
+aType      3
+
+eCtrlEventDef 3
+aZKey      334001757
+aTag       AfterUpdate
+aType      4
+
+eCtrlEventDef 3
+aZKey      334001758
+aTag       BeforeColUpdate
+aType      5
+
+eCtrlEventDef 3
+aZKey      334001759
+aTag       BeforeDelete
+aType      6
+
+eCtrlEventDef 3
+aZKey      334001760
+aTag       BeforeInsert
+aType      7
+
+eCtrlEventDef 3
+aZKey      334001761
+aTag       BeforeUpdate
+aType      8
+
+eCtrlEventDef 3
+aZKey      334001762
+aTag       ColResize
+aType      9
+
+eCtrlEventDef 3
+aZKey      334001763
+aTag       HeadClick
+aType      10
+
+eCtrlEventDef 3
+aZKey      334001764
+aTag       FootClick
+aType      54
+
+eCtrlEventDef 3
+aZKey      334001765
+aTag       OwnerDrawCell
+aType      55
+
+eCtrlEventDef 3
+aZKey      334001766
+aTag       BeforeRowColChange
+aType      63
+
+eCtrlEventDef 3
+aZKey      334001767
+aTag       RowColChange
+aType      11
+
+eCtrlEventDef 3
+aZKey      334001768
+aTag       RowResize
+aType      13
+
+eCtrlEventDef 3
+aZKey      334001769
+aTag       Scroll
+aType      14
+
+eCtrlEventDef 3
+aZKey      334001770
+aTag       SelChange
+aType      15
+
+eCtrlEventDef 3
+aZKey      334001771
+aTag       SplitChange
+aType      24
+
+eCtrlEventDef 3
+aZKey      334001772
+aTag       MouseMove
+aType      -606
+
+eCtrlEventDef 3
+aZKey      334001773
+aTag       MouseDown
+aType      -605
+
+eCtrlEventDef 3
+aZKey      334001774
+aTag       MouseUp
+aType      -607
+
+eCtrlEventDef 3
+aZKey      334001775
+aTag       KeyUp
+aType      -604
+
+eCtrlEventDef 3
+aZKey      334001776
+aTag       KeyDown
+aType      -602
+
+eCtrlEventDef 3
+aZKey      334001777
+aTag       KeyPress
+aType      -603
+
+eCtrlEventDef 3
+aZKey      334001778
+aTag       Change
+aType      16
+
+eCtrlEventDef 3
+aZKey      334001779
+aTag       UnboundWriteData
+aType      19
+
+eCtrlEventDef 3
+aZKey      334001780
+aTag       UnboundAddData
+aType      20
+
+eCtrlEventDef 3
+aZKey      334001781
+aTag       UnboundDeleteRow
+aType      21
+
+eCtrlEventDef 3
+aZKey      334001782
+aTag       Error
+aType      22
+
+eCtrlEventDef 3
+aZKey      334001783
+aTag       UnboundColumnFetch
+aType      23
+
+eCtrlEventDef 3
+aZKey      334001784
+aTag       AfterColEdit
+aType      25
+
+eCtrlEventDef 3
+aZKey      334001785
+aTag       BeforeColEdit
+aType      26
+
+eCtrlEventDef 3
+aZKey      334001786
+aTag       ColEdit
+aType      27
+
+eCtrlEventDef 3
+aZKey      334001787
+aTag       FirstRowChange
+aType      28
+
+eCtrlEventDef 3
+aZKey      334001788
+aTag       LeftColChange
+aType      29
+
+eCtrlEventDef 3
+aZKey      334001789
+aTag       FormatText
+aType      30
+
+eCtrlEventDef 3
+aZKey      334001790
+aTag       DragCell
+aType      32
+
+eCtrlEventDef 3
+aZKey      334001791
+aTag       ButtonClick
+aType      33
+
+eCtrlEventDef 3
+aZKey      334001792
+aTag       ComboSelect
+aType      34
+
+eCtrlEventDef 3
+aZKey      334001793
+aTag       ValueItemError
+aType      35
+
+eCtrlEventDef 3
+aZKey      334001794
+aTag       FetchCellStyle
+aType      36
+
+eCtrlEventDef 3
+aZKey      334001795
+aTag       FetchRowStyle
+aType      51
+
+eCtrlEventDef 3
+aZKey      334001796
+aTag       OnAddNew
+aType      37
+
+eCtrlEventDef 3
+aZKey      334001797
+aTag       Paint
+aType      38
+
+eCtrlEventDef 3
+aZKey      334001798
+aTag       ColMove
+aType      39
+
+eCtrlEventDef 3
+aZKey      334001799
+aTag       PostEvent
+aType      40
+
+eCtrlEventDef 3
+aZKey      334001800
+aTag       FetchCellTips
+aType      49
+
+eCtrlEventDef 3
+aZKey      334001801
+aTag       OLECompleteDrag
+aType      56
+
+eCtrlEventDef 3
+aZKey      334001802
+aTag       OLEDragDrop
+aType      57
+
+eCtrlEventDef 3
+aZKey      334001803
+aTag       OLEDragOver
+aType      58
+
+eCtrlEventDef 3
+aZKey      334001804
+aTag       OLEGiveFeedback
+aType      59
+
+eCtrlEventDef 3
+aZKey      334001805
+aTag       OLESetData
+aType      60
+
+eCtrlEventDef 3
+aZKey      334001806
+aTag       OLEStartDrag
+aType      61
+
+eCtrlEventDef 3
+aZKey      334001807
+aTag       OnInit
+aType      62
+
+eCtrlEventDef 3
+aZKey      334001808
+aTag       LayoutReady
+aType      65
+
+eValidParent 3
+
+eValidParent 3
+
+eValidParent 3
+
+eCtrlMapDef 3
+aZKey      334001809
+aTag       Scope
+aType      S
+aIterator  N
+
+eControlDef 2
+aZKey      334001810
+aKey       32002
+aTag       TrueGridCheck
+aRT_DLL_Name TRUEGRID
+aPainterDLL_Name TZAXCFGD
+aMaintenanceDialog TZAXCFGD
+aMaintenanceWindow UPD_CHECK
+
+eControlDef 2
+aZKey      334001811
+aKey       32001
+aTag       TrueGridCombo
+aRT_DLL_Name Truegrid
+aPainterDLL_Name TZAXCFGD
+aMaintenanceDialog TZAXCFGD
+aMaintenanceWindow UPD_COMBO
+
+eControlDef 2
+aZKey      334001812
+aKey       32003
+aTag       TrueGridEdit
+aRT_DLL_Name TZAXCFGD
+aPainterDLL_Name TZAXCFGD
+aMaintenanceDialog TZAXCFGD
+aMaintenanceWindow UPD_EDIT
+
+eControlDef 2
+aZKey      334001813
+aKey       32004
+aTag       TrueGridRadio
+aRT_DLL_Name TRUEGRID
+aPainterDLL_Name TZAXCFGD
+aMaintenanceDialog TZAXCFGD
+aMaintenanceWindow UPD_RADIO
+
+eControlDef 2
+aZKey      334001814
+aKey       32005
+aTag       TrueGridRadioGroup
+aRT_DLL_Name TRUEGRID
+aPainterDLL_Name TZAXCFGD
+aMaintenanceDialog TZAXCFGD
+aMaintenanceWindow UPD_RADIOGRP
+
+eControlDef 2
+aZKey      334001815
+aKey       32006
+aTag       VirtualWebGrid
+aRT_DLL_Name ZDCTL
+aRT_OperationName VirtualWebGrid
+aPainterDLL_Name none
+aMaintenanceDialog none
+aMaintenanceWindow none
+
+i216       212
+i263       253
+i319       203
+i320       161
+i321       301
+i322       315
+i323       317
+i324       301
+i325       316
+i328       301
+i330       315
+i332       301
+i333       329
+i336       301
+i356       355
+i430       397
+i446       355
+i447       355
+i448       355
+i449       397
+i450       337
+i451       334
+i452       329
+i467       466
+i468       382
+i469       466
+i470       466
+i471       466
+i472       382
+i486       329
+i487       337
+i504       318
+i507       503
+i508       506
+i509       506
+i512       503
+i513       503
+i514       506
+i515       503
+i517       506
+i518       516
+i519       511
+i520       511
+i521       511
+i522       516
+i523       511
+i526       511
+i527       524
+i529       511
+i530       524
+i531       524
+i532       511
+i533       524
+i535       315
+i536       161
+i537       317
+i538       203
+i539       316
+i540       511
+i541       524
+i542       315
+i544       301
+i545       334
+i546       337
+i547       329
+i548       329
+i552       329
+i553       334
+i566       564
+i568       564
+i627       337
+i628       329
+i629       334

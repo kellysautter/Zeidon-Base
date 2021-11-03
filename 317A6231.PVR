@@ -1,0 +1,13 @@
+z1000-Zeidon    317A6231 TZWDVORO 08/30/17   10:41:12 1.0a2    
+eViewObjRef 1
+aZKey      830104113
+aNextZKeyToAssign 830104113
+aName      lPerson
+aDesc      VOR automatically built from LOD Dialog
+
+eLOD       2
+aZKey      364003990
+aName      lPerson
+aDesc      Person Select List
+aDLL_Name  LODOPS_A
+

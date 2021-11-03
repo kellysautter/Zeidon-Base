@@ -1,0 +1,105 @@
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: dCurrentDateTime
+**    
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dCurrentDateTime( VIEW ViewtoInstance BASED ON LOD wXferO,
+                  STRING ( 32 ) InternalEntityStructure,
+                  STRING ( 32 ) InternalAttribStructure,
+                  SHORT GetOrSetFlag )
+
+   CASE GetOrSetFlag
+   OF   zDERIVED_GET:
+
+        /* end zDERIVED_GET */
+   OF   zDERIVED_SET:
+
+        /* end zDERIVED_SET */
+   END  /* case */
+
+END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: dCurrentTime
+**    
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dCurrentTime( VIEW ViewtoInstance BASED ON LOD wXferO,
+              STRING ( 32 ) InternalEntityStructure,
+              STRING ( 32 ) InternalAttribStructure,
+              SHORT GetOrSetFlag )
+
+   CASE GetOrSetFlag
+   OF   zDERIVED_GET:
+
+        /* end zDERIVED_GET */
+   OF   zDERIVED_SET:
+
+        /* end zDERIVED_SET */
+   END  /* case */
+
+END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: dSalaryDataName
+**    
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dSalaryDataName( VIEW wXferO BASED ON LOD wXferO,
+                 STRING ( 32 ) InternalEntityStructure,
+                 STRING ( 32 ) InternalAttribStructure,
+                 SHORT GetOrSetFlag )
+
+   CASE GetOrSetFlag
+   OF   zDERIVED_GET:
+
+        /* end zDERIVED_GET */
+   OF   zDERIVED_SET:
+
+        /* end zDERIVED_SET */
+   END  /* case */
+
+END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: dCurrentDate
+**    
+*************************************************************************************************/
+DERIVED ATTRIBUTE OPERATION
+dCurrentDate( VIEW ViewtoInstance BASED ON LOD wXferO,
+              STRING ( 32 ) InternalEntityStructure,
+              STRING ( 32 ) InternalAttribStructure,
+              SHORT GetOrSetFlag )
+
+   CASE GetOrSetFlag
+   OF   zDERIVED_GET:
+
+        /* end zDERIVED_GET */
+   OF   zDERIVED_SET:
+
+        /* end zDERIVED_SET */
+   END  /* case */
+
+END
+
+
+/*************************************************************************************************
+**    
+**    OPERATION: SetUpAllQueryValues
+**    
+*************************************************************************************************/
+TRANSFORMATION OPERATION
+SetUpAllQueryValues( VIEW ViewToInstance BASED ON LOD wXferO )
+
+
+
+END

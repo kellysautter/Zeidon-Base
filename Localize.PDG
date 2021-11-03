@@ -1,0 +1,21 @@
+z1000-Zeidon    LOCALIZE TZDGSRCO 10/23/15   08:58:24 1.0a2    
+eDomainGroup 1
+aZKey      110001638
+aName      Localize
+aDesc      f
+aExtension C
+
+eDomain    2
+aZKey      110001639
+aName      Local
+aDomainType E
+aJavaClass com.quinsoft.zeidon.domains.StringDomain
+aDataType  S
+aMaxStringLth 10
+aContextRestriction N
+
+eContext   3
+aZKey      110001640
+aName      Local
+aIsDefault Y
+

@@ -1,0 +1,12 @@
+z1000-Zeidon    NUMERIC  TZDGSRCO 09/21/17   10:14:11 1.0a2    
+eDomainGroup 1
+aZKey      110001642
+aName      Numeric
+aDesc      Numeric (TZAP..)
+aExtension C
+
+eOperation 2
+aName      zdmDecimal
+aZKey      110001643
+aType      M
+

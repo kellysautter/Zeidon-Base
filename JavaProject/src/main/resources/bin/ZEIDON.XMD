@@ -1,0 +1,2135 @@
+z1000-Zeidon    ZEIDON   TZEREMXO 08/30/17   14:27:39 1.0a2    
+eMODEL     1
+aNumEnts   22
+aNumRels   21
+
+eENTITY    2
+aZKEY      110001879
+aNumAtts   9
+
+eATTRIB    3
+aZKEY      110001880
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110001881
+aNAME      Type
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110001882
+aNAME      UserMessage
+aAPDM_TOK  1158059
+
+eATTRIB    3
+aZKEY      110001883
+aNAME      DialogName
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110001884
+aNAME      WindowName
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110001885
+aNAME      CompletedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110001886
+aNAME      CreatedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110001887
+aNAME      CreatedBy
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      1221003
+aNAME      FK_ID_Z_USER
+aAPDM_TOK  90000044
+aLTH       4
+
+eENTITY    2
+aZKEY      110001923
+aNumAtts   33
+
+eATTRIB    3
+aZKEY      110001924
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110011447
+aNAME      AddressType
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110001925
+aNAME      Description
+aAPDM_TOK  110001820
+
+eATTRIB    3
+aZKEY      110001926
+aNAME      Line1
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110001927
+aNAME      Line2
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110001928
+aNAME      Line3
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110001929
+aNAME      City
+aAPDM_TOK  90000032
+aLTH       100
+
+eATTRIB    3
+aZKEY      110001930
+aNAME      StateProvince
+aAPDM_TOK  110000052
+
+eATTRIB    3
+aZKEY      110001931
+aNAME      InternationalRegion
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110001932
+aNAME      Country
+aAPDM_TOK  110000657
+
+eATTRIB    3
+aZKEY      110001933
+aNAME      County
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110001934
+aNAME      COD_CountryCodeOverride
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110001935
+aNAME      PostalCode
+aAPDM_TOK  110001825
+aLTH       10
+
+eATTRIB    3
+aZKEY      110001936
+aNAME      TollFreePhone
+aAPDM_TOK  110001832
+
+eATTRIB    3
+aZKEY      110001937
+aNAME      Phone1
+aAPDM_TOK  110001832
+
+eATTRIB    3
+aZKEY      110001938
+aNAME      Phone2
+aAPDM_TOK  110001832
+
+eATTRIB    3
+aZKEY      110001939
+aNAME      Fax
+aAPDM_TOK  110001832
+
+eATTRIB    3
+aZKEY      110001940
+aNAME      AttentionLine1
+aAPDM_TOK  110001835
+aLTH       50
+
+eATTRIB    3
+aZKEY      110001941
+aNAME      TimeZone
+aAPDM_TOK  110001820
+
+eATTRIB    3
+aZKEY      110001942
+aNAME      ValidFromMonthDay
+aAPDM_TOK  110001943
+
+eATTRIB    3
+aZKEY      110001945
+aNAME      ValidToMonthDay
+aAPDM_TOK  110001943
+
+eATTRIB    3
+aZKEY      110001946
+aNAME      Latitude
+aAPDM_TOK  90359331
+
+eATTRIB    3
+aZKEY      110001947
+aNAME      Longitude
+aAPDM_TOK  90359331
+
+eATTRIB    3
+aZKEY      110001948
+aNAME      GeographicPositionZipCode
+aAPDM_TOK  110001825
+
+eATTRIB    3
+aZKEY      110001949
+aNAME      GeographicPositionMiles
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110001950
+aNAME      ShippingFlag
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110001951
+aNAME      CreatedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110001952
+aNAME      ModifiedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110001953
+aNAME      CreatedBy
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110001954
+aNAME      LastModifiedBy
+aAPDM_TOK  90000032
+aLTH       50
+
+eATTRIB    3
+aZKEY      1221004
+aNAME      FK_HOSTID_HOST
+aAPDM_TOK  90000044
+aLTH       4
+
+eATTRIB    3
+aZKEY      1221005
+aNAME      FK_ID_PERSON
+aAPDM_TOK  90000044
+aLTH       4
+
+eATTRIB    3
+aZKEY      1221007
+aNAME      SHIPHOSTID_HOST
+aAPDM_TOK  90000044
+aLTH       4
+
+eENTITY    2
+aZKEY      110002760
+aNumAtts   13
+
+eATTRIB    3
+aZKEY      110002761
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110002762
+aNAME      Type
+aAPDM_TOK  110005147
+aLTH       1
+
+eATTRIB    3
+aZKEY      110002763
+aNAME      ListName
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110002764
+aNAME      DateGenerated
+aAPDM_TOK  90000052
+
+eATTRIB    3
+aZKEY      110002765
+aNAME      DateLastGeneratedRecurring
+aAPDM_TOK  90000052
+
+eATTRIB    3
+aZKEY      110002766
+aNAME      FindCriteria
+aAPDM_TOK  1158059
+
+eATTRIB    3
+aZKEY      110002767
+aNAME      Note
+aAPDM_TOK  1158059
+
+eATTRIB    3
+aZKEY      110002768
+aNAME      CreatedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110002769
+aNAME      DynamicFlag
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110002770
+aNAME      SaveFindFlag
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110002771
+aNAME      SentFlag
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110002772
+aNAME      SentByName
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      1221017
+aNAME      FK_ID_Z_USER
+aAPDM_TOK  90000044
+aLTH       4
+
+eENTITY    2
+aZKEY      110002780
+aNumAtts   2
+
+eATTRIB    3
+aZKEY      110002781
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      1221008
+aNAME      FK_ID_CONTACTLIST
+aAPDM_TOK  90000044
+aLTH       4
+
+eENTITY    2
+aZKEY      110002784
+aNumAtts   4
+
+eATTRIB    3
+aZKEY      110002785
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110002786
+aNAME      Name
+aAPDM_TOK  90000028
+aLTH       32
+
+eATTRIB    3
+aZKEY      110002787
+aNAME      Desc
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      1221018
+aNAME      FK_ID_Z_DOMAIN
+aAPDM_TOK  90000044
+aLTH       4
+
+eENTITY    2
+aZKEY      110002965
+aNumAtts   9
+
+eATTRIB    3
+aZKEY      110002966
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110002967
+aNAME      RootEntityName
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110002968
+aNAME      StoredOI
+aAPDM_TOK  110000002
+
+eATTRIB    3
+aZKEY      110002969
+aNAME      ObjectName
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110002970
+aNAME      CreatedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110002971
+aNAME      DeletedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110002972
+aNAME      UserName
+aAPDM_TOK  110001835
+aLTH       50
+
+eATTRIB    3
+aZKEY      110002973
+aNAME      InstanceID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110002974
+aNAME      InstanceName
+aAPDM_TOK  110001835
+
+eENTITY    2
+aZKEY      110002981
+aNumAtts   49
+
+eATTRIB    3
+aZKEY      110002982
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110002983
+aNAME      PlaceOfBirthCity
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110002984
+aNAME      PlaceOfBirthStateProvince
+aAPDM_TOK  110000052
+
+eATTRIB    3
+aZKEY      110002985
+aNAME      PlaceOfBirthCountry
+aAPDM_TOK  110000657
+
+eATTRIB    3
+aZKEY      110002986
+aNAME      CitizenshipCode
+aAPDM_TOK  90000032
+aLTH       2
+
+eATTRIB    3
+aZKEY      110002987
+aNAME      PrimaryLanguage
+aAPDM_TOK  110000370
+
+eATTRIB    3
+aZKEY      110002988
+aNAME      AlienRegNumber
+aAPDM_TOK  90000032
+aLTH       10
+
+eATTRIB    3
+aZKEY      110011053
+aNAME      PreferredLanguage
+aAPDM_TOK  110000370
+
+eATTRIB    3
+aZKEY      110002989
+aNAME      IPEDS_Ethnicity
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110002990
+aNAME      Ethnicity
+aAPDM_TOK  110000357
+aLTH       2
+
+eATTRIB    3
+aZKEY      110002991
+aNAME      NewEthnicityRace
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110002992
+aNAME      NationOfCitizenship
+aAPDM_TOK  110000657
+aLTH       10
+
+eATTRIB    3
+aZKEY      110002993
+aNAME      VisaClassification
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011544
+aNAME      VisaExpiration
+aAPDM_TOK  90000052
+
+eATTRIB    3
+aZKEY      110011545
+aNAME      PassportExpiration
+aAPDM_TOK  90000052
+
+eATTRIB    3
+aZKEY      110002994
+aNAME      SpecialAccommodationsRequested
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110002995
+aNAME      FatherDeceased
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110002996
+aNAME      MotherDeceased
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110002997
+aNAME      ParentsDivorced
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110002998
+aNAME      ParentsSeparated
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110002999
+aNAME      FatherRemarried
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003000
+aNAME      MotherRemarried
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003001
+aNAME      MotherCollegeGrad
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003002
+aNAME      FatherCollegeGrad
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003003
+aNAME      FirstGenerationCollegeStudent
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003004
+aNAME      ParentIsAlumni
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003005
+aNAME      FatherIsAlum
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003006
+aNAME      MotherIsAlum
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003007
+aNAME      SiblingIsAlum
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003008
+aNAME      SiblingsAttend
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003009
+aNAME      ParentIsPastor
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003010
+aNAME      ParentIsMissionary
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003011
+aNAME      FatherInFullTimeMinistry
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003012
+aNAME      MotherInFullTimeMinistry
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003013
+aNAME      SpecialCircumstances
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003014
+aNAME      CreatedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110003015
+aNAME      ModifiedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110003016
+aNAME      CreatedBy
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110003017
+aNAME      LastModifiedBy
+aAPDM_TOK  90000032
+aLTH       50
+
+eATTRIB    3
+aZKEY      110003018
+aNAME      AcademicDivision
+aAPDM_TOK  90000032
+aLTH       2
+
+eATTRIB    3
+aZKEY      110003019
+aNAME      AnniversaryDate
+aAPDM_TOK  90000052
+
+eATTRIB    3
+aZKEY      110003020
+aNAME      EthnicityHispanic
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003021
+aNAME      EthnicityAmerIndian
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003022
+aNAME      EthnicityAsian
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003023
+aNAME      EthnicityBlack
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003024
+aNAME      EthnicityPacific
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003025
+aNAME      EthnicityWhite
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003026
+aNAME      EthnicityOptionGiven
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      1221020
+aNAME      FK_ID_PERSON
+aAPDM_TOK  90000044
+aLTH       4
+
+eENTITY    2
+aZKEY      110003154
+aNumAtts   5
+
+eATTRIB    3
+aZKEY      110003155
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110003156
+aNAME      Name
+aAPDM_TOK  90000028
+aLTH       32
+
+eATTRIB    3
+aZKEY      110003157
+aNAME      Desc
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110003158
+aNAME      SystemRequired
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003159
+aNAME      RequiresPreloadFlag
+aAPDM_TOK  110000006
+
+eENTITY    2
+aZKEY      110003162
+aNumAtts   7
+
+eATTRIB    3
+aZKEY      110003163
+aNAME      InternalIntegerValue
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110003164
+aNAME      InternalStringValue
+aAPDM_TOK  90000032
+aLTH       64
+
+eATTRIB    3
+aZKEY      110003165
+aNAME      SystemRequired
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110003166
+aNAME      ExternalDescription
+aAPDM_TOK  90000032
+aLTH       64
+
+eATTRIB    3
+aZKEY      110011745
+aNAME      DomainValue_Token
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      1221019
+aNAME      FK_ID_CONTEXT
+aAPDM_TOK  90000044
+aLTH       4
+
+eATTRIB    3
+aZKEY      1221021
+aNAME      FK_ID_Z_DOMAIN
+aAPDM_TOK  90000044
+aLTH       4
+
+eENTITY    2
+aZKEY      110004813
+aNumAtts   10
+
+eATTRIB    3
+aZKEY      110004814
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110004815
+aNAME      Type
+aAPDM_TOK  110005147
+aLTH       1
+
+eATTRIB    3
+aZKEY      110004816
+aNAME      ListName
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110004817
+aNAME      DateGenerated
+aAPDM_TOK  90000052
+
+eATTRIB    3
+aZKEY      110004818
+aNAME      FindCriteria
+aAPDM_TOK  1158059
+
+eATTRIB    3
+aZKEY      110004819
+aNAME      Note
+aAPDM_TOK  1158059
+
+eATTRIB    3
+aZKEY      110004820
+aNAME      CreatedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110004821
+aNAME      DynamicFlag
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110004822
+aNAME      SaveFindFlag
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      1221023
+aNAME      FK_ID_Z_USER
+aAPDM_TOK  90000044
+aLTH       4
+
+eENTITY    2
+aZKEY      110004825
+aNumAtts   2
+
+eATTRIB    3
+aZKEY      110004826
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      1221022
+aNAME      FK_ID_FINDLIST
+aAPDM_TOK  90000044
+aLTH       4
+
+eENTITY    2
+aZKEY      110005616
+aNumAtts   85
+
+eATTRIB    3
+aZKEY      110005617
+aNAME      HostID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110011831
+aNAME      SchoolFormsDir
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011836
+aNAME      SchoolFormsDisplayDir
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005618
+aNAME      HostName
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110005619
+aNAME      FederalIdentificationNumber
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005620
+aNAME      FormInputPassword
+aAPDM_TOK  90000042
+
+eATTRIB    3
+aZKEY      110005621
+aNAME      IRS_ContactPhoneNumber
+aAPDM_TOK  110001832
+
+eATTRIB    3
+aZKEY      110005622
+aNAME      COD_SchoolRoutingID
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005623
+aNAME      COD_DirectLoanSchoolCode
+aAPDM_TOK  90000032
+aLTH       6
+
+eATTRIB    3
+aZKEY      110005624
+aNAME      SMTPServer
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011469
+aNAME      SMTPUser
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011470
+aNAME      SMTPPassword
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011471
+aNAME      SMTPPort
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011472
+aNAME      SMTPEnableSSL
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110011889
+aNAME      UsesServerEmail
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110011473
+aNAME      SMTPEnableTLS
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110005625
+aNAME      ScanPath
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005626
+aNAME      COD_MPN_PrintCode
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005627
+aNAME      COD_ExportDirectoryPath
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005628
+aNAME      MaxMissingCreditsToParticipate
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110005629
+aNAME      GenerateSalaryBudgetNote
+aAPDM_TOK  1158059
+
+eATTRIB    3
+aZKEY      110005630
+aNAME      BudgetVarianceCC_Percent
+aAPDM_TOK  90000198
+
+eATTRIB    3
+aZKEY      110005631
+aNAME      BudgetVarianceAccountPercent
+aAPDM_TOK  90000198
+
+eATTRIB    3
+aZKEY      110005632
+aNAME      BudgetVarianceNullBudgetAmount
+aAPDM_TOK  110000026
+
+eATTRIB    3
+aZKEY      110005633
+aNAME      AD_AuthenticationPathName
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005634
+aNAME      AD_AuthenticationUserNamePrefix
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011608
+aNAME      AD_AuthenticationUserNameSuffix
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005635
+aNAME      DegreeAuditWarningMessage
+aAPDM_TOK  1158059
+
+eATTRIB    3
+aZKEY      110005636
+aNAME      AD_AdminAccount
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005637
+aNAME      AD_AdminPassword
+aAPDM_TOK  90000042
+
+eATTRIB    3
+aZKEY      110005638
+aNAME      WebApplicationName
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005639
+aNAME      OPE_LoanCode
+aAPDM_TOK  90000032
+aLTH       8
+
+eATTRIB    3
+aZKEY      110005640
+aNAME      OPE_LoanCodeBranchID
+aAPDM_TOK  90000032
+aLTH       4
+
+eATTRIB    3
+aZKEY      110005641
+aNAME      CommonLineFileSourceName
+aAPDM_TOK  90000032
+aLTH       32
+
+eATTRIB    3
+aZKEY      110005642
+aNAME      CommonLineFileSchoolID
+aAPDM_TOK  90000032
+aLTH       8
+
+eATTRIB    3
+aZKEY      110005643
+aNAME      CommonLineFileAidValuesFlag
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110005644
+aNAME      LoanLetterEmailTemplate
+aAPDM_TOK  1158059
+
+eATTRIB    3
+aZKEY      110005645
+aNAME      ClearinghouseFICE_Code
+aAPDM_TOK  90000028
+aLTH       6
+
+eATTRIB    3
+aZKEY      110005646
+aNAME      ClearinghouseReportLastTypeOfRun
+aAPDM_TOK  90000028
+aLTH       1
+
+eATTRIB    3
+aZKEY      110005647
+aNAME      ClearinghouseReportLastTypeOfNST
+aAPDM_TOK  90000028
+aLTH       1
+
+eATTRIB    3
+aZKEY      110005648
+aNAME      TranscriptOnDemandKey
+aAPDM_TOK  90000032
+aLTH       40
+
+eATTRIB    3
+aZKEY      110005649
+aNAME      TranscriptOnDemandSchoolID
+aAPDM_TOK  90000032
+aLTH       6
+
+eATTRIB    3
+aZKEY      110005650
+aNAME      BillingPhoneNumber
+aAPDM_TOK  110001832
+
+eATTRIB    3
+aZKEY      110005651
+aNAME      BillingFaxNumber
+aAPDM_TOK  110001832
+
+eATTRIB    3
+aZKEY      110005652
+aNAME      SA1098_TemplateFileName
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005653
+aNAME      EmailSendingAddressForRegistrar
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005654
+aNAME      EmailSendingAddressForAdmissions
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005655
+aNAME      CreatedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110005656
+aNAME      CreatedBy
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110005657
+aNAME      ModifiedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110005658
+aNAME      LastModifiedBy
+aAPDM_TOK  90000032
+aLTH       50
+
+eATTRIB    3
+aZKEY      110011209
+aNAME      CampusIDPrefix
+aAPDM_TOK  90000032
+aLTH       9
+
+eATTRIB    3
+aZKEY      110011400
+aNAME      JasperReportDir
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011904
+aNAME      JSDir
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011905
+aNAME      TempDir
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011906
+aNAME      OSSystem
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011401
+aNAME      ImageDir
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011734
+aNAME      BatchDir
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011870
+aNAME      BatchURLDir
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011406
+aNAME      JasperDateFormat
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011402
+aNAME      HashMethod
+aAPDM_TOK  90000032
+aLTH       20
+
+eATTRIB    3
+aZKEY      110011403
+aNAME      HashSalt
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110011404
+aNAME      FindMaxRecords
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110011553
+aNAME      RegistrarName
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011554
+aNAME      TranscriptMajorPrompt
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011612
+aNAME      TranscriptReportName
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011606
+aNAME      UsesGL
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110011611
+aNAME      UsesGovernmentID
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110011743
+aNAME      PreferredLanguage
+aAPDM_TOK  110000370
+
+eATTRIB    3
+aZKEY      110011869
+aNAME      CustomRelPath
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011895
+aNAME      OLDAP_SearchBase
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011896
+aNAME      OLDAP_UsernameAttribute
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011897
+aNAME      OLDAP_Server
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011898
+aNAME      OLDAP_Port
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011899
+aNAME      OLDAP_Secure
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110011900
+aNAME      OLDAP_Anonymous
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110011901
+aNAME      OLDAP_BindUser
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011902
+aNAME      OLDAP_BindPassword
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011915
+aNAME      OLDAP_FTP_Enabled
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110011916
+aNAME      OLDAP_FTP_Site
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011917
+aNAME      OLDAP_FTP_Username
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011919
+aNAME      OLDAP_FTP_Password
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011920
+aNAME      OLDAP_FTP_RemoteDir
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011921
+aNAME      OLDAP_FTP_Secure
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110011928
+aNAME      OLDAP_FTP_Port
+aAPDM_TOK  90000044
+
+eENTITY    2
+aZKEY      110005953
+aNumAtts   76
+
+eATTRIB    3
+aZKEY      110005954
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110005955
+aNAME      LastName
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110005956
+aNAME      FirstName
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110005957
+aNAME      MiddleName
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110005958
+aNAME      Suffix
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110005959
+aNAME      DateOfBirth
+aAPDM_TOK  90000052
+
+eATTRIB    3
+aZKEY      110005960
+aNAME      eMailAddress
+aAPDM_TOK  110001823
+
+eATTRIB    3
+aZKEY      110011444
+aNAME      PreferredEmail
+aAPDM_TOK  110001823
+
+eATTRIB    3
+aZKEY      110011445
+aNAME      SchoolEmail
+aAPDM_TOK  110001823
+
+eATTRIB    3
+aZKEY      110011446
+aNAME      WorkEmail
+aAPDM_TOK  110001823
+
+eATTRIB    3
+aZKEY      110012003
+aNAME      Photo
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005961
+aNAME      CampusID
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005962
+aNAME      Gender
+aAPDM_TOK  110001828
+
+eATTRIB    3
+aZKEY      110005963
+aNAME      HomePhone
+aAPDM_TOK  110001832
+
+eATTRIB    3
+aZKEY      110005964
+aNAME      MobilePhone
+aAPDM_TOK  110001832
+
+eATTRIB    3
+aZKEY      110005965
+aNAME      CallbackDate
+aAPDM_TOK  90000052
+
+eATTRIB    3
+aZKEY      110005966
+aNAME      ChurchDenomination
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005967
+aNAME      CIP_SubCategory
+aAPDM_TOK  90000032
+aLTH       15
+
+eATTRIB    3
+aZKEY      110005968
+aNAME      ContactPreference
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005969
+aNAME      ConvertedKey
+aAPDM_TOK  90000032
+aLTH       9
+
+eATTRIB    3
+aZKEY      110005970
+aNAME      ConvertedString
+aAPDM_TOK  1158059
+
+eATTRIB    3
+aZKEY      110005971
+aNAME      Deceased
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110005972
+aNAME      DeceasedDate
+aAPDM_TOK  90000052
+
+eATTRIB    3
+aZKEY      110005973
+aNAME      DriversLicenseNumber
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005974
+aNAME      DriversLicenseState
+aAPDM_TOK  110000052
+
+eATTRIB    3
+aZKEY      110005975
+aNAME      EmergencyContactAddressCity
+aAPDM_TOK  90000032
+aLTH       100
+
+eATTRIB    3
+aZKEY      110005976
+aNAME      EmergencyContactAddressLine1
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110005977
+aNAME      EmergencyContactAddressState
+aAPDM_TOK  110000052
+
+eATTRIB    3
+aZKEY      110005978
+aNAME      EmergencyContactAddressZipCode
+aAPDM_TOK  110001825
+aLTH       10
+
+eATTRIB    3
+aZKEY      110005979
+aNAME      EmergencyContactHomePhone
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005980
+aNAME      EmergencyContactMobilePhone
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005981
+aNAME      EmergencyContactName
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110005982
+aNAME      EmergencyContactNote
+aAPDM_TOK  1158059
+
+eATTRIB    3
+aZKEY      110005983
+aNAME      EmergencyContactRelationship
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110005984
+aNAME      EmergencyContactWorkPhone
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005985
+aNAME      Extension
+aAPDM_TOK  90000032
+aLTH       30
+
+eATTRIB    3
+aZKEY      110005986
+aNAME      Fax
+aAPDM_TOK  110001832
+
+eATTRIB    3
+aZKEY      110005987
+aNAME      FiscalIDRG
+aAPDM_TOK  90000032
+aLTH       9
+
+eATTRIB    3
+aZKEY      110005988
+aNAME      HideSSN
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110005989
+aNAME      InternationalHomePhone
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005990
+aNAME      InternationalMobilePhone
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005991
+aNAME      InternationalWorkPhone
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005992
+aNAME      LastDuplicateAnalyzedDate
+aAPDM_TOK  90000052
+
+eATTRIB    3
+aZKEY      110005993
+aNAME      MaidenName
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110005994
+aNAME      MajorName
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110005995
+aNAME      MaritalStatus
+aAPDM_TOK  110000650
+
+eATTRIB    3
+aZKEY      110005996
+aNAME      MaritalStatusDate
+aAPDM_TOK  90000052
+
+eATTRIB    3
+aZKEY      110005997
+aNAME      MasterPromissorySignedDate
+aAPDM_TOK  90000052
+
+eATTRIB    3
+aZKEY      110005998
+aNAME      Note
+aAPDM_TOK  1158059
+
+eATTRIB    3
+aZKEY      110005999
+aNAME      Occupation
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110006000
+aNAME      OccupationCode
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110006001
+aNAME      ParentsEmailAddress
+aAPDM_TOK  110001823
+
+eATTRIB    3
+aZKEY      110006002
+aNAME      PreferedFirstName
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110006003
+aNAME      Prefix
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110006004
+aNAME      PreviousName
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110006005
+aNAME      RetiredPastorFlag
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110006006
+aNAME      Salutation
+aAPDM_TOK  110000609
+
+eATTRIB    3
+aZKEY      110006007
+aNAME      SSN
+aAPDM_TOK  110000031
+aLTH       15
+
+eATTRIB    3
+aZKEY      110006008
+aNAME      Status
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110006009
+aNAME      Title
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110006010
+aNAME      UserName
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110006011
+aNAME      WebPassword
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110006012
+aNAME      WorkEMailAddress
+aAPDM_TOK  110001823
+
+eATTRIB    3
+aZKEY      110006013
+aNAME      WorkPhone
+aAPDM_TOK  110001832
+
+eATTRIB    3
+aZKEY      110006014
+aNAME      CreatedBy
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110006015
+aNAME      CreatedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110006016
+aNAME      ModifiedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110006017
+aNAME      LastModifiedBy
+aAPDM_TOK  90000032
+aLTH       50
+
+eATTRIB    3
+aZKEY      110006018
+aNAME      EmergencyContactLastUpdDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110011054
+aNAME      InstID
+aAPDM_TOK  90000032
+aLTH       100
+
+eATTRIB    3
+aZKEY      110011055
+aNAME      GovernmentID
+aAPDM_TOK  90000032
+aLTH       100
+
+eATTRIB    3
+aZKEY      110011799
+aNAME      OrdainedFlag
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110011834
+aNAME      PatronType
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011868
+aNAME      PatronBarcode
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      1221006
+aNAME      FK_ID_ADDRESS
+aAPDM_TOK  90000044
+aLTH       4
+
+eATTRIB    3
+aZKEY      1221024
+aNAME      FK_ID_PERSON
+aAPDM_TOK  90000044
+aLTH       4
+
+eENTITY    2
+aZKEY      110006768
+aNumAtts   3
+
+eATTRIB    3
+aZKEY      110006769
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110006770
+aNAME      FunctionalArea
+aAPDM_TOK  110000544
+
+eATTRIB    3
+aZKEY      110006771
+aNAME      AllowAccess
+aAPDM_TOK  110000006
+
+eENTITY    2
+aZKEY      110006774
+aNumAtts   8
+
+eATTRIB    3
+aZKEY      110006775
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110006776
+aNAME      SectionName
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110006777
+aNAME      CreateAuthority
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110006778
+aNAME      ReadAuthority
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110006779
+aNAME      UpdateAuthority
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110006780
+aNAME      DeleteAuthority
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110006781
+aNAME      SpecialAuthority
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      1221027
+aNAME      FK_ID_SECURITYAREA
+aAPDM_TOK  90000044
+aLTH       4
+
+eENTITY    2
+aZKEY      110006788
+aNumAtts   5
+
+eATTRIB    3
+aZKEY      110006789
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110006790
+aNAME      SubSectionName
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110006791
+aNAME      AllowAccess
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110006792
+aNAME      AllowReadAccess
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      1221028
+aNAME      FK_ID_SECURITYSECTION
+aAPDM_TOK  90000044
+aLTH       4
+
+eENTITY    2
+aZKEY      110007546
+aNumAtts   8
+
+eATTRIB    3
+aZKEY      110007547
+aNAME      Description
+aAPDM_TOK  110001820
+
+eATTRIB    3
+aZKEY      110007548
+aNAME      UserID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110007549
+aNAME      UserName
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110007550
+aNAME      StoredOI
+aAPDM_TOK  110000002
+
+eATTRIB    3
+aZKEY      110007551
+aNAME      OriginalOI
+aAPDM_TOK  110000002
+
+eATTRIB    3
+aZKEY      110007552
+aNAME      TransDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110007553
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      1221025
+aNAME      FK_ID_PERSON
+aAPDM_TOK  90000044
+aLTH       4
+
+eENTITY    2
+aZKEY      110007668
+aNumAtts   35
+
+eATTRIB    3
+aZKEY      110007669
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110007670
+aNAME      UserName
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110007671
+aNAME      Password
+aAPDM_TOK  90000032
+aLTH       1000
+
+eATTRIB    3
+aZKEY      110011430
+aNAME      PasswordSt
+aAPDM_TOK  90000032
+aLTH       512
+
+eATTRIB    3
+aZKEY      110007672
+aNAME      JavaPassword
+aAPDM_TOK  90000032
+aLTH       1000
+
+eATTRIB    3
+aZKEY      110007675
+aNAME      eMailPassword
+aAPDM_TOK  1084699
+
+eATTRIB    3
+aZKEY      110007676
+aNAME      eMailUserName
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110007677
+aNAME      eMailAddress
+aAPDM_TOK  110001823
+
+eATTRIB    3
+aZKEY      110007678
+aNAME      SMTPServer
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110007679
+aNAME      Active
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110007680
+aNAME      Status
+aAPDM_TOK  110000251
+
+eATTRIB    3
+aZKEY      110007681
+aNAME      OverrideStatus
+aAPDM_TOK  110000251
+
+eATTRIB    3
+aZKEY      110007682
+aNAME      LoginAuthenticationType
+aAPDM_TOK  110000202
+
+eATTRIB    3
+aZKEY      110007683
+aNAME      Note
+aAPDM_TOK  1158059
+
+eATTRIB    3
+aZKEY      110007684
+aNAME      Description
+aAPDM_TOK  1158059
+
+eATTRIB    3
+aZKEY      110007685
+aNAME      WebBroadcastMessageFlag
+aAPDM_TOK  110000006
+
+eATTRIB    3
+aZKEY      110007686
+aNAME      LastLoginDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110007687
+aNAME      CreatedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110007688
+aNAME      ModifiedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110007689
+aNAME      CreatedBy
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110007690
+aNAME      LastModifiedBy
+aAPDM_TOK  90000032
+aLTH       50
+
+eATTRIB    3
+aZKEY      110007691
+aNAME      SecurityQuestion1
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110007692
+aNAME      SecurityQuestion2
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110007693
+aNAME      SecurityQuestion3
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110007694
+aNAME      SecurityAnswer1
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110007695
+aNAME      SecurityAnswer2
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110007696
+aNAME      SecurityAnswer3
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110007697
+aNAME      ProspectInitialApplicationPerson
+aAPDM_TOK  110000002
+
+eATTRIB    3
+aZKEY      110007698
+aNAME      WebLoginCount
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110007699
+aNAME      ProspectFinAidAwardPageCount
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110007700
+aNAME      AuthorizationLevel
+aAPDM_TOK  110000195
+
+eATTRIB    3
+aZKEY      110007701
+aNAME      OnlineProspectInitialCreatedDate
+aAPDM_TOK  90000052
+
+eATTRIB    3
+aZKEY      110007702
+aNAME      MergeOutputFileName
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      110011925
+aNAME      LDAPContext
+aAPDM_TOK  90000032
+
+eATTRIB    3
+aZKEY      1221026
+aNAME      FK_ID_PERSON
+aAPDM_TOK  90000044
+aLTH       4
+
+eENTITY    2
+aZKEY      110007707
+aNumAtts   7
+
+eATTRIB    3
+aZKEY      110007708
+aNAME      ID
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110007709
+aNAME      GroupName
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110007710
+aNAME      Description
+aAPDM_TOK  1158059
+
+eATTRIB    3
+aZKEY      110007711
+aNAME      CreatedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110007712
+aNAME      ModifiedDateTime
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110007713
+aNAME      CreatedBy
+aAPDM_TOK  110001835
+
+eATTRIB    3
+aZKEY      110007714
+aNAME      LastModifiedBy
+aAPDM_TOK  90000032
+aLTH       50
+
+eENTITY    2
+aZKEY      110007875
+aNumAtts   2
+
+eATTRIB    3
+aZKEY      110007876
+aNAME      CurrentGenkey
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110007877
+aNAME      TableName
+aAPDM_TOK  90000028
+aLTH       32
+
+eENTITY    2
+aZKEY      110007880
+aNumAtts   4
+
+eATTRIB    3
+aZKEY      110007881
+aNAME      StringValue
+aAPDM_TOK  90000032
+aLTH       200
+
+eATTRIB    3
+aZKEY      110007882
+aNAME      TimestampValue
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110007883
+aNAME      IntValue
+aAPDM_TOK  90000044
+
+eATTRIB    3
+aZKEY      110007884
+aNAME      TaskID
+aAPDM_TOK  90000044
+
+eENTITY    2
+aZKEY      110007885
+aNumAtts   6
+
+eATTRIB    3
+aZKEY      110007886
+aNAME      LOD_Name
+aAPDM_TOK  90000032
+aLTH       35
+
+eATTRIB    3
+aZKEY      110007887
+aNAME      KeyValue
+aAPDM_TOK  90000032
+aLTH       200
+
+eATTRIB    3
+aZKEY      110007888
+aNAME      UserName
+aAPDM_TOK  90000032
+aLTH       32
+
+eATTRIB    3
+aZKEY      110007889
+aNAME      AllowRead
+aAPDM_TOK  90000032
+aLTH       1
+
+eATTRIB    3
+aZKEY      110007890
+aNAME      Timestamp
+aAPDM_TOK  90000089
+
+eATTRIB    3
+aZKEY      110007891
+aNAME      ID
+aAPDM_TOK  90000044
+
+eREL       2
+aZKEY      110007930
+
+eREL       2
+aZKEY      110007966
+
+eREL       2
+aZKEY      110007975
+
+eREL       2
+aZKEY      110007978
+
+eREL       2
+aZKEY      110008005
+
+eREL       2
+aZKEY      110008875
+
+eREL       2
+aZKEY      110008899
+
+eREL       2
+aZKEY      110008902
+
+eREL       2
+aZKEY      110008917
+
+eREL       2
+aZKEY      110008932
+
+eREL       2
+aZKEY      110008935
+
+eREL       2
+aZKEY      110009130
+
+eREL       2
+aZKEY      110009220
+
+eREL       2
+aZKEY      110009781
+
+eREL       2
+aZKEY      110009784
+
+eREL       2
+aZKEY      110010309
+
+eREL       2
+aZKEY      110010351
+
+eREL       2
+aZKEY      110010357
+
+eREL       2
+aZKEY      110010660
+
+eREL       2
+aZKEY      110010669
+
+eREL       2
+aZKEY      110010846
+

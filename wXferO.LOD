@@ -1,0 +1,7229 @@
+z1000-Zeidon    WXFERO   TZZOLODO 09/21/17   10:11:48 1.0a2    
+eLOD       1
+aZKey      334001830
+aNextZKeyToAssign 364017010
+aName      wXferO
+aDesc      Transfer Work Area
+
+eLOD_EntityParent 2
+aName      Root
+aIndentName Root
+aIndentLvl 0
+aZKey      334001855
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_EntityChild 3
+aName      QueryValues
+aIndentName    QueryValues
+aIndentLvl 3
+aZKey      334002134
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_EntityChild 4
+aName      QueryObject
+aIndentName       QueryObject
+aIndentLvl 6
+aZKey      334002181
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 5
+aZKey      334002182
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ExternalName
+aZKey      334002183
+
+eDomainRec 7
+aZKey      90000032
+aName      Text
+aDomainType E
+aDataType  S
+aMaxStringLth 254
+aDesc      Any Character String
+aContextRestriction N
+
+eLOD_AttributeRec 5
+aZKey      334002184
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ObjectName
+aZKey      334002185
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002186
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ContactListType
+aZKey      334002187
+
+eDomainRec 7
+aZKey      110005147
+aName      ContactListType
+aDomainType T
+aDataType  S
+aMaxStringLth 1
+aContextRestriction N
+
+eLOD_AttributeRec 5
+aZKey      334002188
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      DisplayEntityName
+aZKey      334002189
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002190
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      DisplayAttributeName
+aZKey      334002191
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002192
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ContactListIncludeEntityName
+aZKey      334002193
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002194
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ContactListCreateEntityName
+aZKey      334002195
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002196
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      SourceIncludeEntityName
+aZKey      334002197
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002198
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      AlternateConListFlag
+aZKey      334002199
+aDesc      If 'Y', mConAltl  is used for creating contact lists instead of mConList
+
+eDomainRec 7
+aZKey      110000006
+aName      Y/N
+aDomainType T
+aDataType  S
+aMaxStringLth 1
+aDesc      Yes or No
+aContextRestriction N
+
+eLOD_EntityChild 4
+aName      EventQueryObject
+aIndentName       EventQueryObject
+aIndentLvl 6
+aZKey      334002200
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+aDesc      Query Objects that can be tied to an Event or creating Contact Lists
+
+eLOD_AttributeRec 5
+aZKey      334002201
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ExternalName
+aZKey      334002202
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002203
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ObjectName
+aZKey      334002204
+
+eDomainRec 7
+
+eLOD_EntityChild 4
+aName      ResultSetItemList
+aIndentName       ResultSetItemList
+aIndentLvl 6
+aZKey      334002205
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 5
+aZKey      334002206
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ResultSetRootID
+aZKey      334002207
+
+eDomainRec 7
+aZKey      90000044
+aName      Integer
+aDomainType E
+aDataType  L
+aMaxStringLth 4
+aDecimalFormat 0
+aDesc      Integer numbers from -lots to +lots.
+aContextRestriction N
+
+eLOD_AttributeRec 5
+aZKey      334002208
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      Name
+aZKey      334002209
+aDesc      Displayed derived name
+
+eDomainRec 7
+
+eLOD_EntityChild 4
+aName      FormatOverrideObject
+aIndentName       FormatOverrideObject
+aIndentLvl 6
+aZKey      334002210
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 5
+aZKey      334002211
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ExternalName
+aZKey      334002212
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002213
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ObjectName
+aZKey      334002214
+
+eDomainRec 7
+
+eLOD_EntityChild 4
+aName      DisplayQueryUsage
+aIndentName       DisplayQueryUsage
+aIndentLvl 6
+aZKey      334002215
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 5
+aZKey      334002216
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ObjectName
+aZKey      334002217
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002218
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      QueryName
+aZKey      334002219
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002220
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      LOD_EntityName
+aZKey      334002221
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002222
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      AttributeName
+aZKey      334002223
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002224
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      UsageType
+aZKey      334002225
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002226
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      SelectValue
+aZKey      334002227
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002228
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      StoredQueryID
+aZKey      334002229
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002230
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      PrivateFlag
+aZKey      334002231
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002232
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      UserName
+aZKey      334002233
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002234
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      LastModifiedDate
+aZKey      334002235
+
+eDomainRec 7
+aZKey      90000052
+aName      Date
+aDomainType A
+aDataType  T
+aDesc      This domain manipulates the date portion of DateTime
+aContextRestriction N
+
+eLOD_AttributeRec 4
+aZKey      334002135
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      QueryObjectName
+aZKey      334002136
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002137
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      QueryObjectDescription
+aZKey      334002138
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002139
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      QueryType
+aZKey      334002140
+aDesc      76
+G - General
+S - Special, requires a LOD to be specified in QueryObjectName 
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002141
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      RootEntityName
+aZKey      334002142
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002143
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      CurrentStoredQueryName
+aZKey      334002144
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002145
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      CurrentResultSetName
+aZKey      334002146
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002147
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      CurrentDocumentName
+aZKey      334002148
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002149
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      TemplateFileName
+aZKey      334002150
+
+eDomainRec 6
+aZKey      1158059
+aName      Note
+aDomainType E
+aDataType  S
+aMaxStringLth 10000
+aDesc      10000 byte string
+aContextRestriction N
+
+eLOD_AttributeRec 4
+aZKey      334002151
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      OutputFileName
+aZKey      334002152
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002153
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      ResultType
+aZKey      334002154
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002155
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      WorkRevenue
+aZKey      334002156
+
+eDomainRec 6
+aZKey      110000026
+aName      Revenue
+aDomainType E
+aDataType  M
+aDecimalFormat 2
+aDesc      Dollar amounts, etc.
+aContextRestriction N
+
+eLOD_AttributeRec 4
+aZKey      334002157
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      WorkString
+aZKey      334002158
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002159
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      WorkDecimal
+aZKey      334002160
+
+eDomainRec 6
+aZKey      90000152
+aName      Decimal4
+aDomainType E
+aDataType  M
+aDecimalFormat 4
+aDesc      Characters '0-9' precision ( 0.0000 )
+aContextRestriction N
+
+eLOD_AttributeRec 4
+aZKey      334002161
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      Description
+aZKey      334002162
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002163
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      CurrentDate
+aZKey      334002164
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002165
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      SetProspectType
+aZKey      334002166
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002167
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      EmailText
+aZKey      334002168
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002169
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      EmailSubjectText
+aZKey      334002170
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002171
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      EmailAddressEntityName
+aZKey      334002172
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002173
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      MorningEndTime
+aZKey      334002174
+
+eDomainRec 6
+aZKey      90000078
+aName      Time
+aDomainType A
+aDataType  T
+aContextRestriction N
+
+eLOD_AttributeRec 4
+aZKey      334002175
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      AfternoonEndTime
+aZKey      334002176
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002177
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      EveningEndTime
+aZKey      334002178
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002179
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      WorkDayOfWeek
+aZKey      334002180
+
+eDomainRec 6
+aZKey      110000533
+aName      DayOfWeek
+aDomainType T
+aDataType  L
+aContextRestriction N
+
+eLOD_EntityChild 3
+aName      CopyCutPaste
+aIndentName    CopyCutPaste
+aIndentLvl 3
+aZKey      334002251
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+aSeqNo     0
+
+eLOD_EntityChild 4
+aName      CopyPerson
+aIndentName       CopyPerson
+aIndentLvl 6
+aZKey      334002324
+aCreate    N
+aDelete    N
+aUpdate    N
+aInclude   Y
+aInclSrc   Y
+aExclude   Y
+aRecursive N
+aDerived   Y
+aWork      N
+aParentDeleteBehave E
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 5
+aZKey      334002325
+
+eER_AttributeRec 6
+aName      ID
+aZKey      110005954
+aNotNull   Y
+aDesc      system generated id
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002326
+
+eER_AttributeRec 6
+aName      LastName
+aZKey      110005955
+aDesc      Contact's last Name
+
+eDomainRec 7
+aZKey      110001835
+aName      GeneralName_Address
+aDomainType E
+aDataType  S
+aMaxStringLth 50
+aDesc      General Text (names, streets, cities, etc.)
+aContextRestriction N
+
+eLOD_AttributeRec 5
+aZKey      334002327
+
+eER_AttributeRec 6
+aName      FirstName
+aZKey      110005956
+aDesc      Contact first Name
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002328
+
+eER_AttributeRec 6
+aName      MiddleName
+aZKey      110005957
+aDesc      Contact middle name or initial
+
+eDomainRec 7
+
+eER_EntityRec 5
+aName      Person
+aZKey      110005953
+aPurpose   F
+aER_DiagramPosX 48
+aER_DiagramPosY 110
+
+eLOD_AttributeRec 4
+aZKey      334002252
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      CopyPlanID
+aZKey      334002253
+
+eDomainRec 6
+
+eLOD_EntityChild 3
+aName      SelectListValues
+aIndentName    SelectListValues
+aIndentLvl 3
+aZKey      334002422
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 4
+aZKey      334002423
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      SourceEntityName
+aZKey      334002424
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002425
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      TargetViewName
+aZKey      334002426
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002427
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      TargetEntityName
+aZKey      334002428
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002429
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      TargetScopingEntityName
+aZKey      334002430
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002431
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      RoleEntityName
+aZKey      334002432
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002433
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      RoleDialogName
+aZKey      334002434
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002435
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      RoleWindowName
+aZKey      334002436
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002437
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      MajorViewName
+aZKey      334002438
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002439
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      ReplaceCurrentEntity
+aZKey      334002440
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002441
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      HighSchoolFlag
+aZKey      334002442
+aDesc      126
+H is only High Schools are requested.
+N is only non High Schools are requested.
+Anything else is all schools are requested. 
+
+eDomainRec 6
+aZKey      90000028
+aName      AlphaNumeric
+aDomainType E
+aDataType  S
+aMaxStringLth 254
+aDecimalFormat 1234
+aDesc      Characters 'a-z', 'A-Z', '0-9'
+aContextRestriction N
+
+eLOD_AttributeRec 4
+aZKey      334002443
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      ApplyToSelected
+aZKey      334002444
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002445
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      LikeString
+aZKey      334002446
+
+eDomainRec 6
+
+eLOD_EntityChild 3
+aName      RoomScheduling
+aIndentName    RoomScheduling
+aIndentLvl 3
+aZKey      334002452
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_EntityChild 4
+aName      EmailConfirmation
+aIndentName       EmailConfirmation
+aIndentLvl 6
+aZKey      334002520
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 5
+aZKey      334002521
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      Name
+aZKey      334002522
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002523
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      EmailAddress
+aZKey      334002524
+
+eDomainRec 7
+aZKey      110001823
+aName      EMailAddress
+aDomainType E
+aDataType  S
+aMaxStringLth 128
+aContextRestriction N
+
+eLOD_EntityChild 4
+aName      EmailSourceEntry
+aIndentName       EmailSourceEntry
+aIndentLvl 6
+aZKey      334002525
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 5
+aZKey      334002526
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      Name
+aZKey      334002527
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002528
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      EmailAddress
+aZKey      334002529
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002530
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      SourceType
+aZKey      334002531
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002532
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      Street
+aZKey      334002533
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002534
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      City
+aZKey      334002535
+
+eDomainRec 7
+
+eLOD_AttributeRec 4
+aZKey      334002453
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      SpecificDate
+aZKey      334002454
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002455
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      SearchType
+aZKey      334002456
+aLth       1
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002457
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      DayOfWeek
+aZKey      334002458
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002459
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      StartTime
+aZKey      334002460
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002461
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      EndTime
+aZKey      334002462
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002463
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      StandardStartTime
+aZKey      334002464
+
+eDomainRec 6
+aZKey      110000280
+aName      StandardTimes
+aDomainType T
+aDataType  S
+aMaxStringLth 10
+aDesc      Standard daytime times to make entering times easlier.
+aContextRestriction N
+
+eLOD_AttributeRec 4
+aZKey      334002465
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      StandardEndTime
+aZKey      334002466
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002467
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      DayOfWeekSundayFlag
+aZKey      334002468
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002469
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      DayOfWeekMondayFlag
+aZKey      334002470
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002471
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      DayOfWeekTuesdayFlag
+aZKey      334002472
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002473
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      DayOfWeekWednesdayFlag
+aZKey      334002474
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002475
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      DayOfWeekThursdayFlag
+aZKey      334002476
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002477
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      DayOfWeekFridayFlag
+aZKey      334002478
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002479
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      DayOfWeekSaturdayFlag
+aZKey      334002480
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002481
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      MinimumRoomCapacity
+aZKey      334002482
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002483
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      FindDateBegin
+aZKey      334002484
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002485
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      FindDateEnd
+aZKey      334002486
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002487
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      FindDateBegin2
+aZKey      334002488
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002489
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      FindDateEnd2
+aZKey      334002490
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002491
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      SelectionSummary
+aZKey      334002492
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002493
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      FindType
+aZKey      334002494
+aLth       5
+aDesc      Room or Sched
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002495
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 5
+aName      EventTitle
+aZKey      334002496
+aDesc      Name or title of the Event
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002497
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 5
+aName      EventDescription
+aZKey      334002498
+aDesc      an unlimited description of the event.
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002499
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      ConfirmationMessage
+aZKey      334002500
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002501
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      ConfirmationEmailMessage
+aZKey      334002502
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002503
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      FindLastName
+aZKey      334002504
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002505
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      FindFirstName
+aZKey      334002506
+
+eDomainRec 6
+
+eLOD_EntityChild 3
+aName      WorkEmployee
+aIndentName    WorkEmployee
+aIndentLvl 3
+aZKey      334002545
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 4
+aZKey      334002546
+aWork      Y
+
+eER_AttributeRec 5
+aName      Status
+aZKey      334002547
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002548
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 5
+aName      ActiveContractEffectiveDate
+aZKey      334002549
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002550
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 5
+aName      ActiveContractTerminationDate
+aZKey      334002551
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002552
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      SalaryIncreasePercent
+aZKey      334002553
+
+eDomainRec 6
+aZKey      90000175
+aName      Decimal3
+aDomainType E
+aDataType  M
+aDecimalFormat 3
+aDesc      Characters '0-9' precision ( 0.000 )
+aContextRestriction N
+
+eLOD_AttributeRec 4
+aZKey      334002554
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      SalaryIncreaseAmount
+aZKey      334002555
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002556
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      ClassFromDate
+aZKey      334002557
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002558
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      ClassToDate
+aZKey      334002559
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002560
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      ContractEffectiveBeginDate
+aZKey      334002561
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002562
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      ContractEffectiveEndDate
+aZKey      334002563
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002564
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      SourceContractSelectionDate
+aZKey      334002565
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002566
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      GenerateContractSourceSelectType
+aZKey      334002567
+aDesc      196
+Specifies how source contracts will be identified.
+   A - Source contracts will be Active contracts
+   D - Source contracts will be those whose Effective Begin/End Dates contain specified Date. 
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002568
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      AddToYearOfServiceFlag
+aZKey      334002569
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002570
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      ContractGenerationReplaceFlag
+aZKey      334002571
+
+eDomainRec 6
+
+eLOD_EntityChild 3
+aName      ShowHideAboveTolerance
+aIndentName    ShowHideAboveTolerance
+aIndentLvl 3
+aZKey      334002591
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+aSeqNo     0
+
+eLOD_AttributeRec 4
+aZKey      334002592
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      wFilterText
+aZKey      334002593
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002594
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      wFilterValue
+aZKey      334002595
+aLth       1
+
+eDomainRec 6
+
+eLOD_EntityChild 3
+aName      ShowHideRevenue
+aIndentName    ShowHideRevenue
+aIndentLvl 3
+aZKey      334002596
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+aSeqNo     0
+
+eLOD_AttributeRec 4
+aZKey      334002597
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      wFilterText
+aZKey      334002598
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002599
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      wFilterValue
+aZKey      334002600
+aLth       1
+
+eDomainRec 6
+
+eLOD_EntityChild 3
+aName      RequirementsClassification
+aIndentName    RequirementsClassification
+aIndentLvl 3
+aZKey      334002601
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+aSeqNo     0
+
+eLOD_AttributeRec 4
+aZKey      334002602
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 5
+aName      Classification
+aZKey      334002603
+
+eDomainRec 6
+
+eLOD_AttributeRec 4
+aZKey      334002604
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      AttributeNameSuffix
+aZKey      334002605
+
+eDomainRec 6
+
+eLOD_EntityChild 3
+aName      FAProfileClassYear
+aIndentName    FAProfileClassYear
+aIndentLvl 3
+aZKey      334002606
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+aDesc      Work entity used for tieing a Class to a Fin Aid Profile Period
+
+eLOD_EntityChild 4
+aName      FAProfileClassTie
+aIndentName       FAProfileClassTie
+aIndentLvl 6
+aZKey      334002609
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 5
+aZKey      334002610
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      EnrollmentEntryID
+aZKey      334002611
+
+eDomainRec 7
+
+eLOD_AttributeRec 5
+aZKey      334002612
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 6
+aName      ClassStartDate
+aZKey      334002613
+
+eDomainRec 7
+
+eLOD_AttributeRec 4
+aZKey      334002607
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      CollegeYear
+aZKey      334002608
+
+eDomainRec 6
+
+eLOD_EntityChild 3
+aName      WorkEntity
+aIndentName    WorkEntity
+aIndentLvl 3
+aZKey      334002614
+aCreate    Y
+aDelete    Y
+aUpdate    Y
+aInclude   N
+aInclSrc   Y
+aExclude   N
+aRecursive N
+aDerived   N
+aWork      Y
+aParentDeleteBehave D
+aDupEntityInstance N
+aDupRelationshipInstance N
+
+eLOD_AttributeRec 4
+aZKey      334002615
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 5
+aName      WorkValue
+aZKey      334002616
+
+eDomainRec 6
+
+eLOD_AttributeRec 3
+aZKey      334001856
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wAttemptedPasswordString
+aZKey      334001857
+aDesc      Password entered in as an uncoded string.
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      364016969
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wPreferredLanguage
+aZKey      364016970
+aLth       5
+aDesc      work attribute to  hold preferred language for user. 
+aXML_SimpleName Preferred Langauge
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      354036721
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      InNewModeObject
+aZKey      354036722
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      364016972
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wAnchorName
+aZKey      364016973
+aDesc      Used on a web page to set position via an anchor.
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      364016974
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WebErrorMessage
+aZKey      364016975
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      364016978
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      LanguageSelection
+aZKey      364016979
+
+eDomainRec 5
+aZKey      110000370
+aName      PrimaryLanguage
+aDomainType T
+aDataType  S
+aMaxStringLth 5
+aDesc      Identifies the primary language of the person
+aContextRestriction N
+
+eLOD_AttributeRec 3
+aZKey      364016982
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wInGUI
+aZKey      364016983
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      364016994
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wGovernmentID
+aZKey      364016995
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      364016997
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      IsMessage
+aZKey      364016998
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      364016999
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      IsTableData
+aZKey      364017000
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      364017001
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DoNotUse
+aZKey      364017002
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      364017003
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      NotInDB
+aZKey      364017004
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      364017005
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      NotConverted
+aZKey      364017006
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001858
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wAttemptedUserName
+aZKey      334001859
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001860
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      IncludeCompletedClasses
+aZKey      334001861
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001862
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      SearchFromDate2
+aZKey      334001863
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001864
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      SearchName
+aZKey      334001865
+aDesc      Work area for database searches by name
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001866
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      FA_CurrentProfileYearID
+aZKey      334001867
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      364016976
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wDayOfWeek
+aZKey      364016977
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      364017007
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      FinancialHoldFlag
+aZKey      364017008
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001868
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wZIP
+aZKey      334001869
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      364016980
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wSearchString
+aZKey      364016981
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001870
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WEB_ErrorMessage
+aZKey      334001871
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001872
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      BlindCopyFlag
+aZKey      334001873
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001874
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      StatementDate
+aZKey      334001875
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001876
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DueDate
+aZKey      334001877
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001878
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      QueryFAISIR_HighestYearIndicator
+aZKey      334001879
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001880
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DuplicateSearchBeginChars
+aZKey      334001881
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001882
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DuplicateSearchEndChars
+aZKey      334001883
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001884
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DuplicateSearchType
+aZKey      334001885
+aLth       3
+aDesc      181
+Types of Duplicate Search:
+   SSN - By Duplicate SSN
+   LN -  Last Name/First Name (1st 3 chars of each only)
+   LD - Last Name and Date of Birth (1st 3 chars of last name only) 
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001886
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      SA_BillPrintOption
+aZKey      334001887
+aLth       1
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001888
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      SA_BillPrintPendingFA_Option
+aZKey      334001889
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001890
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      SA_PrintBillDisbursedFA_Option
+aZKey      334001891
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001892
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      SA_BillPrintDisclosureStatement
+aZKey      334001893
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001894
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      SA_PrintBillClassSchedule_Option
+aZKey      334001895
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001896
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 4
+aName      FA_NCAA_ReportingType
+aZKey      334001897
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001898
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 4
+aName      FA_FISAP_ReportingType
+aZKey      334001899
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001900
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 4
+aName      FA_StateReportingType
+aZKey      334001901
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001902
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 4
+aName      FA_USNEWS_ReportingType
+aZKey      334001903
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001904
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      GeneralRadoButtonSelectOption
+aZKey      334001905
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001906
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 4
+aName      FA_CCCU_ReportingType
+aZKey      334001907
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001908
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 4
+aName      FA_IPEDS_ReportingType
+aZKey      334001909
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001910
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 4
+aName      FA_CDS_ReportingType
+aZKey      334001911
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001912
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      FA_SourceStatus
+aZKey      334001913
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001914
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      SearchFromDate
+aZKey      334001915
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001916
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      SearchName2
+aZKey      334001917
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001918
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      SearchToDate
+aZKey      334001919
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001920
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      TemporaryInputAmount
+aZKey      334001921
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001922
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      OnHoldGrades
+aZKey      334001923
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001924
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      HR_EmployeeClassification
+aZKey      334001925
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001926
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      HR_FacultyRank
+aZKey      334001927
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001928
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      HR_IPEDS_Category
+aZKey      334001929
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001930
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      HR_TenureTrack
+aZKey      334001931
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001932
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      AcademicStandingPeriodOption
+aZKey      334001933
+aLth       1
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001934
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wAccountOverToleranceText
+aZKey      334001935
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001936
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wAccountUnderToleranceText
+aZKey      334001937
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001938
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wCCOverToleranceText
+aZKey      334001939
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001940
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wCCUnderToleranceText
+aZKey      334001941
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001942
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wBudgetPageTitle
+aZKey      334001943
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001944
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wiFrameCnt
+aZKey      334001945
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001946
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wTestServer
+aZKey      334001947
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001948
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      GradUndergradFlag
+aZKey      334001949
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001950
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DefaultRoom
+aZKey      334001951
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001952
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DefaultMealPlan
+aZKey      334001953
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001954
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DefaultFullTime
+aZKey      334001955
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001956
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      NewClassCohortTermType
+aZKey      334001957
+aLth       1
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001958
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkCash
+aZKey      334001959
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001960
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkCheck
+aZKey      334001961
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      364017009
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkCharges
+aZKey      364017010
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001962
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkCC
+aZKey      334001963
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001964
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkWire
+aZKey      334001965
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001966
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkOther
+aZKey      334001967
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001968
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkTotal
+aZKey      334001969
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001970
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkYear
+aZKey      334001971
+
+eDomainRec 5
+aZKey      110000226
+aName      Year
+aDomainType F
+aDataType  S
+aMaxStringLth 4
+aDesc      4 Digit Year
+aContextRestriction N
+
+eLOD_AttributeRec 3
+aZKey      334001972
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkMonth
+aZKey      334001973
+
+eDomainRec 5
+aZKey      1051178
+aName      Month
+aDomainType T
+aDataType  L
+aDesc      Number of month in year (e.g.  November is 11)
+aContextRestriction N
+
+eLOD_AttributeRec 3
+aZKey      334001974
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DocumentEmailAddressType
+aZKey      334001975
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001976
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DocumentVariableText
+aZKey      334001977
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001978
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      IncludeRegFee
+aZKey      334001979
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001980
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      IncludeAdmissionFee
+aZKey      334001981
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001982
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      ActionFlag
+aZKey      334001983
+aDesc      Work flag
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001984
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      ImportColumn1
+aZKey      334001985
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001986
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      ImportColumn2
+aZKey      334001987
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001988
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wAttemptedPassword
+aZKey      334001989
+
+eDomainRec 5
+aZKey      90000042
+aName      Password
+aDomainType A
+aDataType  S
+aMaxStringLth 9
+aDesc      Encrypted password
+aContextRestriction N
+
+eLOD_AttributeRec 3
+aZKey      334001990
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wVerifiedPassword
+aZKey      334001991
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001992
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wEmailAddress
+aZKey      334001993
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001994
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wCreatePassword
+aZKey      334001995
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001996
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wConfirmCreatePassword
+aZKey      334001997
+aLth       20
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334001998
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wLastName
+aZKey      334001999
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002000
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wFirstName
+aZKey      334002001
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002002
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wMiddleName
+aZKey      334002003
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002004
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wDOB
+aZKey      334002005
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002006
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wCampusID
+aZKey      334002007
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002008
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wSSN
+aZKey      334002009
+
+eDomainRec 5
+aZKey      110000031
+aName      SocialSecurityNumber
+aDomainType A
+aDataType  S
+aMaxStringLth 9
+aContextRestriction N
+
+eLOD_AttributeRec 3
+aZKey      334002010
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wWorkText
+aZKey      334002011
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002012
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wRptTitle
+aZKey      334002013
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002014
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      ActivityStatus
+aZKey      334002015
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002016
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      dCurrentDateTime
+aZKey      334002017
+
+eDomainRec 5
+aZKey      90000089
+aName      DateTime
+aDomainType A
+aDataType  T
+aMaxStringLth 20
+aDesc      Basic Timestamp Domain
+aContextRestriction N
+
+eLOD_AttrDerivationOperRec 4
+aName      dCurrentDateTime
+aClass     0
+aZKey      334001832
+aType      A
+aReturnDataType N
+
+eSourceFileForDARec 5
+aZKey      334001831
+aName      wXferO
+aLanguageType V
+aExtension VML
+
+eLOD_AttributeRec 3
+aZKey      334002018
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      dCurrentDate
+aZKey      334002019
+
+eDomainRec 5
+
+eLOD_AttrDerivationOperRec 4
+aName      dCurrentDate
+aClass     0
+aZKey      334001847
+aType      A
+aReturnDataType N
+
+eSourceFileForDARec 5
+
+eLOD_AttributeRec 3
+aZKey      334002020
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      dCurrentTime
+aZKey      334002021
+
+eDomainRec 5
+
+eLOD_AttrDerivationOperRec 4
+aName      dCurrentTime
+aClass     0
+aZKey      334001837
+aType      A
+aReturnDataType N
+
+eSourceFileForDARec 5
+
+eLOD_AttributeRec 3
+aZKey      334002022
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkTRCode
+aZKey      334002023
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002024
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      CurrentFunction
+aZKey      334002025
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002026
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DocumentGenerationOptions
+aZKey      334002027
+aDesc      65
+E - Generate and Edit
+P - Generate and Print
+G - Generate Only 
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002028
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DocumentEmailCopyPersonalFlag
+aZKey      334002029
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002030
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DocumentGenerationAllFlag
+aZKey      334002031
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002032
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DocumentGenerationSortOption
+aZKey      334002033
+aDesc      32
+N - By Name
+P - By Postal Code 
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002034
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DocumentLastMailType
+aZKey      334002035
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002036
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DocumentEmailCopyParentsFlag
+aZKey      334002037
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002038
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      SelectQueryListAllFlag
+aZKey      334002039
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002040
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkDecimal
+aZKey      334002041
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002042
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkDate
+aZKey      334002043
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002044
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkDate2
+aZKey      334002045
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002046
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkInteger
+aZKey      334002047
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002048
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkRevenue
+aZKey      334002049
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002050
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkString
+aZKey      334002051
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002052
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkDecimal1
+aZKey      334002053
+
+eDomainRec 5
+aZKey      90000221
+aName      Decimal1
+aDomainType E
+aDataType  M
+aDecimalFormat 1
+aDesc      Characters '0-9' precision ( 0.0 )
+aContextRestriction N
+
+eLOD_AttributeRec 3
+aZKey      334002054
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkTime1
+aZKey      334002055
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002056
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkTime2
+aZKey      334002057
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002058
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkDayOfWeek
+aZKey      334002059
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002060
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkFlag
+aZKey      334002061
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002062
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkFileName
+aZKey      334002063
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002064
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkButtonText
+aZKey      334002065
+aLth       5
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002066
+aWork      Y
+aUpdate    Y
+aInit      A
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WorkAdviseeListType
+aZKey      334002067
+aNotNull   Y
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002068
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      SearchAmount
+aZKey      334002069
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002070
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      SearchInputNumber
+aZKey      334002071
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002072
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      SeasonalAddressDate
+aZKey      334002073
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002074
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WebReturnMessage
+aZKey      334002075
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002076
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WebPromptValue
+aZKey      334002077
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002078
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      WebPromptDialogName
+aZKey      334002079
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002080
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      FA_ScannelKurzReportType
+aZKey      334002081
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002082
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 4
+aName      FA_CCCU_ReportingTypeNull
+aZKey      334002083
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002084
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 4
+aName      FA_CDS_ReportingTypeNull
+aZKey      334002085
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002086
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      FA_CurrentProfileYearIDNull
+aZKey      334002087
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002088
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 4
+aName      FA_FISAP_ReportingTypeNull
+aZKey      334002089
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002090
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 4
+aName      FA_IPEDS_ReportingTypeNull
+aZKey      334002091
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002092
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 4
+aName      FA_NCAA_ReportingTypeNull
+aZKey      334002093
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002094
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      FA_SourceStatusNull
+aZKey      334002095
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002096
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 4
+aName      FA_StateReportingTypeNull
+aZKey      334002097
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002098
+aWork      Y
+aUpdate    Y
+aSeqOrder  A
+
+eER_AttributeRec 4
+aName      FA_USNEWS_ReportingTypeNull
+aZKey      334002099
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002100
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      FA_ScannelKurzReportTypeNull
+aZKey      334002101
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002102
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      FindRememberedCounselorFlag
+aZKey      334002103
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002104
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      FindRememberedCounselorID
+aZKey      334002105
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002106
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      CategoryFunctionalSubArea
+aZKey      334002107
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002108
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      CohortListFilter
+aZKey      334002109
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002110
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      TemporaryInputInteger
+aZKey      334002111
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002112
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      VariableIncludeEntityName
+aZKey      334002113
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002114
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      LastDonationEntered
+aZKey      334002115
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002116
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      CategoryFunctionalArea
+aZKey      334002117
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002118
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      CurrentLevelUpdate
+aZKey      334002119
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002120
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      StudentStatus
+aZKey      334002121
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002122
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      SurveyHoldMsg
+aZKey      334002123
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002124
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      GeneralDisplayText
+aZKey      334002125
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002126
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wAdvisor1
+aZKey      334002127
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002128
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wAdvisor2
+aZKey      334002129
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002130
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      wAdvisor2Text
+aZKey      334002131
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      334002132
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      DisplayCount
+aZKey      334002133
+
+eDomainRec 5
+
+eLOD_AttributeRec 3
+aZKey      354034591
+aWork      Y
+aUpdate    Y
+aSeqOrder  Y
+
+eER_AttributeRec 4
+aName      InEditModeObject
+aZKey      354034592
+
+eDomainRec 5
+
+eLOD_Entity 2
+awkSelectedAttributeForDragSort 53
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 3
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 4
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 5
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 6
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 7
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 8
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 9
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 10
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 11
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 12
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 13
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 14
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 15
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 16
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 17
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 18
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 19
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 20
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 21
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 22
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 23
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 24
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 25
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 26
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 27
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 28
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 29
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 30
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 31
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 32
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 33
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 34
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 35
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 36
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 37
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 38
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 39
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 40
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 41
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 42
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 43
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 44
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 45
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 46
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 47
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 48
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 49
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 50
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 51
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 52
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 53
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 54
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 55
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 56
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 57
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 58
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 59
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 60
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 61
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 62
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 63
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 64
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 65
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 66
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 67
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 68
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 69
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 70
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 71
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 72
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 73
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 74
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 75
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 76
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 77
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 78
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 79
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 80
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 81
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 82
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 83
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 84
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 85
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_AttrDerivationOper 4
+
+eSourceFileForDA 5
+
+eLOD_Attribute 3
+awkSequence 86
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_AttrDerivationOper 4
+
+eSourceFileForDA 5
+
+eLOD_Attribute 3
+awkSequence 87
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_AttrDerivationOper 4
+
+eSourceFileForDA 5
+
+eLOD_Attribute 3
+awkSequence 88
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 89
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 90
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 91
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 92
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 93
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 94
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 95
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 96
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 97
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 98
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 99
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 100
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 101
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 102
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 103
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 104
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 105
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 106
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 107
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 108
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 109
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 110
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 111
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 112
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 113
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 114
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 115
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 116
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 117
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 118
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 119
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 120
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 121
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 122
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 123
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 124
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 125
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 126
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 127
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 128
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 129
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 130
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 131
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 132
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 133
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 134
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 135
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 136
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 137
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 138
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 139
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 140
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 141
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 142
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 143
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 144
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 145
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 146
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 147
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 148
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 149
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 150
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 151
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 152
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 153
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 154
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 155
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 156
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 3
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 4
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 5
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 6
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 7
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 8
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 9
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 10
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 11
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 12
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 13
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 14
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 15
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 16
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 17
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 18
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 19
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 20
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 21
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 22
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 23
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 3
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 4
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 5
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 6
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 7
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 8
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 9
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 3
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 4
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 5
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 6
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 7
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 8
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 9
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 10
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 3
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 4
+
+eER_Attribute 4
+
+eDomain    5
+
+eER_Entity 3
+
+eLOD_Entity 2
+awkSelectedAttributeForDragSort 8
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 3
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 4
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 5
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 6
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 7
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 8
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 9
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 10
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 11
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 12
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 3
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 4
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 5
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 6
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 7
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 8
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 9
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 10
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 11
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 12
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 13
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 14
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 15
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 16
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 17
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 18
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 19
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 20
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 21
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 22
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 23
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 24
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 25
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 26
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 27
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 3
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 4
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 5
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 3
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 4
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 5
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 6
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 7
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 8
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 9
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 10
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 11
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 12
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 13
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Attribute 3
+awkSequence 2
+
+eER_Attribute 4
+
+eDomain    5
+
+eLOD_Entity 2
+
+eLOD_Attribute 3
+awkSequence 1
+
+eER_Attribute 4
+
+eDomain    5
+
+eSourceFile 2
+
+eOperation 3
+
+eParameter 4
+aShortDesc View to Instance
+aDataType  V
+aZKey      334001833
+
+eParameter 4
+aShortDesc Internal Entity Structure
+aDataType  S
+aZKey      334001834
+
+eParameter 4
+aShortDesc Internal Attrib Structure
+aDataType  S
+aZKey      334001835
+
+eParameter 4
+aShortDesc Get Or Set Flag
+aDataType  N
+aZKey      334001836
+
+eOperation 3
+
+eParameter 4
+aShortDesc View to Instance
+aDataType  V
+aZKey      334001838
+
+eParameter 4
+aShortDesc Internal Entity Structure
+aDataType  S
+aZKey      334001839
+
+eParameter 4
+aShortDesc Internal Attrib Structure
+aDataType  S
+aZKey      334001840
+
+eParameter 4
+aShortDesc Get Or Set Flag
+aDataType  N
+aZKey      334001841
+
+eOperation 3
+aName      dSalaryDataName
+aZKey      334001842
+aType      A
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc wXferO
+aDataType  V
+aZKey      334001843
+
+eParameter 4
+aShortDesc InternalEntityStructure
+aDataType  S
+aZKey      334001844
+
+eParameter 4
+aShortDesc InternalAttribStructure
+aDataType  S
+aZKey      334001845
+
+eParameter 4
+aShortDesc GetOrSetFlag
+aDataType  N
+aZKey      334001846
+
+eOperation 3
+
+eParameter 4
+aShortDesc View to Instance
+aDataType  V
+aZKey      334001848
+
+eParameter 4
+aShortDesc Internal Entity Structure
+aDataType  S
+aZKey      334001849
+
+eParameter 4
+aShortDesc Internal Attrib Structure
+aDataType  S
+aZKey      334001850
+
+eParameter 4
+aShortDesc Get Or Set Flag
+aDataType  N
+aZKey      334001851
+
+eOperation 3
+aName      SetUpAllQueryValues
+aZKey      334001852
+aType      T
+aReturnDataType N
+aClass     0
+
+eParameter 4
+aShortDesc View To Instance
+aDataType  V
+aZKey      334001853
+
+ePOD       2
+aNAME      wXferO
+aZKey      334001854
+aTE_SourceZKey 110010889
+
+eTE_DB_Environ 3
+aName      Base
+aZKey      110010888
+aDesc      OakTree Support App
+aType      P
+
+eTE_DBMS_Source 4
+aName      base
+aZKey      110010889
+aParadigm  R
+aDBMS      SQLServer via ODBC
+aGenerateExecutable kzhsqlsb
+aExecutable kzhsqloa
+aGenKeyExecutable kzhgenky
+aDisplayOwner Y
+aDisplayDBMS_ID N
+aDBH_Data  376
+TZDBHODO *********************** ********************************************************************************************************z1000-Zeidon    ZTF_1760_TZDBHODO 11/18/15   13:58:09 1.0a2    
+eODBC      1
+aTimestampPrecision 3
+aTimestampAsString Y
+aBlobsLast Y
+aDropTables Y
+aAddTableNameToFK_Override Y
+aGenCreateIdxs Y
+aGenDropIdxs N
+aGenCreateTables Y
+
+
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+eOperationList 2
+
+eOperSourceFile 3
+
+i9         6
+i15        6
+i18        6
+i21        6
+i24        6
+i27        6
+i34        6
+i37        6
+i44        6
+i48        6
+i51        6
+i55        6
+i58        6
+i61        6
+i64        6
+i67        6
+i70        6
+i73        41
+i76        30
+i79        6
+i85        6
+i88        6
+i91        6
+i94        6
+i97        6
+i100       6
+i103       6
+i109       106
+i112       6
+i118       6
+i124       6
+i127       82
+i130       6
+i133       106
+i136       6
+i139       6
+i145       142
+i148       142
+i156       41
+i162       159
+i165       159
+i169       41
+i173       6
+i176       159
+i179       6
+i182       6
+i185       6
+i188       6
+i191       6
+i194       6
+i197       30
+i203       30
+i206       6
+i211       6
+i218       6
+i221       214
+i224       6
+i227       6
+i230       6
+i233       82
+i236       200
+i239       151
+i242       142
+i245       142
+i251       248
+i254       30
+i257       30
+i260       30
+i263       30
+i266       30
+i269       30
+i272       30
+i275       41
+i278       82
+i281       82
+i284       82
+i287       82
+i290       6
+i293       200
+i296       6
+i299       106
+i302       6
+i305       6
+i308       6
+i311       6
+i315       6
+i318       82
+i321       82
+i327       115
+i330       82
+i333       82
+i336       82
+i339       82
+i342       82
+i345       200
+i348       30
+i351       30
+i355       6
+i358       6
+i362       6
+i365       6
+i369       6
+i372       200
+i377       41
+i380       82
+i383       6
+i387       6
+i390       6
+i393       6
+i396       6
+i399       6
+i402       6
+i408       30
+i411       6
+i414       30
+i417       30
+i420       30
+i423       30
+i426       30
+i429       159
+i432       30
+i435       82
+i438       6
+i441       41
+i444       151
+i447       6
+i450       6
+i453       6
+i456       6
+i459       30
+i462       82
+i465       82
+i468       6
+i471       6
+i474       6
+i477       200
+i480       200
+i483       30
+i486       30
+i489       30
+i492       30
+i495       6
+i498       6
+i501       6
+i504       6
+i507       6
+i510       6
+i513       6
+i516       6
+i519       6
+i522       82
+i525       6
+i528       82
+i531       115
+i534       30
+i537       6
+i540       6
+i543       6
+i546       6
+i549       200
+i552       6
+i555       6
+i558       6
+i561       6
+i564       6
+i567       41
+i570       6
+i573       200
+i576       30
+i579       30
+i582       30
+i585       200
+i588       115
+i591       115
+i594       115
+i597       115
+i600       115
+i603       115
+i606       115
+i615       6
+i618       106
+i621       30
+i624       30
+i627       30
+i630       6
+i633       6
+i639       636
+i642       6
+i645       6
+i648       6
+i651       159
+i654       159
+i657       159
+i660       82
+i663       6
+i669       6
+i672       6
+i675       6
+i683       82
+i685       680
+i688       142
+i690       680
+i693       6
+i696       6
+i699       200
+i702       30
+i705       30
+i708       6
+i711       6
+i714       30
+i717       30
+i720       121
+i723       82
+i726       82
+i729       41
+i732       115
+i735       6
+i741       248
+i744       248
+i747       151
+i750       200
+i753       106
+i756       6
+i759       6
+i762       115
+i765       41
+i768       82
+i771       6
+i774       41
+i777       6
+i780       6
+i783       30
+i786       30
+i789       30
+i792       30
+i795       30
+i798       30
+i801       30
+i804       30
+i807       30
+i810       30
+i813       30
+i816       41
+i819       6
+i822       200
+i825       41
+i828       6
+i831       82
+i834       6
+i837       6
+i840       6
+i843       6
+i846       6
+i849       6
+i852       6
+i855       6
+i858       41
+i861       6
+i862       1
+i863       388
+i864       389
+i865       6
+i866       427
+i867       428
+i868       159
+i869       430
+i870       431
+i871       30
+i872       433
+i873       434
+i874       82
+i875       436
+i876       437
+i877       6
+i878       439
+i879       440
+i880       41
+i881       448
+i882       449
+i883       6
+i884       451
+i885       452
+i886       6
+i887       454
+i888       455
+i889       6
+i890       457
+i891       458
+i892       30
+i893       460
+i894       461
+i895       82
+i896       463
+i897       464
+i898       82
+i899       466
+i900       467
+i901       6
+i902       469
+i903       470
+i904       6
+i905       472
+i906       473
+i907       6
+i908       475
+i909       476
+i910       200
+i911       478
+i912       479
+i913       200
+i914       481
+i915       482
+i916       30
+i917       484
+i918       485
+i919       30
+i920       487
+i921       488
+i922       30
+i923       490
+i924       491
+i925       30
+i926       493
+i927       494
+i928       6
+i929       496
+i930       497
+i931       6
+i932       499
+i933       500
+i934       6
+i935       502
+i936       503
+i937       6
+i938       505
+i939       506
+i940       6
+i941       508
+i942       509
+i943       6
+i944       511
+i945       512
+i946       6
+i947       514
+i948       515
+i949       6
+i950       517
+i951       518
+i952       6
+i953       520
+i954       521
+i955       82
+i956       523
+i957       524
+i958       6
+i959       526
+i960       527
+i961       82
+i962       529
+i963       530
+i964       115
+i965       532
+i966       533
+i967       30
+i968       535
+i969       536
+i970       6
+i971       538
+i972       539
+i973       6
+i974       541
+i975       542
+i976       6
+i977       544
+i978       545
+i979       6
+i980       547
+i981       548
+i982       200
+i983       550
+i984       551
+i985       6
+i986       553
+i987       554
+i988       6
+i989       556
+i990       557
+i991       6
+i992       559
+i993       560
+i994       6
+i995       562
+i996       563
+i997       6
+i998       565
+i999       566
+i1000      41
+i1001      568
+i1002      569
+i1003      6
+i1004      571
+i1005      572
+i1006      200
+i1007      574
+i1008      575
+i1009      30
+i1010      577
+i1011      578
+i1012      30
+i1013      580
+i1014      581
+i1015      30
+i1016      583
+i1017      584
+i1018      200
+i1019      586
+i1020      587
+i1021      115
+i1022      592
+i1023      593
+i1024      115
+i1025      589
+i1026      590
+i1027      115
+i1028      595
+i1029      596
+i1030      115
+i1031      598
+i1032      599
+i1033      115
+i1034      601
+i1035      602
+i1036      115
+i1037      604
+i1038      605
+i1039      115
+i1040      607
+i1041      608
+i1042      609
+i1043      610
+i1044      611
+i1045      612
+i1046      613
+i1047      614
+i1048      6
+i1049      616
+i1050      617
+i1051      106
+i1052      619
+i1053      620
+i1054      30
+i1055      622
+i1056      623
+i1057      30
+i1058      625
+i1059      626
+i1060      30
+i1061      628
+i1062      629
+i1063      6
+i1064      631
+i1065      632
+i1066      6
+i1067      634
+i1068      635
+i1069      636
+i1070      637
+i1071      638
+i1072      636
+i1073      640
+i1074      641
+i1075      6
+i1076      643
+i1077      644
+i1078      6
+i1079      646
+i1080      647
+i1081      6
+i1082      649
+i1083      650
+i1084      159
+i1085      652
+i1086      653
+i1087      159
+i1088      655
+i1089      656
+i1090      159
+i1091      658
+i1092      659
+i1093      82
+i1094      661
+i1095      662
+i1096      6
+i1097      664
+i1098      665
+i1099      666
+i1100      667
+i1101      668
+i1102      6
+i1103      445
+i1104      446
+i1105      6
+i1106      442
+i1107      443
+i1108      151
+i1109      670
+i1110      671
+i1111      6
+i1112      673
+i1113      674
+i1114      6
+i1115      676
+i1116      677
+i1117      678
+i1118      679
+i1119      680
+i1120      681
+i1121      682
+i1122      82
+i1123      684
+i1124      680
+i1125      686
+i1126      687
+i1127      142
+i1128      689
+i1129      680
+i1130      691
+i1131      692
+i1132      6
+i1133      694
+i1134      695
+i1135      6
+i1136      697
+i1137      698
+i1138      200
+i1139      700
+i1140      701
+i1141      30
+i1142      703
+i1143      704
+i1144      30
+i1145      706
+i1146      707
+i1147      6
+i1148      709
+i1149      710
+i1150      6
+i1151      712
+i1152      713
+i1153      30
+i1154      715
+i1155      716
+i1156      30
+i1157      718
+i1158      719
+i1159      121
+i1160      721
+i1161      722
+i1162      82
+i1163      724
+i1164      725
+i1165      82
+i1166      727
+i1167      728
+i1168      41
+i1169      730
+i1170      731
+i1171      115
+i1172      733
+i1173      734
+i1174      6
+i1175      736
+i1176      737
+i1177      738
+i1178      739
+i1179      740
+i1180      248
+i1181      742
+i1182      743
+i1183      248
+i1184      745
+i1185      746
+i1186      151
+i1187      748
+i1188      749
+i1189      200
+i1190      751
+i1191      752
+i1192      106
+i1193      754
+i1194      755
+i1195      6
+i1196      757
+i1197      758
+i1198      6
+i1199      760
+i1200      761
+i1201      115
+i1202      763
+i1203      764
+i1204      41
+i1205      766
+i1206      767
+i1207      82
+i1208      769
+i1209      770
+i1210      6
+i1211      772
+i1212      773
+i1213      41
+i1214      775
+i1215      776
+i1216      6
+i1217      778
+i1218      779
+i1219      6
+i1220      781
+i1221      782
+i1222      30
+i1223      784
+i1224      785
+i1225      30
+i1226      787
+i1227      788
+i1228      30
+i1229      790
+i1230      791
+i1231      30
+i1232      793
+i1233      794
+i1234      30
+i1235      796
+i1236      797
+i1237      30
+i1238      799
+i1239      800
+i1240      30
+i1241      802
+i1242      803
+i1243      30
+i1244      805
+i1245      806
+i1246      30
+i1247      808
+i1248      809
+i1249      30
+i1250      811
+i1251      812
+i1252      30
+i1253      814
+i1254      815
+i1255      41
+i1256      817
+i1257      818
+i1258      6
+i1259      820
+i1260      821
+i1261      200
+i1262      823
+i1263      824
+i1264      41
+i1265      826
+i1266      827
+i1267      6
+i1268      829
+i1269      830
+i1270      82
+i1271      832
+i1272      833
+i1273      6
+i1274      835
+i1275      836
+i1276      6
+i1277      838
+i1278      839
+i1279      6
+i1280      841
+i1281      842
+i1282      6
+i1283      844
+i1284      845
+i1285      6
+i1286      847
+i1287      848
+i1288      6
+i1289      850
+i1290      851
+i1291      6
+i1292      853
+i1293      854
+i1294      6
+i1295      856
+i1296      857
+i1297      41
+i1298      859
+i1299      860
+i1300      6
+i1301      391
+i1302      392
+i1303      6
+i1304      394
+i1305      395
+i1306      6
+i1307      397
+i1308      398
+i1309      6
+i1310      400
+i1311      401
+i1312      6
+i1313      403
+i1314      404
+i1315      405
+i1316      406
+i1317      407
+i1318      30
+i1319      409
+i1320      410
+i1321      6
+i1322      412
+i1323      413
+i1324      30
+i1325      415
+i1326      416
+i1327      30
+i1328      418
+i1329      419
+i1330      30
+i1331      421
+i1332      422
+i1333      30
+i1334      424
+i1335      425
+i1336      30
+i1337      2
+i1338      83
+i1339      84
+i1340      6
+i1341      86
+i1342      87
+i1343      6
+i1344      89
+i1345      90
+i1346      6
+i1347      92
+i1348      93
+i1349      6
+i1350      95
+i1351      96
+i1352      6
+i1353      98
+i1354      99
+i1355      6
+i1356      101
+i1357      102
+i1358      6
+i1359      104
+i1360      105
+i1361      106
+i1362      107
+i1363      108
+i1364      106
+i1365      110
+i1366      111
+i1367      6
+i1368      113
+i1369      114
+i1370      115
+i1371      116
+i1372      117
+i1373      6
+i1374      119
+i1375      120
+i1376      121
+i1377      122
+i1378      123
+i1379      6
+i1380      125
+i1381      126
+i1382      82
+i1383      128
+i1384      129
+i1385      6
+i1386      131
+i1387      132
+i1388      106
+i1389      134
+i1390      135
+i1391      6
+i1392      137
+i1393      138
+i1394      6
+i1395      140
+i1396      141
+i1397      142
+i1398      143
+i1399      144
+i1400      142
+i1401      146
+i1402      147
+i1403      142
+i1404      149
+i1405      150
+i1406      151
+i1407      3
+i1408      4
+i1409      5
+i1410      6
+i1411      7
+i1412      8
+i1413      6
+i1414      10
+i1415      11
+i1416      12
+i1417      13
+i1418      14
+i1419      6
+i1420      16
+i1421      17
+i1422      6
+i1423      19
+i1424      20
+i1425      6
+i1426      22
+i1427      23
+i1428      6
+i1429      25
+i1430      26
+i1431      6
+i1432      28
+i1433      29
+i1434      30
+i1435      31
+i1436      32
+i1437      33
+i1438      6
+i1439      35
+i1440      36
+i1441      6
+i1442      38
+i1443      39
+i1444      40
+i1445      41
+i1446      42
+i1447      43
+i1448      6
+i1449      45
+i1450      46
+i1451      47
+i1452      6
+i1453      49
+i1454      50
+i1455      6
+i1456      52
+i1457      53
+i1458      54
+i1459      6
+i1460      56
+i1461      57
+i1462      6
+i1463      59
+i1464      60
+i1465      6
+i1466      62
+i1467      63
+i1468      6
+i1469      65
+i1470      66
+i1471      6
+i1472      68
+i1473      69
+i1474      6
+i1475      71
+i1476      72
+i1477      41
+i1478      74
+i1479      75
+i1480      30
+i1481      77
+i1482      78
+i1483      6
+i1484      80
+i1485      81
+i1486      82
+i1487      152
+i1488      167
+i1489      168
+i1490      41
+i1491      153
+i1492      154
+i1493      155
+i1494      41
+i1495      157
+i1496      158
+i1497      159
+i1498      160
+i1499      161
+i1500      159
+i1501      163
+i1502      164
+i1503      159
+i1504      166
+i1505      170
+i1506      171
+i1507      172
+i1508      6
+i1509      174
+i1510      175
+i1511      159
+i1512      177
+i1513      178
+i1514      6
+i1515      180
+i1516      181
+i1517      6
+i1518      183
+i1519      184
+i1520      6
+i1521      186
+i1522      187
+i1523      6
+i1524      189
+i1525      190
+i1526      6
+i1527      192
+i1528      193
+i1529      6
+i1530      195
+i1531      196
+i1532      30
+i1533      198
+i1534      199
+i1535      200
+i1536      201
+i1537      202
+i1538      30
+i1539      204
+i1540      205
+i1541      6
+i1542      207
+i1543      231
+i1544      232
+i1545      82
+i1546      234
+i1547      235
+i1548      200
+i1549      237
+i1550      238
+i1551      151
+i1552      240
+i1553      241
+i1554      142
+i1555      243
+i1556      244
+i1557      142
+i1558      246
+i1559      247
+i1560      248
+i1561      249
+i1562      250
+i1563      248
+i1564      252
+i1565      253
+i1566      30
+i1567      255
+i1568      256
+i1569      30
+i1570      258
+i1571      259
+i1572      30
+i1573      261
+i1574      262
+i1575      30
+i1576      264
+i1577      265
+i1578      30
+i1579      267
+i1580      268
+i1581      30
+i1582      270
+i1583      271
+i1584      30
+i1585      273
+i1586      274
+i1587      41
+i1588      276
+i1589      277
+i1590      82
+i1591      279
+i1592      280
+i1593      82
+i1594      282
+i1595      283
+i1596      82
+i1597      285
+i1598      286
+i1599      82
+i1600      288
+i1601      289
+i1602      6
+i1603      291
+i1604      292
+i1605      200
+i1606      294
+i1607      295
+i1608      6
+i1609      297
+i1610      298
+i1611      106
+i1612      300
+i1613      301
+i1614      6
+i1615      303
+i1616      304
+i1617      6
+i1618      306
+i1619      307
+i1620      6
+i1621      309
+i1622      310
+i1623      6
+i1624      208
+i1625      209
+i1626      210
+i1627      6
+i1628      212
+i1629      213
+i1630      214
+i1631      215
+i1632      216
+i1633      217
+i1634      6
+i1635      219
+i1636      220
+i1637      214
+i1638      222
+i1639      223
+i1640      6
+i1641      225
+i1642      226
+i1643      6
+i1644      228
+i1645      229
+i1646      6
+i1647      312
+i1648      313
+i1649      314
+i1650      6
+i1651      316
+i1652      317
+i1653      82
+i1654      319
+i1655      320
+i1656      82
+i1657      322
+i1658      323
+i1659      324
+i1660      325
+i1661      326
+i1662      115
+i1663      328
+i1664      329
+i1665      82
+i1666      331
+i1667      332
+i1668      82
+i1669      334
+i1670      335
+i1671      82
+i1672      337
+i1673      338
+i1674      82
+i1675      340
+i1676      341
+i1677      82
+i1678      343
+i1679      344
+i1680      200
+i1681      346
+i1682      347
+i1683      30
+i1684      349
+i1685      350
+i1686      30
+i1687      352
+i1688      353
+i1689      354
+i1690      6
+i1691      356
+i1692      357
+i1693      6
+i1694      359
+i1695      360
+i1696      361
+i1697      6
+i1698      363
+i1699      364
+i1700      6
+i1701      366
+i1702      367
+i1703      368
+i1704      6
+i1705      370
+i1706      371
+i1707      200
+i1708      373
+i1709      381
+i1710      382
+i1711      6
+i1712      374
+i1713      375
+i1714      376
+i1715      41
+i1716      378
+i1717      379
+i1718      82
+i1719      384
+i1720      385
+i1721      386
+i1722      6
+i1723      680
+i1724      679
+i1729      689
+i1739      684
+i1749      684
+i1750      680
+i1751      679
+i1752      680
+i1753      689
+i1754      680
+i1755      1734
+i1756      680
+i1757      1744
+i1758      680
